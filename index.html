@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mediaQueries.css">
+    <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <title>ice cream</title>
+</head>
+<body>
+    <div class="container">
+
+
+        <!-- nav bar -->
+        <div class="nav-bar">
+            <div class="logo"><a href="">IcyCo</a></div>
+            <div class="nav-links">
+                <a href="#home" class="link">home</a>
+                <a href="#offer" class="link">Offer</a>
+                <a href="#about" class="link">about</a>
+                <a href="#products" class="link">products</a>
+                <a href="#contact" class="link">contact</a>
+                <a href="#reviews" class="link">reviews</a>
+            </div>
+            <div class="icons">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <i class="fa fa-bars menu" aria-hidden="true" onclick="controlMenu()"></i>
+            </div>
+        </div>
+
+
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="text">
+                <h3>Get Ready for a</h3>
+                <h1>Taste Adventure</h1>
+                <h4>Welcome to the frozen feast, where the world of frozen delights comes alive! Get ready to embark on a mouthwatering journey through a virtual ice cream paradise. </h4>
+                <button>Order Now</button>
+            </div>
+            <div class="image">
+                <img src="images/Hero.png" alt="">
+            </div>
+        </section>
+        
+
+        <!-- Offers -->
+        <section class="offer" id="offer">
+            <h1>IcyCo <span>Today's Offer</span></h1>
+            <div class="box-container offer-box">
+                <div class="box">
+                    <div class="image">
+                        <img src="images/offer1.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="off"><span>50%</span> OFF</div>
+                        <div class="description">Tasty Banana Split, ice cream sundae which contains yoghurt, parfait and chocolate.</div>
+                        <div class="price"><span class="new">$15</span><span class="old">$30</span></div>
+                        <button>Try Now</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="images/offer2.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="off"><span>60%</span> OFF</div>
+                        <div class="description">Flavorful Strawberry Gelato Lorem ipsum dolor sit amet Lorem, ipsum dolor Lorem, ipsum.</div>
+                        <div class="price"><span class="new">$10</span><span class="old">$30</span></div>
+                        <button>Try Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About -->
+        <section class="about" id="about">
+            <h1><span>About</span> Us</h1>
+            <div class="box-container about-box">
+                <div class="box image">
+                    <img src="images/about.png" alt="">
+                </div>
+                <div class="box text">
+                    <h2>Get The Cool Down With Our Creamy Creations!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas id quam totam nihil laudantium assumenda cumque explicabo, placeat nisi delectus consequuntur itaque quod obcaecati cum sint veritatis quo qui aliquid dolorem labore atque ad? Voluptatem quasi nobis porro, non placeat possimus doloremque modi aspernatur officiis ratione impedit delectus tempore doloribus.</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            
+        </section>
+
+        
+        <!-- Products -->
+        <section class="products" id="products">
+            <h1><span>Popular</span> Products</h1>
+            <div class="box-container products-box">
+                <div class="box">
+                    <div class="off">-5%</div>
+                    <i class="fa fa-heart wish" aria-hidden="true"></i>
+                    <img src="images/vannila.jpg" alt="">
+                    <div class="name-price">
+                        <div class="name">Vanilla</div>
+                        <div class="price">$35</div>
+                    </div>
+                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
+                    <div class="qty">
+                        <span>-</span>
+                        <span>0</span>
+                        <span>+</span>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="box">
+                    <div class="off">-8%</div>
+                    <i class="fa fa-heart wish" aria-hidden="true"></i>
+                    <img src="images/chocolate.jpg" alt="">
+                    <div class="name-price">
+                        <div class="name">Chocolate</div>
+                        <div class="price">$50</div>
+                    </div>
+                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
+                    <div class="qty">
+                        <span>-</span>
+                        <span>0</span>
+                        <span>+</span>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="box">
+                    <div class="off">-4%</div>
+                    <i class="fa fa-heart wish" aria-hidden="true"></i>
+                    <img src="images/strawberry.jpg" alt="">
+                    <div class="name-price">
+                        <div class="name">Strawberry</div>
+                        <div class="price">$45</div>
+                    </div>
+                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
+                    <div class="qty">
+                        <span>-</span>
+                        <span>0</span>
+                        <span>+</span>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="box">
+                    <div class="off">-15%</div>
+                    <i class="fa fa-heart wish" aria-hidden="true"></i>
+                    <img src="images/blue berry.jpg" alt="">
+                    <div class="name-price">
+                        <div class="name">Blue Berry</div>
+                        <div class="price">$38</div>
+                    </div>
+                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
+                    <div class="qty">
+                        <span>-</span>
+                        <span>0</span>
+                        <span>+</span>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="box">
+                    <div class="off">-5%</div>
+                    <i class="fa fa-heart wish" aria-hidden="true"></i>
+                    <img src="images/mango.jpg" alt="">
+                    <div class="name-price">
+                        <div class="name">Mango</div>
+                        <div class="price">$30</div>
+                    </div>
+                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
+                    <div class="qty">
+                        <span>-</span>
+                        <span>0</span>
+                        <span>+</span>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="box">
+                    <div class="off">-3%</div>
+                    <i class="fa fa-heart wish" aria-hidden="true"></i>
+                    <img src="images/rainbow.jpg" alt="">
+                    <div class="name-price">
+                        <div class="name">Rainbow</div>
+                        <div class="price">$45</div>
+                    </div>
+                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
+                    <div class="qty">
+                        <span>-</span>
+                        <span>0</span>
+                        <span>+</span>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="box">
+                    <div class="off">-7%</div>
+                    <i class="fa fa-heart wish" aria-hidden="true"></i>
+                    <img src="images/peanut-butter.jpg" alt="">
+                    <div class="name-price">
+                        <div class="name">Peanut</div>
+                        <div class="price">$48</div>
+                    </div>
+                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
+                    <div class="qty">
+                        <span>-</span>
+                        <span>0</span>
+                        <span>+</span>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="box">
+                    <div class="off">-5%</div>
+                    <i class="fa fa-heart wish" aria-hidden="true"></i>
+                    <img src="images/mint.jpg" alt="">
+                    <div class="name-price">
+                        <div class="name">Mint</div>
+                        <div class="price">$35</div>
+                    </div>
+                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
+                    <div class="qty">
+                        <span>-</span>
+                        <span>0</span>
+                        <span>+</span>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <h1><span>Contact</span> Us</h1>
+            <form action="#" class="box-container" id="contact-form">
+                <div class="row">
+                    <div class="input-box">
+                        <label for="fname">Your First Name</label><br>
+                        <input type="text" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="lname">Your Last Name</label><br>
+                        <input type="text" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="input-box">
+                        <label for="email">Your Email</label><br>
+                        <input type="email" id="email" oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Your Contact Number</label><br>
+                        <input type="tel" id="phone" oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="message">Your Message</label><br>
+                        <textarea name="" id="message" cols="30" rows="10" oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Send">
+                </div>  
+            </form>        
+        </section>
+
+
+        <!-- reviews -->
+        <section class="reviews" id="reviews">
+            <h1>Top <span>Reviews</span></h1>
+
+            <div class="swiper reviews-box">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer1.jpg" alt="">
+                            <div class="right"><div class="name"><span>Tom Stepher</span> <br> Verfied Customer</div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit, vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer4.webp" alt="">
+                            <div class="right"><div class="name"><span>Oliviya Lee</span> <br> Verfied Customer</div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit, vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer2.jpg" alt="">
+                            <div class="right"><div class="name"><span>Tom Stepher</span> <br> Verfied Customer</div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit, vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer5.jpg" alt="">
+                            <div class="right"><div class="name"><span>Mia Patal</span> <br> Verfied Customer</div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit, vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer3.jpg" alt="">
+                            <div class="right"><div class="name"><span>Tom Stepher</span> <br> Verfied Customer</div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit, vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer6.jpg" alt="">
+                            <div class="right"><div class="name"><span>Sopia Devis</span> <br> Verfied Customer</div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit, vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer7.jpg" alt="">
+                            <div class="right"><div class="name"><span>Emily Anderson</span> <br> Verfied Customer</div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit, vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+
+        <!-- news letter -->
+        <section class="news-letter">
+            <h1><span>News</span> Letter</h1>
+            <h3>Stay tuned for updates!</h3>
+            <form action="#" class="box-container" id="news-letter">
+                <div class="input-box">
+                    <input type="email" name="" id="newsletter-email" placeholder="Your email address" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-box">
+                <h1>Follow Us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Libero, quidem.</p>
+                <div class="icons">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h1>Need Help?</h1>
+                <p>Lorem ipsum dolor sit.</p>
+                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+87 123456789</a>
+                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+87 987654321</a>
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>icyco@gmail.com</a>
+            </div>
+            <div class="footer-box">
+                <h1>Locations</h1>
+                <a href="#">Colombo</a>
+                <a href="#">Galle</a>
+                <a href="#">Hatton</a>
+                <a href="#">Jaffna</a>
+            </div>
+            <div class="footer-box">
+                <h1>Quick Links</h1>
+                <a href="#home">Home</a>
+                <a href="#offer">Offer</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </footer>
+
+
+        <!-- copyright -->
+        <div class="copyright">
+            <i class="fa-regular fa-copyright"></i>
+            copyright | @2023 by <span>DharshiB</span> | All Rights Deserved
+        </div>
+    </div>
+
+
+
+
+    <script src="script/swiper-bundle.min.js"></script>
+    <script type="module" src="script/script.js"></script>
+    
+</body>
+</html>

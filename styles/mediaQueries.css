@@ -1,0 +1,110 @@
+@media all and (max-width:1200px) {
+    .nav-bar, .home {
+        padding: 0 25px;
+    }
+    .nav-bar .nav-links a{
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+
+}
+
+@media all and (max-width:1000px) {
+    .nav-bar {
+        width: 100%;
+    }
+    .nav-bar .nav-links a{
+        margin: 10px;
+        padding: 0;
+        width: max-content;
+        font-size: 15px;
+    }
+    .home .text h3 {
+        font-size: 25px;
+    }
+    .home .text h1 {
+        font-size:50px;
+    }
+    .home .text h4 {
+        font-size: 16px;
+    }
+    .home .image img {
+        width: 100%;
+        height: 80%;
+    }
+    footer {
+        padding: 20px;
+    }
+}
+
+@media all and (max-width:830px) {
+    .nav-bar {
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .nav-bar .nav-links{
+        position: fixed;
+        top: 70px;
+        height: 90vh;
+        background-color: var(--lightpink);
+        width: 100%;
+        left: -100%;
+        transition: 0.3s;
+    }
+    .nav-bar .nav-links a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 25px 0;
+        border-bottom: 1px solid rgb(255, 223, 228);
+    }
+    .nav-bar .icons i.menu {
+        display: inline-block;
+    }
+    .nav-bar .nav-links.active {
+        left: 0;
+    }
+    .home {
+        height: max-content;
+        padding:90px 15px 0 0;
+        flex-direction: column;
+    }
+    .home .text{
+        width: 100%;
+        padding-left:10px;
+    }
+    .home .text h3 {
+        font-size: 20px;
+    }
+    .home .text h1 {
+        font-size:35px;
+    }
+    .home .text h4 {
+        font-size: 15px;
+    }
+    .home .image {
+        padding-top: 25px;
+        width: 80%;
+    }
+    .reviews .reviews-box .box .top img{
+        height: 60px;
+        width: 60px;
+    }
+    .contact form .row {
+        flex-direction: column; align-items: center; gap: 5px;
+    }
+    .copyright {
+        font-size: 10px;
+    }
+
+}
+@media all and (max-width:600px) {
+    .about .about-box .image, .about .about-box .text {
+        height: max-content;
+    }
+    footer .footer-box {margin-bottom: 15px;}
+    footer .footer-box h1{
+        font-size: 20px;
+    }
+}
