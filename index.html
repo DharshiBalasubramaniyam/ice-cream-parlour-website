@@ -25,22 +25,38 @@
                 <a href="#reviews" class="link">reviews</a>
             </div>
             <div class="icons">
-                <i class="fa fa-search" aria-hidden="true"></i>
-                <i class="fa fa-heart" aria-hidden="true"></i>
-                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                <i class="fa fa-bars menu" aria-hidden="true" onclick="controlMenu()"></i>
+                <div class="icon">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <div class="icon">
+                    <span class="i"><i class="fa fa-heart" aria-hidden="true"></i> <span class="no-of-wishlist-items">0</span></span>
+                </div>
+                <div class="icon">
+                    <span class="i"><i class="fa fa-shopping-bag cart-icon" aria-hidden="true"></i> <span class="no-of-cart-items">0</span></span>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-bars menu" aria-hidden="true" onclick="controlMenu()"></i>
+                </div>
             </div>
         </div>
 
         <div class="cart">
+            <i class="fa fa-times close-cart" aria-hidden="true"></i>
             <h1>Your Cart</h1>
-            <ul class="cart-list-items">
+
+            <div class="no-empty-cart">
+                <ul class="cart-list-items">
+                </ul>
+                <div>
+                    <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                    <button>Check out</button>
+                </div>
                 
-            </ul>
-    
-            <div>Sub Total: <span class="sub-total">$0</span></div>
-    
-            <button>Check out</button>
+            </div>
+            
+            <div class="empty-cart active">
+                <p>No items in the cart!</p>
+            </div>
     
         </div>
 

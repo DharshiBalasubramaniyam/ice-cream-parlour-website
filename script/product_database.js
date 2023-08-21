@@ -1,6 +1,6 @@
 const products_list = [
     {
-        id: 1,
+        id: "p001",
         name: "Vanilla",
         off: 5,
         price: 35,
@@ -8,7 +8,7 @@ const products_list = [
         image: "images/vannila.jpg"
     },
     {
-        id: 2,
+        id: "p002",
         name: "Chocolate",
         off: 8,
         price: 50,
@@ -16,7 +16,7 @@ const products_list = [
         image: "images/chocolate.jpg"
     },
         {
-        id: 3,
+        id: "p003",
         name: "Strawberry",
         off: 4,
         price: 45,
@@ -24,7 +24,7 @@ const products_list = [
         image: "images/strawberry.jpg"
     },
     {
-        id: 4,
+        id: "p004",
         name: "Blue Berry",
         off: 15,
         price: 35,
@@ -32,7 +32,7 @@ const products_list = [
         image: "images/blue berry.jpg"
     },
     {
-        id: 5,
+        id: "p005",
         name: "Mango",
         off: 5,
         price: 30,
@@ -40,7 +40,7 @@ const products_list = [
         image: "images/mango.jpg"
     },
     {
-        id: 6,
+        id: "p006",
         name: "Rainbow",
         off: 3,
         price: 45,
@@ -48,7 +48,7 @@ const products_list = [
         image: "images/rainbow.jpg"
     },
     {
-        id: 7,
+        id: "p007",
         name: "Peanut",
         off: 7,
         price: 48,
@@ -56,7 +56,7 @@ const products_list = [
         image: "images/peanut-butter.jpg"
     },
     {
-        id: 8,
+        id:"p008" ,
         name: "Mint",
         off: 5,
         price: 32,
