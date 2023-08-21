@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: pink;
+        }
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+        }
+        .cart{
+            width: 280px;
+            height: max-content;
+            background-color: white;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style: none;
+            padding: 5px;
+            background-color: rgb(255, 243, 245);
+            margin: 10px 0;
+        }
+        ul li img {
+            float: left;
+            height: 50px;
+            width: 50px;
+            margin-right: 10px;
+        }
+        ul li .text{
+            position: relative;
+        }
+        ul li .text #remove {
+            position: absolute;
+            right: 0;
+            top: 40%;
+            font-size: 11.5px;
+        }
+        ul li .text .price {
+            font-weight: 600;
+        }
+        h1 {
+            font-weight: 400;
+            font-size: 20px;
+            margin: 0;
+        }
+        button {
+            margin: 10px 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="cart">
+        <h1>Your Cart</h1>
+        <ul>
+            <li>
+                <img src="images/blue berry.jpg" alt="">
+                <div class="text">
+                    <span class="name">Blue Berry</span> <span id="remove">Remove</span><br>
+                    <span class="qty">2</span> x $15 <br>
+                    <div class="price">$30</div>
+                </div>
+            </li>
+            <li>
+                <img src="images/blue berry.jpg" alt="">
+                <div class="text">
+                    <span class="name">Blue Berry</span> <span id="remove">Remove</span><br>
+                    <span class="qty">2</span> x $15 <br>
+                    <div class="price">$30</div>
+                </div>
+            </li>
+            <li>
+                <img src="images/blue berry.jpg" alt="">
+                <div class="text">
+                    <span class="name">Blue Berry</span> <span id="remove">Remove</span><br>
+                    <span class="qty">2</span> x $15 <br>
+                    <div class="price">$30</div>
+                </div>
+            </li>
+            <li>
+                <img src="images/blue berry.jpg" alt="">
+                <div class="text">
+                    <span class="name">Blue Berry</span> <span id="remove">Remove</span><br>
+                    <span class="qty">2</span> x $15 <br>
+                    <div class="price">$30</div>
+                </div>
+            </li>
+
+        </ul>
+
+        <div>Sub Total: <span class="sub-total">$156</span></div>
+
+        <button>Check out</button>
+
+    </div>
+</body>
+</html>

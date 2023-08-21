@@ -32,6 +32,17 @@
             </div>
         </div>
 
+        <div class="cart">
+            <h1>Your Cart</h1>
+            <ul class="cart-list-items">
+                
+            </ul>
+    
+            <div>Sub Total: <span class="sub-total">$0</span></div>
+    
+            <button>Check out</button>
+    
+        </div>
 
         <!-- Home -->
         <section class="home" id="home">
@@ -98,134 +109,6 @@
         <section class="products" id="products">
             <h1><span>Popular</span> Products</h1>
             <div class="box-container products-box">
-                <div class="box">
-                    <div class="off">-5%</div>
-                    <i class="fa fa-heart wish" aria-hidden="true"></i>
-                    <img src="images/vannila.jpg" alt="">
-                    <div class="name-price">
-                        <div class="name">Vanilla</div>
-                        <div class="price">$35</div>
-                    </div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
-                    <div class="qty">
-                        <span>-</span>
-                        <span>0</span>
-                        <span>+</span>
-                    </div>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="box">
-                    <div class="off">-8%</div>
-                    <i class="fa fa-heart wish" aria-hidden="true"></i>
-                    <img src="images/chocolate.jpg" alt="">
-                    <div class="name-price">
-                        <div class="name">Chocolate</div>
-                        <div class="price">$50</div>
-                    </div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
-                    <div class="qty">
-                        <span>-</span>
-                        <span>0</span>
-                        <span>+</span>
-                    </div>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="box">
-                    <div class="off">-4%</div>
-                    <i class="fa fa-heart wish" aria-hidden="true"></i>
-                    <img src="images/strawberry.jpg" alt="">
-                    <div class="name-price">
-                        <div class="name">Strawberry</div>
-                        <div class="price">$45</div>
-                    </div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
-                    <div class="qty">
-                        <span>-</span>
-                        <span>0</span>
-                        <span>+</span>
-                    </div>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="box">
-                    <div class="off">-15%</div>
-                    <i class="fa fa-heart wish" aria-hidden="true"></i>
-                    <img src="images/blue berry.jpg" alt="">
-                    <div class="name-price">
-                        <div class="name">Blue Berry</div>
-                        <div class="price">$38</div>
-                    </div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
-                    <div class="qty">
-                        <span>-</span>
-                        <span>0</span>
-                        <span>+</span>
-                    </div>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="box">
-                    <div class="off">-5%</div>
-                    <i class="fa fa-heart wish" aria-hidden="true"></i>
-                    <img src="images/mango.jpg" alt="">
-                    <div class="name-price">
-                        <div class="name">Mango</div>
-                        <div class="price">$30</div>
-                    </div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
-                    <div class="qty">
-                        <span>-</span>
-                        <span>0</span>
-                        <span>+</span>
-                    </div>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="box">
-                    <div class="off">-3%</div>
-                    <i class="fa fa-heart wish" aria-hidden="true"></i>
-                    <img src="images/rainbow.jpg" alt="">
-                    <div class="name-price">
-                        <div class="name">Rainbow</div>
-                        <div class="price">$45</div>
-                    </div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
-                    <div class="qty">
-                        <span>-</span>
-                        <span>0</span>
-                        <span>+</span>
-                    </div>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="box">
-                    <div class="off">-7%</div>
-                    <i class="fa fa-heart wish" aria-hidden="true"></i>
-                    <img src="images/peanut-butter.jpg" alt="">
-                    <div class="name-price">
-                        <div class="name">Peanut</div>
-                        <div class="price">$48</div>
-                    </div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
-                    <div class="qty">
-                        <span>-</span>
-                        <span>0</span>
-                        <span>+</span>
-                    </div>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="box">
-                    <div class="off">-5%</div>
-                    <i class="fa fa-heart wish" aria-hidden="true"></i>
-                    <img src="images/mint.jpg" alt="">
-                    <div class="name-price">
-                        <div class="name">Mint</div>
-                        <div class="price">$35</div>
-                    </div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.</div>
-                    <div class="qty">
-                        <span>-</span>
-                        <span>0</span>
-                        <span>+</span>
-                    </div>
-                    <button>Add to Cart</button>
-                </div>
             </div>
         </section>
 
@@ -233,7 +116,7 @@
         <!-- contact -->
         <section class="contact" id="contact">
             <h1><span>Contact</span> Us</h1>
-            <form action="#" class="box-container" id="contact-form">
+            <form action="#" novalidate class="box-container" id="contact-form">
                 <div class="row">
                     <div class="input-box">
                         <label for="fname">Your First Name</label><br>
@@ -407,7 +290,7 @@
         <section class="news-letter">
             <h1><span>News</span> Letter</h1>
             <h3>Stay tuned for updates!</h3>
-            <form action="#" class="box-container" id="news-letter">
+            <form action="#" novalidate class="box-container" id="news-letter">
                 <div class="input-box">
                     <input type="email" name="" id="newsletter-email" placeholder="Your email address" oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
@@ -457,6 +340,7 @@
             <i class="fa-regular fa-copyright"></i>
             copyright | @2023 by <span>DharshiB</span> | All Rights Deserved
         </div>
+
     </div>
 
 
