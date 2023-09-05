@@ -133,7 +133,7 @@ function addProductsToMenu() {
                             <img src="${product.image}" alt="">
                             <div class="name-price">
                                 <div class="name">${product.name}</div>
-                                <div class="price">${product.price}</div>
+                                <div class="price">$${product.price}</div>
                             </div>
                             <div class="description">${product.description}</div>
                             <div class="qty">
@@ -183,6 +183,11 @@ addToCartBtns.forEach(btn => {
 function addToCart(e) {
     let cartItemId = e.parentElement.getAttribute("id");
 
+    if (checkItem(cartItemId)) {
+        alert("The item already in your cart!");
+        return;
+    }
+
     let itemLi = document.createElement("li");
     itemLi.setAttribute("id", "c00" + (cartItems.length+1));
     let item = getItem(cartItemId)[0];
@@ -206,6 +211,7 @@ function addToCart(e) {
     displaySubTotal();
     displayNoOfCartItems();
     console.log(cartItems);
+    alert(`${pcs} ${item.name} ice cream successfully added to the cart!`);
 }
 
 
@@ -233,6 +239,15 @@ function addToCartList(cid, id, pcs, amount) {
         amount: amount 
     }
     cartItems.push(itemObject);
+}
+
+function checkItem(pid) {
+    for(let i=0;i<cartItems.length;i++) {
+        if(cartItems[i].itemId == pid) {
+            return true;
+        }
+    }
+    return false;
 }
 
 
