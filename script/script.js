@@ -194,8 +194,12 @@ function addToCart(e) {
     let pcs = e.parentElement.querySelector(".pcs").textContent;
     let amount = item.price * pcs;
 
-    if (pcs>0) {
-        itemLi.innerHTML = `<img src="${item.image}" alt="">
+    if (pcs == 0) {
+        alert("Please select number of cups you want!");
+        return;
+    }
+
+    itemLi.innerHTML = `<img src="${item.image}" alt="">
                         <div class="text">
                             <span class="name">${item.name}</span><br>
                             <span class="qty">${pcs}</span> x ${item.price} <br>
@@ -203,10 +207,9 @@ function addToCart(e) {
                             <i class="fa fa-times remove" aria-hidden="true"></i>
                         </div>`;             
         
-        cartUlList.appendChild(itemLi);
-        removeItemFromCart();
+    cartUlList.appendChild(itemLi);
+    removeItemFromCart();
 
-    }
     addToCartList("c00" + (cartItems.length+1), cartItemId, pcs, amount);
     displaySubTotal();
     displayNoOfCartItems();
