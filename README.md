@@ -1,4 +1,4 @@
-# ice-cream-parlour-website
+# Ice-cream-parlour-website
 This is a resposive user-friendly ice cream store website using HTML, CSS and Vanilla JavaScript.
 The main features of this website are: 
   - Responsive navbar with toggle menu bar effect and scrollspy.
