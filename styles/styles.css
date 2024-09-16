@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -7,14 +9,14 @@
     font-weight: 400;
     overflow-x: hidden;
     box-sizing: border-box;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
     background-color: var(--lightpink);
 }
 :root {
     --darkpink:rgb(156, 26, 97);
-    --lightpink:pink;
+    --lightpink:rgb(255, 249, 250);
     --pink:deeppink;
     --dullpink: rgb(255, 219, 225);
 }
@@ -244,17 +246,17 @@ h3{text-align: center; margin-top: -20px;}
     color: var(--darkpink);
 }
 .home .text h3 {
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 400;text-align: left;
     margin:20px 0 13px 0;
 }
 .home .text h1 {
-    font-size:70px;
+    font-size:80px;
     margin-bottom: 25px;
     color: var(--pink);
 }
 .home .text h4 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
     margin-bottom: 25px;
 }
@@ -273,11 +275,12 @@ h3{text-align: center; margin-top: -20px;}
     justify-content: center;
 }
 .offer .offer-box .box {
-    background-color: white;
+    background-color: var(--dullpink);
     width: 100%;
     max-width: 600px;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 5px;
 }
 .offer .offer-box .box:hover .image img {
     transform: scale(0.95);
@@ -338,14 +341,15 @@ h3{text-align: center; margin-top: -20px;}
     justify-content: center;
 }
 .about .about-box .text h2 {
-    font-size: 25px;
+    font-size: 28px;
     text-align: center;
     font-weight: 400;
     color: var(--darkpink);
     margin-bottom: 30px;
 }
 .about .about-box .text p {
-    font-size: 16px;
+    font-size: 18px;
+    letter-spacing: 1.2px;
     text-align: center;
 }
 .about .about-box .text button {
@@ -353,6 +357,9 @@ h3{text-align: center; margin-top: -20px;}
 }
 
 /* -------------products section styles------------------- */
+.products .products-box {
+    /* background-color: gray; */
+}
 .products .products-box .box {
     position: relative;
     background-color: white;
@@ -362,6 +369,7 @@ h3{text-align: center; margin-top: -20px;}
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+    background-color: var(--dullpink);
 }
 .products .products-box .box .off,
 .products .products-box .box .wish{
@@ -372,8 +380,8 @@ h3{text-align: center; margin-top: -20px;}
     text-align: center;
     top: 15px;
     left: 10px;
-    background-color: var(--dullpink);
-    color: var(--darkpink);
+    background-color: var(--darkpink);
+    color: var(--lightpink);
     padding: 7px 10px;
     display: flex;
     align-items: center;
@@ -460,8 +468,10 @@ h3{text-align: center; margin-top: -20px;}
     border: 2px solid var(--dullpink);
     font-size: 15px;
     width: 100%;
-    padding: 5px 10px;
+    padding: 7px 10px;
     transition: 0.3s;
+    margin-top: 4px;
+    border-radius: 4px;
 }
 .contact form .input-box input:focus,
 .contact form .input-box textarea:focus{
@@ -488,7 +498,7 @@ h3{text-align: center; margin-top: -20px;}
     align-items:flex-start;
     justify-content: left;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--dullpink);
     padding: 15px;
     cursor: pointer;
 }
@@ -528,10 +538,12 @@ h3{text-align: center; margin-top: -20px;}
 .reviews .reviews-box .box .quote {
     position: absolute;
     font-size: 75px;
-    color: var(--darkpink);z-index: 1000;
+    color: var(--darkpink);
+    z-index: 1000;
     top: 0;
     right: 15px;
     opacity: 0.2;
+    overflow: hidden;
 }
 .swiper-btn {
     color: var(--darkpink) !important;
@@ -598,6 +610,7 @@ footer .footer-box p {
 footer .footer-box .icons i {
     font-size: 25px;
     color: var(--lightpink);
+    overflow: hidden;
 }
 footer .footer-box .icons i:hover {
     color: rgb(255, 165, 180);

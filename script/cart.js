@@ -6,7 +6,6 @@ let cartItems = [];
 
 console.log(addToCartBtns);
 addToCartBtns.forEach(btn => {
-    console.log("add")
     btn.addEventListener("click", ()=> {
         addToCart(btn);
     });
@@ -22,7 +21,7 @@ function addToCart(e) {
 
     let itemLi = document.createElement("li");
     itemLi.setAttribute("id", "c00" + (cartItems.length+1));
-    let item = getItem(cartItemId)[0];
+    let item = getItem(cartItemId);
     let pcs = e.parentElement.querySelector(".pcs").textContent;
     let amount = item.price * pcs;
 
@@ -77,31 +76,16 @@ function addToCartList(cid, id, pcs, amount) {
 }
 
 function checkItem(pid) {
-    for(let i=0;i<cartItems.length;i++) {
-        if(cartItems[i].itemId == pid) {
-            return true;
-        }
-    }
-    return false;
+    return cartItems.filter(item => item?.itemId == pid).length != 0;
 }
 
 
 function removeFromCartList(cartId) {
-    for(let i=0;i<cartItems.length;i++) {
-        if(cartItems[i].cartId== cartId) {
-            cartItems.splice(i, 1);
-            break;
-        }
-    }
+    cartItems = cartItems.filter(item => item?.cartId != cartId)
 }
 
 function getItem(pid) {
-    const item = products_list.filter((product) => {
-        if (product.id == pid) {
-            return product;
-        }
-    })
-    return item;
+    return products_list.find(item => item.id == pid);
 }
 
 function getSubtotal() {
@@ -109,13 +93,11 @@ function getSubtotal() {
     cartItems.forEach(item => {
         subtotal+=item.amount;
     });
-    console.log(subtotal);
     return subtotal;
 }
 
 function displaySubTotal() {
     const subtotal = document.querySelector(".sub-total");
-    console.log(subtotal);
     subtotal.textContent = "$" + getSubtotal();
 }
 
@@ -124,13 +106,11 @@ function getNoOfCartItems() {
     cartItems.forEach(item => {
         noOfItems+=parseInt(item.pcs);
     });
-    console.log(noOfItems);
     return noOfItems;
 }
 
 function displayNoOfCartItems() {
     const noOfItems = document.querySelector(".no-of-cart-items");
-    console.log(noOfItems);
     noOfItems.textContent = getNoOfCartItems();
 
     let emptyCart = document.querySelector(".empty-cart");
