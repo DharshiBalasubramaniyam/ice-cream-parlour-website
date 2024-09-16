@@ -431,16 +431,29 @@ h3{text-align: center; margin-top: -20px;}
     width: 45px;
     line-height: 31px;
     font-size: 20px;
-    border: 1px solid var(--darkpink);
+    border: 2px solid var(--darkpink);
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
 }
-.products .products-box .box .qty span:hover {
-    background-color: white;
+.products .products-box .box .qty span:first-of-type:hover,
+.products .products-box .box .qty span:last-of-type:hover {
+    background-color: var(--darkpink);
+    color: white;
+}
+.products .products-box .box .qty span:first-of-type {
+    border-radius: 25px 0 0 25px;
+    border-right-width: 0;
+}
+.products .products-box .box .qty span:last-of-type {
+    border-radius: 0 25px 25px 0;
+    border-left-width: 0;
+}
+.products .products-box .box button {
+    width: 70%;
 }
 .products .products-box .box button:hover {
-    background-color: white;
+    background-color: transparent;
 }
 
 /* -------------contact section styles------------------- */
