@@ -1,4 +1,4 @@
-@media all and (max-width:1200px) {
+@media all and (max-width:1300px) {
     .nav-bar, .home {
         padding: 0 25px;
     }
@@ -7,10 +7,19 @@
         padding: 0;
         font-size: 15px;
     }
+    section {
+        padding: 15px;
+    }
+    .about .about-box .image,
+    .about .about-box .text{
+        margin: auto;
+        height: fit-content;
+    }
 
 }
 
 @media all and (max-width:1000px) {
+    
     .nav-bar {
         width: 100%;
     }
@@ -39,36 +48,45 @@
 }
 
 @media all and (max-width:830px) {
+    
     .nav-bar {
         justify-content: space-between;
         padding: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgb(203, 203, 203);
     }
     .nav-bar .nav-links{
         position: fixed;
         top: 70px;
-        height: 90vh;
-        background-color: var(--lightpink);
+        height: fit-content;
+        background-color: var(--body-color);
         width: 100%;
         left: -100%;
         transition: 0.3s;
+    }
+    .nav-bar .nav-links.active {
+        left: 0;
     }
     .nav-bar .nav-links a{
         display: block;
         width: 100%;
         text-align: center;
+        margin: 0;
         padding: 25px 0;
-        border-bottom: 1px solid rgb(255, 223, 228);
+        border-bottom: 1px solid var(--main-color);
+        border-radius: 0;
+    }
+    .nav-bar .nav-links a:first-of-type{
+        border-top: 1px solid var(--main-color);
     }
     .nav-bar .icons i.menu {
         display: inline-block;
     }
-    .nav-bar .nav-links.active {
-        left: 0;
-    }
+    
     .home {
         height: max-content;
-        padding:90px 15px 0 0;
-        flex-direction: column;
+        padding:50px 15px 0 0;
+        flex-direction: column-reverse;
     }
     .home .text{
         width: 100%;
@@ -81,11 +99,11 @@
         font-size:35px;
     }
     .home .text h4 {
-        font-size: 15px;
+        font-size: 16px;
     }
     .home .image {
         padding-top: 25px;
-        width: 80%;
+        width: 90%;
     }
     .reviews .reviews-box .box .top img{
         height: 60px;
