@@ -9,7 +9,6 @@ function addProductsToMenu() {
         box.setAttribute("class", "box"); box.setAttribute("id", product.id);
         box.innerHTML = `<div class="image-wrapper">
                         <div class="off">-${product.off}%</div>
-                        <i class="fa fa-heart wish" aria-hidden="true"></i>
                         <img src="${product.image}" alt="">
                         <div class="cat-label">${product.category}</div>
                     </div>
