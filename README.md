@@ -7,13 +7,10 @@ The main features of this website are:
   - Proper form validations for contact form and news letter.
   - Responsive review section with slider using swiper.js.
 
-![Screenshot 2024-09-14 095018](https://github.com/user-attachments/assets/3a205644-5601-49c2-a1e1-616cf9ea5d03)
+![Screenshot 2024-09-17 185359](https://github.com/user-attachments/assets/d9df5d8c-6b8a-4664-9609-98a3dbae438d)
 
+![Screenshot 2024-09-17 185419](https://github.com/user-attachments/assets/06f27f92-1c94-4ec5-9dc0-e5f981d5cdb6)
 
-![Screenshot 2024-09-14 095042](https://github.com/user-attachments/assets/d12cf7f0-f18a-4907-b40e-584312fb020e)
+![Screenshot 2024-09-17 185438](https://github.com/user-attachments/assets/8e86c3a7-1760-4bc0-a085-1b738d6daa38)
 
-
-![Screenshot 2024-09-14 095110](https://github.com/user-attachments/assets/227be13e-d347-4026-9e20-a79e3a584b39)
-
-
-![Screenshot 2024-09-14 095204](https://github.com/user-attachments/assets/b10f085a-034e-4b99-ae32-b53a400979ca)
+![Screenshot 2024-09-17 185614](https://github.com/user-attachments/assets/433e74dd-706e-424b-b20d-f368d0acf745)
