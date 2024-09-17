@@ -12,17 +12,16 @@
     font-family: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
-    background-color: var(--lightpink);
+    background-color: var(--body-color);
 }
 :root {
-    --darkpink:rgb(156, 26, 97);
-    --lightpink:rgb(255, 249, 250);
-    --pink:deeppink;
-    --dullpink: rgb(255, 219, 225);
+    --main-color:rgb(249, 4, 139);
+    --body-color:rgb(255, 255, 255);
+    --secondary-color: rgb(255, 241, 244);
 }
 ::selection {
-    background-color: var(--darkpink);
-    color: var(--lightpink);
+    background-color: var(--main-color);
+    color: var(--body-color);
 }
 html {
     scroll-padding-top: 70px;
@@ -32,17 +31,18 @@ html {
 button, input[type="submit"] {
     width: 150px;
     padding: 8px 0;
-    background-color: var(--darkpink);
-    border: 2px solid var(--darkpink);
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
     border-radius: 20px;
-    color: var(--lightpink);
+    color: var(--body-color);
     font-size: 18px;
     cursor: pointer;
     transition: 0.3s;
 }
 button:hover, input[type="submit"]:hover{
     background:transparent;
-    color: var(--darkpink);
+    color: var(--main-color);
+
 }
 button:active,input[type="submit"]:active {
     transform: scale(0.95);
@@ -58,7 +58,7 @@ section > h1 {
     margin-bottom: 20px;
 }
 section > h1 span {
-    color: var(--darkpink);
+    color: var(--main-color);
 }
 .box-container{
     width: 100%;
@@ -87,7 +87,7 @@ h3{text-align: center; margin-top: -20px;}
 /* -------------header styles------------------- */
 .nav-bar {
     position: fixed; top: 0;
-    background-color: var(--lightpink);
+    background-color: var(--body-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -100,7 +100,7 @@ h3{text-align: center; margin-top: -20px;}
 .nav-bar .logo a{
     font-size: 30px;
     font-weight: 400;
-    color: var(--darkpink);
+    color: var(--main-color);
 }
 .nav-bar .nav-links a{
     width: 100px;
@@ -109,12 +109,12 @@ h3{text-align: center; margin-top: -20px;}
     padding: 7px 10px;
     display: inline-block;
     margin: 0 15px;
-    color: var(--darkpink);
+    color: var(--main-color);
     text-transform: capitalize;
     transition: 0.3s;
 }
 .nav-bar .nav-links a:hover {
-    color: var(--pink);
+    color: black;
 }
 .nav-bar .icons {
     display: flex;
@@ -126,20 +126,20 @@ h3{text-align: center; margin-top: -20px;}
 .nav-bar .icons i{
     font-size: 20px;
     margin: 0 8px;
-    color: var(--darkpink);
+    color: var(--main-color);
     padding: 10px 0;
     cursor: pointer;
     transition: 0.3s;    
 }
 .nav-bar .icons i:hover {
-    color: var(--pink);
+    color: var(--main-color);
 }
 .nav-bar .icons i.menu {
     display: none;
 }
 .nav-bar .icons .no-of-cart-items, .no-of-wishlist-items {
     position: absolute;
-    color: var(--darkpink);
+    color: var(--main-color);
     right: -10px;
     width: 25px;
     font-size: 12px;
@@ -190,12 +190,12 @@ h3{text-align: center; margin-top: -20px;}
     font-size: 20px;
     margin-top: 20px;
     text-align: center;
-    color: var(--darkpink);
+    color: var(--main-color);
 }
 .cart .total {
-    background-color: var(--dullpink);
+    background-color: var(--secondary-color);
     padding: 10px;
-    color: var(--darkpink);
+    color: var(--main-color);
 }
 .cart button {
     margin: 15px 0;
@@ -205,12 +205,12 @@ h3{text-align: center; margin-top: -20px;}
     position: absolute;
     right: 10px;
     cursor: pointer;
-    color: var(--darkpink);
+    color: var(--main-color);
     font-size: 20px;
     transition: 0.3s;
 }
 .cart .close-cart:hover, .remove:hover {
-    color: var(--pink);
+    color: var(--main-color);
 }
 .cart ul li .text .remove {
     font-size: 15px;
@@ -221,7 +221,7 @@ h3{text-align: center; margin-top: -20px;}
     display: none;
 }
 .cart .empty-cart p{
-    color: var(--darkpink);
+    color: var(--main-color);
     text-align: center;
     padding-top: 25%;
     
@@ -243,17 +243,19 @@ h3{text-align: center; margin-top: -20px;}
 }
 .home .text{
     width: 60%;
-    color: var(--darkpink);
+    /* color: var(--main-color); */
+    color: rgb(66, 66, 66);
 }
 .home .text h3 {
     font-size: 40px;
-    font-weight: 400;text-align: left;
+    font-weight: 400;
+    text-align: left;
     margin:20px 0 13px 0;
 }
 .home .text h1 {
     font-size:80px;
     margin-bottom: 25px;
-    color: var(--pink);
+    /* color: var(--main-color); */
 }
 .home .text h4 {
     font-size: 22px;
@@ -275,7 +277,7 @@ h3{text-align: center; margin-top: -20px;}
     justify-content: center;
 }
 .offer .offer-box .box {
-    background-color: var(--dullpink);
+    background-color: var(--secondary-color);
     width: 100%;
     max-width: 600px;
     display: flex;
@@ -295,7 +297,7 @@ h3{text-align: center; margin-top: -20px;}
 .offer .offer-box .box .text  .off {
     font-size: 20px;
     margin-bottom: 25px;
-    color: var(--darkpink);
+    color: var(--main-color);
 }
 .offer .offer-box .box .text  .off span {
     font-size: 30px;
@@ -344,7 +346,7 @@ h3{text-align: center; margin-top: -20px;}
     font-size: 28px;
     text-align: center;
     font-weight: 400;
-    color: var(--darkpink);
+    color: var(--main-color);
     margin-bottom: 30px;
 }
 .about .about-box .text p {
@@ -357,8 +359,24 @@ h3{text-align: center; margin-top: -20px;}
 }
 
 /* -------------products section styles------------------- */
-.products .products-box {
-    /* background-color: gray; */
+.categories-wrapper {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.categories-wrapper button{
+    font-size: 15px;
+    width: fit-content;
+    padding: 7px 20px;
+    border: 1px solid var(--main-color);
+    margin: 5px;
+
+}
+.categories-wrapper button:not(.active){
+    color: black;
+    background-color: transparent;
+}
+.categories-wrapper button:not(.active):hover{
+    background-color: var(--secondary-color);
 }
 .products .products-box .box {
     position: relative;
@@ -369,7 +387,25 @@ h3{text-align: center; margin-top: -20px;}
     align-items: center;
     justify-content: center;
     transition: 0.3s;
-    background-color: var(--dullpink);
+    /*  */
+    border: 2px solid rgb(203, 203, 203);
+}
+.image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.cat-label {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 5px;
+    position: absolute;
+    bottom: 5px;
+    font-size: 12px;
+    left: 5px;
+    border-radius: 25px;
 }
 .products .products-box .box .off,
 .products .products-box .box .wish{
@@ -379,9 +415,9 @@ h3{text-align: center; margin-top: -20px;}
     font-size: 20px;
     text-align: center;
     top: 15px;
-    left: 10px;
-    background-color: var(--darkpink);
-    color: var(--lightpink);
+    left: 0px;
+    background-color: var(--main-color);
+    color: var(--body-color);
     padding: 7px 10px;
     display: flex;
     align-items: center;
@@ -392,15 +428,15 @@ h3{text-align: center; margin-top: -20px;}
     right: -60px;
     transition: right 0.2s ease;
 }
-.products .products-box .box .wish:hover {
-    color: var(--pink);
-}
 .products .products-box .box:hover .wish{
-    right: 10px;
+    right: 0;
+}
+.products .products-box .box:hover {
+    background-color: rgb(238, 238, 238);
 }
 .products .products-box .box img{
     width: 100%;
-    height: 200px;
+    height: 100%;
     display: inline-block;
 }
 .products .products-box .box .name-price {
@@ -410,13 +446,11 @@ h3{text-align: center; margin-top: -20px;}
     justify-content: space-between;
     font-size: 22px;
     padding: 10px 1px;
-    color: var(--darkpink);
 }
 .products .products-box .box .description {
     width: 100%;
     text-align: center;
     font-size: 15px;
-    color: var(--darkpink);
 }
 .products .products-box .box .qty {
     display: flex;
@@ -426,19 +460,19 @@ h3{text-align: center; margin-top: -20px;}
 .products .products-box .box .qty span {
     margin: 15px 0;
     display: inline-block;
-    background-color: var(--dullpink);
+    background-color: var(--secondary-color);
     height: 35px;
     width: 45px;
     line-height: 31px;
     font-size: 20px;
-    border: 2px solid var(--darkpink);
+    border: 2px solid var(--main-color);
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
 }
 .products .products-box .box .qty span:first-of-type:hover,
 .products .products-box .box .qty span:last-of-type:hover {
-    background-color: var(--darkpink);
+    background-color: var(--main-color);
     color: white;
 }
 .products .products-box .box .qty span:first-of-type {
@@ -473,12 +507,12 @@ h3{text-align: center; margin-top: -20px;}
 .contact form .input-box label {
     font-size: 16px;
     margin-bottom: 3px;
-    color: var(--pink);
+    color: var(--main-color);
 }
 .contact form .input-box input,
 .contact form .input-box textarea  {
-    background:transparent;
-    border: 2px solid var(--dullpink);
+    background:var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     font-size: 15px;
     width: 100%;
     padding: 7px 10px;
@@ -488,7 +522,7 @@ h3{text-align: center; margin-top: -20px;}
 }
 .contact form .input-box input:focus,
 .contact form .input-box textarea:focus{
-    border: 2px solid var(--darkpink);
+    border: 2px solid var(--main-color);
 }  
 .contact form .row:last-child{
     display: flex;
@@ -511,7 +545,7 @@ h3{text-align: center; margin-top: -20px;}
     align-items:flex-start;
     justify-content: left;
     flex-direction: column;
-    background-color: var(--dullpink);
+    background-color: var(--secondary-color);
     padding: 15px;
     cursor: pointer;
 }
@@ -521,7 +555,7 @@ h3{text-align: center; margin-top: -20px;}
     display: flex;
     align-items: center;
     justify-content: left;
-    color: var(--darkpink);
+    color: var(--main-color);
 
 }
 .reviews .reviews-box .box .right {
@@ -542,16 +576,16 @@ h3{text-align: center; margin-top: -20px;}
 }
 .reviews .reviews-box .box .stars {
     margin: 10px 0;
-    color: var(--pink);
+    color: var(--main-color);
 }
 .reviews .reviews-box .box .text {
     margin-top: 15px;
-    color: var(--darkpink);
+    color: var(--main-color);
 }
 .reviews .reviews-box .box .quote {
     position: absolute;
     font-size: 75px;
-    color: var(--darkpink);
+    color: var(--main-color);
     z-index: 1000;
     top: 0;
     right: 15px;
@@ -559,16 +593,16 @@ h3{text-align: center; margin-top: -20px;}
     overflow: hidden;
 }
 .swiper-btn {
-    color: var(--darkpink) !important;
+    color: var(--main-color) !important;
     height: 50px !important;
     width: 50px !important;
     border-radius: 50% !important;
     padding: 5px !important;
     font-size: 15px !important;
-    background-color: var(--lightpink);
+    background-color: var(--body-color);
 }
 .swiper-pagination-bullet{
-   background-color: var(--darkpink) !important;
+   background-color: var(--main-color) !important;
 }
 
 /* -------------reviews section styles------------------- */
@@ -586,16 +620,17 @@ h3{text-align: center; margin-top: -20px;}
 }
 .news-letter form #newsletter-email{
     background:transparent;
-    border: 2px solid var(--darkpink);
+    border: 2px solid var(--main-color);
     font-size: 15px;
     width: 100%;
-    padding: 7px 10px;
+    padding: 10px 10px;
+    border-radius: 4px;
 }
 
 /* -------------footer styles------------------- */
 footer {
     padding: 25px 80px;
-    background-color: var(--darkpink);
+    background-color: var(--main-color);
     width: 100%;
     height: max-content;
     display: flex;
@@ -613,16 +648,15 @@ footer .footer-box h1{
     font-weight: 400;
     font-size: 25px;
     margin-bottom: 15px;
-    color: var(--pink);
 }
 footer .footer-box p {
-    color: var(--lightpink);
+    color: var(--body-color);
     font-size: 15px;
     margin-bottom: 10px;
 }
 footer .footer-box .icons i {
     font-size: 25px;
-    color: var(--lightpink);
+    color: var(--body-color);
     overflow: hidden;
 }
 footer .footer-box .icons i:hover {
@@ -634,18 +668,19 @@ footer .footer-box a i {
     color: pink;
 }
 footer .footer-box a  {
-    color: var(--lightpink);
+    color: var(--body-color);
+    transition: 0.3s;
 }
 footer .footer-box a:hover {
-    color: var(--pink);
+    transform: translateX(10px);
 }
 .copyright {
     width: 100%;
     text-align: center;
     font-size: 13px;
     padding: 5px 0;
-    background-color: var(--darkpink);
+    background-color: var(--main-color);
 }
 .copyright span {
-    color: var(--lightpink);
+    color: var(--body-color);
 }

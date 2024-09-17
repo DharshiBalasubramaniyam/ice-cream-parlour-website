@@ -7,9 +7,12 @@ function addProductsToMenu() {
     products_list.forEach(product => {
         let box = document.createElement("div");
         box.setAttribute("class", "box"); box.setAttribute("id", product.id);
-        box.innerHTML = `<div class="off">-${product.off}%</div>
-                            <i class="fa fa-heart wish" aria-hidden="true"></i>
-                            <img src="${product.image}" alt="">
+        box.innerHTML = `<div class="image-wrapper">
+                        <div class="off">-${product.off}%</div>
+                        <i class="fa fa-heart wish" aria-hidden="true"></i>
+                        <img src="${product.image}" alt="">
+                        <div class="cat-label">${product.category}</div>
+                    </div>
                             <div class="name-price">
                                 <div class="name">${product.name}</div>
                                 <div class="price">$${product.price}</div>
@@ -32,14 +35,14 @@ const decreaseBtns = document.querySelectorAll(".decrease");
 console.log(increaseBtns);
 
 increaseBtns.forEach(btn => {
-    btn.addEventListener("click", ()=>{
+    btn.addEventListener("click", () => {
         btn.previousElementSibling.textContent = parseInt(btn.previousElementSibling.textContent) + 1;
         console.log("incremented");
     });
 });
 decreaseBtns.forEach(btn => {
-    btn.addEventListener("click", ()=>{
-        if(btn.nextElementSibling.textContent>0) {
+    btn.addEventListener("click", () => {
+        if (btn.nextElementSibling.textContent > 0) {
             btn.nextElementSibling.textContent = parseInt(btn.nextElementSibling.textContent) - 1;
         }
         console.log("decremented");
