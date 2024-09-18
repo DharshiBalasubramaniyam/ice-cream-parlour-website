@@ -251,25 +251,33 @@ h3{text-align: center; margin-top: -20px;}
 }
 .home .text{
     width: 50%;
-    color: rgb(66, 66, 66);
+    color: rgb(65, 65, 65);
 }
 .home .text h3 {
     font-size: 40px;
     font-weight: 400;
     text-align: left;
     margin:20px 0 0 0;
+    font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
+    background: -webkit-linear-gradient(var(--secondary-color), var(--main-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .home .text h1 {
     font-size:80px;
+    background: -webkit-linear-gradient(var(--secondary-color), var(--main-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 .home .text h4 {
     font-size: 22px;
     font-weight: 400;
     margin-bottom: 25px;
+    font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
 }
 .home .image {
-    padding: 15px 0;
     width: 50%;
 }
 .home .image img {
