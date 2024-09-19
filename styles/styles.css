@@ -264,17 +264,65 @@ h3{text-align: center; margin-top: -20px;}
     flex-direction: row;
     position: relative;
 }
-.home .design2 {
-    top: 100px;
+.home .design2{
+    animation-name: zoom;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    top: 70px;
     left: -75px;
 }
 .home .design4 {
     bottom: 70px;
     left: 40%;
+    height: 100px;
+    width: 100px;
+    animation-name: rotate;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
 }
 .home .design5 {
     top: 200px;
     right: -80px;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(90%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+@keyframes move {
+    0% {
+        right: -80px;
+        top: 200px;
+    }
+    50% {
+        right: -20px;
+        top: 170px;
+    }
+    100% {
+        right: -80px;
+        top: 200px;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .home .text{
     width: 50%;
@@ -310,6 +358,10 @@ h3{text-align: center; margin-top: -20px;}
 .home .image img {
     width: 100%;
     height: 70%;
+    animation-name: zoom;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
 }
 
 /* -------------about section styles------------------- */
@@ -506,7 +558,7 @@ h3{text-align: center; margin-top: -20px;}
 
 /* -------------contact section styles------------------- */
 .contact {
-    background: url('../images/design1.png') left top / 200px 200px no-repeat, url('../images/design1.png') right bottom / 250px 250px no-repeat;
+    background: url('../images/design2.png') left top / 200px 200px no-repeat, url('../images/design5.png') right bottom / 250px 250px no-repeat;
 }
 .contact form {
     flex-direction: column;
@@ -631,7 +683,7 @@ h3{text-align: center; margin-top: -20px;}
 
 /* -------------reviews section styles------------------- */
 .news-letter {
-    background: url('../images/design6.png') right bottom / 200px 200px no-repeat;
+    background: url('../images/design7.png') right bottom / 200px 200px no-repeat;
 }
 .news-letter h3 {
     font-style: oblique;
@@ -690,7 +742,7 @@ footer .footer-box .icons i {
     overflow: hidden;
 }
 footer .footer-box .icons i:hover {
-    color: rgb(255, 165, 180);
+    color: var(--ternary-color);
 }
 footer .footer-box a i {
     font-size: 15px;
@@ -704,6 +756,7 @@ footer .footer-box a  {
 }
 footer .footer-box a:hover {
     transform: translateX(10px);
+    color: var(--ternary-color);
 }
 .copyright {
     width: 100%;
