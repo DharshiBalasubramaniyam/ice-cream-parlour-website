@@ -16,7 +16,7 @@ body {
 }
 :root {
     --ternary-color:#656565;
-    --main-color:#e72978;
+    --main-color:#f13785;
     --body-color:#ffffff;
     --secondary-color: #fecee2;
 }
@@ -48,9 +48,9 @@ button:hover, input[type="submit"]:hover{
 button:active,input[type="submit"]:active {
     transform: scale(0.95);
 }
-section, .nav-bar{
+section{
     width: 100%;
-    max-width: 1300px;
+    padding: 0 100px;
 }
 section {
     margin: 20px 0;
@@ -90,6 +90,12 @@ h3{text-align: center; margin-top: -20px;}
     width: 0;
 }
 
+.design1, .design2, .design3, .design4, .design5 {
+    position: absolute;
+    z-index: -1;
+    height: 200px;
+    width: 200px;
+}
 /* -------------header styles------------------- */
 .nav-bar {
     position: fixed; top: 0;
@@ -98,7 +104,10 @@ h3{text-align: center; margin-top: -20px;}
     align-items: center;
     justify-content: space-between;
     height: 70px;
+    width: 100%;
     z-index: 1000;
+    background-color: var(--secondary-color);
+    padding: 0 110px;
 }
 .nav-bar .logo{
     display: flex;
@@ -253,6 +262,19 @@ h3{text-align: center; margin-top: -20px;}
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    position: relative;
+}
+.home .design2 {
+    top: 100px;
+    left: -75px;
+}
+.home .design4 {
+    bottom: 70px;
+    left: 40%;
+}
+.home .design5 {
+    top: 200px;
+    right: -80px;
 }
 .home .text{
     width: 50%;
@@ -291,7 +313,9 @@ h3{text-align: center; margin-top: -20px;}
 }
 
 /* -------------about section styles------------------- */
-
+.about {
+    background: url('../images/design3.png') left top / 200px 200px no-repeat, url('../images/design2.png') right bottom / 250px 250px no-repeat;
+}
 .about .about-box .image {
     width: 100%;
     height:500px;
@@ -322,7 +346,7 @@ h3{text-align: center; margin-top: -20px;}
     line-height: 25px;
 }
 .about .about-box .text ul li {
-    margin: 15px 0;
+    margin: 10px 0;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -344,6 +368,7 @@ h3{text-align: center; margin-top: -20px;}
     font-weight: 600;
 }
 /* -------------products section styles------------------- */
+
 .categories-wrapper {
     margin-bottom: 20px;
     text-align: center;
@@ -362,6 +387,11 @@ h3{text-align: center; margin-top: -20px;}
 }
 .categories-wrapper button:not(.active):hover{
     background-color: var(--secondary-color);
+}
+.products {
+    background: url('../images/design7.png') left top / 100px 100px no-repeat,
+    url('../images/design7.png') right 500px / 100px 100px no-repeat,
+    url('../images/design7.png') 50% 50% / 100px 100px no-repeat;
 }
 .products .products-box .box {
     position: relative;
@@ -475,6 +505,9 @@ h3{text-align: center; margin-top: -20px;}
 }
 
 /* -------------contact section styles------------------- */
+.contact {
+    background: url('../images/design1.png') left top / 200px 200px no-repeat, url('../images/design1.png') right bottom / 250px 250px no-repeat;
+}
 .contact form {
     flex-direction: column;
 }
@@ -516,6 +549,10 @@ h3{text-align: center; margin-top: -20px;}
 }
 
 /* -------------reviews section styles------------------- */
+.reviews {
+    background: url('../images/design4.png') left bottom / 200px 200px no-repeat;
+
+}
 .reviews .reviews-box {
     padding: 35px 0;
 }
@@ -593,6 +630,9 @@ h3{text-align: center; margin-top: -20px;}
 }
 
 /* -------------reviews section styles------------------- */
+.news-letter {
+    background: url('../images/design6.png') right bottom / 200px 200px no-repeat;
+}
 .news-letter h3 {
     font-style: oblique;
 }

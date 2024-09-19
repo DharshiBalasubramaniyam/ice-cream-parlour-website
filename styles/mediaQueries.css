@@ -129,4 +129,8 @@
         font-size: 15px;
         padding: 7px 12px;
     }
+    .home .design4,
+    .about .design3 {
+        opacity: 0.3;
+    }
 }
