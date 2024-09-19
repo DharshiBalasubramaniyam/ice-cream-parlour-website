@@ -15,9 +15,10 @@ body {
     background-color: var(--body-color);
 }
 :root {
-    --main-color:#f9048b;
+    --ternary-color:#656565;
+    --main-color:#e72978;
     --body-color:#ffffff;
-    --secondary-color: #ffc6de;
+    --secondary-color: #fecee2;
 }
 ::selection {
     background-color: var(--main-color);
@@ -50,7 +51,6 @@ button:active,input[type="submit"]:active {
 section, .nav-bar{
     width: 100%;
     max-width: 1300px;
-    /* background-color: blue; */
 }
 section {
     margin: 20px 0;
@@ -60,6 +60,8 @@ section > h1 {
     text-align: center;
     margin-bottom: 20px;
     font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
+   color: var(--ternary-color);
+
 }
 section > h1 span {
     color: var(--main-color);
@@ -125,7 +127,7 @@ h3{text-align: center; margin-top: -20px;}
 }
 .nav-bar .nav-links a:hover,
 .nav-bar .nav-links a.active {
-    color: black;
+    color: var(--ternary-color);
 }
 .nav-bar .icons {
     display: flex;
@@ -143,7 +145,7 @@ h3{text-align: center; margin-top: -20px;}
     transition: 0.3s;    
 }
 .nav-bar .icons i:hover {
-    color: black;
+    color: var(--ternary-color);
 }
 .nav-bar .icons i.menu {
     display: none;
@@ -222,7 +224,7 @@ h3{text-align: center; margin-top: -20px;}
     transition: 0.3s;
 }
 .cart .close-cart:hover, .remove:hover {
-    color: black;
+    color: var(--ternary-color);
 }
 .cart ul li .text .remove {
     font-size: 15px;
@@ -278,6 +280,7 @@ h3{text-align: center; margin-top: -20px;}
     font-weight: 400;
     margin-bottom: 25px;
     font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--ternary-color);
 }
 .home .image {
     width: 50%;
@@ -285,58 +288,6 @@ h3{text-align: center; margin-top: -20px;}
 .home .image img {
     width: 100%;
     height: 70%;
-}
-
- /* -------------offers styles------------------- */
-
-.offer .box-container{
-    justify-content: center;
-}
-.offer .offer-box .box {
-    background-color: var(--secondary-color);
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 5px;
-}
-.offer .offer-box .box:hover .image img {
-    transform: scale(0.95);
-}
-.offer .offer-box .box .text {
-    flex: 1 1 280px;
-    padding: 5px;
-}
-.offer .offer-box .box .image{
-    flex: 1 1 300px;
-}
-.offer .offer-box .box .text  .off {
-    font-size: 20px;
-    margin-bottom: 25px;
-    color: var(--main-color);
-}
-.offer .offer-box .box .text  .off span {
-    font-size: 30px;
-    font-weight: 600;
-}
-.offer .offer-box .box .text  .price {
-    font-size: 30px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-}
-.offer .offer-box .box .text  .price .new {
-    font-weight: 600;
-    margin-right: 15px;
-
-}
-.offer .offer-box .box .text  .price .old {
-    font-size: 20px;
-    text-decoration: line-through;
-}
-.offer .offer-box .box .image img {
-    width: 98%;
-    height: 98%;
-    transition: 0.3s;
 }
 
 /* -------------about section styles------------------- */
@@ -347,9 +298,7 @@ h3{text-align: center; margin-top: -20px;}
     max-width: 640px;
     overflow: hidden;
     padding: 0;
-    background-color: var(--secondary-color);
     border-radius: 10px;
-    border: 2px solid var(--main-color);
 }
 .about .about-box .image img{
     height:100%;
@@ -367,6 +316,7 @@ h3{text-align: center; margin-top: -20px;}
 .about .about-box .text h2 {
     font-size: 30px;
     font-weight: 600;
+    color: var(--ternary-color);
 }
 .about .about-box .text p {
     line-height: 25px;
@@ -407,7 +357,7 @@ h3{text-align: center; margin-top: -20px;}
 
 }
 .categories-wrapper button:not(.active){
-    color: black;
+    color: var(--ternary-color);
     background-color: transparent;
 }
 .categories-wrapper button:not(.active):hover{
@@ -617,6 +567,7 @@ h3{text-align: center; margin-top: -20px;}
 }
 .reviews .reviews-box .box .text {
     margin-top: 15px;
+    line-height: 25px;
 }
 .reviews .reviews-box .box .quote {
     position: absolute;
@@ -666,7 +617,7 @@ h3{text-align: center; margin-top: -20px;}
 /* -------------footer styles------------------- */
 footer {
     padding: 25px 80px;
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     width: 100%;
     height: max-content;
     display: flex;
@@ -685,15 +636,17 @@ footer .footer-box h1{
     font-size: 25px;
     margin-bottom: 15px;
     font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--ternary-color);
 }
 footer .footer-box p {
-    color: var(--body-color);
+    color: var(--main-color);
     font-size: 15px;
     margin-bottom: 10px;
+    line-height: 25px;
 }
 footer .footer-box .icons i {
     font-size: 25px;
-    color: var(--body-color);
+    color: var(--main-color);
     overflow: hidden;
 }
 footer .footer-box .icons i:hover {
@@ -702,11 +655,12 @@ footer .footer-box .icons i:hover {
 footer .footer-box a i {
     font-size: 15px;
     margin-right: 10px;
-    color: pink;
+    color: var(--main-color);
 }
 footer .footer-box a  {
-    color: var(--body-color);
+    color: var(--main-color);
     transition: 0.3s;
+    line-height: 25px;
 }
 footer .footer-box a:hover {
     transform: translateX(10px);
@@ -716,8 +670,8 @@ footer .footer-box a:hover {
     text-align: center;
     font-size: 13px;
     padding: 5px 0;
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
 }
 .copyright span {
-    color: var(--body-color);
+    color: var(--main-color);
 }
