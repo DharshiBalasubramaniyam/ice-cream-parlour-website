@@ -17,7 +17,7 @@ body {
 :root {
     --main-color:#f9048b;
     --body-color:#ffffff;
-    --secondary-color: #fff1f4;
+    --secondary-color: #ffc6de;
 }
 ::selection {
     background-color: var(--main-color);
@@ -120,8 +120,11 @@ h3{text-align: center; margin-top: -20px;}
     color: var(--main-color);
     text-transform: capitalize;
     transition: 0.3s;
+    font-size: 18px;
+    font-weight: 600;
 }
-.nav-bar .nav-links a:hover {
+.nav-bar .nav-links a:hover,
+.nav-bar .nav-links a.active {
     color: black;
 }
 .nav-bar .icons {
@@ -269,7 +272,6 @@ h3{text-align: center; margin-top: -20px;}
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
-    
 }
 .home .text h4 {
     font-size: 22px;
@@ -341,12 +343,12 @@ h3{text-align: center; margin-top: -20px;}
 
 .about .about-box .image {
     width: 100%;
-    height:450px;
+    height:500px;
     max-width: 640px;
     overflow: hidden;
     padding: 0;
     background-color: var(--secondary-color);
-    border-radius: 50%;
+    border-radius: 10px;
     border: 2px solid var(--main-color);
 }
 .about .about-box .image img{
@@ -356,28 +358,41 @@ h3{text-align: center; margin-top: -20px;}
 .about .about-box .text {
     width: 100%;
     max-width: 640px;
-    height: 450px;
+    height: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    gap: 15px;
 }
 .about .about-box .text h2 {
-    font-size: 28px;
-    text-align: center;
-    font-weight: 400;
-    color: var(--main-color);
-    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 600;
 }
 .about .about-box .text p {
-    font-size: 18px;
-    letter-spacing: 1.2px;
-    text-align: center;
+    line-height: 25px;
 }
-.about .about-box .text button {
-    margin: 20px 0;
+.about .about-box .text ul li {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-
+.about .about-box .text ul li .feature-icon {
+    height: 30px;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+.about .about-box .text ul li i {
+    color: var(--main-color);
+}
+.about .about-box .text ul li span span{
+    color: var(--main-color);
+    font-weight: 600;
+}
 /* -------------products section styles------------------- */
 .categories-wrapper {
     margin-bottom: 20px;
@@ -408,7 +423,7 @@ h3{text-align: center; margin-top: -20px;}
     justify-content: center;
     transition: 0.3s;
     /*  */
-    border: 2px solid rgb(203, 203, 203);
+    border: 2px solid var(--secondary-color);
 }
 .image-wrapper {
     width: 100%;
@@ -480,7 +495,6 @@ h3{text-align: center; margin-top: -20px;}
 .products .products-box .box .qty span {
     margin: 15px 0;
     display: inline-block;
-    background-color: var(--secondary-color);
     height: 35px;
     width: 45px;
     line-height: 31px;
@@ -527,12 +541,10 @@ h3{text-align: center; margin-top: -20px;}
 .contact form .input-box label {
     font-size: 16px;
     margin-bottom: 3px;
-    color: var(--main-color);
 }
 .contact form .input-box input,
 .contact form .input-box textarea  {
-    background:var(--secondary-color);
-    border: 2px solid var(--secondary-color);
+    border: 2px solid var(--main-color);
     font-size: 15px;
     width: 100%;
     padding: 7px 10px;
@@ -542,7 +554,7 @@ h3{text-align: center; margin-top: -20px;}
 }
 .contact form .input-box input:focus,
 .contact form .input-box textarea:focus{
-    border: 2px solid var(--main-color);
+    background-color: var(--secondary-color);
 }  
 .contact form .row:last-child{
     display: flex;
@@ -565,17 +577,22 @@ h3{text-align: center; margin-top: -20px;}
     align-items:flex-start;
     justify-content: left;
     flex-direction: column;
-    background-color: var(--secondary-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
     padding: 15px;
     cursor: pointer;
+    transition: 0.3s;
 }
+.reviews .reviews-box .box:hover {
+    background-color: var(--secondary-color);
+}
+
 .reviews .reviews-box .box .top {
     width: 100%;
     height: max-content;
     display: flex;
     align-items: center;
     justify-content: left;
-    color: var(--main-color);
 
 }
 .reviews .reviews-box .box .right {
@@ -600,7 +617,6 @@ h3{text-align: center; margin-top: -20px;}
 }
 .reviews .reviews-box .box .text {
     margin-top: 15px;
-    color: var(--main-color);
 }
 .reviews .reviews-box .box .quote {
     position: absolute;
