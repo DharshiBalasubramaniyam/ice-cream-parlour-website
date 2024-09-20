@@ -2,7 +2,7 @@ const products_list = [
     {
         id: "p001",
         name: "Chocolate Chip Cookie",
-        category: "Regular",
+        flavor_id: "f001",
         off: 5,
         price: 35,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -11,7 +11,7 @@ const products_list = [
     {
         id: "p002",
         name: "Häagen-Dazs Vanilla",
-        category: "Regular",
+        flavor_id: "f001",
         off: 5,
         price: 35,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -20,7 +20,7 @@ const products_list = [
     {
         id: "p003",
         name: "Homemade Vanilla",
-        category: "Regular",
+        flavor_id: "f001",
         off: 5,
         price: 35,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -29,7 +29,7 @@ const products_list = [
     {
         id: "p004",
         name: "Cookies & Cream",
-        category: "Regular",
+        flavor_id: "f001",
         off: 5,
         price: 35,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -38,7 +38,7 @@ const products_list = [
     {
         id: "p005",
         name: "Sea Salt Caramel Gelato",
-        category: "Gelato",
+        flavor_id: "f002",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -47,7 +47,7 @@ const products_list = [
     {
         id: "p006",
         name: "Stracciatella Gelato",
-        category: "Gelato",
+        flavor_id: "f002",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -56,7 +56,7 @@ const products_list = [
     {
         id: "p007",
         name: "Pistachio Gelato",
-        category: "Gelato",
+        flavor_id: "f002",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -65,7 +65,7 @@ const products_list = [
     {
         id: "p008",
         name: "Mediterranean Mint",
-        category: "Gelato",
+        flavor_id: "f002",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -74,7 +74,7 @@ const products_list = [
     {
         id: "p009",
         name: "Raspberry Sorbetto",
-        category: "Sorbet",
+        flavor_id: "f003",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -83,7 +83,7 @@ const products_list = [
     {
         id: "p010",
         name: "Mango Sorbet",
-        category: "Sorbet",
+        flavor_id: "f003",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -92,7 +92,7 @@ const products_list = [
     {
         id: "p011",
         name: "Berry Sorbet",
-        category: "Sorbet",
+        flavor_id: "f003",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -101,7 +101,7 @@ const products_list = [
     {
         id: "p012",
         name: "Lemon Sorbet",
-        category: "Sorbet",
+        flavor_id: "f003",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -110,7 +110,7 @@ const products_list = [
     {
         id: "p013",
         name: "Strawberry Sorbet",
-        category: "Sorbet",
+        flavor_id: "f003",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -119,7 +119,7 @@ const products_list = [
     {
         id: "p014",
         name: "Chocolate Sorbet",
-        category: "Sorbet",
+        flavor_id: "f003",
         off: 4,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -128,7 +128,7 @@ const products_list = [
     {
         id: "p015",
         name: "Original Frozen Yogurt",
-        category: "Frozen Yogurt",
+        flavor_id: "f004",
         off: 25,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -137,7 +137,7 @@ const products_list = [
     {
         id: "p016",
         name: "Frozen Yogurt Vanilla Bean",
-        category: "Frozen Yogurt",
+        flavor_id: "f004",
         off: 10,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -146,7 +146,7 @@ const products_list = [
     {
         id: "p017",
         name: " Strawberry",
-        category: "Frozen Yogurt",
+        flavor_id: "f004",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -155,7 +155,7 @@ const products_list = [
     {
         id: "p018",
         name: "Cake Batter",
-        category: "Frozen Yogurt",
+        flavor_id: "f004",
         off: 12,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -164,7 +164,7 @@ const products_list = [
     {
         id: "p019",
         name: "Greek Yogurt",
-        category: "Frozen Yogurt",
+        flavor_id: "f004",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -173,7 +173,7 @@ const products_list = [
     {
         id: "p020",
         name: "Pistachio",
-        category: "Frozen Yogurt",
+        flavor_id: "f004",
         off: 1,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -182,7 +182,7 @@ const products_list = [
     {
         id: "p021",
         name: "Fudge Brownie",
-        category: "Non Diary/Vegen",
+        flavor_id: "f005",
         off: 0,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -191,7 +191,7 @@ const products_list = [
     {
         id: "p022",
         name: "Peanut Butter",
-        category: "Non Diary/Vegen",
+        flavor_id: "f005",
         off: 3,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -200,7 +200,7 @@ const products_list = [
     {
         id: "p023",
         name: "Mint Chip Dairy-Free",
-        category: "Non Diary/Vegen",
+        flavor_id: "f005",
         off: 15,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -209,7 +209,7 @@ const products_list = [
     {
         id: "p024",
         name: "Oat Milk Chocolate",
-        category: "Non Diary/Vegen",
+        flavor_id: "f005",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",

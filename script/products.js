@@ -1,16 +1,25 @@
-import products_list from "/script/product_database.js";
-console.log(products_list);
+import products_list from "./product_database.js";
+import flavor_list from "./flavor_database.js";
 
-function addProductsToMenu() {
+document.addEventListener("DOMContentLoaded", () => {
+        displayFlavorFilter()
+        displayProducts(products_list)
+    }
+)
+
+// display products
+function displayProducts(products) {
     let productsSection = document.querySelector(".products-box");
+    productsSection.innerHTML = ""
 
-    products_list.forEach(product => {
+    products.forEach(product => {
         let box = document.createElement("div");
+        let flavorName = flavor_list.find(f => f.id == product.flavor_id)?.name;
         box.setAttribute("class", "box"); box.setAttribute("id", product.id);
         box.innerHTML = `<div class="image-wrapper">
                         <div class="off">-${product.off}%</div>
                         <img src="${product.image}" alt="">
-                        <div class="cat-label">${product.category}</div>
+                        <div class="cat-label">${flavorName}</div>
                     </div>
                             <div class="name-price">
                                 <div class="name">${product.name}</div>
@@ -27,11 +36,52 @@ function addProductsToMenu() {
         productsSection.appendChild(box);
     });
 }
-addProductsToMenu();
+
+// display flavors filter
+function displayFlavorFilter() {
+
+    let flavorFilterSection = document.querySelector(".categories-wrapper");
+
+    let allButton = document.createElement("button");
+    allButton.setAttribute("id", "all");
+    allButton.setAttribute("class", "active");
+    allButton.textContent = "All";
+    flavorFilterSection.appendChild(allButton);
+    allButton.addEventListener("click", () => {
+        flavorFilterSection.querySelector(".active").classList.remove("active")
+        allButton.classList.add("active")
+        filterProducts("all")
+    })
+
+    flavor_list.forEach(flavor => {
+        let button = document.createElement("button");
+        button.setAttribute("id", flavor.id);
+        button.textContent = flavor.name;
+        button.addEventListener("click", () => {
+            flavorFilterSection.querySelector(".active")?.classList.remove("active")
+            button.classList.add("active")
+            filterProducts(flavor.id)
+        })
+        flavorFilterSection.appendChild(button);
+    });
+
+}
+
+function filterProducts(id) {
+
+    let productsToDisplay = products_list
+
+    if (id != "all") {
+        productsToDisplay = products_list.filter(p => p.flavor_id == id)
+    }
+    console.log(productsToDisplay)
+
+    displayProducts(productsToDisplay)
+
+}
 
 const increaseBtns = document.querySelectorAll(".increase");
 const decreaseBtns = document.querySelectorAll(".decrease");
-console.log(increaseBtns);
 
 increaseBtns.forEach(btn => {
     btn.addEventListener("click", () => {

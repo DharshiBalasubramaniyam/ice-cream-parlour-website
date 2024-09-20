@@ -85,7 +85,8 @@ section>h1 span {
 .box-container {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap:wrap;
     gap: 15px;
 }
 
@@ -629,7 +630,7 @@ h3 {
     align-items: center;
     justify-content: center;
     transition: 0.3s;
-    /*  */
+    max-width: 350px;
     border: 2px solid var(--secondary-color);
 }
 

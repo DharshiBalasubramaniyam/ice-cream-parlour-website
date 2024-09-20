@@ -20,3 +20,5 @@ const falvors_list = [
         name: "Non Diary/Vegen"
     }
 ]
+
+export default falvors_list;
