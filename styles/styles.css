@@ -232,13 +232,13 @@ h3 {
 }
 
 .cart .no-empty-cart.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
-
 .cart ul li {
-    padding: 5px;
-    background-color: rgb(255, 243, 245);
+    padding: 7px;
     margin: 10px 0;
+    border: 2px solid var(--ternary-color);
 }
 
 .cart ul li img {
@@ -247,10 +247,10 @@ h3 {
     width: 50px;
     margin-right: 10px;
 }
-
 .cart ul li .text {
     position: relative;
     font-size: 13px;
+    line-height: 17px;
 }
 
 .cart ul li .text .price {
@@ -267,7 +267,7 @@ h3 {
 .cart .total {
     background-color: var(--secondary-color);
     padding: 10px;
-    color: var(--main-color);
+    margin-top: 15px;
 }
 
 .cart button {
@@ -276,7 +276,7 @@ h3 {
 }
 
 .cart .close-cart,
-.remove {
+.remove-cart-item-btn {
     position: absolute;
     right: 10px;
     cursor: pointer;
@@ -286,11 +286,11 @@ h3 {
 }
 
 .cart .close-cart:hover,
-.remove:hover {
+.remove-cart-item-btn:hover {
     color: var(--ternary-color);
 }
 
-.cart ul li .text .remove {
+.cart ul li .text .remove-cart-item-btn {
     font-size: 15px;
     top: 0;
     right: 0;
@@ -309,9 +309,6 @@ h3 {
 .cart .empty-cart.active {
     display: inline;
 }
-
-
-
 
 /* -------------home styles------------------- */
 .home {
