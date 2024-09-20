@@ -100,6 +100,10 @@ function filterProducts(id) {
 
 // Add items to cart
 function addToCart(e) {
+
+    document.querySelector(".empty-cart").classList.remove("active")
+    document.querySelector(".no-empty-cart").classList.add("active")
+    
     let cartItemId = e.target.parentElement.getAttribute("id");
 
     if (cartItems.filter(item => item?.itemId == cartItemId).length != 0) {
@@ -147,8 +151,7 @@ function handleRemoveButtonInCart() {
 
 function displayCartItems() {
 
-    document.querySelector(".empty-cart").classList.remove("active")
-    document.querySelector(".no-empty-cart").classList.add("active")
+    
 
     const cartUlList = document.querySelector(".cart-list-items");
     cartUlList.innerHTML = "";
