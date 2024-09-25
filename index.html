@@ -29,11 +29,11 @@
             </div>
             <div class="nav-links">
                 <a href="#home" class="link active">home</a>
+                <a href="#services" class="link">services</a>
                 <a href="#about" class="link">about</a>
                 <a href="#products" class="link">products</a>
-                <a href="#contact" class="link">contact</a>
                 <a href="#reviews" class="link">reviews</a>
-                <a href="#faqs" class="link">faqs</a>
+                <a href="#contact" class="link">contact</a>
             </div>
             <div class="icons">
                 <div class="icon">
@@ -72,19 +72,53 @@
 
         <!-- Hero -->
         <section class="home" id="home">
-            <img src="./images/design1.png" class="design2">
-            <img src="./images/design7.png" class="design4">
-            <img src="./images/design1.png" class="design5">
+            <img src="./images/design1.png" class="design1">
+            <img src="./images/design2.png" class="design2">
+            <img src="./images/design1.png" class="design3">
             <div class="text">
-                <h3>Get Ready for a</h3>
-                <h1>Taste Adventure</h1>
+                <h1>Scoop into Happiness, Anytime, Anywhere!</h1>
                 <h4>Welcome to the frozen feast, where the world of frozen delights comes alive! Get ready to embark on
-                    a mouthwatering journey through a virtual ice cream paradise. </h4>
-                <button>Order Now</button>
+                    a mouthwatering journey through a virtual ice cream paradise. Whether you’re craving a cozy in-store treat, delivery to your doorstep, or a custom ice cream experience at your next event, we’re here to serve you the sweetest moments, wherever you are.</h4>
             </div>
             <div class="image">
                 <img src="images/Hero1.png" alt="">
             </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services" id="services">
+            <h1>What <span>we do?</span></h1>
+            <div class="services-card-wrapper">
+                <div class="service-card">
+                    <div>
+                        <h2>Dine-In</h2>
+                        <h3>Chill With Us – Indulge In-Store</h3>
+                        <img src="./images/dine in.png" height="150px" width="150px">
+                        <p>Whether you're enjoying a family outing, a date, or a treat just for yourself, our dine-in experience is the perfect way to savor handcrafted scoops, decadent sundaes, and custom creations.</p>
+                        <button>Find the nearest store to you <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>    
+                </div>
+                <div class="service-card">  
+                    <div>
+                        <h2>Island-Wide Delivery</h2>
+                        <h3>Ice Cream On the Go – Delivered to Your Door</h3>
+                        <img src="./images/delivary.png" height="150px" width="150px">
+                        <p>Whether it’s a late-night craving or a sweet surprise for someone special, we’ll bring freshly scooped goodness straight to your doorstep – fast, fresh, and frozen to perfection.</p>
+                        <button>Enter your address <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>  
+                </div>
+                <div class="service-card">
+                    <div>
+                        <h2>Catering</h2>
+                        <h3>Sweeten Your Event – Ice Cream Catering</h3>
+                        <img src="./images/event.png" height="150px" width="150px">
+                        <p>Whether it's a birthday party, wedding, corporate event, or any celebration, we provide custom ice cream bars, sundae stations, or full-service catering to keep your guests delighted. </p>
+                        <button>Tell us about your event <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>    
+                </div>
+
+            </div>
+            
         </section>
 
         <!-- About -->
@@ -126,33 +160,6 @@
 
         </section>
 
-        <section class="services">
-            <div class="service-card">
-                <div>
-                    <h2>Experience Ice Cream Like Never Before</h2>
-                    <img src="./images/dine in.png" height="150px" width="150px">
-                    <p>Whether you're enjoying a family outing, a date, or a treat just for yourself, our dine-in experience is the perfect way to savor handcrafted scoops, decadent sundaes, and custom creations.</p>
-                    <button>Find the nearest store to you <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                </div>    
-            </div>
-            <div class="service-card">  
-                <div>
-                    <h2>Deliciousness Delivered to Your Door</h2>
-                    <img src="./images/delivary.png" height="150px" width="150px">
-                    <p>Whether it’s a late-night craving or a sweet surprise for someone special, we’ll bring freshly scooped goodness straight to your doorstep – fast, fresh, and frozen to perfection.</p>
-                    <button>Enter your address <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                </div>  
-            </div>
-            <div class="service-card">
-                <div>
-                    <h2>Bring the Scoop to Your Special Event</h2>
-                    <img src="./images/event.png" height="150px" width="150px">
-                    <p>Whether it's a birthday party, wedding, corporate event, or any celebration, we provide custom ice cream bars, sundae stations, or full-service catering to keep your guests delighted. </p>
-                    <button>Tell us about your event <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                </div>    
-            </div>
-        </section>
-
         <!-- Products -->
         <section class="products" id="products">
             <h1>Our <span>Products</span></h1>
@@ -161,53 +168,6 @@
             </div>
             <div class="box-container products-box">
             </div>
-        </section>
-
-        <!-- contact -->
-        <section class="contact" id="contact">
-            <h1><span>Contact</span> Us</h1>
-            <form action="#" novalidate class="box-container" id="contact-form">
-                <div class="row">
-                    <div class="input-box">
-                        <label for="fname">Your First Name</label><br>
-                        <input type="text" id="fname"
-                            oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                    <div class="input-box">
-                        <label for="lname">Your Last Name</label><br>
-                        <input type="text" id="lname"
-                            oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="input-box">
-                        <label for="email">Your Email</label><br>
-                        <input type="email" id="email"
-                            oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                    <div class="input-box">
-                        <label for="phone">Your Contact Number</label><br>
-                        <input type="tel" id="phone"
-                            oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-box">
-                        <label for="message">Your Message</label><br>
-                        <textarea name="" id="message" cols="30" rows="10"
-                            oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                </div>
-                <div class="row">
-                    <input type="submit" value="Send">
-                </div>
-            </form>
         </section>
 
         <!-- reviews -->
@@ -358,6 +318,53 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
+        </section>
+
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <h1><span>Contact</span> Us</h1>
+            <form action="#" novalidate class="box-container" id="contact-form">
+                <div class="row">
+                    <div class="input-box">
+                        <label for="fname">Your First Name</label><br>
+                        <input type="text" id="fname"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="lname">Your Last Name</label><br>
+                        <input type="text" id="lname"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box">
+                        <label for="email">Your Email</label><br>
+                        <input type="email" id="email"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Your Contact Number</label><br>
+                        <input type="tel" id="phone"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="message">Your Message</label><br>
+                        <textarea name="" id="message" cols="30" rows="10"
+                            oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
         </section>
 
         <!-- news letter -->

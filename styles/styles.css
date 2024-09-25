@@ -114,9 +114,7 @@ h3 {
 
 .design1,
 .design2,
-.design3,
-.design4,
-.design5 {
+.design3 {
     position: absolute;
     z-index: -1;
     height: 200px;
@@ -320,7 +318,7 @@ h3 {
     position: relative;
 }
 
-.home .design2 {
+.home .design1 {
     animation-name: zoom;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -328,7 +326,7 @@ h3 {
     left: -75px;
 }
 
-.home .design4 {
+.home .design2 {
     bottom: 70px;
     left: 40%;
     height: 100px;
@@ -338,7 +336,7 @@ h3 {
     animation-iteration-count: infinite;
 }
 
-.home .design5 {
+.home .design3 {
     top: 200px;
     right: -80px;
     animation-name: move;
@@ -396,30 +394,18 @@ h3 {
     color: rgb(65, 65, 65);
 }
 
-.home .text h3 {
-    font-size: 40px;
-    font-weight: 400;
-    text-align: left;
-    margin: 20px 0 0 0;
-    font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
-    background: -webkit-linear-gradient(var(--secondary-color), var(--main-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .home .text h1 {
-    font-size: 80px;
-    background: -webkit-linear-gradient(var(--secondary-color), var(--main-color));
+    font-size: 65px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .home .text h4 {
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 25px;
-    font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    line-height: 35px;
     color: var(--ternary-color);
 }
 
@@ -437,10 +423,6 @@ h3 {
 }
 
 /* -------------about section styles------------------- */
-.about {
-    background: url('../images/design3.png') left top / 200px 200px no-repeat, url('../images/design2.png') right bottom / 250px 250px no-repeat;
-}
-
 .about .about-box .image {
     width: 100%;
     height: 500px;
@@ -501,7 +483,7 @@ h3 {
     font-weight: 600;
 }
 
-.services {
+.services-card-wrapper {
     display: flex;
     gap: 15px;
     padding-block: 15px;
@@ -547,6 +529,11 @@ h3 {
 .service-card>div h2 {
     text-align: center;
     font-family: "Permanent Marker", Verdana, Geneva, Tahoma, sans-serif;
+}
+.service-card>div h3 {
+    font-style: oblique;
+    font-size: 16px;
+    width: 100%;
 }
 
 .service-card>div p {
@@ -610,12 +597,6 @@ h3 {
 
 .categories-wrapper button:not(.active):hover {
     background-color: var(--secondary-color);
-}
-
-.products {
-    background: url('../images/design7.png') left top / 100px 100px no-repeat,
-        url('../images/design7.png') right 500px / 100px 100px no-repeat,
-        url('../images/design7.png') 50% 50% / 100px 100px no-repeat;
 }
 
 .products .products-box .box {
@@ -746,10 +727,6 @@ h3 {
 }
 
 /* -------------contact section styles------------------- */
-.contact {
-    background: url('../images/design2.png') left top / 200px 200px no-repeat, url('../images/design5.png') right bottom / 250px 250px no-repeat;
-}
-
 .contact form {
     flex-direction: column;
 }
@@ -798,11 +775,6 @@ h3 {
 }
 
 /* -------------reviews section styles------------------- */
-.reviews {
-    background: url('../images/design4.png') left bottom / 200px 200px no-repeat;
-
-}
-
 .reviews .reviews-box {
     padding: 35px 0;
 }
@@ -889,9 +861,6 @@ h3 {
 }
 
 /* -------------reviews section styles------------------- */
-.news-letter {
-    background: url('../images/design7.png') right bottom / 200px 200px no-repeat;
-}
 
 .news-letter h3 {
     font-style: oblique;
