@@ -73,7 +73,7 @@
         position: fixed;
         top: 70px;
         height: fit-content;
-        background-color: var(--body-color);
+        background-color: var(--ternary-color);
         width: 100%;
         left: -100%;
         transition: 0.3s;
@@ -103,13 +103,12 @@
 
     .home {
         height: max-content;
-        padding: 50px 15px 0 0;
+        padding: 50px 10px 0 10px;
         flex-direction: column-reverse;
     }
 
     .home .text {
         width: 100%;
-        padding-left: 10px;
     }
 
     .home .text h1 {
@@ -119,6 +118,7 @@
     .home .text h4 {
         font-size: 15px;
         margin-bottom: 15px;
+        overflow: visible;
     }
 
     .home .image {
@@ -180,7 +180,7 @@
     }
 
     .footer .footer-row {
-        padding: 20px;
+        /* padding: 20px; */
         gap: 1rem;
     }
 
