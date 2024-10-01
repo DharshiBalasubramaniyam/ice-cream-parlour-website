@@ -421,7 +421,7 @@ h3 {
 }
 
 .home .image img {
-    width: 100%;
+    width: 90%;
     height: 70%;
     animation-name: zoom;
     animation-duration: 5s;
