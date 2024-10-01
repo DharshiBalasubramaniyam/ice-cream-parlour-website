@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IcyCo Ice Cream</title>
+
+    <!-- custom style sheets -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mediaQueries.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+
+    <!-- link to add favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <!-- font awesome icons script -->
+    <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- nav bar -->
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="./images/logo.png" alt="icyco-logo" height="25px" width="25px">
+                <a href="">IcyCo</a>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="link active">home</a>
+                <a href="#services" class="link">services</a>
+                <a href="#about" class="link">about</a>
+                <a href="#products" class="link">products</a>
+                <a href="#reviews" class="link">reviews</a>
+                <a href="#contact" class="link">contact</a>
+            </div>
+            <div class="icons">
+                <div class="icon">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="icon">
+                    <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                            class="no-of-cart-items">0</span></span>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-bars menu" aria-hidden="true" onclick="controlMenu()"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart -->
+        <div class="cart">
+            <i class="fa fa-times close-cart" aria-hidden="true"></i>
+            <h1>Your Cart</h1>
+
+            <div class="no-empty-cart">
+                <ul class="cart-list-items">
+                </ul>
+                <div>
+                    <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                    <button>Check out</button>
+                </div>
+
+            </div>
+
+            <div class="empty-cart active">
+                <p>No items in the cart!</p>
+            </div>
+
+        </div>
+
+        <!-- Hero -->
+        <section class="home" id="home">
+            <!-- <img src="./images/design1.png" class="design1">
+            <img src="./images/design2.png" class="design2">
+            <img src="./images/design1.png" class="design3"> -->
+            <div class="text">
+                <h1>Scoop into Happiness, Anytime, Anywhere!</h1>
+                <h4>Welcome to the frozen feast, where the world of frozen delights comes alive! Get ready to embark on
+                    a mouthwatering journey through a virtual ice cream paradise. Whether you’re craving a cozy in-store
+                    treat, delivery to your doorstep, or a custom ice cream experience at your next event, we’re here to
+                    serve you the sweetest moments, wherever you are.</h4>
+            </div>
+            <div class="image">
+                <img src="images/Hero1.png" alt="">
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services" id="services">
+            <h1>What <span>we do?</span></h1>
+            <div class="services-card-wrapper">
+                <div class="service-card">
+                    <div>
+                        <h2>Dine-In</h2>
+                        <h3>Chill With Us – Indulge In-Store</h3>
+                        <img src="./images/dine in.png" height="150px" width="150px">
+                        <p>Whether you're enjoying a family outing, a date, or a treat just for yourself, our dine-in
+                            experience is the perfect way to savor handcrafted scoops, decadent sundaes, and custom
+                            creations.</p>
+                        <button>Find the nearest store to you <i class="fa fa-arrow-right"
+                                aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div>
+                        <h2>Island-Wide Delivery</h2>
+                        <h3>Ice Cream On the Go – Delivered to Your Door</h3>
+                        <img src="./images/delivary.png" height="150px" width="150px">
+                        <p>Whether it’s a late-night craving or a sweet surprise for someone special, we’ll bring
+                            freshly scooped goodness straight to your doorstep – fast, fresh, and frozen to perfection.
+                        </p>
+                        <button>Enter your address <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div>
+                        <h2>Catering</h2>
+                        <h3>Sweeten Your Event – Ice Cream Catering</h3>
+                        <img src="./images/event.png" height="150px" width="150px">
+                        <p>Whether it's a birthday party, wedding, corporate event, or any celebration, we provide
+                            custom ice cream bars, sundae stations, or full-service catering to keep your guests
+                            delighted. </p>
+                        <button>Tell us about your event <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about">
+            <h1><span>About</span> Us</h1>
+            <div class="box-container about-box">
+                <div class="box image">
+                    <img src="images/about.png" alt="">
+                </div>
+                <div class="box text">
+                    <h2>Get The Cool Down With Our Creamy Creations!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas id quam totam nihil laudantium
+                        assumenda cumque explicabo, placeat nisi delectus consequuntur itaque quod obcaecati cum sint
+                        veritatis quo qui aliquid dolorem labore atque ad? animi? odio tempore, doloremque, illo dolorem
+                        commodi similique aspernatur eos. Cumque repudiandae nemo hic quo beatae a ab debitis libero
+                        porro.</p>
+                    <ul>
+                        <li>
+                            <div class="feature-icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                            <span><span>Range of flavours</span> from our parlour for <span>Dine-in</span> and
+                                <span>Take-out</span> options</span>
+                        </li>
+                        <li>
+                        <li>
+                            <div class="feature-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
+                            <span>Manufactured under <span>strict hygiene</span> and <span>food safety
+                                    conditions</span></span>
+                        </li>
+                        <li>
+                        <li>
+                            <div class="feature-icon"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>
+                            <span><span>Best quality ingredients</span> from globally and locally recognized
+                                suppliers</span>
+                        </li>
+                        <li>
+                        <li>
+                            <div class="feature-icon"><i class="fa fa-smile-o" aria-hidden="true"></i></div>
+                            <span>A welcoming space for families, offering a fun and <span>friendly atmosphere</span>
+                                for all ages.</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Products -->
+        <section class="products" id="products">
+            <h1>Our <span>Products</span></h1>
+            <div class="categories-wrapper">
+                <!-- <button class="active" id="all">All</button> -->
+            </div>
+            <div class="box-container products-box">
+            </div>
+        </section>
+
+        <!-- reviews -->
+        <section class="reviews" id="reviews">
+            <h1>Top <span>Reviews</span></h1>
+
+            <div class="swiper reviews-box">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer1.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit,
+                            vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor
+                            officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer4.webp" alt="">
+                            <div class="right">
+                                <div class="name"><span>Oliviya Lee</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit,
+                            vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor
+                            officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer2.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit,
+                            vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor
+                            officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer5.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Mia Patal</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit,
+                            vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor
+                            officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer3.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit,
+                            vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor
+                            officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer6.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Sopia Devis</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit,
+                            vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor
+                            officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                        <div class="top">
+                            <img src="images/reveiwer7.jpg" alt="">
+                            <div class="right">
+                                <div class="name"><span>Emily Anderson</span> <br> <small>Verfied Customer</small></div>
+                                <div class="stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam earum sit,
+                            vel iusto natus itaque et expedita. At, reiciendis. Quidem asperiores quas deleniti dolor
+                            officia suscipit debitis assumenda molestiae quasi.</div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <h1><span>Contact</span> Us</h1>
+            <form action="#" novalidate class="box-container" id="contact-form">
+                <div class="row">
+                    <div class="input-box">
+                        <label for="fname">Your First Name</label><br>
+                        <input type="text" id="fname"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="lname">Your Last Name</label><br>
+                        <input type="text" id="lname"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-box">
+                        <label for="email">Your Email</label><br>
+                        <input type="email" id="email"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Your Contact Number</label><br>
+                        <input type="tel" id="phone"
+                            oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="message">Your Message</label><br>
+                        <textarea name="" id="message" cols="30" rows="10"
+                            oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </section>
+
+        <!-- footer -->
+        <section class="footer">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Useful links</h4>
+                    <ul class="links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Customer Agreement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Flavors</h4>
+                    <ul class="links">
+                        <li><a href="#">Regular</a></li>
+                        <li><a href="#">Gelato</a></li>
+                        <li><a href="#">Sorbet</a></li>
+                        <li><a href="#">Soft serve</a></li>
+                        <li><a href="#">Frozen Yogurt</a></li>
+                        <li><a href="#">Non Diary/Vegen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul class="links">
+                        <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
+                        <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
+                    </ul>
+                    <h4 style="margin-top: 15px;">Locations</h4>
+                    <ul class="links">
+                        <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
+                                ramankulam-
+                                Malappuram Dt</a></li>
+                        <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
+                                ramankulam-
+                                Malappuram Dt</a></li>
+                        <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
+                                ramankulam-
+                                Malappuram Dt</a></li>
+                        <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
+                                ramankulam-
+                                Malappuram Dt</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Need Help?</h4>
+                    <ul class="links">
+                        <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+                        <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+                        <li><a href="" class="social"><i class="fa-solid fa-envelope"></i> mail@1234567.com</a></li>
+                    </ul>
+                    <h4 style="margin-top: 15px;">Follow Us</h4>
+                    <ul class="links">
+                        <li><a href="#" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="#" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>
+                        Subscribe to our newsletter for a weekly dose
+                        of news, updates, helpful tips, and
+                        exclusive offers.
+                    </p>
+                    <form action="#">
+                        <input type="text" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- copyright -->
+        <div class="copyright">
+            &copy; | @2024 by <span>DharshiB</span> | All Rights Deserved
+        </div>
+
+    </div>
+
+    <script src="script/swiper-bundle.min.js"></script>
+    <script src="script/reviews.js"></script>
+    <script src="script/form.js"></script>
+    <script type="module" src="script/products.js"></script>
+    <script type="module" src="script/nav.js"></script>
+    <script type="module" src="script/cart.js"></script>
+</body>
+
+</html>

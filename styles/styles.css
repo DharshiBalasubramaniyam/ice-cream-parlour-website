@@ -18,9 +18,9 @@ body {
 }
 
 :root {
-    --ternary-color: #640D5F;
+    --ternary-color: hsl(259, 42%, 42%);
     --main-color: #D91656;
-    --body-color: #FFEB55;
+    --body-color: #FFEB00;
     --secondary-color: #EE66A6;
 }
 
@@ -72,7 +72,7 @@ section>h1 {
     font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
-    font-family: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins", "Verdana", Geneva, Tahoma, sans-serif;
     color: var(--ternary-color);
 
 }
@@ -411,7 +411,8 @@ h3 {
     font-size: 20px;
     line-height: 35px;
     color: var(--ternary-color);
-    font-family: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Times New Roman", Times, serif;
+
 
 }
 
