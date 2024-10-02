@@ -996,6 +996,39 @@ h3 {
 
 }
 
+/* scroll bottom to top */
+.scroll-button {
+    position: fixed;
+    bottom: 5%;
+    /* right: 500px; */
+    left: 1400px;
+
+    outline: none;
+    border: none;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+     -webkit-tap-highlight-color: transparent;  
+     background-image: none;
+     background-color: transparent;
+     
+  }
+  
+  .scroll-button > img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .show-btn {
+    opacity: 1 !important;
+    pointer-events: all !important;
+  }
+  
 
 .FAQs h2{
     text-align: center;
