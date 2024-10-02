@@ -49,9 +49,8 @@ input[type="submit"] {
 
 button:hover,
 input[type="submit"]:hover {
-    background: transparent;
-    color: var(--main-color);
-
+    background-color: var(--main-color);
+    color: var(--body-color);
 }
 
 button:active,
@@ -88,6 +87,7 @@ section>h1 span {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
+
 }
 
 .box {
@@ -273,7 +273,13 @@ h3 {
 
 .cart button {
     margin: 15px 0;
-    width: 100%;
+    width: 70%;
+    transition:0.7s;
+    margin-left:30px;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+}
+.cart button:hover {
+    transform:scale(1.1);
 }
 
 .cart .close-cart,
@@ -559,13 +565,14 @@ h3 {
 }
 
 .service-card>div button {
-    background-color: transparent;
-    color: var(--main-color);
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    background-color: var(--main-color);
+    color: var(--body-color);
     border: none;
     width: fit-content;
-    padding: 0;
-    border-radius: 0;
-    transition: 0s;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
     border-bottom: 2px solid transparent;
     margin-bottom: 15px;
     display: flex;
@@ -575,6 +582,7 @@ h3 {
 
 .service-card>div button:hover {
     border-bottom: 2px solid var(--main-color);
+    transform: scale(1.1);
 }
 
 /* -------------products section styles------------------- */
@@ -590,10 +598,11 @@ h3 {
     padding: 7px 20px;
     border: 1px solid var(--main-color);
     margin: 5px;
-
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
 }
 
 .categories-wrapper button:not(.active) {
+    background-image:none;
     color: var(--ternary-color);
     background-color: transparent;
 }
@@ -722,11 +731,14 @@ h3 {
 }
 
 .products .products-box .box button {
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
     width: 70%;
 }
 
 .products .products-box .box button:hover {
-    background-color: transparent;
+    background-color: var(--main-color);
+    color:var(--body-color);
+    transform:scale(1.1);
 }
 
 /* -------------contact section styles------------------- */
@@ -772,11 +784,18 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Ensures no scrollbar appears */
 }
 
 .contact form .row input[type="submit"] {
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%,rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
     margin-top: 15px;
+    transition: 0.7s;
 }
+.contact form .row input[type="submit"]:hover{
+    transform:scale(1.1);
+}
+
 
 /* -------------reviews section styles------------------- */
 .reviews .reviews-box {
@@ -959,12 +978,14 @@ h3 {
 .footer-col form button {
     border-radius: 6px;
     transition: 0.2s ease;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
 }
 
 .footer-col form button:hover {
-    background: transparent;
+    background-color: var(--main-color);
+    color:var(--body-color);
     border: 1px solid var(--body-color);
-    color: var(--body-color);
+    transform:scale(0.95);
 }
 
 .footer-col .icons {
