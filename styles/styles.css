@@ -17,6 +17,11 @@ body {
     background-color: var(--body-color);
 }
 
+.link:target {
+    background-color: #ccc;
+    color: #333;
+  }
+
 :root {
     --ternary-color: #640D5F;
     --main-color: #D91656;

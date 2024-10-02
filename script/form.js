@@ -7,6 +7,25 @@ const message = document.getElementById("message");
 const emailRegex = new RegExp(/[^A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm");
 const phoneRegex = new RegExp(/[^0-9]/, "gm");
 
+// Get all links
+const links = document.querySelectorAll('.link');
+
+// Function to update active link state
+function updateActiveLinkState() {
+  links.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === window.location.hash) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// Call the function on page load
+updateActiveLinkState();
+
+// Call the function on hash change
+window.addEventListener('hashchange', updateActiveLinkState);
+
 contactForm.addEventListener("submit", (e)=> {
     e.preventDefault();
     
