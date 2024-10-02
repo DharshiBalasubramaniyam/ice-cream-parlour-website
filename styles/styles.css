@@ -187,6 +187,9 @@ h3 {
     cursor: pointer;
     transition: 0.3s;
 }
+.spinner {
+    margin-right: 15px;
+}
 
 .nav-bar .icons i:hover {
     color: var(--secondary-color);
@@ -971,7 +974,7 @@ h3 {
 .footer-col .icons {
     display: flex;
     margin-top: 30px;
-    gap: 30px;
+    gap: 40px;
     cursor: pointer;
 }
 
