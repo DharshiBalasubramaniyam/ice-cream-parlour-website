@@ -8,7 +8,7 @@
     .nav-bar .nav-links a {
         margin: 0;
         padding: 0;
-        font-size: 15px;
+        font-size: 17px;
     }
 
     section {
@@ -33,7 +33,7 @@
         margin: 10px;
         padding: 0;
         width: max-content;
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .home .text h3 {
