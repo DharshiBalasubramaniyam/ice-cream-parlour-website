@@ -402,6 +402,7 @@ h3 {
     font-weight: 600;
     margin-bottom: 15px;
     background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
+    background-clip: var(--body-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Spicy Rice", serif;
@@ -797,9 +798,7 @@ h3 {
     transition: 0.3s;
 }
 
-.reviews .reviews-box .box:hover {
-    /* background-color: var(--secondary-color); */
-}
+
 
 .reviews .reviews-box .box .top {
     width: 100%;
