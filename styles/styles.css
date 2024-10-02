@@ -863,6 +863,22 @@ h3 {
 .swiper-pagination-bullet {
     background-color: var(--main-color) !important;
 }
+ .reviews button{
+    position:absolute;
+    top:860%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+button.prev{
+    left:1rem;
+    border-radius: 50%;
+    width: 60px;
+}
+button.next{
+    right:1rem;
+    border-radius: 50%;
+    width: 60px;
+}
 
 /* -------------reviews section styles------------------- */
 
