@@ -730,25 +730,49 @@ h3 {
 }
 
 /* -------------contact section styles------------------- */
+.contact {
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    color: #333;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.contact h1 span {
+    color: var(--ternary-color);
+}
+
 .contact form {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    max-width: 800px; /* Center the form */
+    margin: 0 auto; /* Center the form */
 }
 
 .contact form .row {
     padding: 0;
     width: 100%;
     display: flex;
-    gap: 25px;
+    gap: 20px;
     justify-content: center;
 }
 
 .contact form .input-box {
-    width: 100%;
+    flex: 1; /* Take equal space */
+    min-width: 250px; /* Minimum width for inputs */
+    position: relative; /* For error messages */
 }
 
 .contact form .input-box label {
     font-size: 16px;
-    margin-bottom: 3px;
+    margin-bottom: 8px;
+    font-weight: bold; /* Make labels bold */
 }
 
 .contact form .input-box input,
@@ -756,16 +780,34 @@ h3 {
     border: 2px solid var(--main-color);
     font-size: 15px;
     width: 100%;
-    padding: 7px 10px;
+    padding: 10px;
     transition: 0.3s;
     margin-top: 4px;
     border-radius: 4px;
     background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .contact form .input-box input:focus,
 .contact form .input-box textarea:focus {
-    background-color: var(--secondary-color);
+    background-color: rgba(243, 225, 124, 0.644); /* Subtle background on focus */
+    border-color: var(--body-color); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.contact form .input-box small.error {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: rgb(189, 171, 171);
+    font-size: 12px;
+    display: none; /* Initially hidden */
+}
+
+.contact form .input-box input:invalid + small.error,
+.contact form .input-box input:focus:invalid + small.error,
+.contact form .input-box textarea:invalid + small.error {
+    display: block; /* Show error message */
 }
 
 .contact form .row:last-child {
@@ -776,6 +818,21 @@ h3 {
 
 .contact form .row input[type="submit"] {
     margin-top: 15px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact form .row input[type="submit"]:hover {
+    background-color: var(--ternary-color);
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* -------------reviews section styles------------------- */

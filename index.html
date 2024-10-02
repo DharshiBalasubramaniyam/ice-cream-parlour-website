@@ -332,52 +332,47 @@
             </div>
         </section>
 
-        <!-- contact -->
-        <section class="contact" id="contact">
-            <h1><span>Contact</span> Us</h1>
-            <form action="#" novalidate class="box-container" id="contact-form">
-                <div class="row">
-                    <div class="input-box">
-                        <label for="fname">Your First Name</label><br>
-                        <input type="text" id="fname"
-                            oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                    <div class="input-box">
-                        <label for="lname">Your Last Name</label><br>
-                        <input type="text" id="lname"
-                            oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                </div>
+       <!-- contact -->
+<section class="contact" id="contact">
+    <h1><span>Contact</span> Us</h1>
+    <form action="#" novalidate class="box-container" id="contact-form">
+        <div class="row">
+            <div class="input-box">
+                <label for="fname">Your First Name</label>
+                <input type="text" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                <small class="error"></small>
+            </div>
+            <div class="input-box">
+                <label for="lname">Your Last Name</label>
+                <input type="text" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                <small class="error"></small>
+            </div>
+        </div>
 
-                <div class="row">
-                    <div class="input-box">
-                        <label for="email">Your Email</label><br>
-                        <input type="email" id="email"
-                            oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                    <div class="input-box">
-                        <label for="phone">Your Contact Number</label><br>
-                        <input type="tel" id="phone"
-                            oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-box">
-                        <label for="message">Your Message</label><br>
-                        <textarea name="" id="message" cols="30" rows="10"
-                            oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                </div>
-                <div class="row">
-                    <input type="submit" value="Send">
-                </div>
-            </form>
-        </section>
+        <div class="row">
+            <div class="input-box">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" oninput="this.parentElement.querySelector('small').textContent = ''">
+                <small class="error"></small>
+            </div>
+            <div class="input-box">
+                <label for="phone">Your Contact Number</label>
+                <input type="tel" id="phone" oninput="this.parentElement.querySelector('small').textContent = ''">
+                <small class="error"></small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-box">
+                <label for="message">Your Message</label>
+                <textarea id="message" cols="30" rows="10" oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
+                <small class="error"></small>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Send">
+        </div>
+    </form>
+</section>
 
         <!-- FAQ -->
         <section class="FAQs" id="FAQs">
