@@ -1,4 +1,4 @@
-# 🍦 Ice Cream Parlour Website 🍨
+ #   🍦 Ice Cream Parlour Website 🍨
   
  ![Ice Cream Website Screenshot](/Screenshot%202024-10-02%20121926.png) 
 
@@ -59,15 +59,19 @@ We’re excited to have you contribute to this *Ice Cream Parlour Website* proje
 
 2. **💻 Clone Your Fork**  
    - Once the repository is forked, clone it to your local machine. Open your terminal and run:
-     bash
-     git clone https://github.com/your-username/ice-cream-parlour-website.git
+    ``` bash
+     git clone
+     https://github.com/your-username/ice-cream-parlour-website.git
+    ```
      
    - Replace your-username with your GitHub username.
 
 3. **🌿 Create a New Branch** 
    - Before making any changes, create a new branch for your work:
-     bash
-     git checkout -b your-branch-name
+    ``` bash
+     git checkout
+     -b your-branch-name
+    ```
      
    - Choose a branch name that describes what you're working on, such as fix-navbar or add-contact-form.
 
@@ -80,15 +84,17 @@ We’re excited to have you contribute to this *Ice Cream Parlour Website* proje
 
 6. **💬 Commit Your Changes** 
    - Once your changes are ready, commit them with a descriptive message:
-     bash
+     ```bash
      git add .
      git commit -m "Added feature X or Fixed issue Y"
+     ```
      
 
 7. **📤 Push Your Changes**
    - Push your changes to your forked repository on GitHub:
-     bash
+    ``` bash
      git push origin your-branch-name
+    ```
      
 
 8. **🔄 Create a Pull Request (PR)** 
@@ -101,10 +107,11 @@ We’re excited to have you contribute to this *Ice Cream Parlour Website* proje
 
 ---
 
-By following these steps, you can easily contribute to this project! If you have any questions, feel free to ask in the repository’s discussion or issue section. Happy coding!
+By following these steps, you can easily contribute to this project! If you have any questions, feel free to ask in the repository’s discussion or issue section.
 
 
 # Contribution Points 
+
 *🏆 Contribution Levels:*
 All the tasks will be assigned various levels based on the complexity of the task and skills required to complete it. Every level will provide you a different amount of Points that is:
 - **🥇 Level 1**: 10 Points  
@@ -113,7 +120,7 @@ All the tasks will be assigned various levels based on the complexity of the tas
 
 # GSSoC Guidelines 
 
-It is important for all to adhere to all the Guildines, if found guilty the concequesces can affect your profile. To review the guidlines refer [here] (https://github.com/GSSoC24/Contributor/tree/main/gssoc-guidelines)
+It is important for all to adhere to all the Guildines, if found guilty the concequesces can affect your profile. To review the guidlines refer [here](https://github.com/GSSoC24/Contributor/tree/main/gssoc-guidelines)
 
 ---
 # 📄Ending Note
