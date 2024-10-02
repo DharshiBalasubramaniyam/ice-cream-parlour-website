@@ -43,7 +43,14 @@ function displayProducts(products) {
 
 
         let addToCartButton = document.createElement("button");
+        // if website got reloded and item already exist in cart
+        let existingCartItem = cartItems.find(item => item?.itemId == product.id);
+        if(existingCartItem){
+            addToCartButton.textContent = "Already in the cart - Add again?";
+        }
+        else{
         addToCartButton.textContent = "Add to Cart";
+        }
         addToCartButton.addEventListener("click", (e) => {
             addToCart(e)
         })
@@ -124,12 +131,13 @@ function addToCart(e) {
     }
     else{
 
-    cartItems.push({
-        itemId: cartItemId,
-        pcs: pcs,
-        amount: amount
-    });
-    alert(`${pcs} ${item.name} ice cream/s successfully added to the cart!`);
+        cartItems.push({
+            itemId: cartItemId,
+            pcs: pcs,
+            amount: amount
+        });
+        alert(`${pcs} ${item.name} ice cream/s successfully added to the cart!`);
+        e.target.textContent = "Already in the cart - Add again?";
     }
     localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems))
     
@@ -143,6 +151,12 @@ function handleRemoveButtonInCart() {
     removeBtns.forEach(btn => {
         btn.addEventListener("click", () => {
             cartItems = cartItems.filter(item => item?.itemId != btn.parentElement.parentElement.getAttribute("id"))
+            const productBox = document.querySelector(`.box[id='${btn.parentElement.parentElement.getAttribute("id")}']`);
+            if (productBox) {
+                // Change the button text to "Add to Cart"
+                const addToCartButton = productBox.querySelector("button");
+                addToCartButton.textContent = "Add to Cart";
+            }
             localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems))
             displayCartItems()
             // if (cartItems.length == 0) {
@@ -211,4 +225,3 @@ function handleQuantityButtonsInProductCard() {
         });
     });
 }
-
