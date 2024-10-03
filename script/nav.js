@@ -1,10 +1,8 @@
 const menu = document.querySelector(".menu");
 
-menu.addEventListener("click", ()=> {
-    controlMenu();
-})
 function controlMenu() {
     const navlinks = document.querySelector(".nav-links");
+    console.log(navlinks.classList)
     if (navlinks.classList.contains("active")) {
         navlinks.classList.remove("active");
     }
@@ -38,7 +36,7 @@ window.addEventListener("scroll", () => {
 });
 
 // when user click the button take him to the top with smooth behavior
-scrollButton.addEventListener("click", () => {
+scrollButton?.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth" // for smoothly scrolling

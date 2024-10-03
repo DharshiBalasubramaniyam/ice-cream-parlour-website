@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // display products
 function displayProducts(products) {
     let productsSection = document.querySelector(".products-box");
-    productsSection.innerHTML = ""
+    productsSection ? productsSection.innerHTML = "" : null
 
     products.forEach(product => {
         let box = document.createElement("div");
@@ -57,7 +57,7 @@ function displayProducts(products) {
 
         box.appendChild(addToCartButton)
 
-        productsSection.appendChild(box);
+        productsSection?.appendChild(box);
     });
     handleQuantityButtonsInProductCard()
 
@@ -72,9 +72,9 @@ function displayFlavorFilter() {
     allButton.setAttribute("id", "all");
     allButton.setAttribute("class", "active");
     allButton.textContent = "All";
-    flavorFilterSection.appendChild(allButton);
+    flavorFilterSection?.appendChild(allButton);
     allButton.addEventListener("click", () => {
-        flavorFilterSection.querySelector(".active").classList.remove("active")
+        flavorFilterSection?.querySelector(".active").classList.remove("active")
         allButton.classList.add("active")
         filterProducts("all")
     })
@@ -84,11 +84,11 @@ function displayFlavorFilter() {
         button.setAttribute("id", flavor.id);
         button.textContent = flavor.name;
         button.addEventListener("click", () => {
-            flavorFilterSection.querySelector(".active")?.classList.remove("active")
+            flavorFilterSection?.querySelector(".active")?.classList.remove("active")
             button.classList.add("active")
             filterProducts(flavor.id)
         })
-        flavorFilterSection.appendChild(button);
+        flavorFilterSection?.appendChild(button);
     });
 
 }
