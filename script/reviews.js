@@ -27,3 +27,25 @@ var swiper = new Swiper(".reviews-box", {
         },
     },
 });
+// Initialize Swiper
+const swiper = new Swiper('.swiper', {
+    // Swiper options
+    loop: true, // Loop the slides
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+// Get the buttons
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+// Add event listeners for the buttons
+prevButton.addEventListener('click', () => {
+    swiper.slidePrev(); // Move to the previous slide
+});
+
+nextButton.addEventListener('click', () => {
+    swiper.slideNext(); // Move to the next slide
+});
