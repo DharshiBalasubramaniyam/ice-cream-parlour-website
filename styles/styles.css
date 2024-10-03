@@ -711,10 +711,17 @@ h3 {
     font-size: 20px;
     border: 2px solid var(--main-color);
     text-align: center;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: 0.3s;
+    /* user-select: none; */
 }
-
+.products .products-box .box .qty .increase, .decrease{
+    cursor: pointer;
+    user-select: none;
+}
+.products .products-box .box .qty .pcs{
+    cursor: default;
+}
 .products .products-box .box .qty span:first-of-type:hover,
 .products .products-box .box .qty span:last-of-type:hover {
     background-color: var(--main-color);
