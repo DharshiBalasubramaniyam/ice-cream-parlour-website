@@ -1,6 +1,8 @@
 // nav.js
 const menu = document.querySelector(".menu");
 
+menu.addEventListener("click", controlMenu)
+
 function controlMenu() {
     const navlinks = document.querySelector(".nav-links");
     console.log(navlinks.classList)
