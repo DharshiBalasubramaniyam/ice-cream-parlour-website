@@ -168,6 +168,7 @@ h3 {
 .nav-bar .nav-links a:hover,
 .nav-bar .nav-links a.active {
     color: var(--secondary-color);
+    transform: scale(1.1);
 }
 
 .nav-bar .icons {
