@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -48,9 +49,8 @@ input[type="submit"] {
 
 button:hover,
 input[type="submit"]:hover {
-    background: transparent;
-    color: var(--main-color);
-
+    background-color: var(--main-color);
+    color: var(--body-color);
 }
 
 button:active,
@@ -87,6 +87,7 @@ section>h1 span {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
+
 }
 
 .box {
@@ -272,7 +273,14 @@ h3 {
 
 .cart button {
     margin: 15px 0;
-    width: 100%;
+    width: 70%;
+    transition: 0.7s;
+    margin-left: 30px;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+}
+
+.cart button:hover {
+    transform: scale(1.1);
 }
 
 .cart .close-cart,
@@ -558,13 +566,14 @@ h3 {
 }
 
 .service-card>div button {
-    background-color: transparent;
-    color: var(--main-color);
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    background-color: var(--main-color);
+    color: var(--body-color);
     border: none;
     width: fit-content;
-    padding: 0;
-    border-radius: 0;
-    transition: 0s;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
     border-bottom: 2px solid transparent;
     margin-bottom: 15px;
     display: flex;
@@ -574,6 +583,7 @@ h3 {
 
 .service-card>div button:hover {
     border-bottom: 2px solid var(--main-color);
+    transform: scale(1.1);
 }
 
 /* -------------products section styles------------------- */
@@ -589,10 +599,11 @@ h3 {
     padding: 7px 20px;
     border: 1px solid var(--main-color);
     margin: 5px;
-
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
 }
 
 .categories-wrapper button:not(.active) {
+    background-image: none;
     color: var(--ternary-color);
     background-color: transparent;
 }
@@ -622,7 +633,7 @@ h3 {
 }
 
 .cat-label {
-    background-color:var(--body-color);
+    background-color: var(--body-color);
     color: var(--main-color);
     border: 1px solid var(--main-color);
     padding: 5px;
@@ -721,13 +732,16 @@ h3 {
 }
 
 .products .products-box .box button {
-    width: fit-content;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    width: 70%;
     padding: 5px 18px;
     font-size: 16px;
 }
 
 .products .products-box .box button:hover {
-    background-color: transparent;
+    background-color: var(--main-color);
+    color: var(--body-color);
+    transform: scale(1.1);
 }
 
 /* -------------contact section styles------------------- */
@@ -773,11 +787,20 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    /* Ensures no scrollbar appears */
 }
 
 .contact form .row input[type="submit"] {
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
     margin-top: 15px;
+    transition: 0.7s;
 }
+
+.contact form .row input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
 
 /* -------------reviews section styles------------------- */
 .reviews .reviews-box {
@@ -960,12 +983,14 @@ h3 {
 .footer-col form button {
     border-radius: 6px;
     transition: 0.2s ease;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
 }
 
 .footer-col form button:hover {
-    background: transparent;
-    border: 1px solid var(--body-color);
+    background-color: var(--main-color);
     color: var(--body-color);
+    border: 1px solid var(--body-color);
+    transform: scale(0.95);
 }
 
 .footer-col .icons {
@@ -982,11 +1007,13 @@ h3 {
 .footer-col .icons i:hover {
     color: #fff;
 }
+
 .social {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 .copyright {
     background-color: var(--ternary-color);
     width: 100%;
@@ -1001,9 +1028,7 @@ h3 {
 .scroll-button {
     position: fixed;
     bottom: 5%;
-    /* right: 500px; */
-    left: 1400px;
-
+    right: 0;
     outline: none;
     border: none;
     border-radius: 100%;
@@ -1014,58 +1039,63 @@ h3 {
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.5s ease;
-     -webkit-tap-highlight-color: transparent;  
-     background-image: none;
-     background-color: transparent;
-     
-  }
-  
-  .scroll-button > img {
+    -webkit-tap-highlight-color: transparent;
+    background-image: none;
+    background-color: transparent;
+    padding: 0;
+
+}
+.scroll-button:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+}
+
+.scroll-button>img {
     width: 50px;
     height: 50px;
-  }
-  
-  .show-btn {
+}
+
+.show-btn {
     opacity: 1 !important;
     pointer-events: all !important;
-  }
-  
+}
 
-.FAQs h2{
+
+.FAQs h2 {
     text-align: center;
     margin-bottom: 15px;
     color: var(--main-color);
 }
 
-.FAQs h3{
-    text-align: center;    
+.FAQs h3 {
+    text-align: center;
 }
 
-.FAQ-questions{
-    color: rgba(0,0,0,0.8);
+.FAQ-questions {
+    color: rgba(0, 0, 0, 0.8);
     border: none;
     cursor: pointer;
     font-family: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2rem;
-    width:100%;
+    width: 100%;
     color: var(--ternary-color);
     padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: bolder;   
+    font-weight: bolder;
     border-radius: 0;
     margin-bottom: 15px;
     border: 2px solid var(--ternary-color);
     background-color: transparent;
 }
 
-.FAQ-questions i{
+.FAQ-questions i {
     font-size: 1.6rem;
     overflow: visible;
 }
 
-.FAQ-answers{
+.FAQ-answers {
     color: var(--ternary-color);
     font-size: 1.2rem;
     line-height: 1.4;
@@ -1077,6 +1107,7 @@ h3 {
 .FAQ-answers.active {
     display: block;
 }
+
 i {
     overflow: visible;
 }

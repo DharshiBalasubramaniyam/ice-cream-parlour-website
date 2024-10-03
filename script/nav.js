@@ -33,11 +33,29 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
+
 // Ensure the links are clickable and toggle the active state
 links.forEach(link => {
     link.addEventListener("click", () => {
         links.forEach(link => link.classList.remove("active"));
         link.classList.add("active");
     });
+=======
+// when user click the button take him to the top with smooth behavior
+scrollButton?.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // for smoothly scrolling
+  });
 });
 
+function controlMenu() {
+    const navlinks = document.querySelector(".nav-links");
+    console.log(navlinks.classList)
+    if (navlinks.classList.contains("active")) {
+        navlinks.classList.remove("active");
+    }
+    else {
+        navlinks.classList.add("active");
+    }
+}
