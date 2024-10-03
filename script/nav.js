@@ -40,7 +40,7 @@ links.forEach(link => {
         links.forEach(link => link.classList.remove("active"));
         link.classList.add("active");
     });
-=======
+
 // when user click the button take him to the top with smooth behavior
 scrollButton?.addEventListener("click", () => {
   window.scrollTo({
