@@ -1088,8 +1088,8 @@ i {
 ::-webkit-scrollbar-thumb:hover{
     background: linear-gradient(var(--ternary-color) , var(--main-color));
 }
-@supports (scrollbar-color:#ba9bf4,#6967d8){
+@supports (var(--main-color)){
     *{
-        scrollbar-color:#ba9bf4 #6967d8;
+        scrollbar-color:var(--main-color);
     }
 }
