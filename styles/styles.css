@@ -826,8 +826,23 @@ h3 {
     padding: 15px;
     cursor: pointer;
     transition: 0.3s;
+    animation: animate 60s linear infinite;
+}
+.reviews .reviews-box:hover .box {
+    animation-play-state: paused;
 }
 
+@keyframes animate{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-420%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
 .reviews .reviews-box .box:hover {
     /* background-color: var(--secondary-color); */
 }
