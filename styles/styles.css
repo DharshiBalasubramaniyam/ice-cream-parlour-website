@@ -10,7 +10,7 @@
     outline: none;
     font-weight: 400;
     box-sizing: border-box;
-    font-family: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--main-font);
 }
 
 body {
@@ -23,6 +23,9 @@ body {
     --body-color: #FFEB55;
     --secondary-color: #EE66A6;
     --background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    --main-font: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
+    --heading-font: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
+    --curly-font: "Spicy Rice", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 ::selection {
@@ -71,14 +74,14 @@ section>h1 {
     font-size: 40px;
     text-align: center;
     margin-bottom: 20px;
-    font-family: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--heading-font);
     color: var(--ternary-color);
 
 }
 
 section>h1 span {
     color: var(--main-color);
-    font-family: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--heading-font);
 }
 
 .box-container {
@@ -147,7 +150,7 @@ h3 {
     font-size: 30px;
     font-weight: 400;
     color: var(--body-color);
-    font-family: "Spicy Rice", serif;
+    font-family: var(--curly-font);
 
 }
 
@@ -403,14 +406,14 @@ h3 {
     background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Spicy Rice", serif;
+    font-family: var(--curly-font);
 }
 
 .home .text h4 {
     font-size: 20px;
     line-height: 35px;
     color: var(--ternary-color);
-    font-family: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--heading-font);
 
 }
 
@@ -457,7 +460,7 @@ h3 {
     letter-spacing: 1.3px;
     font-weight: 600;
     color: var(--ternary-color);
-    font-family: "Spicy Rice", serif;
+    font-family: var(--curly-font);
 }
 
 .about .about-box .text p {
@@ -534,12 +537,12 @@ h3 {
 
 .service-card>div h2 {
     text-align: center;
-    font-family: "Spicy Rice", serif;
+    font-family: var(--curly-font);
 }
 
 .service-card>div h3 {
     font-style: oblique;
-    font-family: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--heading-font);
     font-size: 16px;
     width: 100%;
 }
@@ -861,7 +864,7 @@ h3 {
     color: var(--body-color);
     font-size: 1.3rem;
     font-weight: 400;
-    font-family: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--heading-font);
 }
 
 .footer-col .links {
@@ -1023,7 +1026,7 @@ h3 {
     font-size: 1.2rem;
     line-height: 1.4;
     padding: 0.2rem 2.5rem 2rem;
-    font-family: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--main-font);
     display: none;
 }
 
