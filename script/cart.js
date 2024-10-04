@@ -11,7 +11,7 @@ cartIcon.addEventListener("click", () => {
     }
 })
 
-close.addEventListener("click", () => {
+close?.addEventListener("click", () => {
     cart.classList.remove("active");
 })
 
