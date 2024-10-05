@@ -1,6 +1,6 @@
  #   🍦 Ice Cream Parlour Website 🍨
   
- ![Ice Cream Website Screenshot](/Screenshot%202024-10-02%20121926.png) 
+ ![Ice Cream Website Screenshot](/images/readme.png) 
 
  ## Table of Contents
 - [Overview](#-overview-)
