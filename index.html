@@ -507,6 +507,27 @@
         </div>
     </section>
 
+    <script>
+        // Function to hide the preloader after 20 seconds
+        function hidePreloader() {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+
+            // Add a class to the body to trigger CSS styles
+            document.body.classList.add('loaded');
+            
+            // Hide the preloader and show the main content after 20 seconds
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                mainContent.style.display = 'block'; // Show main content
+            }, 50000); // 20000 milliseconds = 20 seconds
+        }
+
+        // Call the hidePreloader function after the page loads
+        window.addEventListener('load', hidePreloader);
+    </script>
+
+
     <!-----scroll bottom to top------->
     <button class="scroll-button">
         <img src="images/icecream-cone.png" alt="icecream-cone" />
