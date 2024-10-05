@@ -105,14 +105,22 @@ function filterProducts(id) {
 
 }
 
+function showToast(message) {
+    const toastContainer = document.getElementById("toast-container");
+    const toast = document.createElement("div");
+    toast.classList.add("toast");
+    toast.textContent = message;
+    toastContainer.appendChild(toast);
+    setTimeout(() => {
+        toast.remove();
+    }, 5500);
+}
+
 // Add items to cart
 function addToCart(e) {
-
-    // document.querySelector(".empty-cart").classList.remove("active")
-    // document.querySelector(".no-empty-cart").classList.add("active")
-    
     let cartItemId = e.target.parentElement.getAttribute("id");
-    // To check if item already exists.
+
+    // Check if the item already exists in the cart
     let existingCartItem = cartItems.find(item => item?.itemId == cartItemId);
 
     let item = products_list.find(item => item.id == cartItemId);
@@ -120,30 +128,29 @@ function addToCart(e) {
     let amount = item.price * pcs;
 
     if (pcs == 0) {
-        alert("Please select number of cups you want!");
+        showToast("Please select the number of cups you want!");
         return;
     }
     if (existingCartItem) {
         // Update the existing item's quantity and amount
         existingCartItem.pcs = (parseInt(existingCartItem.pcs) + parseInt(pcs));
         existingCartItem.amount = existingCartItem.pcs * item.price;
-        alert(`${pcs} more ${item.name} ice cream/s successfully added to the cart!`);
-    }
-    else{
-
+        showToast(`${pcs} more ${item.name} ice cream/s successfully added to the cart!`);
+    } else {
+        // Add a new item to the cart
         cartItems.push({
             itemId: cartItemId,
             pcs: pcs,
             amount: amount
         });
-        alert(`${pcs} ${item.name} ice cream/s successfully added to the cart!`);
+        showToast(`${pcs} ${item.name} ice cream/s successfully added to the cart!`);
         e.target.textContent = "Already in the cart - Add again?";
     }
-    localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems))
-    
+    // Save the updated cart to local storage
+    localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems));
 
-    displayCartItems()
-
+    // Display updated cart items
+    displayCartItems();
 }
 
 function handleRemoveButtonInCart() {

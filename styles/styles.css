@@ -64,7 +64,7 @@ body {
 :root {
     --ternary-color: #640D5F;
     --main-color: #D91656;
-    --body-color: #FFEB55;
+    --body-color: #ffeb55;
     --secondary-color: #EE66A6;
     --background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
     --main-font: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
@@ -179,8 +179,8 @@ h3 {
     width: 100%;
     z-index: 1000;
     background-color: var(--ternary-color);
-    padding: 10px;
-    padding-left: 20px;
+    height: 70px;
+    padding: 0 100px;
 }
 
 .nav-bar .logo {
@@ -247,7 +247,7 @@ h3 {
 .nav-bar .icons .no-of-cart-items,
 .no-of-wishlist-items {
     position: absolute;
-    color: var(--main-color);
+    color: var(--body-color);
     right: -15px;
     width: 25px;
     font-size: 12px;
@@ -591,6 +591,9 @@ h3 {
     font-size: 16px;
     width: 100%;
 }
+.service-card>div a {
+    color: var(--body-color);
+}
 
 .service-card>div p {
     line-height: 25px;
@@ -650,6 +653,8 @@ h3 {
     transition: 0.3s;
     max-width: 350px;
     border: 2px solid var(--secondary-color);
+
+    border-radius: 10px;
 }
 
 .image-wrapper {
@@ -740,13 +745,17 @@ h3 {
     text-align: center;
     transition: 0.3s;
 }
-.products .products-box .box .qty .increase, .decrease{
+
+.products .products-box .box .qty .increase,
+.decrease {
     cursor: pointer;
     user-select: none;
 }
-.products .products-box .box .qty .pcs{
+
+.products .products-box .box .qty .pcs {
     cursor: default;
 }
+
 .products .products-box .box .qty span:first-of-type:hover,
 .products .products-box .box .qty span:last-of-type:hover {
     background-color: var(--main-color);
@@ -766,14 +775,19 @@ h3 {
 /* -------------contact section styles------------------- */
 .contact form {
     flex-direction: column;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 2rem 0;
+    background-color: var(--body-color);
 }
 
 .contact form .row {
     padding: 0;
-    width: 100%;
+    width: 95%;
     display: flex;
     gap: 25px;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .contact form .input-box {
@@ -791,7 +805,6 @@ h3 {
     font-size: 15px;
     width: 100%;
     padding: 7px 10px;
-    transition: 0.3s;
     margin-top: 4px;
     border-radius: 4px;
     background-color: transparent;
@@ -799,7 +812,7 @@ h3 {
 
 .contact form .input-box input:focus,
 .contact form .input-box textarea:focus {
-    background-image: var(--background-image);
+    outline: 2px solid var(--secondary-color);
 }
 
 .contact form .row:last-child {
@@ -807,6 +820,7 @@ h3 {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
 }
 
 
@@ -823,7 +837,7 @@ h3 {
     justify-content: left;
     flex-direction: column;
     border: 2px solid var(--main-color);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 15px;
     cursor: pointer;
     transition: 0.3s;
@@ -996,8 +1010,8 @@ h3 {
 /* scroll bottom to top */
 .scroll-button {
     position: fixed;
-    bottom: 5%;
-    right: 0;
+    bottom: 4%;
+    right: 2%;
     outline: none;
     border: none;
     border-radius: 100%;
@@ -1014,6 +1028,7 @@ h3 {
     padding: 0;
 
 }
+
 .scroll-button:hover {
     background-color: transparent;
     transform: scale(1.1);
@@ -1029,6 +1044,7 @@ h3 {
     pointer-events: all !important;
 }
 
+/* FAQ Section  */
 
 .FAQs h2 {
     text-align: center;
@@ -1051,12 +1067,13 @@ h3 {
     justify-content: space-between;
     align-items: center;
     font-weight: bolder;
-    border-radius: 0;
+    border-radius: 10px;
     margin-bottom: 15px;
     border: 2px solid var(--ternary-color);
     background-color: transparent;
     background-image: none;
 }
+
 .FAQ-questions:hover {
     background-image: var(--background-image);
 }
@@ -1084,32 +1101,111 @@ i {
 }
 
 /* delivery styles */
-.heading{
+.heading {
     text-align: center;
     font-size: 20px;
     margin-top: 15px;
     font-weight: 400;
 }
-.form-text{
+
+.form-text {
     margin-left: 0px;
     padding: 6px;
     display: flex;
     border: var(--main-color) 2px solid;
     border-radius: 3px;
-    width:100%;
-    height:40px;
+    width: 100%;
+    height: 40px;
     background-color: transparent;
 }
+
 .form-text:focus {
-    background-image: var(--background-image);
+    outline: 2px solid var(--secondary-color);
 }
-.text{
+
+.text {
     display: block;
     margin-bottom: 7px;
 }
-.indv-text{
+
+.indv-text {
     margin: 20px;
 }
-.btn-style{
+
+.btn-style {
     margin-right: 15px;
 }
+
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+    width: 0.8em;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* border-radius: 100vw; */
+    /* margin-block: .5em; */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    background-image: var(--background-image);
+    /* border-radius: 100vw; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-image: none;
+}
+
+@supports (var(--main-color)) {
+    * {
+        scrollbar-color: var(--main-color);
+    }
+}
+
+/* Toaster styles */
+.toast-container {
+    position: fixed;
+    top: 50px;
+    margin: 0 10px;
+    right: 0;
+    z-index: 9999;
+}
+
+.toast {
+    background-color: var(--secondary-color);
+    color: var(--ternary-color);
+    padding: 16px;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.5s forwards, fadeOut 4s 3s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
