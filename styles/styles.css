@@ -59,30 +59,6 @@ body.loaded #main-content {
 body {
     height: 100vh;
     background-color: #FFEB55;
-    cursor: none;
-}
-.cursor-dot {
-    width: 5px;
-    height: 5px;
-    background-color: rgb(7, 7, 7);
-}
-
-.cursor-outline {
-    width: 30px;
-    height: 30px;
-    border: 2px;
-    border: 2px solid hsla(0, 0%, 0%, 0.5);
-}
-
-.cursor-dot,
-.cursor-outline{
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 1;
-    pointer-events: none;
 }
 
 :root {
