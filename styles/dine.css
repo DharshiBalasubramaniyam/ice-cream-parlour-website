@@ -2,12 +2,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #FFEB55;
+  background-color: var(--body-color);
 }
 
 .navbar-dine {
-  background-color: #640D5F;
-  color: #FFEB55;
+  background-color: var(--ternary-color);
+  color: var(--body-color);
   text-align: center;
   height: 70px;
   margin-top: -25px;
@@ -32,17 +32,17 @@ body {
   width: 70%;
   padding: 12px;
   font-size: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--secondary-color);
   border-radius: 10px 0 0 10px;
+}
+
+.search-bar input:focus {
+  outline: 2px solid var(--secondary-color);
 }
 
 .search-bar button {
   padding: 10px 20px;
-  background-color: #EE66A6;
-  color: white;
-  border: none;
   border-radius: 0 10px 10px 0;
-  cursor: pointer;
 }
 
 .restaurants {
@@ -51,12 +51,13 @@ body {
   flex-wrap: wrap;
   gap: 15px;
 }
+
 .restaurant-card {
   background-color: #e6247f;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  color: #FFEB55;
+  color: var(--body-color);
   transition: all 0.8s ease;
   flex: 1 1 300px;
   max-width: 350px;
@@ -72,7 +73,7 @@ body {
 .restaurant-info {
   padding-top: 25px;
   text-align: center;
-  
+
 }
 
 .restaurant-info p {
@@ -84,15 +85,16 @@ body {
 }
 
 .restaurant-info h3 {
-  color: #FFEB55;
+  color: var(--body-color);
   font-size: 1.25rem;
   font-family: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
 }
-.heading{
+
+.heading {
   text-align: center;
   font-size: 20px;
   margin-top: 15px;
   font-weight: 400;
-  
+
 }
