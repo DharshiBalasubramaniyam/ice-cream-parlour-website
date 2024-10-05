@@ -959,31 +959,75 @@ h3 {
     padding: 10px;
 
 }
+/* Top Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    border-end-end-radius: 10px;
+    background-image: linear-gradient(135deg, #f39c12, #e67e22); /* Matches scrollbar gradient */
+    z-index: 9999;
+    transition: width 0.25s ease;
+}
+
 
 /* scroll bottom to top */
 .scroll-button {
     position: fixed;
     bottom: 5%;
-    right: 0;
-    outline: none;
+    right: 2%;
+    width: 5rem;
+    height: 5rem;
+    background-color: #f39c12;
+    color: #fff;
     border: none;
-    border-radius: 100%;
-    display: grid;
-    place-items: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     user-select: none;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
     -webkit-tap-highlight-color: transparent;
-    background-image: none;
-    background-color: transparent;
+    background-image: linear-gradient(135deg, #f39c12, #e67e22);
     padding: 0;
-
 }
+
+.scroll-button::before {
+    content: '⬆';  /* Up arrow symbol */
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
 .scroll-button:hover {
-    background-color: transparent;
-    transform: scale(1.1);
+    background-image: linear-gradient(135deg, #e67e22, #f39c12);
+    transform: scale(1.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-button:hover::before {
+    transform: translateY(-5px);
+}
+
+.scroll-button:active {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-button.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.scroll-button.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .scroll-button>img {
