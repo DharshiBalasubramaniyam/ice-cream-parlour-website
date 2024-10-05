@@ -772,19 +772,6 @@ h3 {
     /* Ensures no scrollbar appears */
 }
 
-.contact form .row input[type="submit"] {
-    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-    margin-top: 15px;
-    transition: 0.7s;
-
-    font-weight: 500;
-}
-
-.contact form .row input[type="submit"]:hover {
-    transform: scale(1.1);
-
-}
-
 
 /* -------------reviews section styles------------------- */
 .reviews .reviews-box {
