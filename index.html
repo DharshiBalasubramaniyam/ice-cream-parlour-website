@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/search.css">
+
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -34,6 +36,8 @@
                 <a href="#products" class="link">products</a>
                 <a href="#reviews" class="link">reviews</a>
                 <a href="#contact" class="link">contact</a>
+    
+                
             </div>
             <div class="icons">
                 <div class="icon">
@@ -47,7 +51,13 @@
                     <i class="fa fa-bars menu" aria-hidden="true"></i>
                 </div>
             </div>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search...">
+                <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                <div id="search-dropdown" class="dropdown-content"></div>
+            </div>
         </div>
+        
 
         <!-- Cart -->
         <div class="cart">
@@ -554,6 +564,7 @@
     <script type="module" src="script/nav.js"></script>
     <script type="module" src="script/cart.js"></script>
     <script src="script/FAQ.js"></script>
+    <script src="script/search.js"></script>
 </body>
 
 </html>
