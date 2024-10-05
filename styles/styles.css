@@ -607,6 +607,8 @@ h3 {
     transition: 0.3s;
     max-width: 350px;
     border: 2px solid var(--secondary-color);
+
+    border-radius: 10px;
 }
 
 .image-wrapper {
@@ -787,7 +789,7 @@ h3 {
     justify-content: left;
     flex-direction: column;
     border: 2px solid var(--main-color);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 15px;
     cursor: pointer;
     transition: 0.3s;
@@ -994,6 +996,7 @@ h3 {
     pointer-events: all !important;
 }
 
+/* FAQ Section  */
 
 .FAQs h2 {
     text-align: center;
@@ -1016,7 +1019,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     font-weight: bolder;
-    border-radius: 0;
+    border-radius: 10px;
     margin-bottom: 15px;
     border: 2px solid var(--ternary-color);
     background-color: transparent;
