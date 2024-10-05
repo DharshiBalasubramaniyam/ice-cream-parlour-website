@@ -405,6 +405,7 @@ h3 {
     font-weight: 600;
     margin-bottom: 15px;
     background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
+    background-clip: var(--body-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--curly-font);
@@ -791,6 +792,7 @@ h3 {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .reviews .reviews-box .box .top {
     width: 100%;
     height: max-content;

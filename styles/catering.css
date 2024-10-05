@@ -1,0 +1,120 @@
+.image img{
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    height: 550px;
+    top: 0;
+    opacity: 0.95;
+}
+
+.context{
+    position: relative;
+    padding: 50px;
+}
+
+.context h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 80px;
+    word-spacing: 4px;
+    text-align: center;
+    align-self: center;
+    font-weight: bolder;
+    color:black;
+}
+
+.context p{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 45px;
+    word-spacing: 4px;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+}
+
+.mid{
+    margin: 140px;
+    height: 200px;
+    padding: 30px;
+}
+
+
+h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+.mid p{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 2px;
+    text-align: center;
+    line-height: 1cm;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+}
+
+.mid span{
+    text-decoration: underline;
+    text-decoration-color: rgb(233, 31, 31);
+    text-decoration-thickness: 2px;
+}
+
+.container{
+    background-color: rgb(253, 253, 253);
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photo img{
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    border-radius: 3rem;
+}
+
+.photo img:hover{
+    transform: scale(1.45);
+    transition-duration: 1s;
+    border-radius: 6rem;
+}
+
+.customer{
+    margin-top: 2cm;
+}
+
+.customer h3{
+    font-size: 25px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 4px 4px 0 0;
+}
+
+#box{
+    border-radius: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 30px;
+    font-size: 15px;
+    height: fit-content;
+}
+
+.foot{
+    background-color: rgb(2, 2, 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+.links{
+    color: white;
+}
