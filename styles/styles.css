@@ -1102,3 +1102,42 @@ i {
     }
 }
 
+.toast-container {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  .toast {
+    background-color: #7B206F;
+    color: #FFF;
+    padding: 16px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s forwards, fadeOut 4s 3s forwards;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
