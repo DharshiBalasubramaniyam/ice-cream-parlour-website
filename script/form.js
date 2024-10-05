@@ -1,3 +1,4 @@
+// Contact form validation
 const contactForm = document.getElementById("contact-form");
 const firstname = document.getElementById("fname");
 const lastname = document.getElementById("lname");
@@ -7,46 +8,56 @@ const message = document.getElementById("message");
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const phoneRegex = /^[0-9]{10}$/;
 
-contactForm.addEventListener("submit", (e)=> {
+contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     
+    let valid = true;  // Assume form is valid until proven otherwise
+
+    clearError(firstname);
+    clearError(lastname);
+    clearError(email);
+    clearError(phone);
+    clearError(message);
+
     if (firstname.value.trim() === "") {
         setError(firstname, "First name is required!");
+        valid = false;
     }
     if (lastname.value.trim() === "") {
         setError(lastname, "Last name is required!");
+        valid = false;
     }
     if (email.value.trim() === "") {
         setError(email, "Email is required!");
-    }
-    else if (!emailRegex.test(email.value.trim())){
+        valid = false;
+    } 
+    else if (!emailRegex.test(email.value.trim())) {
         setError(email, "Invalid email format!");
+        valid = false;
     }
     if (phone.value.trim() === "") {
         setError(phone, "Phone number is required!");
-    }
-    else if (!phoneRegex.test(phone.value.trim())){
+        valid = false;
+    } 
+    else if (!phoneRegex.test(phone.value.trim())) {
         setError(phone, "Contact number must have exactly 10 digits");
+        valid = false;
     }
     if (message.value.trim() === "") {
         setError(message, "Message is required!");
+        valid = false;
+    }
+
+    // If all fields are valid, submit the form
+    if (valid) {
+        contactForm.submit();  // Only submit if everything is valid
     }
 });
 
-// Newsletter section scripts
-const newsletterForm = document.getElementById("news-letter");
-const newsletterEmail = document.getElementById("newsletter-email");
-
-newsletterForm.addEventListener("submit", (e)=> {
-    e.preventDefault();
-
-    if (newsletterEmail.value.trim() === "") {
-        setError(newsletterEmail, "Email is required!");
-    }
-    else if (!emailRegex.test(newsletterEmail.value.trim())) {
-        setError(newsletterEmail, "Invalid email format!");
-    }
-});
+function clearError(field) {
+    const error = field.parentElement.querySelector("small");
+    error.textContent = ""; // Clear the error message
+}
 
 function setError(field, errorMessage) {
     const error = field.parentElement.querySelector("small");
