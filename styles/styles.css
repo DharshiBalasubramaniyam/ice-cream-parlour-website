@@ -14,7 +14,8 @@
 }
 
 body {
-    background-color: var(--body-color);
+    height: 100vh;
+    background-color: #FFEB55;
 }
 
 :root {
@@ -26,6 +27,48 @@ body {
     --main-font: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
     --heading-font: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
     --curly-font: "Spicy Rice", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFEB55;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.preloader-icon {
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+}
+
+.loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    animation: pulse 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide the preloader once the page is loaded */
+body.loaded #preloader {
+    display: none;
+}
+
+body.loaded #main-content {
+    display: block;
 }
 
 ::selection {
@@ -405,7 +448,6 @@ h3 {
     font-weight: 600;
     margin-bottom: 15px;
     background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
-    background-clip: var(--body-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--curly-font);
@@ -799,7 +841,6 @@ h3 {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .reviews .reviews-box .box .top {
     width: 100%;
     height: max-content;
@@ -1102,7 +1143,7 @@ i {
 
 .star.filled {
     color: #ff9800; 
-
+}
 /* Scroll Bar */
 
 ::-webkit-scrollbar {
@@ -1176,3 +1217,4 @@ i {
     }
 
 }
+
