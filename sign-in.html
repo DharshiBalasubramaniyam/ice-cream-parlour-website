@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GitLab</title>
+    <link rel="stylesheet" href="styles\sign.in.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="./images/logo.png" alt="icyco-logo" height="35px" width="35px">
+            <a href="">IcyCo</a>
+        </div>
+        <form class="login-form">
+            <div class="input-group">
+                <label for="username">Username or primary email</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="options">
+                <div>
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <a href="#" class="forget">Forgot your password?</a>
+            </div>
+            <button type="submit">Sign In</button>
+            <p class="tos">By signing in you accept the Terms of Use and acknowledge the Privacy Statement and Cookie Policy.</p>
+        </form>
+        <div class="register">
+            <p>Don't have an account yet? <a href="#">Register now</a></p>
+        </div>
+        <div class="social-login">
+            <p>or sign in with</p>
+            <button class="social-btn google">
+ 
+                <i class="fa-brands fa-google">&nbsp;&nbsp;</i>Google</button>
+            <button class="social-btn github"><i class="fa-brands fa-github">&nbsp;&nbsp;</i>GitHub</button>
+            <button class="social-btn bitbucket"><i class="fa-brands fa-bitbucket">&nbsp;&nbsp;</i>Bitbucket</button>
+            <button class="social-btn salesforce"><i class="fa-brands fa-salesforce">&nbsp;&nbsp;</i>Salesforce</button>
+        </div>
+    </div>
+</body>
+</html>

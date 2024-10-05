@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island-Wide Delivery</title>
+
+    <!-- custom style sheets -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="./styles/dine.css">
+    <link rel="stylesheet" href="styles/mediaQueries.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+
+    <!-- link to add favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <!-- font awesome icons script -->
+    <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="./images/logo.png" alt="icyco-logo" height="25px" width="25px">
+            <a href="">IcyCo</a>
+        </div>
+        <div class="nav-links">
+            <a href="./index.html" class="link">home</a>
+            <a href="./delivery.html" class="link">Delivery</a>
+            <a href="./dine-in.html" class="link active">Dine In</a>
+            <a href="./catering.html" class="link">Catering</a>
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="icon">
+                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                        class="no-of-cart-items">0</span></span>
+            </div>
+            <div class="icon">
+                <i class="fa fa-bars menu" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding-top: 90px;"></div>
+        <h2
+            style="text-align: center; font-weight:600; font-size: 45px; font-family: Spicy Rice, serif; color: #D91656;">
+            Dine In</h2>
+    </div>
+
+    <h2 class="heading">Find your nearest store</h2>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Enter your Current Location">
+        <button><i class="fa fa-search"></i></button>
+    </div>
+
+    <section class="restaurants">
+        <div class="restaurant-card">
+            <img src="./images/ice-1.jpg" alt="Restaurant 1">
+            <div class="restaurant-info">
+                <h3>Frozen Fusion </h3>
+                <p>Sector 2, Salt Lake, Kolkata</p>
+                <p>⭐⭐⭐⭐ (4.0)</p>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="./images/ice-2.jpg" alt="Restaurant 2">
+            <div class="restaurant-info">
+                <h3>Kulfi Station Express</h3>
+                <p>Sector 5, Salt Lake, Kolkata</p>
+                <p>⭐⭐⭐⭐⭐ (5.0)</p>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="./images//ice-3.jpg" alt="Restaurant 2">
+            <div class="restaurant-info">
+                <h3>Kookie Jar</h3>
+                <p>Sector 3, Salt Lake, Kolkata</p>
+                <p>⭐⭐⭐⭐ (4.0)</p>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="./images/ice-4.avif" alt="Restaurant 2">
+            <div class="restaurant-info">
+                <h3>Flury's</h3>
+                <p>Sector 1, Salt Lake, Kolkata</p>
+                <p>⭐⭐⭐ (3.0)</p>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="./images//ice-5.webp" alt="Restaurant 2">
+            <div class="restaurant-info">
+                <h3>Icy Fusion</h3>
+                <p>Sector 2, Salt Lake, Kolkata</p>
+                <p>⭐⭐⭐⭐⭐ (5.0)</p>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="./images/ice-6.webp" alt="Restaurant 2">
+            <div class="restaurant-info">
+                <h3>Waffle Junction</h3>
+                <p>Sector 2, Salt Lake, Kolkata</p>
+                <p>⭐⭐⭐⭐ (4.0)</p>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="./images/ice-1.jpg" alt="Restaurant 1">
+            <div class="restaurant-info">
+                <h3>Frozen Fusion </h3>
+                <p>Sector 2, Salt Lake, Kolkata</p>
+                <p>⭐⭐⭐⭐ (4.0)</p>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="./images/ice-2.jpg" alt="Restaurant 2">
+            <div class="restaurant-info">
+                <h3>Kulfi Station Express</h3>
+                <p>Sector 5, Salt Lake, Kolkata</p>
+                <p>⭐⭐⭐⭐⭐ (5.0)</p>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="./images//ice-3.jpg" alt="Restaurant 2">
+            <div class="restaurant-info">
+                <h3>Kookie Jar</h3>
+                <p>Sector 3, Salt Lake, Kolkata</p>
+                <p>⭐⭐⭐⭐ (4.0)</p>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="./images/ice-1.jpg" alt="Restaurant 1">
+            <div class="restaurant-info">
+                <h3>Frozen Fusion </h3>
+                <p>Sector 2, Salt Lake, Kolkata</p>
+                <p>⭐⭐⭐⭐ (4.0)</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cart -->
+    <div class="cart">
+        <i class="fa fa-times close-cart" aria-hidden="true"></i>
+        <h1>Your Cart</h1>
+
+        <div class="no-empty-cart">
+            <ul class="cart-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+        </div>
+
+        <div class="empty-cart active">
+            <p>No items in the cart!</p>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Useful links</h4>
+                <ul class="links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#FAQs">FAQs</a></li>
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Flavors</h4>
+                <ul class="links">
+                    <li><a href="#">Regular</a></li>
+                    <li><a href="#">Gelato</a></li>
+                    <li><a href="#">Sorbet</a></li>
+                    <li><a href="#">Soft serve</a></li>
+                    <li><a href="#">Frozen Yogurt</a></li>
+                    <li><a href="#">Non Diary/Vegen</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Opening Hours</h4>
+                <ul class="links">
+                    <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
+                    <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
+                </ul>
+                <h4 style="margin-top: 15px;">Locations</h4>
+                <ul class="links">
+                    <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
+                            ramankulam-
+                            Malappuram Dt</a></li>
+                    <li class="address2"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> MG Road,
+                            Bangalore - Karnataka</a></li>
+                    <li class="address3"><a href="" class="social"><i class="fa-solid fa-location-dot"></i>
+                            Connaught Place, New Delhi</a></li>
+                    <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
+                            Street, Kolkata - West Bengal</a></li>
+
+                    </li>
+
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Need Help?</h4>
+                <ul class="links">
+                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+                    <li><a href="" class="social"><i class="fa-solid fa-envelope"></i> mail@1234567.com</a></li>
+                </ul>
+                <h4 style="margin-top: 15px;">Follow Us</h4>
+                <ul class="links">
+                    <li><a href="#" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                </p>
+                <form action="#">
+                    <input type="text" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-----scroll bottom to top------->
+    <button class="scroll-button">
+        <img src="images/icecream-cone.png" alt="icecream-cone" />
+    </button>
+
+    <!-- copyright -->
+    <div class="copyright">
+        &copy; 2024 by <span>DharshiB</span> | All Rights Deserved
+    </div>
+
+    <script src="./script/nav.js"></script>
+    <script src="./script/cart.js"></script>
+    <script type="module" src="./script/products.js"></script>
+
+</body>
+
+</html>
