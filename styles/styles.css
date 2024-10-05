@@ -1076,3 +1076,29 @@ i {
 .btn-style{
     margin-right: 15px;
 }
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+    width: 0.8em;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 100vw;
+    margin-block:.5em ;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: 100vw;
+} 
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(var(--ternary-color) , var(--main-color));
+}
+@supports (var(--main-color)){
+    *{
+        scrollbar-color:var(--main-color);
+    }
+}
+
