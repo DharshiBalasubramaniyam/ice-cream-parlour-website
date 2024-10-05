@@ -122,6 +122,12 @@ All the tasks will be assigned various levels based on the complexity of the tas
 
 It is important for all to adhere to all the Guildines, if found guilty the concequesces can affect your profile. To review the guidlines refer [here](https://github.com/GSSoC24/Contributor/tree/main/gssoc-guidelines)
 
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35"> Contributors
+
+Big thanks to all the contributors! 🎉
+
+<a href="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/pulse"> <img align="center" src="https://contrib.rocks/image?max=100&repo=DharshiBalasubramaniyam/ice-cream-parlour-website" /> </a> 
+
 ---
 # 📄Ending Note
 Thank you for checking out the Ice Cream Parlour Website! We hope you find this project enjoyable and informative. Your feedback, contributions, and suggestions are always welcome!
