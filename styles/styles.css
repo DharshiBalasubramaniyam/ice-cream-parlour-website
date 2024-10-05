@@ -1069,3 +1069,12 @@ i {
 .btn-style{
     margin-right: 15px;
 }
+
+.star {
+    color: #ccc; 
+    font-size: 1.5em; 
+}
+
+.star.filled {
+    color: #ff9800; 
+}
