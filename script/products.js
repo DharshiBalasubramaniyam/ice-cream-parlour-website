@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // display products
 function displayProducts(products) {
     let productsSection = document.querySelector(".products-box");
-    productsSection.innerHTML = ""
+    productsSection ? productsSection.innerHTML = "" : null
 
     products.forEach(product => {
         let box = document.createElement("div");
@@ -43,14 +43,21 @@ function displayProducts(products) {
 
 
         let addToCartButton = document.createElement("button");
+        // if website got reloded and item already exist in cart
+        let existingCartItem = cartItems.find(item => item?.itemId == product.id);
+        if(existingCartItem){
+            addToCartButton.textContent = "Already in the cart - Add again?";
+        }
+        else{
         addToCartButton.textContent = "Add to Cart";
+        }
         addToCartButton.addEventListener("click", (e) => {
             addToCart(e)
         })
 
         box.appendChild(addToCartButton)
 
-        productsSection.appendChild(box);
+        productsSection?.appendChild(box);
     });
     handleQuantityButtonsInProductCard()
 
@@ -65,9 +72,9 @@ function displayFlavorFilter() {
     allButton.setAttribute("id", "all");
     allButton.setAttribute("class", "active");
     allButton.textContent = "All";
-    flavorFilterSection.appendChild(allButton);
+    flavorFilterSection?.appendChild(allButton);
     allButton.addEventListener("click", () => {
-        flavorFilterSection.querySelector(".active").classList.remove("active")
+        flavorFilterSection?.querySelector(".active").classList.remove("active")
         allButton.classList.add("active")
         filterProducts("all")
     })
@@ -77,11 +84,11 @@ function displayFlavorFilter() {
         button.setAttribute("id", flavor.id);
         button.textContent = flavor.name;
         button.addEventListener("click", () => {
-            flavorFilterSection.querySelector(".active")?.classList.remove("active")
+            flavorFilterSection?.querySelector(".active")?.classList.remove("active")
             button.classList.add("active")
             filterProducts(flavor.id)
         })
-        flavorFilterSection.appendChild(button);
+        flavorFilterSection?.appendChild(button);
     });
 
 }
@@ -105,11 +112,8 @@ function addToCart(e) {
     // document.querySelector(".no-empty-cart").classList.add("active")
     
     let cartItemId = e.target.parentElement.getAttribute("id");
-
-    if (cartItems.filter(item => item?.itemId == cartItemId).length != 0) {
-        alert("The item already in your cart!");
-        return;
-    }
+    // To check if item already exists.
+    let existingCartItem = cartItems.find(item => item?.itemId == cartItemId);
 
     let item = products_list.find(item => item.id == cartItemId);
     let pcs = e.target.parentElement.querySelector(".pcs").textContent;
@@ -119,15 +123,24 @@ function addToCart(e) {
         alert("Please select number of cups you want!");
         return;
     }
+    if (existingCartItem) {
+        // Update the existing item's quantity and amount
+        existingCartItem.pcs = (parseInt(existingCartItem.pcs) + parseInt(pcs));
+        existingCartItem.amount = existingCartItem.pcs * item.price;
+        alert(`${pcs} more ${item.name} ice cream/s successfully added to the cart!`);
+    }
+    else{
 
-    cartItems.push({
-        itemId: cartItemId,
-        pcs: pcs,
-        amount: amount
-    });
-
+        cartItems.push({
+            itemId: cartItemId,
+            pcs: pcs,
+            amount: amount
+        });
+        alert(`${pcs} ${item.name} ice cream/s successfully added to the cart!`);
+        e.target.textContent = "Already in the cart - Add again?";
+    }
     localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems))
-    alert(`${pcs} ${item.name} ice cream/s successfully added to the cart!`);
+    
 
     displayCartItems()
 
@@ -138,6 +151,12 @@ function handleRemoveButtonInCart() {
     removeBtns.forEach(btn => {
         btn.addEventListener("click", () => {
             cartItems = cartItems.filter(item => item?.itemId != btn.parentElement.parentElement.getAttribute("id"))
+            const productBox = document.querySelector(`.box[id='${btn.parentElement.parentElement.getAttribute("id")}']`);
+            if (productBox) {
+                // Change the button text to "Add to Cart"
+                const addToCartButton = productBox.querySelector("button");
+                addToCartButton.textContent = "Add to Cart";
+            }
             localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems))
             displayCartItems()
             // if (cartItems.length == 0) {
@@ -206,4 +225,3 @@ function handleQuantityButtonsInProductCard() {
         });
     });
 }
-
