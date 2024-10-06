@@ -11,33 +11,42 @@ const phoneRegex = /^[0-9]{10}$/;
 
 contactForm.addEventListener("submit", (e)=> {
     e.preventDefault();
-    
+    let isValid = true;
+
     if (firstname.value.trim() === "") {
         setError(firstname, "First name is required!");
+        isValid = false;
     }
     if (lastname.value.trim() === "") {
         setError(lastname, "Last name is required!");
+        isValid = false;
     }
     if (email.value.trim() === "") {
         setError(email, "Email is required!");
+        isValid = false;
     }
     else if (!emailRegex.test(email.value.trim())){
         setError(email, "Invalid email format!");
+        isValid = false;
     }
     if (phone.value.trim() === "") {
         setError(phone, "Phone number is required!");
+        isValid = false;
     }
     else if (!phoneRegex.test(phone.value.trim())){
         setError(phone, "Contact number must have exactly 10 digits");
+        isValid = false;
     }
     if (message.value.trim() === "") {
         setError(message, "Message is required!");
+        isValid = false;
     }
 
-    const formData = new FormData(contactForm);
-    contactForm.reset();
-    alert("Your details where submitted Succesfully");
-
+    if (isValid) {
+        const formData = new FormData(contactForm);
+        contactForm.reset();
+        alert("Your details were submitted Successfully");
+    }
 });
 
 // Newsletter section scripts
