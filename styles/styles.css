@@ -1089,12 +1089,11 @@ h3 {
     line-height: 1.4;
     font-family: var(--main-font);
     display: none;
-    transition: padding 0.3s;
+    padding: 0.2rem 2.5rem 2rem;
 }
 
 .FAQ-answers.active {
     display: block;
-    padding: 0.2rem 2.5rem 2rem;
 }
 
 i {
