@@ -2,6 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
 
+.mainimg {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.large-image {
+    position: absolute;
+    top: -500px; /* Move the image further up */
+    right: -300px; /* Move the image further to the right */
+    width: 1600px; /* Maintain the larger size */
+    height: auto;
+    animation: heartbeat 1.5s infinite; /* Heartbeat animation */
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.1); /* Scale up to 110% */
+    }
+}
+
+
+
+
 * {
     padding: 0;
     margin: 0;
