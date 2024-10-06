@@ -20,11 +20,12 @@ body{
 }
 .login-container h1{
     margin-bottom: 8px;
+    color: #D91656;
 }
 
 .login-container {
-    background-color: white;
-    margin: 20px 320px;
+    background-color: #FFEB55;
+    margin: 32px 280px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -95,16 +96,16 @@ body{
 }
 .terms a{
     text-decoration: none;
-    color: #0b5cad;   
+    color: #D91656;   
 }
 .signin-btn button{
     margin-top: 10px;
     width: 420px;
     height:30px;
-    background-color:#1f75cb;
+    background-color:#640D5F;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: #FFEB55;
     font-size: 15px;
     cursor: pointer;
     transition: 0.3s ease;
@@ -129,7 +130,7 @@ body{
     height: 35px;
     border: 1px solid #ccc; 
     padding: 5px 10px; 
-    background-color: white; 
+    background-color: #FFEB55; 
     color: #333;
     font-size: 15px; 
     border-radius: 5px ;
@@ -164,7 +165,7 @@ body{
 }
 .sign-in-link a{
     text-decoration: none;
-    color: #1f75cb;
+    color: #FFEB55;
 }
 .sign-in-link a:hover{
     text-decoration: underline;

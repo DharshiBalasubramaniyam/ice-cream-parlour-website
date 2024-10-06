@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="styles/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <div class="login-container">
+        <div id="logo">
+            <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true" width="15%" alt="IcyCo Logo">
+        </div>
+        <h1>IcyCo</h1>
+        <br/>
+        <form>
+            <div class="input-fields">
+                <div class="input-field-header">Username or primary email</div>
+                <input type="email" class="input-field" placeholder="Enter your email">
+            </div>
+
+            <div class="input-fields">
+                <div class="input-field-header">Password</div>
+                <div class="password-container">
+                    <input type="password" class="input-field" id="password-input-field" placeholder="Enter your password">
+                    <i class="fa-solid fa-eye-slash" id="toggle-password"></i>
+                </div>
+                <a href="#">Forgot your password?</a>
+            </div>
+
+            <div class="check-button">
+                <input type="checkbox">
+                <span>Remember me</span>
+            </div>
+
+            <div class="signin-btn">
+                <button type="submit">Sign in</button>
+            </div>
+        </form>
+
+        <div class="terms">
+            By signing in you accept the 
+            <a href="#">Terms of Use and acknowledge the Privacy Statement and Cookie Policy</a>
+        </div>
+
+        <div id="line-container">
+            <span>Don't have an account?</span><a href="signup.html" class="register-now-link">Register now</a>
+            <div class="sign-in">or sign in with</div>
+        </div>
+
+        <div class="social-links">
+            <button><img src="images/social-icons/google.png" class="imgs" width="20px" height="20px" alt="Google">Google</button>
+            <button><img src="images/social-icons/github.png" width="20px" height="20px" alt="GitHub">GitHub</button>
+            <button><img src="images/social-icons/bitbucket.png" width="20px" height="20px" alt="Bitbucket">Bitbucket</button>
+            <button><img src="images/social-icons/salesforce.png" width="20px" height="20px" alt="Salesforce">Salesforce</button>
+        </div>
+    </div>
+
+    <script>
+        // Toggle password visibility
+        document.getElementById("toggle-password").addEventListener("click", function () {
+            var passwordInput = document.getElementById("password-input-field");
+            var toggleIcon = document.getElementById("toggle-password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
+            } else {
+                passwordInput.type = "password";
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
+            }
+        });
+    </script>
+</body>
+</html>

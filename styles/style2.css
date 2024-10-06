@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 12px;
-    background-color: #640D5F;
+    background-color:#640D5F;
 }
 
 #logo{
@@ -20,13 +20,16 @@ body{
 }
 
 .login-container {
-    background-color: white;
-    margin: 20px 420px;
+    background-color:#FFEB55;
+    margin: 60px 420px;
     padding: 20px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.login-container h1 {
+     color: #D91656;
 }
 .input-fields{
     margin-bottom: 12px;
@@ -38,10 +41,13 @@ body{
 .input-field-header{
     margin-bottom: 7px;
     font-weight: 550;
+    
+    
 }
 
 .password-container {
     position: relative;
+    color: #640D5F;
 }
 
 .password-container input {
@@ -62,7 +68,7 @@ body{
     display: flex;
     justify-content: right;
     text-decoration: none;
-    color: #0b5cad;
+    color: #640D5F;
 }
 
 .check-button{
@@ -72,6 +78,7 @@ body{
 .check-button input{
     height:15px;
     width: 15px;
+
 }
 .check-button span{
     margin-left: 8px;
@@ -83,10 +90,10 @@ body{
     margin-top: 10px;
     width:100%;
     height:30px;
-    background-color:#1f75cb;
+    background-color:#640D5F;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: #FFEB55;
     font-size: 15px;
     cursor: pointer;
     transition: 0.3s ease;
@@ -107,7 +114,7 @@ body{
 }
 .terms a{
     text-decoration: none;
-    color: #0b5cad;   
+    color: #D91656;   
 }
 #line-container{
     font-size: 14px;
@@ -115,7 +122,7 @@ body{
 .register-now-link {
     margin-left: 3px;
     text-decoration: none;
-    color: #0b5cad;
+    color: #D91656;
 }
 .register-now-link:hover{
     text-decoration: underline;
@@ -139,8 +146,8 @@ body{
     height: 35px;
     border: 1px solid #ccc; 
     padding: 5px 10px; 
-    background-color: white; 
-    color: #333;
+    background-color: #FFEB55; 
+    color: black;
     font-size: 15px; 
     border-radius: 5px ;
     cursor: pointer; 
