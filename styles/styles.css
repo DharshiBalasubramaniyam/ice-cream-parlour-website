@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
 
 * {
-    padding: 0;
+   
     margin: 0;
     list-style-type: none;
     text-decoration: none;
@@ -13,21 +13,27 @@
     font-family: var(--main-font);
 }
 
-body {
-    height: 100vh;
-    background-color: #FFEB55;
-}
-
 :root {
+    /* Colors remain the same */
     --ternary-color: #640D5F;
     --main-color: #D91656;
-    --body-color: #ffeb55;
+    --body-color: #FFEB55;
     --secondary-color: #EE66A6;
     --background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-    --main-font: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
-    --heading-font: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
-    --curly-font: "Spicy Rice", Verdana, Geneva, Tahoma, sans-serif;
+    
+    /* New font variables */
+    --main-font: "Roboto", sans-serif; /* Changed to Roboto */
+    --heading-font: "Montserrat", sans-serif; /* Changed to Montserrat */
+    --curly-font: "Dancing Script", cursive; /* Changed to Dancing Script */
 }
+
+body {
+    height: 100vh;
+    background-color: var(--body-color); /* Updated to use variable */
+}
+
+}
+
 
 /* Preloader styles */
 #preloader {
@@ -52,7 +58,7 @@ body {
 
 .loading-text {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 22px; /* Increased font size */
     color: #333;
     animation: pulse 2.5s linear infinite;
 }
@@ -84,7 +90,7 @@ html {
 button,
 input[type="submit"] {
     background-image: var(--background-image);
-    font-size: 16px;
+    font-size: 18px; /* Increased font size */
     padding: 8px 30px;
     background-color: var(--main-color);
     border: 2px solid var(--main-color);
@@ -114,12 +120,11 @@ section {
 }
 
 section>h1 {
-    font-size: 40px;
+    font-size: 48px; /* Increased font size */
     text-align: center;
     margin-bottom: 20px;
     font-family: var(--heading-font);
     color: var(--ternary-color);
-
 }
 
 section>h1 span {
@@ -133,7 +138,6 @@ section>h1 span {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-
 }
 
 .box {
@@ -144,6 +148,7 @@ section>h1 span {
 h3 {
     text-align: center;
     margin-top: -20px;
+    font-size: 24px; /* Increased font size */
 }
 
 .container {
@@ -444,21 +449,23 @@ h3 {
 }
 
 .home .text h1 {
-    font-size: 65px;
-    font-weight: 600;
+    font-size: 75px; /* Increased font size */
+    font-weight: 700; /* Made font bolder */
     margin-bottom: 15px;
     background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--curly-font);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added text shadow for depth */
 }
 
 .home .text h4 {
-    font-size: 20px;
-    line-height: 35px;
+    font-size: 24px; /* Increased font size */
+    line-height: 1.5; /* Improved line spacing */
     color: var(--ternary-color);
     font-family: var(--heading-font);
-
+    text-align: left; /* Aligned text left */
+    margin: 10px 0; /* Added margin for spacing */
 }
 
 .home .image {
@@ -467,13 +474,14 @@ h3 {
 
 .home .image img {
     width: 100%;
-    height: 70%;
+    height: auto; /* Adjusted height to auto for better scaling */
     animation-name: zoom;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-delay: 2s;
+    border-radius: 15px; /* Added rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
-
 /* -------------about section styles------------------- */
 .about .about-box .image {
     width: 100%;
@@ -482,6 +490,7 @@ h3 {
     overflow: hidden;
     padding: 0;
     border-radius: 10px;
+    margin-right: 20px; /* Added margin to create spacing on the right */
 }
 
 .about .about-box .image img {
@@ -497,25 +506,27 @@ h3 {
     flex-direction: column;
     justify-content: center;
     gap: 15px;
+    margin-left: 20px; /* Added margin to create spacing on the left */
 }
 
 .about .about-box .text h2 {
-    font-size: 35px;
-    letter-spacing: 1.3px;
+    font-size: 45px; /* Increased font size */
+    letter-spacing: 1.5px; /* Adjusted letter spacing */
     font-weight: 600;
     color: var(--ternary-color);
     font-family: var(--curly-font);
 }
 
 .about .about-box .text p {
-    line-height: 25px;
+    line-height: 30px; /* Increased line height for better readability */
+    font-size: 18px; /* Increased font size */
 }
 
 .about .about-box .text ul li {
     margin: 10px 0;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .about .about-box .text ul li .feature-icon {
@@ -545,7 +556,6 @@ h3 {
 }
 
 .service-card {
-
     flex: 1 1 300px;
     --_g:
         #0000 calc(-650%/13) calc(50%/13), var(--main-color) 0 calc(100%/13),
@@ -563,7 +573,7 @@ h3 {
     transition: 0.3s;
 }
 
-.service-card>div {
+.service-card > div {
     width: 100%;
     height: 100%;
     background-color: var(--body-color);
@@ -579,24 +589,27 @@ h3 {
     box-shadow: 0 0 10px var(--main-color);
 }
 
-.service-card>div h2 {
+.service-card > div h2 {
     text-align: center;
     font-family: var(--curly-font);
+    font-size: 24px; /* Increased font size */
 }
 
-.service-card>div h3 {
+.service-card > div h3 {
     font-style: oblique;
     font-family: var(--heading-font);
-    font-size: 16px;
+    font-size: 18px; /* Increased font size */
     width: 100%;
 }
-.service-card>div a {
+
+.service-card > div a {
     color: var(--body-color);
 }
 
-.service-card>div p {
-    line-height: 25px;
+.service-card > div p {
+    line-height: 30px; /* Increased line height for better readability */
     text-align: center;
+    font-size: 18px; /* Increased font size */
 }
 
 .service-card img {
@@ -607,14 +620,13 @@ h3 {
     transform: scale(1.12);
 }
 
-.service-card>div button {
+.service-card > div button {
     border-bottom: 2px solid transparent;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
-
 /* -------------products section styles------------------- */
 
 .categories-wrapper {
