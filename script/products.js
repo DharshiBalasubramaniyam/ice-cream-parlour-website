@@ -34,7 +34,7 @@ function displayProducts(products) {
                             <div class="description">${product.description}</div>
                             <div class="qty">
                                 <span class="decrease">-</span>
-                                <span class="pcs">0</span>
+                                <span class="pcs">1</span>
                                 <span class="increase">+</span>
                             </div>
                             `;
