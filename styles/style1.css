@@ -9,20 +9,23 @@ body{
     height: 100vh;
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 12px;
     background-color: #640D5F;
 }
 
 #logo{
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+}
+.login-container h1{
+    margin-bottom: 8px;
 }
 
 .login-container {
     background-color: white;
-    margin: 25px 320px;
-    padding: 25px;
+    margin: 20px 320px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -31,7 +34,7 @@ body{
 }
 
 .input-fields{
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 .input-fields input{
     width: 420px;
@@ -81,7 +84,7 @@ body{
 }
 
 .terms {
-    margin-top: 5px;    
+    margin-top: 2px;    
     width: 450px; 
     text-align: left;
     padding-left: 10px;

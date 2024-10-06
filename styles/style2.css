@@ -9,7 +9,7 @@ body{
     height: 100vh;
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 12px;
     background-color: #640D5F;
 }
 
@@ -21,15 +21,15 @@ body{
 
 .login-container {
     background-color: white;
-    margin: 25px 420px;
-    padding: 25px;
+    margin: 20px 420px;
+    padding: 20px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 .input-fields{
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 .input-fields input{
     width: 420px;
