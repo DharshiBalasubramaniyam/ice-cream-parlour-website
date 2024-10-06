@@ -1067,6 +1067,7 @@ h3 {
     align-items: center;
     font-weight: bolder;
     border-radius: 10px;
+    margin-top: 15px;
     margin-bottom: 15px;
     border: 2px solid var(--ternary-color);
     background-color: transparent;
@@ -1086,13 +1087,14 @@ h3 {
     color: var(--ternary-color);
     font-size: 1.2rem;
     line-height: 1.4;
-    padding: 0.2rem 2.5rem 2rem;
     font-family: var(--main-font);
     display: none;
+    transition: padding 0.3s;
 }
 
 .FAQ-answers.active {
     display: block;
+    padding: 0.2rem 2.5rem 2rem;
 }
 
 i {
