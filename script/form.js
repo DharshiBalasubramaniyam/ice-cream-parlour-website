@@ -7,31 +7,50 @@ const message = document.getElementById("message");
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const phoneRegex = /^[0-9]{10}$/;
 
-contactForm.addEventListener("submit", (e)=> {
+contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    
+
+    let isValid = true; // Flag to track if the form is valid
+
     if (firstname.value.trim() === "") {
         setError(firstname, "First name is required!");
+        isValid = false;
     }
     if (lastname.value.trim() === "") {
         setError(lastname, "Last name is required!");
+        isValid = false;
     }
     if (email.value.trim() === "") {
         setError(email, "Email is required!");
-    }
-    else if (!emailRegex.test(email.value.trim())){
+        isValid = false;
+    } else if (!emailRegex.test(email.value.trim())) {
         setError(email, "Invalid email format!");
+        isValid = false;
     }
     if (phone.value.trim() === "") {
         setError(phone, "Phone number is required!");
-    }
-    else if (!phoneRegex.test(phone.value.trim())){
+        isValid = false;
+    } else if (!phoneRegex.test(phone.value.trim())) {
         setError(phone, "Contact number must have exactly 10 digits");
+        isValid = false;
     }
     if (message.value.trim() === "") {
         setError(message, "Message is required!");
+        isValid = false;
+    }
+
+    // If the form is valid, show the alert
+    if (isValid) {
+        alert("Form submitted successfully!");
     }
 });
+
+function setError(element, message) {
+    const errorDisplay = element.parentElement.querySelector(".error-message");
+    errorDisplay.innerText = message; // Display the error message
+    element.classList.add("error"); // Add error styling
+}
+
 
 // Newsletter section scripts
 const newsletterForm = document.getElementById("news-letter");
