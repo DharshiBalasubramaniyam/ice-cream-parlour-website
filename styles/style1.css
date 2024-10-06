@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    background-color: #640D5F;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.login-container h1{
+    margin-bottom: 8px;
+}
+
+.login-container {
+    background-color: white;
+    margin: 20px 320px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-fields{
+    margin-bottom: 12px;
+}
+.input-fields input{
+    width: 420px;
+    height: 30px;
+}
+.input-field-header{
+    margin-bottom: 7px;
+    font-weight: 550;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px; 
+}
+.password-container i {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.input-fields a{
+    margin-top: 5px;
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+    color: #0b5cad;
+}
+
+#name-fields{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+#first-name-field{
+    margin-right: 35px;
+}
+#first-name-field input,
+#last-name-field input{
+    width: 192px;
+    height: 30px;
+
+}
+
+.terms {
+    margin-top: 2px;    
+    width: 450px; 
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px; 
+    margin-bottom: 14px;   
+    font-size: 14px;
+}
+.terms a{
+    text-decoration: none;
+    color: #0b5cad;   
+}
+.signin-btn button{
+    margin-top: 10px;
+    width: 420px;
+    height:30px;
+    background-color:#1f75cb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    
+}
+.signin-btn button:hover{
+    border: 1.5px solid #3a383f;
+}
+
+#continue-with{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.social-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-links button {
+    width: 420px;
+    height: 35px;
+    border: 1px solid #ccc; 
+    padding: 5px 10px; 
+    background-color: white; 
+    color: #333;
+    font-size: 15px; 
+    border-radius: 5px ;
+    cursor: pointer; 
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+  }
+
+  .social-links button:hover{
+    border-color: #3a383f;
+    background-color: #bfbfc3;
+  }
+
+  .social-links img{
+    margin-right: 5px;
+  }
+
+  .social-links img {
+    margin-right: 8px;
+    vertical-align: middle; 
+  }
+  .social-links button span {
+    line-height: 20px; 
+    padding-top: 4px;  
+}
+
+.sign-in-link{
+    font-size: 14px;
+}
+.sign-in-link a{
+    text-decoration: none;
+    color: #1f75cb;
+}
+.sign-in-link a:hover{
+    text-decoration: underline;
+}
