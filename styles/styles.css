@@ -10,22 +10,21 @@
 
 .large-image {
     position: absolute;
-    top: -500px; /* Move the image further up */
-    right: -300px; /* Move the image further to the right */
-    width: 1600px; /* Maintain the larger size */
+    top: -500px; 
+    right: -300px; 
+    width: 1500px; 
     height: auto;
-    animation: heartbeat 1.5s infinite; /* Heartbeat animation */
+    animation: heartbeat 1.5s infinite; 
 }
 
 @keyframes heartbeat {
     0%, 100% {
-        transform: scale(1); /* Original size */
+        transform: scale(1); 
     }
     50% {
-        transform: scale(1.1); /* Scale up to 110% */
+        transform: scale(1.1); 
     }
 }
-
 
 
 
