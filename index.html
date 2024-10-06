@@ -18,6 +18,45 @@
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
 
+    <style>
+        body {
+            cursor: url(./images/pink-arrow.png), auto;
+        }
+        a:hover, button:hover {
+            cursor: url(./images/pink-arrow.png), pointer;
+        }
+        a:active, button:active {
+            cursor: url(./images/pink-arrow.png), pointer;
+        }
+        .hover-card {
+            cursor: url(./images/pink-arrow.png), pointer;
+        }
+        .hover-about {
+            cursor: url(./images/pink-arrow.png), auto; 
+        }
+        .services-card {
+            cursor: url(./images/pink-arrow.png), auto;
+        }
+        .hover-about:hover {
+            cursor: url(./images/pink-arrow.png), pointer; 
+        }
+        
+        .reviews .swiper-slide.box:hover {
+            cursor: url(./images/pink-arrow.png), pointer; 
+        }
+        .products {
+            cursor: url(./images/pink-arrow.png), pointer; 
+        }
+        .products h1, .products .categories-wrapper, .products .box-container.products-box {
+            cursor: url(./images/pink-arrow.png), pointer; 
+        }
+        .feature-icon:hover {
+            cursor: url(./images/pink-arrow.png), pointer; 
+        }
+        
+    </style>
+
+
 </head>
 
 <body>
@@ -97,7 +136,7 @@
     <section class="services" id="services">
         <h1>What <span>we do?</span></h1>
         <div class="services-card-wrapper">
-            <div class="service-card">
+            <div class="service-card hover-card">
                 <div>
                     <h2>Dine-In</h2>
                     <h3>Chill With Us – Indulge In-Store</h3>
@@ -109,7 +148,7 @@
                             aria-hidden="true"></i></button>
                 </div>
             </div>
-            <div class="service-card">
+            <div class="service-card hover-card">
                 <div>
                     <h2>Island-Wide Delivery</h2>
                     <h3>Ice Cream On the Go – Delivered to Your Door</h3>
@@ -121,7 +160,7 @@
                                 aria-hidden="true"></i></button></a>
                 </div>
             </div>
-            <div class="service-card">
+            <div class="service-card hover-card">
                 <div>
                     <h2>Catering</h2>
                     <h3>Sweeten Your Event – Ice Cream Catering</h3>
