@@ -1,0 +1,11 @@
+/* Top Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-image: linear-gradient(135deg, #f39c12, #e67e22); /* Matches scrollbar gradient */
+    z-index: 9999;
+    transition: width 0.25s ease;
+}
