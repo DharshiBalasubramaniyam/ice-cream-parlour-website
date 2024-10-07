@@ -8,7 +8,6 @@
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="./styles/dine.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
 
@@ -21,12 +20,13 @@
 </head>
 
 <body>
+
     <!-- Preloader -->
     <div id="preloader">
         <img src="images/logo.png" alt="Preloader" class="preloader-icon">
         <p class="loading-text">Loading...</p>
     </div>
-    
+
     <!-- nav bar -->
     <div class="nav-bar">
         <div class="logo">
@@ -36,8 +36,8 @@
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
             <a href="./delivery.html" class="link">Delivery</a>
-            <a href="./dine-in.html" class="link active">Dine In</a>
-            <a href="./catering.html" class="link">Catering</a>
+            <a href="./dine-in.html" class="link">Dine In</a>
+            <a href="./catering.html" class="link active">Catering</a>
         </div>
         <div class="icons">
             <div class="icon">
@@ -53,102 +53,73 @@
         </div>
     </div>
 
-    <div style="padding-top: 90px;"></div>
+
+    <div style="padding-top: 90px;">
         <h2
             style="text-align: center; font-weight:600; font-size: 45px; font-family: Spicy Rice, serif; color: #D91656;">
-            Dine In</h2>
+            Event Catering</h2>
     </div>
 
-    <h2 class="heading">Find your nearest store</h2>
+    <!-- DETAILS FORM -->
+    <h2 class="heading">Enter Your Details</h2>
 
-    <div class="search-bar">
-        <input type="text" placeholder="Enter your Current Location">
-        <button><i class="fa fa-search"></i></button>
-    </div>
+    <section class="form-contents">
 
-    <section class="restaurants">
-        <div class="restaurant-card">
-            <img src="./images/ice-1.jpg" alt="Restaurant 1">
-            <div class="restaurant-info">
-                <h3>Frozen Fusion </h3>
-                <p>Sector 2, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
-            </div>
+        <div class="indv-text">
+            <label for="name" class="text">NAME</label>
+            <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
         </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-2.jpg" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Kulfi Station Express</h3>
-                <p>Sector 5, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐⭐ (5.0)</p>
-            </div>
+
+        <div class="indv-text">
+            <label for="email" class="text">EMAIL ID</label>
+            <input type="email" class="form-text" placeholder="example@gmail.com" required>
         </div>
-        <div class="restaurant-card">
-            <img src="./images//ice-3.jpg" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Kookie Jar</h3>
-                <p>Sector 3, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
-            </div>
+
+        <div class="indv-text">
+            <label for="contact" class="text">CONTACT No.</label>
+            <input type="tel" class="form-text" name="" id="" placeholder="0123456789" required>
         </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-4.avif" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Flury's</h3>
-                <p>Sector 1, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐ (3.0)</p>
-            </div>
+
+        <div class="indv-text">
+            <label for="eventdate" class="text">Event Date</label>
+            <input type="date" class="form-text" name="" id="" required>
         </div>
-        <div class="restaurant-card">
-            <img src="./images//ice-5.webp" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Icy Fusion</h3>
-                <p>Sector 2, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐⭐ (5.0)</p>
-            </div>
+
+        <div class="indv-text">
+            <label for="eventtype" class="text">Event Type</label>
+            <label style="margin-left: 0px;
+            padding: 6px;
+            display: inline-block;
+            border: var(--main-color) 2px solid;
+            border-radius: 3px;
+            width:100%;
+            height:100%;
+            background-color: transparent;">
+            <label><input type="radio" id="self-pickup" name="indoor-outdoor" value="self-pickup"> Self Service Pickup</label><br><br>
+            <label><input type="radio" id="self-delivery" name="indoor-outdoor" value="self-delivery"> Self Service Delivery</label><br><br>
+            <label><input type="radio" id="full-service" name="indoor-outdoor" value="full-service"> Full Service Catering</label><br><br>  
+            <label><input type="radio" id="not-sure" name="indoor-outdoor" value="not-sure"> Not Sure Want To Learn More</label>
+            <label>
+        </div> 
+
+        <div class="indv-text">
+            <label for="add1" class="text">Complete Address</label>
+            <input type="text" class="form-text" name="" id="" placeholder="Street Address"
+                required>
         </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-6.webp" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Waffle Junction</h3>
-                <p>Sector 2, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
-            </div>
+
+        <div class="indv-text">
+            <label for="state" class="text">STATE</label>
+            <input type="text" class="form-text" placeholder="State" required>
         </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-1.jpg" alt="Restaurant 1">
-            <div class="restaurant-info">
-                <h3>Frozen Fusion </h3>
-                <p>Sector 2, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
-            </div>
+
+        <div style="display: flex; margin: 20px;" class="btn">
+            <button type="reset" class="btn-style" value="RESET">RESET</button>
+            <button type="submit" value="SUMBIT" class="btn-style">SUBMIT</button>
         </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-2.jpg" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Kulfi Station Express</h3>
-                <p>Sector 5, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐⭐ (5.0)</p>
-            </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./images//ice-3.jpg" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Kookie Jar</h3>
-                <p>Sector 3, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
-            </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-1.jpg" alt="Restaurant 1">
-            <div class="restaurant-info">
-                <h3>Frozen Fusion </h3>
-                <p>Sector 2, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
-            </div>
-        </div>
+
     </section>
-    
+
     <!-- Cart -->
     <div class="cart">
         <i class="fa fa-times close-cart" aria-hidden="true"></i>
@@ -260,7 +231,6 @@
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
     <script type="module" src="./script/products.js"></script>
-
 </body>
 
 </html>

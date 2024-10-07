@@ -47,7 +47,7 @@ scrollButton?.addEventListener("click", () => {
 });
 
 const links = document.querySelectorAll(".link");
-const sections = document.querySelectorAll("section");
+const sections = document.querySelector(".index")?.querySelectorAll("section");
 
 const observerOptions = {
     root: null, // Use the viewport as the root
@@ -76,7 +76,7 @@ function observerCallback(entries) {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 // Observe each section
-sections.forEach(section => {
+sections?.forEach(section => {
     observer.observe(section);
 });
 
@@ -86,4 +86,10 @@ links.forEach(link => {
         links.forEach(link => link.classList.remove("active"));
         link.classList.add("active");
     });
+});
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.body.classList.add('loaded');
+    }, 3000); // 3 seconds delay
 });
