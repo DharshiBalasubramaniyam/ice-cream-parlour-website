@@ -1,9 +1,15 @@
+.search-container-wrapper {
+    position: relative;
+    z-index: 1000; /* Ensure the wrapper is above the hero section */
+}
+
 .search-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    z-index: 10; 
 }
 
 #search-bar {
@@ -58,10 +64,10 @@
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 0 0 20px 20px; 
-    z-index: 1;
+    z-index: 10001 ;
     max-height: 200px;
     overflow-y: auto;
-    width: 200px; 
+    width: 100%; 
 }
 
 /* Show dropdown when it's active, adjust search bar styling */
@@ -72,6 +78,7 @@
 
 #search-bar:focus {
     border-radius: 20px 20px 20px 20px; 
+    width: 100%;
 }
 
 .dropdown-content a {
@@ -79,12 +86,14 @@
     padding: 10px;
     text-decoration: none;
     display: block;
-    font-family: inherit;
+    z-index: 999999 !important;
+    font-family: inherit;    
 }
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
+
 #search-bar.expand {
     border-radius: 20px 20px 0 0; 
 }
