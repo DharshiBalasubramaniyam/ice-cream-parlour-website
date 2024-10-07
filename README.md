@@ -19,15 +19,16 @@ This responsive, user-friendly ice cream store website is built using HTML, CSS,
 HTML is the backbone of the web. It provides the structure for the website by defining elements such as headings, paragraphs, buttons, images, and more. For this project:
 HTML is used to create the layout of all sections, from the navbar to the footer. HTML helps in organizing content in form of Tags that are easy to acces and edit. 
 
+
 ### 2. *🟦 CSS (Cascading Style Sheets)*
 CSS is responsible for the website's appearance, allowing us to apply styling rules to make the website visually attractive and responsive. In this project:
 CSS is used to style the entire page, including colors, fonts, and layouts. It also ensures that the website is responsive across all devices, adjusting elements to look great on different screen sizes.
+
 
 ### 3. *🟨 JavaScript (Vanilla JavaScript)*
 JavaScript is a programming language that brings the website to life by adding interactivity and functionality. For this project:
 Vanilla JavaScript handles dynamic features such as adding items to the shopping cart, viewing/removing them, and form validations.
 It is also responsible for the interactive review slider using Swiper.js.
-
 
 
  # ✨ Key Features ✨
@@ -45,8 +46,6 @@ Newsletter Signup: Validates email entries for the subscription form.
 
 *⭐ Interactive Reviews Section*
 Swiper.js Slider: Customers can view reviews with an engaging and smooth sliding effect.
-
-
 
 
 # 🚀 How to Contribute to This Project
@@ -89,7 +88,7 @@ We’re excited to have you contribute to this *Ice Cream Parlour Website* proje
      git commit -m "Added feature X or Fixed issue Y"
      ```
      
-
+   
 7. **📤 Push Your Changes**
    - Push your changes to your forked repository on GitHub:
     ``` bash
@@ -130,11 +129,11 @@ Big thanks to all the contributors! 🎉
 
 ---
 # 📄Ending Note
-Thank you for checking out the Ice Cream Parlour Website! We hope you find this project enjoyable and informative. Your feedback, contributions, and suggestions are always welcome!
+Thank you for checking out the Ice Cream Parlour Website! We hope you find this project enjoyable and informative. Your feedback, contributions and suggestions are always welcome!
 
 If you have any questions or need assistance, please feel free to reach out through the Issues section of this repository.
 
 # 🌈 Join Us!
-We encourage you to explore the website, share your thoughts, and get involved in improving the project. Let’s make this ice cream experience even sweeter together!
+We encourage you to explore the website, share your thoughts and get involved in improving the project. Let’s make this ice cream experience even sweeter together!
 
 Happy coding! 🍦
