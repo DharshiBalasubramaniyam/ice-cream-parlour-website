@@ -34,12 +34,18 @@ body{
 }
 
 .input-fields{
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 .input-fields input{
-    width: 420px;
-    height: 30px;
+    width: 425px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #640D5F;
+    border-style: dashed;
+    background: #e9e0e8;
 }
+
+
 .input-field-header{
     margin-bottom: 7px;
     font-weight: 550;
@@ -78,8 +84,11 @@ body{
 }
 #first-name-field input,
 #last-name-field input{
-    width: 192px;
-    height: 30px;
+    width: 195px;
+    height: 35px;
+    border-radius: 5px;
+    background: #e9e0e8;
+    border-style: dashed;
 
 }
 
@@ -112,6 +121,8 @@ body{
 }
 .signin-btn button:hover{
     border: 1.5px solid #3a383f;
+    font-size:17px ;
+    background-color: #640D5F;
 }
 
 #continue-with{
@@ -130,7 +141,7 @@ body{
     border: 1px solid #ccc; 
     padding: 5px 10px; 
     background-color: white; 
-    color: #333;
+    color: #0c2faa;
     font-size: 15px; 
     border-radius: 5px ;
     cursor: pointer; 
@@ -143,7 +154,8 @@ body{
 
   .social-links button:hover{
     border-color: #3a383f;
-    background-color: #bfbfc3;
+    font-size: 20px; 
+    background-color: #d599b3;
   }
 
   .social-links img{
@@ -160,7 +172,7 @@ body{
 }
 
 .sign-in-link{
-    font-size: 14px;
+    font-size: 19px;
 }
 .sign-in-link a{
     text-decoration: none;
