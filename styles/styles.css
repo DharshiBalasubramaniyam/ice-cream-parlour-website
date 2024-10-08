@@ -577,6 +577,7 @@ h3 {
 
 .service-card:hover {
     box-shadow: 0 0 10px var(--main-color);
+    transform: scale(1.01);
 }
 
 .service-card>div h2 {
