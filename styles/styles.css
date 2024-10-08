@@ -575,8 +575,16 @@ h3 {
     flex-direction: column;
 }
 
+.service-card {
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 10px; /* Additional margin between cards */
+}
+
 .service-card:hover {
-    box-shadow: 0 0 10px var(--main-color);
+    box-shadow: 0 0 15px var(--main-color), 0 0 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1) translateY(-15px);
+    z-index: 10; /* Ensure the hovered card appears above others */
 }
 
 .service-card>div h2 {
