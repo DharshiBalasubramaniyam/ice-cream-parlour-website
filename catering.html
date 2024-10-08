@@ -82,8 +82,13 @@
 
         <div class="indv-text">
             <label for="eventdate" class="text">Event Date</label>
-            <input type="date" class="form-text" name="" id="" required>
+            <input type="date" class="form-text" name="" id="dateInput" required>
         </div>
+        <script>
+            const today = new Date();
+            const yesterday = new Date(today.setDate(today.getDate())).toISOString().split('T')[0];
+            document.getElementById('dateInput').setAttribute('min', yesterday);
+          </script>
 
         <div class="indv-text">
             <label for="eventtype" class="text">Event Type</label>
