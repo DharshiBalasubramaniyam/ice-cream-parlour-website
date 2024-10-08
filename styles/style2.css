@@ -21,8 +21,6 @@ body{
 
 .login-container {
     background-color: white;
-    margin: 20px 420px;
-    padding: 20px;
     border-radius: 8px;
     display: flex;
     align-items: center;
