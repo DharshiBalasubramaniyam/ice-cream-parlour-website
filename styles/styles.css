@@ -15,6 +15,27 @@
 
 body {
     height: 100vh;
+    background-color:rgb(242, 233, 221);
+     
+}
+
+:root {
+    --ternary-color:#640D5F;
+    --navbar-color:rgb(254, 254, 254);
+    --original-body-color:rgb(242, 233, 221);
+    --navbar-icon-color:black;
+    --main-color: #D91656;
+    --card-color: linear-gradient(to top right, #666699 0%, #ff99cc 100%);
+    --body-color:#640D5F;
+    --secondary-color: black;
+    --button-color: rgb(218, 59, 218);
+    --background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    --main-font: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
+    --heading-font: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
+    --curly-font: "Spicy Rice", Verdana, Geneva, Tahoma, sans-serif;
+/*
+body {
+    height: 100vh;
     background-color: #FFEB55;
 }
 
@@ -28,6 +49,7 @@ body {
     --heading-font: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
     --curly-font: "Spicy Rice", Verdana, Geneva, Tahoma, sans-serif;
 }
+    */
 
 /* Preloader styles */
 #preloader {
@@ -177,7 +199,7 @@ h3 {
     height: fit-content;
     width: 100%;
     z-index: 1000;
-    background-color: var(--ternary-color);
+    background-color: var(--navbar-color);
     height: 70px;
     padding: 0 100px;
 }
@@ -205,7 +227,8 @@ h3 {
     padding: 7px 10px;
     display: inline-block;
     margin: 0 15px;
-    color: var(--body-color);
+    /*color: var(--body-color);*/
+    color: var(--button-color);
     text-transform: capitalize;
     transition: 0.3s;
     font-size: 18px;
@@ -229,7 +252,7 @@ h3 {
 .nav-bar .icons i {
     font-size: 20px;
     margin: 0 8px;
-    color: var(--body-color);
+    color: var(--navbar-icon-color);
     padding: 10px 0;
     cursor: pointer;
     transition: 0.3s;
@@ -555,7 +578,7 @@ h3 {
     --_g1: repeating-linear-gradient(-45deg, var(--_g));
     background:
         var(--_g0), var(--_g0) 16px 16px,
-        var(--_g1), var(--_g1) 16px 16px var(--secondary-color);
+        var(--_g1), var(--_g1) 16px 16px var(--card-color);
     background-size: calc(2*16px) calc(2*16px);
     padding: 7px;
     border-radius: 10px;
@@ -566,9 +589,10 @@ h3 {
 .service-card>div {
     width: 100%;
     height: 100%;
-    background-color: var(--body-color);
+    background-color: var(--card-color);
     border-radius: 7px;
     display: flex;
+    border-color:aqua;
     align-items: center;
     padding: 17px 10px;
     gap: 25px;
@@ -591,7 +615,7 @@ h3 {
     width: 100%;
 }
 .service-card>div a {
-    color: var(--body-color);
+    color: var(--card-border-color);
 }
 
 .service-card>div p {
@@ -774,10 +798,10 @@ h3 {
 /* -------------contact section styles------------------- */
 .contact form {
     flex-direction: column;
-    border: 2px solid var(--main-color);
+    border: 2px solid var(--navbar-icon-color);
     border-radius: 10px;
     padding: 2rem 0;
-    background-color: var(--body-color);
+    background-color: var(--navbar-color);
 }
 
 .contact form .row {
@@ -906,7 +930,7 @@ h3 {
 
 /* -------------footer styles------------------- */
 .footer {
-    background: var(--ternary-color);
+    background: var(--card-color);
     margin: 0;
 }
 
@@ -919,7 +943,7 @@ h3 {
 }
 
 .footer-row .footer-col h4 {
-    color: var(--body-color);
+    color: var(--card-color);
     font-size: 1.3rem;
     font-weight: 400;
     font-family: var(--heading-font);
@@ -997,7 +1021,7 @@ h3 {
 }
 
 .copyright {
-    background-color: var(--ternary-color);
+    background-color:var(--card-color);
     width: 100%;
     color: var(--body-color);
     text-align: center;

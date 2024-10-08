@@ -2,11 +2,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--body-color);
+  background-color: var(--original-body-color);
 }
 
 .navbar-dine {
-  background-color: var(--ternary-color);
+  background-color: var(--navbar-color);
   color: var(--body-color);
   text-align: center;
   height: 70px;
@@ -53,7 +53,7 @@ body {
 }
 
 .restaurant-card {
-  background-color: #e6247f;
+  background-color: rgb(85, 65, 38);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
