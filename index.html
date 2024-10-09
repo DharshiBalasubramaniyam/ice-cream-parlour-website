@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/topscrollindicator.css">
 
     <!-- link to add favicon -->
-    <link rel="icon" href="./images/logo.png" type="image/png">
+    <link rel="icon" href="./images/logo.png" type="image/png"> 
 
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
@@ -364,7 +364,7 @@
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
             </div>
-
+    
             <div class="row">
                 <div class="input-box">
                     <label for="email">Your Email</label><br>
@@ -380,8 +380,7 @@
             <div class="row">
                 <div class="input-box">
                     <label for="message">Your Message</label><br>
-                    <textarea name="" id="message" cols="30" rows="10"
-                        oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
+                    <textarea id="message" cols="30" rows="10" oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
             </div>
@@ -389,7 +388,9 @@
                 <input type="submit" value="Send">
             </div>
         </form>
-    </section>
+        <div id="confirmation-message" class="hover-message">Thank you for contacting us! We will get back to you soon.</div>
+    </section> 
+    
 
     <!-- FAQs -->
     <section class="FAQs" id="FAQs">

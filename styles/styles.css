@@ -825,6 +825,32 @@ h3 {
 
 }
 
+#confirmation-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 128, 0, 0.9); /* Slightly transparent green background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures it appears above other elements */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#confirmation-message.show {
+    display: block;
+    opacity: 1;
+}
+
+#confirmation-message.hide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
 
 /* -------------reviews section styles------------------- */
 .reviews .reviews-box {

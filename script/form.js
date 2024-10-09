@@ -1,54 +1,72 @@
-const contactForm = document.getElementById("contact-form");
-const firstname = document.getElementById("fname");
-const lastname = document.getElementById("lname");
-const email = document.getElementById("email");
-const phone = document.getElementById("phone");
-const message = document.getElementById("message");
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const phoneRegex = /^[0-9]{10}$/;
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
-contactForm.addEventListener("submit", (e)=> {
-    e.preventDefault();
-    
-    if (firstname.value.trim() === "") {
-        setError(firstname, "First name is required!");
+    // Get form inputs
+    const fname = document.getElementById('fname');
+    const lname = document.getElementById('lname');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const message = document.getElementById('message');
+    let isValid = true;
+
+    // Validation logic
+    if (fname.value.trim() === '') {
+        displayError(fname, 'First name is required');
+        isValid = false;
     }
-    if (lastname.value.trim() === "") {
-        setError(lastname, "Last name is required!");
+    if (lname.value.trim() === '') {
+        displayError(lname, 'Last name is required');
+        isValid = false;
     }
-    if (email.value.trim() === "") {
-        setError(email, "Email is required!");
+    if (email.value.trim() === '' || !validateEmail(email.value)) {
+        displayError(email, 'Valid email is required');
+        isValid = false;
     }
-    else if (!emailRegex.test(email.value.trim())){
-        setError(email, "Invalid email format!");
+    if (phone.value.trim() === '' || !validatePhone(phone.value)) {
+        displayError(phone, 'Valid phone number is required');
+        isValid = false;
     }
-    if (phone.value.trim() === "") {
-        setError(phone, "Phone number is required!");
+    if (message.value.trim() === '') {
+        displayError(message, 'Message cannot be empty');
+        isValid = false;
     }
-    else if (!phoneRegex.test(phone.value.trim())){
-        setError(phone, "Contact number must have exactly 10 digits");
-    }
-    if (message.value.trim() === "") {
-        setError(message, "Message is required!");
+
+    // If all fields are valid, show the confirmation message
+    if (isValid) {
+        const confirmationMessage = document.getElementById('confirmation-message');
+        confirmationMessage.classList.add('show');
+        
+        setTimeout(() => {
+            confirmationMessage.classList.remove('show');
+        }, 3000); // Message disappears after 3 seconds
+
+        clearForm(); // Clear the form fields
     }
 });
 
-// Newsletter section scripts
-const newsletterForm = document.getElementById("news-letter");
-const newsletterEmail = document.getElementById("newsletter-email");
+// Function to display validation error
+function displayError(element, message) {
+    const small = element.parentElement.querySelector('small');
+    small.textContent = message;
+}
 
-newsletterForm.addEventListener("submit", (e)=> {
-    e.preventDefault();
+// Function to validate email using regex
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
 
-    if (newsletterEmail.value.trim() === "") {
-        setError(newsletterEmail, "Email is required!");
-    }
-    else if (!emailRegex.test(newsletterEmail.value.trim())) {
-        setError(newsletterEmail, "Invalid email format!");
-    }
-});
+// Function to validate phone number (basic validation)
+function validatePhone(phone) {
+    const re = /^[0-9]{10}$/; // Adjust this regex based on your phone number format
+    return re.test(String(phone));
+}
 
-function setError(field, errorMessage) {
-    const error = field.parentElement.querySelector("small");
-    error.textContent = errorMessage;
+// Function to clear form fields after successful submission
+function clearForm() {
+    document.getElementById('fname').value = '';
+    document.getElementById('lname').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('message').value = '';
 }
