@@ -215,6 +215,9 @@ h3 {
 .nav-bar .nav-links a:hover,
 .nav-bar .nav-links a.active {
     color: var(--secondary-color);
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+    text-underline-offset: 10px
 }
 
 .nav-bar .icons {
