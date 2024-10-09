@@ -15,41 +15,42 @@
     </div>
     <h1>IcyCo</h1>
     
-    <form>
+    <form id="loginForm">
         <div id="name-fields">
             <div id="first-name-field">
-                <div class="input-field-header" >First name</div>
-                <input type="text" class="input-field">
+                <div class="input-field-header">First name</div>
+                <input type="text" class="input-field" id="firstName">
             </div>
             <div id="last-name-field">
                 <div class="input-field-header">Last name</div>
-                <input type="text" class="input-field">
+                <input type="text" class="input-field" id="lastName">
             </div>
         </div>
 
         <div class="input-fields">
             <div class="input-field-header">Username</div>
-            <input type="text" class="input-field">
+            <input type="text" class="input-field" id="username">
         </div>
 
         <div class="input-fields">
             <div class="input-field-header">Email</div>
-            <input type="email" class="input-field">
+            <input type="email" class="input-field" id="email">
         </div>
 
         <div class="input-fields">
             <div class="input-field-header">Password</div>
             <div class="password-container">
-            <input type="password" class="input-field" id="password-input-field">
+            <input type="password" class="input-field" id="password">
             <i class="fa-solid fa-eye-slash" id="toggle-password"></i>
             </div>
         </div>
     </form>
+
     <div class="terms">
-            By clicking Continue or registering through a third party you accept the Icyco
-            <a href="#">Terms of Use and acknowledge the Privacy Statement and Cookie Policy</a>
+        By clicking Continue or registering through a third party you accept the IcyCo
+        <a href="#">Terms of Use and acknowledge the Privacy Statement and Cookie Policy</a>
         <div class="signin-btn">
-            <button>Continue</button>
+            <button id="loginButton">Continue</button>
         </div>
         <div id="continue-with">Continue with:</div>
     </div>
@@ -63,7 +64,7 @@
             <a href="signup.html">Sign in</a>
         </div>
     </div>
-    </div>
+</div>
 </body>
 <script src="script/login.js"></script>
 </html>
