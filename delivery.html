@@ -17,6 +17,28 @@
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
     
+    <style>
+        /* Simple popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .popup.active {
+            display: block;
+        }
+        .popup button {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,7 +61,7 @@
             <a href="./catering.html" class="link">Catering</a>
         </div>
         <div class="icons">
-            <div class="icon">
+            <div class="icon" onclick="window.location.href='login.html'">
                 <i class="fa fa-user" aria-hidden="true"></i>
             </div>
             <div class="icon">
@@ -52,7 +74,6 @@
         </div>
     </div>
 
-
     <div style="padding-top: 90px;">
         <h2
             style="text-align: center; font-weight:600; font-size: 45px; font-family: Spicy Rice, serif; color: #D91656;">
@@ -63,44 +84,50 @@
     <h2 class="heading">Enter Your Details</h2>
 
     <section class="form-contents">
+        <form id="deliveryForm">
+            <div class="indv-text">
+                <label for="name" class="text">NAME</label>
+                <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
+            </div>
 
-        <div class="indv-text">
-            <label for="name" class="text">NAME</label>
-            <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
-        </div>
+            <div class="indv-text">
+                <label for="email" class="text">EMAIL ID</label>
+                <input type="email" class="form-text" placeholder="example@gmail.com" required>
+            </div>
 
-        <div class="indv-text">
-            <label for="email" class="text">EMAIL ID</label>
-            <input type="email" class="form-text" placeholder="example@gmail.com" required>
-        </div>
+            <div class="indv-text">
+                <label for="contact" class="text">CONTACT No.</label>
+                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" maxlength="10" pattern="\d{10}" required>
+            </div>
 
-        <div class="indv-text">
-            <label for="contact" class="text">CONTACT No.</label>
-            <input type="tel" class="form-text" name="" id="" placeholder="0123456789" required>
-        </div>
+            <div class="indv-text">
+                <label for="add1" class="text">ADDRESS Line1</label>
+                <input type="text" class="form-text" name="" id="" placeholder="Street Address" required>
+            </div>
 
-        <div class="indv-text">
-            <label for="add1" class="text">ADDRESS Line1</label>
-            <input type="text" class="form-text" name="" id="" placeholder="Street Address"
-                required>
-        </div>
+            <div class="indv-text">
+                <label for="add2" class="text">ADDRESS Line2</label>
+                <input type="text" class="form-text" name="" id="" placeholder="City" required>
+            </div>
 
-        <div class="indv-text">
-            <label for="add2" class="text">ADDRESS Line2</label>
-            <input type="text" class="form-text" name="" id="" placeholder="City" required>
-        </div>
+            <div class="indv-text">
+                <label for="state" class="text">STATE</label>
+                <input type="text" class="form-text" placeholder="State" required>
+            </div>
 
-        <div class="indv-text">
-            <label for="state" class="text">STATE</label>
-            <input type="text" class="form-text" placeholder="State" required>
-        </div>
-
-        <div style="display: flex; margin: 20px;" class="btn">
-            <button type="reset" class="btn-style" value="RESET">RESET</button>
-            <button type="submit" value="SUMBIT" class="btn-style">SUBMIT</button>
-        </div>
-
+            <div style="display: flex; margin: 20px;" class="btn">
+                <button type="reset" class="btn-style" value="RESET">RESET</button>
+                <button type="submit" class="btn-style">SUBMIT</button>
+            </div>
+        </form>
     </section>
+
+    <!-- Popup Confirmation -->
+    <div class="popup" id="confirmationPopup">
+        <h3>Submission Successful!</h3>
+        <p>Your details have been submitted successfully.</p>
+        <button id="closePopup">Close</button>
+    </div>
 
     <!-- Cart -->
     <div class="cart">
@@ -114,13 +141,11 @@
                 <div class="total">Sub Total: <span class="sub-total">$0</span></div>
                 <button>Check out</button>
             </div>
-
         </div>
 
         <div class="empty-cart active">
             <p>No items in the cart!</p>
         </div>
-
     </div>
 
     <!-- footer -->
@@ -146,7 +171,7 @@
                     <li><a href="#">Sorbet</a></li>
                     <li><a href="#">Soft serve</a></li>
                     <li><a href="#">Frozen Yogurt</a></li>
-                    <li><a href="#">Non Diary/Vegen</a></li>
+                    <li><a href="#">Non Dairy/Vegan</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -209,10 +234,30 @@
     <div class="copyright">
         &copy; 2024 by <span>DharshiB</span> | All Rights Deserved
     </div>
+    </section>
 
-    <script src="./script/nav.js"></script>
-    <script src="./script/cart.js"></script>
-    <script type="module" src="./script/products.js"></script>
+    <!-- Script -->
+   <!-- Link to external JS scripts -->
+   <script src="./script/nav.js"></script>
+   <script src="./script/cart.js"></script>
+   <script type="module" src="./script/products.js"></script>
+    <script>
+        // Handle form submission
+        document.getElementById('deliveryForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Show the confirmation popup
+            document.getElementById('confirmationPopup').classList.add('active');
+
+            // Clear form fields
+            this.reset();
+        });
+
+        // Close popup functionality
+        document.getElementById('closePopup').addEventListener('click', function () {
+            document.getElementById('confirmationPopup').classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>
