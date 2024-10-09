@@ -13,20 +13,42 @@
     font-family: var(--main-font);
 }
 
-body {
-    height: 100vh;
-    background-color: #FFEB55;
-}
-
 :root {
-    --ternary-color: #640D5F;
-    --main-color: #D91656;
-    --body-color: #ffeb55;
-    --secondary-color: #EE66A6;
-    --background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    /* New Palette */
+    --primary-color: #A8E6CF; /* Mint Green */
+    --secondary-color: #FF6F61; /* Coral */
+    --accent-color: #6A0572; /* Deep Purple */
+    --background-color: #F7F7F7; /* Soft White */
+
+    /* Fonts */
     --main-font: "Questrial", Verdana, Geneva, Tahoma, sans-serif;
     --heading-font: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
     --curly-font: "Spicy Rice", Verdana, Geneva, Tahoma, sans-serif;
+
+    /* Optional Gradient */
+    --background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.1) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* General Styles */
+body {
+    background-color: var(--background-color);
+    font-family: var(--main-font);
+}
+
+/* Button Styles */
+button.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button.secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Accent Usage */
+h1 {
+    color: var(--accent-color);
 }
 
 /* Preloader styles */
