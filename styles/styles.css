@@ -1044,11 +1044,15 @@ h3 {
 }
 
 /* FAQ Section  */
-
+.FAQ{
+    padding-left: 8%;
+  
+}
 .FAQs h2 {
     text-align: center;
     margin-bottom: 15px;
     color: var(--main-color);
+    font-weight: 700;
 }
 
 .FAQs h3 {
@@ -1059,41 +1063,59 @@ h3 {
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
-    width: 100%;
-    color: var(--ternary-color);
+    width: 90%;
+    color:white;
     padding: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: bolder;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-top: 15px;
-    margin-bottom: 15px;
-    border: 2px solid var(--ternary-color);
-    background-color: transparent;
+    margin-bottom: 17px;
+    border: 3px solid var(--ternary-color);
+    background-color: #D91656;
     background-image: none;
+    padding-left: 3%;
+    padding-right: 5%;
+    transition: none;
 }
 
 .FAQ-questions:hover {
-    background-image: var(--background-image);
+  /*  background-image: var(--background-image);*/
+    background-color: #df3f74;
 }
 
 .FAQ-questions i {
     font-size: 1.6rem;
     overflow: visible;
 }
-
 .FAQ-answers {
-    color: var(--ternary-color);
+    color: white;
     font-size: 1.2rem;
     line-height: 1.4;
     font-family: var(--main-font);
     display: none;
-    padding: 0.2rem 2.5rem 2rem;
+    padding: 2rem 2.5rem 2rem;
+    background-color: #df3f74;
+    width: 90%;
+    border-radius: 20px;
+    margin: 0;
 }
-
+.FAQ.active .FAQ-answers {
+    display: block;
+}
+.FAQ.active .FAQ-questions {
+    margin-bottom: 1.5px;
+   
+}
+.FAQ.active .FAQ-questions i {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
 .FAQ-answers.active {
     display: block;
+    margin: 0;
 }
 
 i {
