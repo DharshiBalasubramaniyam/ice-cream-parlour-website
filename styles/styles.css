@@ -772,55 +772,84 @@ h3 {
 }
 
 /* -------------contact section styles------------------- */
-.contact form {
-    flex-direction: column;
-    border: 2px solid var(--main-color);
+/* Contact section styles */
+.contact {
+    background: linear-gradient(to right, #f9f9f9, #eaeaea); /* Light gradient background */
+    padding: 40px;
     border-radius: 10px;
-    padding: 2rem 0;
-    background-color: var(--body-color);
-}
-
-.contact form .row {
-    padding: 0;
-    width: 95%;
-    display: flex;
-    gap: 25px;
-    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.contact form .input-box {
-    width: 100%;
+.contact h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.contact form .input-box label {
-    font-size: 16px;
-    margin-bottom: 3px;
-}
-
-.contact form .input-box input,
-.contact form .input-box textarea {
-    border: 2px solid var(--main-color);
-    font-size: 15px;
-    width: 100%;
-    padding: 7px 10px;
-    margin-top: 4px;
-    border-radius: 4px;
-    background-color: transparent;
-}
-
-.contact form .input-box input:focus,
-.contact form .input-box textarea:focus {
-    outline: 2px solid var(--secondary-color);
-}
-
-.contact form .row:last-child {
+.box-container1 {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-
+    flex-direction: column;
+    gap: 20px;
 }
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box input, 
+.input-box textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff;
+    transition: border 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.input-box input:focus, 
+.input-box textarea:focus {
+    border-color: #007bff; /* Highlighted border color on focus */
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2); /* Soft blue shadow */
+}
+
+.error {
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
 
 
 /* -------------reviews section styles------------------- */
