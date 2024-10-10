@@ -1,5 +1,9 @@
 const falvors_list = [
     {
+        id: "f000",
+        name: "Today's Special"
+    },
+    {
         id: "f001",
         name: "Regular"
     },

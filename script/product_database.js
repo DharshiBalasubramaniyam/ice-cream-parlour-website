@@ -17,6 +17,7 @@ const products_list = [
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
         image: "images/vannila.jpg"
     },
+    
     {
         id: "p003",
         name: "Homemade Vanilla",
@@ -65,6 +66,15 @@ const products_list = [
     {
         id: "p008",
         name: "Mediterranean Mint",
+        flavor_id: "f000",
+        off: 8,
+        price: 50,
+        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
+        image: "images/mint.jpg"
+    },
+    {
+        id: "p008",
+        name: "Mediterranean Mint",
         flavor_id: "f002",
         off: 8,
         price: 50,
@@ -74,7 +84,7 @@ const products_list = [
     {
         id: "p009",
         name: "Raspberry Sorbetto",
-        flavor_id: "f003",
+        flavor_id: "f000",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -182,7 +192,7 @@ const products_list = [
     {
         id: "p021",
         name: "Fudge Brownie",
-        flavor_id: "f005",
+        flavor_id: "f000",
         off: 0,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
