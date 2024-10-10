@@ -489,7 +489,7 @@ h3 {
     font-weight: 600;
     margin-bottom: 15px;
     background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--curly-font);
 }
