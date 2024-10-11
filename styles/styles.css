@@ -28,8 +28,7 @@ body {
     --heading-font: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
     --curly-font: "Spicy Rice", Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/* Preloader styles */
+     /* Preloader styles */
 #preloader {
     position: fixed;
     top: 0;
@@ -70,6 +69,8 @@ body.loaded #preloader {
 body.loaded #main-content {
     display: block;
 }
+
+
 
 ::selection {
     background-color: var(--main-color);
