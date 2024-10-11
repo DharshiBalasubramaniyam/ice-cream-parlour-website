@@ -57,8 +57,13 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Hide the preloader once the page is loaded */
@@ -200,23 +205,59 @@ h3 {
 }
 
 .nav-bar .nav-links a {
+    position: relative;
+    text-decoration: none;
     width: 100px;
     border-radius: 5px;
     text-align: center;
-    padding: 7px 10px;
-    display: inline-block;
-    margin: 0 15px;
     color: var(--body-color);
-    text-transform: capitalize;
-    transition: 0.3s;
     font-size: 18px;
     letter-spacing: 1.3px;
+    text-transform: capitalize;
+    margin: 0 15px;
+}
+
+.nav-bar .nav-links a:after {
+    content: "";
+    position: absolute;
+    background-color: var(--body-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
 }
 
 .nav-bar .nav-links a:hover,
-.nav-bar .nav-links a.active {
+.nav-bar .nav-links a.active
+ {
     color: var(--secondary-color);
+
 }
+
+.nav-bar .nav-links a:hover:after {
+    width: 100%;
+
+}
+
+/* .nav-bar .nav-links a { */
+/* width: 100px; */
+/* border-radius: 5px; */
+/* text-align: center; */
+/* padding: 7px 10px; */
+/* display: inline-block; */
+/* margin: 0 15px; */
+/* color: var(--body-color); */
+/* text-transform: capitalize; */
+/* transition: 0.3s; */
+/* font-size: 18px; */
+/* letter-spacing: 1.3px; */
+/* } */
+/*  */
+/* .nav-bar .nav-links a:hover, */
+/* .nav-bar .nav-links a.active { */
+/* color: var(--secondary-color); */
+/* } */
 
 .nav-bar .icons {
     display: flex;
@@ -449,7 +490,7 @@ h3 {
     font-weight: 600;
     margin-bottom: 15px;
     background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--curly-font);
 }
@@ -591,6 +632,7 @@ h3 {
     font-size: 16px;
     width: 100%;
 }
+
 .service-card>div a {
     color: var(--body-color);
 }
@@ -842,6 +884,7 @@ h3 {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .reviews .reviews-box .box .top {
     width: 100%;
     height: max-content;
