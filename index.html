@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IcyCo Ice Cream</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pVn7+0+0h3zNJh6K93fGz/UVgR6oI1rDjIyYwDmxzTGnOy6l5Fd0LFHo+V4b7rXG36qG5LFT/sx6TRxgY1a3Zg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
@@ -363,33 +370,48 @@
             <div class="row">
                 <div class="input-box">
                     <label for="fname">Your First Name</label><br>
-                    <input type="text" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <div class="input-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''" placeholder="First Name">
+                    </div>
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
                 <div class="input-box">
                     <label for="lname">Your Last Name</label><br>
-                    <input type="text" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''" placeholder="Last Name">
+                   
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
             </div>
-
+    
             <div class="row">
                 <div class="input-box">
                     <label for="email">Your Email</label><br>
-                    <input type="email" id="email" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <div class="input-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" oninput="this.parentElement.querySelector('small').textContent = ''" placeholder="Email">
+                    </div>
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
                 <div class="input-box">
                     <label for="phone">Your Contact Number</label><br>
-                    <input type="tel" id="phone" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <div class="input-icon">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" oninput="this.parentElement.querySelector('small').textContent = ''" placeholder="Phone Number">
+                    </div>
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
             </div>
+    
             <div class="row">
                 <div class="input-box">
                     <label for="message">Your Message</label><br>
-                    <textarea name="" id="message" cols="30" rows="10"
-                        oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
+                    <div class="input-icon">
+                        <i class="fas fa-comment-dots"></i>
+                        <textarea id="message" cols="30" rows="10" oninput="this.parentElement.querySelector('small').textContent = ''" placeholder="Your Message"></textarea>
+                    </div>
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
             </div>
@@ -398,7 +420,7 @@
             </div>
         </form>
     </section>
-
+    
     <!-- FAQs -->
     <section class="FAQs" id="FAQs">
         <h1><span>FAQs</span></h1>
