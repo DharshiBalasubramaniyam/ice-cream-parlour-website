@@ -1,0 +1,53 @@
+declare const _default: {
+    warnings: {
+        straightRow: string;
+        keyPattern: string;
+        simpleRepeat: string;
+        extendedRepeat: string;
+        sequences: string;
+        recentYears: string;
+        dates: string;
+        topTen: string;
+        topHundred: string;
+        common: string;
+        similarToCommon: string;
+        wordByItself: string;
+        namesByThemselves: string;
+        commonNames: string;
+        userInputs: string;
+        pwned: string;
+    };
+    suggestions: {
+        l33t: string;
+        reverseWords: string;
+        allUppercase: string;
+        capitalization: string;
+        dates: string;
+        recentYears: string;
+        associatedYears: string;
+        sequences: string;
+        repeated: string;
+        longerKeyboardPattern: string;
+        anotherWord: string;
+        useWords: string;
+        noNeed: string;
+        pwned: string;
+    };
+    timeEstimation: {
+        ltSecond: string;
+        second: string;
+        seconds: string;
+        minute: string;
+        minutes: string;
+        hour: string;
+        hours: string;
+        day: string;
+        days: string;
+        month: string;
+        months: string;
+        year: string;
+        years: string;
+        centuries: string;
+    };
+};
+export default _default;

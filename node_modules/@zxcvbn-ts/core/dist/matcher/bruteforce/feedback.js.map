@@ -1,0 +1,1 @@
+{"version":3,"file":"feedback.js","sources":["../../../src/matcher/bruteforce/feedback.ts"],"sourcesContent":["export default () => {\n    return null;\n};\n//# sourceMappingURL=feedback.js.map"],"names":[],"mappings":";;AAAA,wBAAA,CAAe,MAAM;AACjB,EAAA,OAAO,IAAI,CAAA;AACf,CAAC;;;;"}

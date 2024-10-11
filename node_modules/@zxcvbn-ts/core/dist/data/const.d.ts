@@ -1,0 +1,30 @@
+export declare const DATE_MAX_YEAR = 2050;
+export declare const DATE_MIN_YEAR = 1000;
+export declare const DATE_SPLITS: {
+    4: number[][];
+    5: number[][];
+    6: number[][];
+    7: number[][];
+    8: number[][];
+};
+export declare const BRUTEFORCE_CARDINALITY = 10;
+export declare const MIN_GUESSES_BEFORE_GROWING_SEQUENCE = 10000;
+export declare const MIN_SUBMATCH_GUESSES_SINGLE_CHAR = 10;
+export declare const MIN_SUBMATCH_GUESSES_MULTI_CHAR = 50;
+export declare const MIN_YEAR_SPACE = 20;
+export declare const START_UPPER: RegExp;
+export declare const END_UPPER: RegExp;
+export declare const ALL_UPPER: RegExp;
+export declare const ALL_UPPER_INVERTED: RegExp;
+export declare const ALL_LOWER: RegExp;
+export declare const ALL_LOWER_INVERTED: RegExp;
+export declare const ONE_LOWER: RegExp;
+export declare const ONE_UPPER: RegExp;
+export declare const ALPHA_INVERTED: RegExp;
+export declare const ALL_DIGIT: RegExp;
+export declare const REFERENCE_YEAR: number;
+export declare const REGEXEN: {
+    recentYear: RegExp;
+};
+export declare const SEPERATOR_CHARS: string[];
+export declare const SEPERATOR_CHAR_COUNT: number;

@@ -1,0 +1,1 @@
+{"version":3,"file":"scoring.js","sources":["../../../src/matcher/repeat/scoring.ts"],"sourcesContent":["export default ({ baseGuesses, repeatCount }) => baseGuesses * repeatCount;\n//# sourceMappingURL=scoring.js.map"],"names":["baseGuesses","repeatCount"],"mappings":";;AAAA,oBAAA,CAAe,CAAC;EAAEA,WAAW;AAAEC,EAAAA,WAAAA;AAAY,CAAC,KAAKD,WAAW,GAAGC,WAAW;;;;"}

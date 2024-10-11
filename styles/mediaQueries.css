@@ -196,3 +196,76 @@
         margin: 10px 0 0 0;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-field {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #name-fields {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .signin-btn button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .social-links button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Tablets (600px - 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .login-container {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .signin-btn button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .social-links button {
+        width: 48%;
+        margin: 10px 1%;
+    }
+}
+
+/* Large devices (min-width: 900px) */
+@media only screen and (min-width: 901px) {
+    .login-container {
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .signin-btn button {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .social-links button {
+        width: 48%;
+        margin: 10px 1%;
+    }
+}

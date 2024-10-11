@@ -1,0 +1,41 @@
+{
+  "name": "@zxcvbn-ts/core",
+  "version": "3.0.4",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "description": "Realistic password strength estimation written in typescript",
+  "license": "MIT",
+  "homepage": "https://github.com/zxcvbn-ts/zxcvbn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zxcvbn-ts/zxcvbn.git"
+  },
+  "author": "zxcvbn-ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "fastest-levenshtein": "1.0.16"
+  },
+  "keywords": [
+    "password",
+    "passphrase",
+    "security",
+    "authentication",
+    "strength",
+    "meter",
+    "quality",
+    "estimation",
+    "pattern",
+    "cracking",
+    "scoring",
+    "entropy",
+    "bruteforce"
+  ],
+  "gitHead": "ecb44e737022ff694a063d3e5e5caec94cc2d4fa"
+}

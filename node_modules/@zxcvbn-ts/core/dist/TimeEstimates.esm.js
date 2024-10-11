@@ -1,0 +1,98 @@
+import { zxcvbnOptions } from './Options.esm.js';
+
+const SECOND = 1;
+const MINUTE = SECOND * 60;
+const HOUR = MINUTE * 60;
+const DAY = HOUR * 24;
+const MONTH = DAY * 31;
+const YEAR = MONTH * 12;
+const CENTURY = YEAR * 100;
+const times = {
+  second: SECOND,
+  minute: MINUTE,
+  hour: HOUR,
+  day: DAY,
+  month: MONTH,
+  year: YEAR,
+  century: CENTURY
+};
+/*
+ * -------------------------------------------------------------------------------
+ *  Estimates time for an attacker ---------------------------------------------------------------
+ * -------------------------------------------------------------------------------
+ */
+class TimeEstimates {
+  translate(displayStr, value) {
+    let key = displayStr;
+    if (value !== undefined && value !== 1) {
+      key += 's';
+    }
+    const {
+      timeEstimation
+    } = zxcvbnOptions.translations;
+    return timeEstimation[key].replace('{base}', `${value}`);
+  }
+  estimateAttackTimes(guesses) {
+    const crackTimesSeconds = {
+      onlineThrottling100PerHour: guesses / (100 / 3600),
+      onlineNoThrottling10PerSecond: guesses / 10,
+      offlineSlowHashing1e4PerSecond: guesses / 1e4,
+      offlineFastHashing1e10PerSecond: guesses / 1e10
+    };
+    const crackTimesDisplay = {
+      onlineThrottling100PerHour: '',
+      onlineNoThrottling10PerSecond: '',
+      offlineSlowHashing1e4PerSecond: '',
+      offlineFastHashing1e10PerSecond: ''
+    };
+    Object.keys(crackTimesSeconds).forEach(scenario => {
+      const seconds = crackTimesSeconds[scenario];
+      crackTimesDisplay[scenario] = this.displayTime(seconds);
+    });
+    return {
+      crackTimesSeconds,
+      crackTimesDisplay,
+      score: this.guessesToScore(guesses)
+    };
+  }
+  guessesToScore(guesses) {
+    const DELTA = 5;
+    if (guesses < 1e3 + DELTA) {
+      // risky password: "too guessable"
+      return 0;
+    }
+    if (guesses < 1e6 + DELTA) {
+      // modest protection from throttled online attacks: "very guessable"
+      return 1;
+    }
+    if (guesses < 1e8 + DELTA) {
+      // modest protection from unthrottled online attacks: "somewhat guessable"
+      return 2;
+    }
+    if (guesses < 1e10 + DELTA) {
+      // modest protection from offline attacks: "safely unguessable"
+      // assuming a salted, slow hash function like bcrypt, scrypt, PBKDF2, argon, etc
+      return 3;
+    }
+    // strong protection from offline attacks under same scenario: "very unguessable"
+    return 4;
+  }
+  displayTime(seconds) {
+    let displayStr = 'centuries';
+    let base;
+    const timeKeys = Object.keys(times);
+    const foundIndex = timeKeys.findIndex(time => seconds < times[time]);
+    if (foundIndex > -1) {
+      displayStr = timeKeys[foundIndex - 1];
+      if (foundIndex !== 0) {
+        base = Math.round(seconds / times[displayStr]);
+      } else {
+        displayStr = 'ltSecond';
+      }
+    }
+    return this.translate(displayStr, base);
+  }
+}
+
+export { TimeEstimates as default };
+//# sourceMappingURL=TimeEstimates.esm.js.map

@@ -1,0 +1,30 @@
+{
+  "name": "@zxcvbn-ts/language-common",
+  "version": "3.0.4",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "description": "The common language package for zxcvbn-ts",
+  "license": "MIT",
+  "homepage": "https://github.com/zxcvbn-ts/zxcvbn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zxcvbn-ts/zxcvbn.git"
+  },
+  "author": "zxcvbn-ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "zxcvbn",
+    "language",
+    "translation",
+    "common"
+  ],
+  "gitHead": "ecb44e737022ff694a063d3e5e5caec94cc2d4fa"
+}

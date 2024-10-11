@@ -1,0 +1,55 @@
+var translationKeys = {
+  warnings: {
+    straightRow: 'straightRow',
+    keyPattern: 'keyPattern',
+    simpleRepeat: 'simpleRepeat',
+    extendedRepeat: 'extendedRepeat',
+    sequences: 'sequences',
+    recentYears: 'recentYears',
+    dates: 'dates',
+    topTen: 'topTen',
+    topHundred: 'topHundred',
+    common: 'common',
+    similarToCommon: 'similarToCommon',
+    wordByItself: 'wordByItself',
+    namesByThemselves: 'namesByThemselves',
+    commonNames: 'commonNames',
+    userInputs: 'userInputs',
+    pwned: 'pwned'
+  },
+  suggestions: {
+    l33t: 'l33t',
+    reverseWords: 'reverseWords',
+    allUppercase: 'allUppercase',
+    capitalization: 'capitalization',
+    dates: 'dates',
+    recentYears: 'recentYears',
+    associatedYears: 'associatedYears',
+    sequences: 'sequences',
+    repeated: 'repeated',
+    longerKeyboardPattern: 'longerKeyboardPattern',
+    anotherWord: 'anotherWord',
+    useWords: 'useWords',
+    noNeed: 'noNeed',
+    pwned: 'pwned'
+  },
+  timeEstimation: {
+    ltSecond: 'ltSecond',
+    second: 'second',
+    seconds: 'seconds',
+    minute: 'minute',
+    minutes: 'minutes',
+    hour: 'hour',
+    hours: 'hours',
+    day: 'day',
+    days: 'days',
+    month: 'month',
+    months: 'months',
+    year: 'year',
+    years: 'years',
+    centuries: 'centuries'
+  }
+};
+
+export { translationKeys as default };
+//# sourceMappingURL=translationKeys.esm.js.map

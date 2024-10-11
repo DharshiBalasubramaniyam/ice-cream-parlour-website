@@ -1,0 +1,1 @@
+{"version":3,"file":"feedback.js","sources":["../../../src/matcher/separator/feedback.ts"],"sourcesContent":["export default () => {\n    // no suggestions\n    return null;\n};\n//# sourceMappingURL=feedback.js.map"],"names":[],"mappings":";;AAAA,uBAAA,CAAe,MAAM;AACjB;AACA,EAAA,OAAO,IAAI,CAAA;AACf,CAAC;;;;"}

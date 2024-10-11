@@ -1,0 +1,23 @@
+import React from 'react';
+import type { LocalizationKey } from '../customizables';
+import { Button, Flex, Spinner } from '../customizables';
+import type { ElementDescriptor, ElementId } from '../customizables/elementDescriptors';
+import type { PropsOfComponent, ThemableCssProp } from '../styledSystem';
+export declare const Actions: (props: PropsOfComponent<typeof Flex>) => import("@emotion/react/jsx-runtime").JSX.Element;
+export declare const SmallActions: (props: PropsOfComponent<typeof Flex>) => import("@emotion/react/jsx-runtime").JSX.Element;
+type ActionProps = Omit<PropsOfComponent<typeof Button>, 'label'> & {
+    icon: React.ComponentType;
+    trailing?: React.ReactNode;
+    label: string | LocalizationKey;
+    iconBoxElementDescriptor?: ElementDescriptor;
+    iconBoxElementId?: ElementId;
+    iconBoxSx?: ThemableCssProp;
+    iconElementDescriptor?: ElementDescriptor;
+    iconElementId?: ElementId;
+    iconSx?: ThemableCssProp;
+    spinnerSize?: PropsOfComponent<typeof Spinner>['size'];
+};
+export declare const ExtraSmallAction: (props: Omit<ActionProps, "label">) => import("@emotion/react/jsx-runtime").JSX.Element;
+export declare const SmallAction: (props: ActionProps) => import("@emotion/react/jsx-runtime").JSX.Element;
+export declare const Action: (props: ActionProps) => import("@emotion/react/jsx-runtime").JSX.Element;
+export {};

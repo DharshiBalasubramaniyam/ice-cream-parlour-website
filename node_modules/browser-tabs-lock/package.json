@@ -1,0 +1,52 @@
+{
+  "name": "browser-tabs-lock",
+  "version": "1.2.15",
+  "description": "provides locking mechanism to sync across browser tabs",
+  "main": "index.js",
+  "scripts": {
+    "pack-test": "npm run pack && npx mocha --timeout 40000 --exit",
+    "pack": "rm -f ./bundle/* && ./node_modules/.bin/webpack -p",
+    "build": "npx tsc -p tsconfig.json",
+    "test": "npx mocha --timeout 40000 --exit",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supertokens/browser-tabs-lock.git"
+  },
+  "devDependencies": {
+    "puppeteer": "2.0.0",
+    "typescript": "3.5.2",
+    "mocha": "6.1.4",
+    "mocha-jsdom": "2.0.0",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  },
+  "dependencies": {
+    "lodash": ">=4.17.21"
+  },
+  "keywords": [
+    "browser",
+    "tabs",
+    "browser sync",
+    "tabs synchronization",
+    "locks",
+    "tabs lock",
+    "locking in browser",
+    "chrome",
+    "firefox",
+    "IE",
+    "safari"
+  ],
+  "contributors": [
+    "bhumilsarvaiya",
+    "rishabhpoddar",
+    "nkshah2",
+    "supertokens"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supertokens/browser-tabs-lock/issues"
+  },
+  "homepage": "https://github.com/supertokens/browser-tabs-lock#readme"
+}

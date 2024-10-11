@@ -1,0 +1,25 @@
+declare const _default: {
+    a: string[];
+    b: string[];
+    c: string[];
+    d: string[];
+    e: string[];
+    f: string[];
+    g: string[];
+    h: string[];
+    i: string[];
+    k: string[];
+    l: string[];
+    m: string[];
+    n: string[];
+    o: string[];
+    q: string[];
+    u: string[];
+    s: string[];
+    t: string[];
+    v: string[];
+    w: string[];
+    x: string[];
+    z: string[];
+};
+export default _default;
