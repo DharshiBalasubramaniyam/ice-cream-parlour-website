@@ -732,7 +732,21 @@ h3 {
     align-items: center;
     justify-content: center;
 }
-
+.qtycart{
+    width: fit-content !important; border: 2px solid red !important; border-radius: 25px !important; padding:0 5px !important;display: flex !important;justify-content: center !important;align-items: center !important;
+}
+.decreasecart{
+    border-right: 2px solid red !important;
+    padding: 5px !important;
+}
+.increasecart{
+    cursor: pointer !important;
+    padding: 5px !important;
+}
+.pcscart{
+    border-right: 2px solid red !important;
+    padding: 5px;
+}
 .products .products-box .box .qty span {
     margin: 15px 0;
     display: inline-block;
@@ -745,9 +759,11 @@ h3 {
     transition: 0.3s;
 }
 
+
+
 .products .products-box .box .qty .increase,
 .decrease {
-    cursor: pointer;
+    cursor: pointer !important;
     user-select: none;
 }
 

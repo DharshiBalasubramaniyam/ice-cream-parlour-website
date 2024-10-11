@@ -5,11 +5,12 @@ const LOCAL_STORAGE_CART_KEY = "icyco_cart";
 let cartItems = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CART_KEY)) || [];
 
 document.addEventListener("DOMContentLoaded", () => {
-    displayFlavorFilter()
-    displayProducts(products_list)
-    displayCartItems()
-}
-)
+    displayFlavorFilter();
+    displayProducts(products_list);
+    displayCartItems();
+    // handleQuantityButtonsInProductCard(); 
+    handleQuantityButtonsInCart();        
+});
 
 // display products
 function displayProducts(products) {
@@ -32,11 +33,11 @@ function displayProducts(products) {
                                 <div class="price">$${product.price}</div>
                             </div>
                             <div class="description">${product.description}</div>
-                            <div class="qty">
-                                <span class="decrease">-</span>
-                                <span class="pcs">1</span>
-                                <span class="increase">+</span>
-                            </div>
+                           <div class="qty">
+                            <span class="decrease">-</span>
+                            <span class="pcs">1</span>
+                            <span class="increase">+</span>
+                           </div>
                             `;
 
 
@@ -60,6 +61,7 @@ function displayProducts(products) {
         productsSection?.appendChild(box);
     });
     handleQuantityButtonsInProductCard()
+    // handleQuantityButtonsInCart()
 
 }
 
@@ -176,59 +178,120 @@ function handleRemoveButtonInCart() {
 }
 
 function displayCartItems() {
-
-    if (cartItems.length !=0 ) {
-        document.querySelector(".empty-cart").classList.remove("active")
-        document.querySelector(".no-empty-cart").classList.add("active")
-    }else {
-        document.querySelector(".empty-cart").classList.add("active")
-        document.querySelector(".no-empty-cart").classList.remove("active")
+    if (cartItems.length != 0) {
+        document.querySelector(".empty-cart").classList.remove("active");
+        document.querySelector(".no-empty-cart").classList.add("active");
+    } else {
+        document.querySelector(".empty-cart").classList.add("active");
+        document.querySelector(".no-empty-cart").classList.remove("active");
     }
 
     const cartUlList = document.querySelector(".cart-list-items");
     cartUlList.innerHTML = "";
 
     let subtotal = 0, noOfItems = 0;
+
+    // Iterate over cartItems to create list items
     cartItems.map(ci => {
         let itemLi = document.createElement("li");
-
         itemLi.setAttribute("id", ci.itemId);
 
-        let product = products_list.find(p => p.id == ci.itemId)
+        // Find the product for the current cart item
+        let product = products_list.find(p => p.id == ci.itemId); // Move this line here
 
-        itemLi.innerHTML = `<img src="${product.image}" alt="">
-                            <div class="text">
-                                <span class="name">${product.name}</span><br>
-                                <span class="qty">${ci.pcs}</span> x ${product.price} <br>
-                                <div class="price">$${ci.amount}</div>
-                                <i class="fa fa-times remove-cart-item-btn" aria-hidden="true"></i>
-                            </div>`;
+        // Check if the product was found
+        if (product) {
+            itemLi.innerHTML = `
+                <img src="${product.image}" alt="">
+                <div class="text">
+                    <span class="name">${product.name}</span><br>
+                    <span class="qty">${ci.pcs}</span> x ${product.price} <br>
+                    <div class="price">$${ci.amount}</div>
+                    <i class="fa fa-times remove-cart-item-btn" aria-hidden="true"></i>
+                </div>
+                <div class="qty qtycart">
+                    <span class="decrease decreasecart">-</span>
+                    <span class="pcs pcscart">${ci.pcs}</span>
+                    <span class="increase increasecart">+</span>
+                </div>
+            `;
 
-        cartUlList.appendChild(itemLi);
-        handleRemoveButtonInCart()
-        subtotal += Number.parseFloat(ci.amount);
-        noOfItems += Number.parseInt(ci.pcs)
-    })
+            cartUlList.appendChild(itemLi);
+            handleRemoveButtonInCart();
+            // handleQuantityButtonsInCart() // Uncomment if needed
+            
+            subtotal += Number.parseFloat(ci.amount);
+            noOfItems += Number.parseInt(ci.pcs);
+        } else {
+            console.error(`Product with ID ${ci.itemId} not found`);
+        }
+    });
 
-    document.querySelector(".sub-total").textContent = `$${subtotal}`;
+    // Update subtotal and number of items in the cart
+    document.querySelector(".sub-total").textContent = `$${subtotal.toFixed(2)}`;
     document.querySelector(".no-of-cart-items").textContent = noOfItems;
-
 }
 
 function handleQuantityButtonsInProductCard() {
-    const increaseBtns = document.querySelectorAll(".increase");
-    const decreaseBtns = document.querySelectorAll(".decrease");
-
-    increaseBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            btn.previousElementSibling.textContent = parseInt(btn.previousElementSibling.textContent) + 1;
-        });
-    });
-    decreaseBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            if (btn.nextElementSibling.textContent > 0) {
-                btn.nextElementSibling.textContent = parseInt(btn.nextElementSibling.textContent) - 1;
+    const productsBox = document.querySelector(".products-box");
+    if (!productsBox) return;
+    productsBox.addEventListener("click", (e) => {
+        
+        if (e.target.classList.contains("increase")) {
+            const qtySpan = e.target.previousElementSibling;
+            let currentQty = parseInt(qtySpan.textContent);
+            qtySpan.textContent = currentQty + 1; 
+        }
+        if (e.target.classList.contains("decrease")) {
+            const qtySpan = e.target.nextElementSibling; 
+            let currentQty = parseInt(qtySpan.textContent);
+            if (currentQty > 1) { 
+                qtySpan.textContent = currentQty - 1; 
             }
-        });
+        }
+    });
+}
+
+
+function handleQuantityButtonsInCart() {
+    const cartList = document.querySelector(".cart-list-items");
+    cartList.addEventListener("click", (e) => {
+        const itemId = e.target.closest("li").getAttribute("id");
+        let cartItem = cartItems.find(item => item.itemId == itemId);
+        if (e.target.classList.contains("increase")) {
+            const qtySpan = e.target.previousElementSibling;
+            let currentQty = parseInt(qtySpan.textContent);
+            qtySpan.textContent = currentQty + 1;
+            cartItem.pcs = currentQty + 1;
+            cartItem.amount = cartItem.pcs * products_list.find(p => p.id == itemId).price;
+
+            const priceElement = e.target.closest("li").querySelector(".price");
+            priceElement.textContent = `$${cartItem.amount.toFixed(2)}`;
+
+            const subtotal=document.querySelector(".sub-total")
+            subtotal.textContent=`$${cartItem.amount.toFixed(2)}`
+          
+            const textQtyElement = e.target.closest("li").querySelector(".text .qty");
+            textQtyElement.textContent = cartItem.pcs;
+            localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems));
+        }
+        if (e.target.classList.contains("decrease")) {
+            const qtySpan = e.target.nextElementSibling;
+            let currentQty = parseInt(qtySpan.textContent);
+            if (currentQty > 1) {
+                qtySpan.textContent = currentQty - 1;
+                cartItem.pcs = currentQty - 1;
+                cartItem.amount = cartItem.pcs * products_list.find(p => p.id == itemId).price;
+                const priceElement = e.target.closest("li").querySelector(".price");
+                priceElement.textContent = `$${cartItem.amount.toFixed(2)}`;
+
+                
+            const subtotal=document.querySelector(".sub-total")
+            subtotal.textContent=`$${cartItem.amount.toFixed(2)}`
+                const textQtyElement = e.target.closest("li").querySelector(".text .qty");
+                textQtyElement.textContent = cartItem.pcs;
+                localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems));
+            }
+        }
     });
 }
