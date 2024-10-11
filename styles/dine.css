@@ -58,11 +58,15 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   color: var(--body-color);
-  transition: all 0.8s ease;
   flex: 1 1 300px;
   max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.restaurant-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 
 .restaurant-card img {
   width: 100%;
