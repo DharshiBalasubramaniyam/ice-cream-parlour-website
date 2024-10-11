@@ -255,9 +255,16 @@ function handleQuantityButtonsInProductCard() {
 
 function handleQuantityButtonsInCart() {
     const cartList = document.querySelector(".cart-list-items");
+    function updateSubtotal() {
+        const subtotalElement = document.querySelector(".sub-total");
+        const subtotal = cartItems.reduce((acc, item) => acc + item.amount, 0);
+        subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+    }
+
     cartList.addEventListener("click", (e) => {
         const itemId = e.target.closest("li").getAttribute("id");
         let cartItem = cartItems.find(item => item.itemId == itemId);
+
         if (e.target.classList.contains("increase")) {
             const qtySpan = e.target.previousElementSibling;
             let currentQty = parseInt(qtySpan.textContent);
@@ -268,13 +275,14 @@ function handleQuantityButtonsInCart() {
             const priceElement = e.target.closest("li").querySelector(".price");
             priceElement.textContent = `$${cartItem.amount.toFixed(2)}`;
 
-            const subtotal=document.querySelector(".sub-total")
-            subtotal.textContent=`$${cartItem.amount.toFixed(2)}`
-          
             const textQtyElement = e.target.closest("li").querySelector(".text .qty");
             textQtyElement.textContent = cartItem.pcs;
+
             localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems));
+
+            updateSubtotal(); 
         }
+
         if (e.target.classList.contains("decrease")) {
             const qtySpan = e.target.nextElementSibling;
             let currentQty = parseInt(qtySpan.textContent);
@@ -282,16 +290,18 @@ function handleQuantityButtonsInCart() {
                 qtySpan.textContent = currentQty - 1;
                 cartItem.pcs = currentQty - 1;
                 cartItem.amount = cartItem.pcs * products_list.find(p => p.id == itemId).price;
+
                 const priceElement = e.target.closest("li").querySelector(".price");
                 priceElement.textContent = `$${cartItem.amount.toFixed(2)}`;
 
-                
-            const subtotal=document.querySelector(".sub-total")
-            subtotal.textContent=`$${cartItem.amount.toFixed(2)}`
                 const textQtyElement = e.target.closest("li").querySelector(".text .qty");
                 textQtyElement.textContent = cartItem.pcs;
+
                 localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems));
+
+                updateSubtotal(); 
             }
         }
     });
 }
+
