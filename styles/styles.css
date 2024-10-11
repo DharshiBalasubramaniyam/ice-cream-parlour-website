@@ -1125,6 +1125,7 @@ h3 {
 .FAQ-questions i {
     font-size: 1.6rem;
     overflow: visible;
+    transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);  /* Smooth rotation of arrow */
 }
 
 .FAQ-answers {
