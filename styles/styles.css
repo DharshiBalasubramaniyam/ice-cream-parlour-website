@@ -123,8 +123,12 @@ section>h1 {
 }
 
 section>h1 span {
-    color: var(--main-color);
+    color: #860831;
     font-family: var(--heading-font);
+    background-color: #EE66A6;
+    display: inline-block;
+    padding: 0.1rem 3rem;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100% ,7% 50% ,0% 0%);
 }
 
 .box-container {
