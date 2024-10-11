@@ -28,7 +28,8 @@ body {
     --heading-font: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
     --curly-font: "Spicy Rice", Verdana, Geneva, Tahoma, sans-serif;
 }
-     /* Preloader styles */
+
+/* Preloader styles */
 #preloader {
     position: fixed;
     top: 0;
@@ -57,13 +58,8 @@ body {
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Hide the preloader once the page is loaded */
@@ -74,8 +70,6 @@ body.loaded #preloader {
 body.loaded #main-content {
     display: block;
 }
-
-
 
 ::selection {
     background-color: var(--main-color);
@@ -209,59 +203,23 @@ h3 {
 }
 
 .nav-bar .nav-links a {
-    position: relative;
-    text-decoration: none;
     width: 100px;
     border-radius: 5px;
     text-align: center;
+    padding: 7px 10px;
+    display: inline-block;
+    margin: 0 15px;
     color: var(--body-color);
+    text-transform: capitalize;
+    transition: 0.3s;
     font-size: 18px;
     letter-spacing: 1.3px;
-    text-transform: capitalize;
-    margin: 0 15px;
-}
-
-.nav-bar .nav-links a:after {
-    content: "";
-    position: absolute;
-    background-color: var(--body-color);
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: -10px;
-    transition: 0.3s;
 }
 
 .nav-bar .nav-links a:hover,
-.nav-bar .nav-links a.active
- {
+.nav-bar .nav-links a.active {
     color: var(--secondary-color);
-
 }
-
-.nav-bar .nav-links a:hover:after {
-    width: 100%;
-
-}
-
-/* .nav-bar .nav-links a { */
-/* width: 100px; */
-/* border-radius: 5px; */
-/* text-align: center; */
-/* padding: 7px 10px; */
-/* display: inline-block; */
-/* margin: 0 15px; */
-/* color: var(--body-color); */
-/* text-transform: capitalize; */
-/* transition: 0.3s; */
-/* font-size: 18px; */
-/* letter-spacing: 1.3px; */
-/* } */
-/*  */
-/* .nav-bar .nav-links a:hover, */
-/* .nav-bar .nav-links a.active { */
-/* color: var(--secondary-color); */
-/* } */
 
 .nav-bar .icons {
     display: flex;
@@ -494,7 +452,7 @@ h3 {
     font-weight: 600;
     margin-bottom: 15px;
     background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--curly-font);
 }
@@ -521,30 +479,44 @@ h3 {
 }
 
 /* -------------about section styles------------------- */
-.about .about-box .image {
-    width: 100%;
-    height: 500px;
-    max-width: 640px;
-    overflow: hidden;
-    padding: 0;
-    border-radius: 10px;
+.about-box {
+    display: flex; /* Use Flexbox to position children in a row */
+    align-items: center; /* Vertically center the items */
+    margin-left: -25px;
 }
 
-.about .about-box .image img {
-    height: 100%;
-    width: 100%;
+.about .about-box .video-container {
+    position: relative;
+    flex: 1; /* Allow the video container to grow */
+    max-width: 800px; /* Limit the width of the video */
+    overflow: hidden;
+}
+
+.video-container video {
+    width: calc(100% + 100px); /* Increase the width to crop from the right */
+    height: auto; /* Maintain aspect ratio */
+    position: relative;
+    right: -90px; /* Move the video to the left to crop from the right */
 }
 
 .about .about-box .text {
-    width: 100%;
-    max-width: 640px;
-    height: 500px;
+    flex: 1; /* Allow the text container to grow */
+    max-width: 640px; /* Optional: Limit the width of the text */
     display: flex;
+    padding-left: 20px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Center content vertically */
     gap: 15px;
 }
 
+.about .about-box .text h1 {
+    font-size: 35px; /* Adjust font size as needed */
+    letter-spacing: 1.3px;
+    font-weight: 900; /* Increase this value to make it bolder */
+    color: var(--ternary-color);
+}
+
+/* Existing styles remain unchanged */
 .about .about-box .text h2 {
     font-size: 35px;
     letter-spacing: 1.3px;
@@ -636,7 +608,6 @@ h3 {
     font-size: 16px;
     width: 100%;
 }
-
 .service-card>div a {
     color: var(--body-color);
 }
@@ -904,7 +875,6 @@ h3 {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .reviews .reviews-box .box .top {
     width: 100%;
     height: max-content;
@@ -1145,7 +1115,6 @@ h3 {
 .FAQ-questions i {
     font-size: 1.6rem;
     overflow: visible;
-    transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);  /* Smooth rotation of arrow */
 }
 
 .FAQ-answers {
