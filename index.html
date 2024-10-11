@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
+    <link rel="stylesheet" href="styles/popup.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -136,6 +137,26 @@
         </div>
 
     </section>
+
+    <!-- Pop-up for email registration -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <div class="popup-left">
+        <img src="images/popupice.jpg" alt="Discount Image">
+      </div>
+      <div class="popup-right">
+        <span class="close-btn">&times;</span>
+        <h2>Get a sweet deal before it melts away!</h2>
+        <p>Get 30% off your first order when you Sign up.</p>
+        <form id="emailForm">
+          <input type="email" id="email" placeholder="Enter your email" required>
+          <button type="submit" class="signup-btn">SIGN UP</button>
+        </form>
+        <a href="#" class="no-thanks">No thanks</a>
+        <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </div>
 
     <!-- About -->
     <section class="about" id="about">
@@ -380,7 +401,7 @@
 
     <!-- FAQs -->
     <section class="FAQs" id="FAQs">
-        <h1>FAQs</h1>
+        <h1><span>FAQs</span></h1>
         <h2>Find Out More About The Ice Cream Shop</h2>
         <br /><br />
         <h3>We’ve got cones of wisdom for your burning questions!</h3>
@@ -485,15 +506,18 @@
             <div class="footer-col">
                 <h4>Need Help?</h4>
                 <ul class="links">
-                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
-                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
-                    <li><a href="" class="social"><i class="fa-solid fa-envelope"></i> mail@1234567.com</a></li>
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+                    <li><a href="mailto:mail@1234567.com" class="social"><i class="fa-solid fa-envelope"></i> mail@1234567.com</a></li>
                 </ul>
                 <h4 style="margin-top: 15px;">Follow Us</h4>
                 <ul class="links">
-                    <li><a href="#" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="#" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+
+                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+
                 </ul>
             </div>
             <div class="footer-col">
@@ -510,6 +534,7 @@
             </div>
         </div>
     </section>
+
 
     <!-----scroll bottom to top------->
     <button class="scroll-button">
@@ -534,6 +559,7 @@
     <script type="module" src="script/cart.js"></script>
     <script src="script/FAQ.js"></script>
     <script src="script/topscrollindicator.js"></script>
+    <script src="script/popup.js"></script>
 </body>
 
 </html>
