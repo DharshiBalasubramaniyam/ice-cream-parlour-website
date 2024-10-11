@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@clerk/clerk-js": "^5.26.3"
+    "@clerk/clerk-js": "^5.26.3",
+    "firebase": "^10.14.1"
   }
 }

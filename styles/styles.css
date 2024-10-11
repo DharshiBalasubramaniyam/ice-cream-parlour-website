@@ -501,7 +501,47 @@ h3 {
     justify-content: center;
     gap: 15px;
 }
+.about h1{
+    font-size: 3rem; /* Large font size for prominence */
+    color: #2c3e50; /* Dark color for the main heading */
+    font-weight: 700; /* Bold text for emphasis */
+    text-transform: uppercase; /* Uppercase for a strong appearance */
+    letter-spacing: 2px; /* Spacing between letters */
+    transition: color 0.4s ease;
+    /* position: relative; */
+}
 
+.about /* Decorative Underline */
+h1::after {
+    
+    width: 100%; /* Full width underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #e74c3c; /* Red color for the underline */
+    bottom: -10px; /* Position it below the text */
+    left: 0;
+    transform: scaleX(0); /* Start hidden */
+    transition: transform 0.4s ease; /* Animate the scale */
+}
+.about h1:hover {
+    color: #e74c3c; /* Change text color on hover */
+}
+.about h1:hover::after {
+    transform: scaleX(1); /* Show underline on hover */
+}
+
+.about h1 span{
+    color: #0f34d7; /* Highlight color for the span */
+    font-style: italic; /* Italicize for emphasis */
+    transition: transform 0.3s ease;
+}
+.about h1 span:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+@media (max-width: 768px) {
+    .about h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+}
 .about .about-box .text h2 {
     font-size: 35px;
     letter-spacing: 1.3px;
@@ -773,7 +813,42 @@ h3 {
     border-radius: 0 25px 25px 0;
     border-left-width: 0;
 }
-
+.products h1{
+    font-size: 3rem; /* Large font size for prominence */
+    color: #2c3e50; /* Dark color for the main heading */
+    font-weight: 700; /* Bold text for emphasis */
+    text-transform: uppercase; /* Uppercase for a strong appearance */
+    letter-spacing: 2px; /* Spacing between letters */
+    transition: color 0.4s ease;
+}
+.products h1::after{
+    
+        content: '';
+        width: 100%; /* Full width underline */
+        height: 4px; /* Thickness of the underline */
+        background-color: #e74c3c; /* Red color for the underline */
+        bottom: -10px; /* Position it below the text */
+        left: 0;
+        transform: scaleX(0); /* Start hidden */
+        transition: var(--ternary-color); /* Animate the scale */
+    
+}
+.products h1:hover {
+    color: #880ce6; /* Change text color on hover */
+}
+.products h1 span {
+    color: #05e74c; /* Highlight color for the span */
+    font-style: italic; /* Italicize for emphasis */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+.products h1 span:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+@media (max-width: 768px) {
+    .products h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+}
 /* -------------contact section styles------------------- */
 .contact form {
     flex-direction: column;
