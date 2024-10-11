@@ -521,30 +521,44 @@ h3 {
 }
 
 /* -------------about section styles------------------- */
-.about .about-box .image {
-    width: 100%;
-    height: 500px;
-    max-width: 640px;
-    overflow: hidden;
-    padding: 0;
-    border-radius: 10px;
+.about-box {
+    display: flex; /* Use Flexbox to position children in a row */
+    align-items: center; /* Vertically center the items */
+    margin-left: -25px;
 }
 
-.about .about-box .image img {
-    height: 100%;
-    width: 100%;
+.about .about-box .video-container {
+    position: relative;
+    flex: 1; /* Allow the video container to grow */
+    max-width: 800px; /* Limit the width of the video */
+    overflow: hidden;
+}
+
+.video-container video {
+    width: calc(100% + 100px); /* Increase the width to crop from the right */
+    height: auto; /* Maintain aspect ratio */
+    position: relative;
+    right: -90px; /* Move the video to the left to crop from the right */
 }
 
 .about .about-box .text {
-    width: 100%;
-    max-width: 640px;
-    height: 500px;
+    flex: 1; /* Allow the text container to grow */
+    max-width: 640px; /* Optional: Limit the width of the text */
     display: flex;
+    padding-left: 20px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Center content vertically */
     gap: 15px;
 }
 
+.about .about-box .text h1 {
+    font-size: 35px; /* Adjust font size as needed */
+    letter-spacing: 1.3px;
+    font-weight: 900; /* Increase this value to make it bolder */
+    color: var(--ternary-color);
+}
+
+/* Existing styles remain unchanged */
 .about .about-box .text h2 {
     font-size: 35px;
     letter-spacing: 1.3px;
