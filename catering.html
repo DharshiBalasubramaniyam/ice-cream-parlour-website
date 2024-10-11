@@ -1,3 +1,4 @@
+@ -1,241 +0,0 @@
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,11 +85,6 @@
             <label for="eventdate" class="text">Event Date</label>
             <input type="date" class="form-text" name="" id="dateInput" required>
         </div>
-        <script>
-            const today = new Date();
-            const yesterday = new Date(today.setDate(today.getDate())).toISOString().split('T')[0];
-            document.getElementById('dateInput').setAttribute('min', yesterday);
-          </script>
 
         <div class="indv-text">
             <label for="eventtype" class="text">Event Type</label>
@@ -233,6 +229,7 @@
         &copy; 2024 by <span>DharshiB</span> | All Rights Deserved
     </div>
 
+    <script src="./script/catering.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
     <script type="module" src="./script/products.js"></script>
