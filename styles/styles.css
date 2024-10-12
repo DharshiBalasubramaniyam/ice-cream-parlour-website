@@ -28,8 +28,7 @@ body {
     --heading-font: "Pacifico", Verdana, Geneva, Tahoma, sans-serif;
     --curly-font: "Spicy Rice", Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/* Preloader styles */
+     /* Preloader styles */
 #preloader {
     position: fixed;
     top: 0;
@@ -58,8 +57,13 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Hide the preloader once the page is loaded */
@@ -70,6 +74,8 @@ body.loaded #preloader {
 body.loaded #main-content {
     display: block;
 }
+
+
 
 ::selection {
     background-color: var(--main-color);
@@ -123,8 +129,12 @@ section>h1 {
 }
 
 section>h1 span {
-    color: var(--main-color);
+    color: #860831;
     font-family: var(--heading-font);
+    background-color: #EE66A6;
+    display: inline-block;
+    padding: 0.1rem 3rem;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100% ,7% 50% ,0% 0%);
 }
 
 .box-container {
@@ -199,23 +209,59 @@ h3 {
 }
 
 .nav-bar .nav-links a {
+    position: relative;
+    text-decoration: none;
     width: 100px;
     border-radius: 5px;
     text-align: center;
-    padding: 7px 10px;
-    display: inline-block;
-    margin: 0 15px;
     color: var(--body-color);
-    text-transform: capitalize;
-    transition: 0.3s;
     font-size: 18px;
     letter-spacing: 1.3px;
+    text-transform: capitalize;
+    margin: 0 15px;
+}
+
+.nav-bar .nav-links a:after {
+    content: "";
+    position: absolute;
+    background-color: var(--body-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
 }
 
 .nav-bar .nav-links a:hover,
-.nav-bar .nav-links a.active {
+.nav-bar .nav-links a.active
+ {
     color: var(--secondary-color);
+
 }
+
+.nav-bar .nav-links a:hover:after {
+    width: 100%;
+
+}
+
+/* .nav-bar .nav-links a { */
+/* width: 100px; */
+/* border-radius: 5px; */
+/* text-align: center; */
+/* padding: 7px 10px; */
+/* display: inline-block; */
+/* margin: 0 15px; */
+/* color: var(--body-color); */
+/* text-transform: capitalize; */
+/* transition: 0.3s; */
+/* font-size: 18px; */
+/* letter-spacing: 1.3px; */
+/* } */
+/*  */
+/* .nav-bar .nav-links a:hover, */
+/* .nav-bar .nav-links a.active { */
+/* color: var(--secondary-color); */
+/* } */
 
 .nav-bar .icons {
     display: flex;
@@ -448,7 +494,7 @@ h3 {
     font-weight: 600;
     margin-bottom: 15px;
     background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--curly-font);
 }
@@ -590,6 +636,7 @@ h3 {
     font-size: 16px;
     width: 100%;
 }
+
 .service-card>div a {
     color: var(--body-color);
 }
@@ -734,7 +781,21 @@ h3 {
     align-items: center;
     justify-content: center;
 }
-
+.qtycart{
+    width: fit-content !important; border: 2px solid red !important; border-radius: 25px !important; padding:0 5px !important;display: flex !important;justify-content: center !important;align-items: center !important;
+}
+.decreasecart{
+    border-right: 2px solid red !important;
+    padding: 5px !important;
+}
+.increasecart{
+    cursor: pointer !important;
+    padding: 5px !important;
+}
+.pcscart{
+    border-right: 2px solid red !important;
+    padding: 5px;
+}
 .products .products-box .box .qty span {
     margin: 15px 0;
     display: inline-block;
@@ -747,9 +808,11 @@ h3 {
     transition: 0.3s;
 }
 
+
+
 .products .products-box .box .qty .increase,
 .decrease {
-    cursor: pointer;
+    cursor: pointer !important;
     user-select: none;
 }
 
@@ -843,6 +906,7 @@ h3 {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .reviews .reviews-box .box .top {
     width: 100%;
     height: max-content;
@@ -1083,6 +1147,7 @@ h3 {
 .FAQ-questions i {
     font-size: 1.6rem;
     overflow: visible;
+    transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);  /* Smooth rotation of arrow */
 }
 
 .FAQ-answers {
@@ -1138,6 +1203,15 @@ i {
     margin-right: 15px;
 }
 
+
+.star {
+    color: #ccc; 
+    font-size: 1.5em; 
+}
+
+.star.filled {
+    color: #ff9800; 
+}
 /* Scroll Bar */
 
 ::-webkit-scrollbar {
