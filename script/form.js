@@ -16,11 +16,19 @@ contactForm.addEventListener("submit", (e)=> {
     if (firstname.value.trim() === "") {
         setError(firstname, "First name is required!");
         isValid = false;
+    } else if (/[^a-zA-Z]/.test(firstname.value.trim())) {
+        setError(firstname, "Only letters are allowed in first name!");
+        isValid = false;
     }
+    
     if (lastname.value.trim() === "") {
         setError(lastname, "Last name is required!");
         isValid = false;
+    } else if (/[^a-zA-Z]/.test(lastname.value.trim())) {
+        setError(lastname, "Only letters are allowed in last name!");
+        isValid = false;
     }
+    
     if (email.value.trim() === "") {
         setError(email, "Email is required!");
         isValid = false;
