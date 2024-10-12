@@ -1201,6 +1201,15 @@ i {
     margin-right: 15px;
 }
 
+
+.star {
+    color: #ccc; 
+    font-size: 1.5em; 
+}
+
+.star.filled {
+    color: #ff9800; 
+}
 /* Scroll Bar */
 
 ::-webkit-scrollbar {
@@ -1271,5 +1280,7 @@ i {
 
     to {
         opacity: 0;
-    }
+  }
+
 }
+
