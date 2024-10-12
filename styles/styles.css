@@ -944,6 +944,94 @@ h3 {
 
 }
 
+/*------ WHY icyCO? styles----------------*/
+
+.why-icyco {
+    text-align: center;
+    padding: 2px 10px;
+    /* background-color: #ffebee; */
+    background-color: rgb(255,255,255);
+}
+
+.why-icyco h1 {
+    color: rgb(217,22,86);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    display: flex;
+    align-items: center;
+    width: 48%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.icon-circle {
+    width: 100px;
+    height: 120px;
+    /* border-radius: 50%; */
+    background-color: #fdfcf9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    background:transparent;
+}
+
+.icon-circle img {
+    border-radius: 50%;
+    width: 65px;
+    margin-bottom: 40px;
+    box-shadow:1px 1px 6px 5px rgb(0,0,0,0.4) ;
+}
+
+.feature-text {
+    text-align: left;
+}
+
+.feature-text h3 {
+    color: #ff4081;
+    font-size: 1.26em;
+    margin-bottom: 10px;
+}
+
+.feature-text p {
+    color: #757575;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .feature-box {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .icon-circle {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+.inner{
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
 
 /* -------------reviews section styles------------------- */
 .reviews .reviews-box {
