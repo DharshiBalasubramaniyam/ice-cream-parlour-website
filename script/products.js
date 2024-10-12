@@ -6,6 +6,7 @@ let cartItems = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CART_KEY)) || [];
 
 document.addEventListener("DOMContentLoaded", () => {
     displayFlavorFilter();
+    filterProducts("all");
     displayProducts(products_list);
     displayCartItems();
     // handleQuantityButtonsInProductCard(); 
@@ -67,46 +68,98 @@ function displayProducts(products) {
 
 // display flavors filter
 function displayFlavorFilter() {
-
     let flavorFilterSection = document.querySelector(".categories-wrapper");
 
+    // Create the "All" button
     let allButton = document.createElement("button");
     allButton.setAttribute("id", "all");
     allButton.setAttribute("class", "active");
     allButton.textContent = "All";
     flavorFilterSection?.appendChild(allButton);
+    
     allButton.addEventListener("click", () => {
-        flavorFilterSection?.querySelector(".active").classList.remove("active")
-        allButton.classList.add("active")
-        filterProducts("all")
-    })
+        clearActiveState();
+        allButton.classList.add("active");
+        filterProducts("all");
+        allButton.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
 
+    // Create buttons for each flavor
     flavor_list.forEach(flavor => {
         let button = document.createElement("button");
         button.setAttribute("id", flavor.id);
         button.textContent = flavor.name;
         button.addEventListener("click", () => {
-            flavorFilterSection?.querySelector(".active")?.classList.remove("active")
-            button.classList.add("active")
-            filterProducts(flavor.id)
-        })
+            clearActiveState();
+            button.classList.add("active");
+            filterProducts(flavor.id);
+            button.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
         flavorFilterSection?.appendChild(button);
     });
+       // Added this to handle footer flavors section
+       const footerLinks = document.querySelectorAll('.footer-col .links a');
+       let isProcessing = false; // Flag to prevent duplicate clicks
+   
+       footerLinks.forEach(link => {
+           link.addEventListener('click', (event) => {
+               event.preventDefault(); 
+               if (isProcessing) return;
+   
+               isProcessing = true; // 
+               let hash = link.getAttribute('href').substring(1); 
+               let targetButton = document.getElementById(hash);
+   
+               if (targetButton) {
+                   clearActiveState(); 
+                   activateButton(targetButton, hash); // Activate the clicked button
+   
+                   // Re-enable the links after a short delay to avoid multiple clicks
+                   setTimeout(() => {
+                       isProcessing = false; 
+                   }, 100); 
+               } else {
+                   isProcessing = false; 
+               }
+           });
+       });
+   
+       // Keeping the hashchange listener for direct URL access
+       window.addEventListener("hashchange", () => {
+           let hash = window.location.hash.substring(1);
+           let targetButton = document.getElementById(hash);
+   
+           if (targetButton) {
+               clearActiveState(); 
+               activateButton(targetButton, hash); 
+           }
+       });
+   }
+   
+   // Function to clear active state from all buttons
+   function clearActiveState() {
+       let flavorFilterSection = document.querySelector(".categories-wrapper");
+       flavorFilterSection?.querySelector(".active")?.classList.remove("active");
+   }
+   
+   // Function to activate a button and filter products
+   function activateButton(button, filter) {
+       button.classList.add("active"); 
+       filterProducts(filter);
+       button.scrollIntoView({ behavior: "smooth", block: "start" }); 
+   }
 
-}
-
+    
+// Function to filter products based on the selected flavor
 function filterProducts(id) {
+    let productsToDisplay = products_list;
 
-    let productsToDisplay = products_list
-
-    if (id != "all") {
-        productsToDisplay = products_list.filter(p => p.flavor_id == id)
+    if (id !== "all") {
+        productsToDisplay = products_list.filter(p => p.flavor_id === id);
     }
 
-    displayProducts(productsToDisplay)
-
+    displayProducts(productsToDisplay);
 }
-
 function showToast(message) {
     const toastContainer = document.getElementById("toast-container");
     const toast = document.createElement("div");
