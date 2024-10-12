@@ -60,7 +60,7 @@
     .nav-bar {
         justify-content: space-between;
         padding: 15px;
-        overflow: hidden;
+        overflow: visible;
         box-shadow: 0 0 10px rgb(203, 203, 203);
     }
 
@@ -133,6 +133,30 @@
 
     .copyright {
         font-size: 10px;
+    }
+}
+
+@media (max-width: 830px) {
+
+    #search-bar {
+        width: 100% !important;
+        font-size: 14px !important;
+        z-index: 10002 !important; /* Ensure priority in mobile */
+
+    }
+
+    .dropdown-content {
+        width: 100% !important;
+        position: absolute !important;
+        z-index: 10005 !important; /* Ensure it's always above in mobile */
+    }
+
+    .search-container {
+        z-index: 10006 !important; /* Ensure the container remains visible */
+    }
+
+    .search-icon {
+        font-size: 20px !important;
     }
 
 }
@@ -228,5 +252,25 @@
 
     .about .about-box .text h2 {
         font-size: 24px; /* Further adjust font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #search-bar {
+        width: 100%;
+        padding: 8px 35px 8px 8px;
+        font-size: 13px;
+        z-index: 10002 !important; /* Maintain search bar on top */
+    }
+
+    .dropdown-content {
+        max-height: 150px;
+        z-index: 10015 !important; /* Ensure dropdown visibility */
+        margin-bottom: 20px;
+    }
+
+    .search-icon {
+        right: 8px;
+        z-index: 10003 !important; /* Keep icon on top */
     }
 }
