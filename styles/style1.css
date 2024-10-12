@@ -32,17 +32,21 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: 14px;
+    
+}
+.input-fields{
+    margin-bottom: 16px;
 }
 
-.input-fields {
-    margin-bottom: 12px;
+.input-fields input{
+    width: 425px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #640D5F;
+    border-style: dashed;
+    background: #e9e0e8;
 }
 
-.input-fields input {
-    width: 420px;
-    height: 30px;
-}
 
 .input-field-header {
     margin-bottom: 7px;
@@ -85,12 +89,14 @@ body {
 }
 
 #first-name-field input,
-#last-name-field input {
-    width: 192px;
-    height: 30px;
+#last-name-field input{
+    width: 195px;
+    height: 35px;
+    border-radius: 5px;
+    background: #e9e0e8;
+    border-style: dashed;
 
 }
-
 .terms {
     margin-top: 2px;
     width: 450px;
@@ -99,7 +105,7 @@ body {
     padding-right: 10px;
     margin-left: 10px;
     margin-bottom: 14px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .terms a {
@@ -123,6 +129,8 @@ body {
 
 .signin-btn button:hover {
     border: 1.5px solid #3a383f;
+    font-size:17px ;
+    background-color: #640D5F;
 }
 
 #continue-with {
@@ -140,49 +148,46 @@ body {
 .social-links button {
     width: 420px;
     height: 35px;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    background-color: white;
-    color: #333;
-    font-size: 15px;
-    border-radius: 5px;
-    cursor: pointer;
+    border: 1px solid #ccc; 
+    padding: 5px 10px; 
+    background-color: white; 
+    color: #0c2faa;
+    font-size: 15px; 
+    border-radius: 5px ;
+    cursor: pointer; 
     margin-bottom: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.3s ease;
-}
+  }
 
-.social-links button:hover {
+  .social-links button:hover{
     border-color: #3a383f;
-    background-color: #bfbfc3;
-}
-
-.social-links img {
+    font-size: 20px; 
+    background-color: #d599b3;
+  }
+ .social-links img{
     margin-right: 5px;
-}
+  }
 
-.social-links img {
+  .social-links img {
     margin-right: 8px;
-    vertical-align: middle;
+    vertical-align: middle; 
+  }
+  .social-links button span {
+    line-height: 20px; 
+    padding-top: 4px;  
 }
 
-.social-links button span {
-    line-height: 20px;
-    padding-top: 4px;
+.sign-in-link{
+    font-size: 19px;
 }
-
-.sign-in-link {
-    font-size: 14px;
-}
-
-.sign-in-link a {
+.sign-in-link a{
     text-decoration: none;
     color: #1f75cb;
 }
-
-.sign-in-link a:hover {
+.sign-in-link a:hover{
     text-decoration: underline;
 }
 
