@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     filterProducts("all");
     displayProducts(products_list);
     displayCartItems();
-    // handleQuantityButtonsInProductCard(); 
     handleQuantityButtonsInCart();        
 });
 
@@ -34,12 +33,11 @@ function displayProducts(products) {
                                 <div class="price">$${product.price}</div>
                             </div>
                             <div class="description">${product.description}</div>
-                           <div class="qty">
-                            <span class="decrease">-</span>
-                            <span class="pcs">1</span>
-                            <span class="increase">+</span>
-                           </div>
-                            `;
+                            <div class="qty">
+                                <span class="decrease">-</span>
+                                <span class="pcs">1</span>
+                                <span class="increase">+</span>
+                            </div>`;
 
 
 
@@ -358,3 +356,23 @@ function handleQuantityButtonsInCart() {
     });
 }
 
+// Scroll animation
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+    const sr = ScrollReveal();
+
+    // Apply ScrollReveal to products
+    const productBoxes = document.querySelectorAll(".products-box .box");
+    productBoxes.forEach(box => {
+        sr.reveal(box, {
+            origin: 'left',
+            distance: '80px',
+            duration: 600,
+            easing: 'ease-in',
+            interval: 400,
+            reset:true
+        });
+    });
+
+});
