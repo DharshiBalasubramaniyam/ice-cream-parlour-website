@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap');
 
 * {
     padding: 0;
@@ -503,7 +504,7 @@ h3 {
     font-size: 20px;
     line-height: 35px;
     color: var(--ternary-color);
-    font-family: var(--heading-font);
+    font-family: "Arvo", serif;
 
 }
 
