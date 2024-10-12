@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap');
 
 * {
     padding: 0;
@@ -129,8 +130,12 @@ section>h1 {
 }
 
 section>h1 span {
-    color: var(--main-color);
+    color: #860831;
     font-family: var(--heading-font);
+    background-color: #EE66A6;
+    display: inline-block;
+    padding: 0.1rem 3rem;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100% ,7% 50% ,0% 0%);
 }
 
 .box-container {
@@ -499,7 +504,7 @@ h3 {
     font-size: 20px;
     line-height: 35px;
     color: var(--ternary-color);
-    font-family: var(--heading-font);
+    font-family: "Arvo", serif;
 
 }
 
@@ -692,11 +697,11 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 0.3s;
+    transition: 0.5s ease-in-out;
     max-width: 350px;
     border: 2px solid var(--secondary-color);
 
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .image-wrapper {
@@ -733,6 +738,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+ 
 }
 
 .products .products-box .box .wish {
@@ -753,7 +759,9 @@ h3 {
     width: 100%;
     height: 100%;
     display: inline-block;
+    border-radius: 15px;
 }
+
 
 .products .products-box .box .name-price {
     width: 100%;
@@ -1197,6 +1205,15 @@ i {
     margin-right: 15px;
 }
 
+
+.star {
+    color: #ccc; 
+    font-size: 1.5em; 
+}
+
+.star.filled {
+    color: #ff9800; 
+}
 /* Scroll Bar */
 
 ::-webkit-scrollbar {

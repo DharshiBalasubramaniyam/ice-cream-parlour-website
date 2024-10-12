@@ -6,7 +6,8 @@ const products_list = [
         off: 5,
         price: 35,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg"
+        image: "images/chocolate.jpg",
+        rating: 4
     },
     {
         id: "p002",
@@ -15,7 +16,8 @@ const products_list = [
         off: 5,
         price: 35,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/vannila.jpg"
+        image: "images/vannila.jpg",
+        rating: 5
     },
     {
         id: "p003",
@@ -24,7 +26,8 @@ const products_list = [
         off: 5,
         price: 35,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mango.jpg"
+        image: "images/mango.jpg",
+        rating: 4
     },
     {
         id: "p004",
@@ -33,7 +36,8 @@ const products_list = [
         off: 5,
         price: 35,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/vannila.jpg"
+        image: "images/vannila.jpg",
+        rating: 5
     },
     {
         id: "p005",
@@ -42,7 +46,8 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/strawberry.jpg"
+        image: "images/strawberry.jpg",
+        rating: 4
     },
     {
         id: "p006",
@@ -51,7 +56,8 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/peanut-butter.jpg"
+        image: "images/peanut-butter.jpg",
+        rating: 5
     },
     {
         id: "p007",
@@ -60,7 +66,8 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mango.jpg"
+        image: "images/mango.jpg",
+        rating: 4
     },
     {
         id: "p008",
@@ -69,7 +76,8 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mint.jpg"
+        image: "images/mint.jpg",
+        rating: 3
     },
     {
         id: "p009",
@@ -78,7 +86,8 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/rainbow.jpg"
+        image: "images/rainbow.jpg",
+        rating: 4
     },
     {
         id: "p010",
@@ -87,7 +96,8 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mango.jpg"
+        image: "images/mango.jpg",
+        rating: 5
     },
     {
         id: "p011",
@@ -96,7 +106,8 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/blue berry.jpg"
+        image: "images/blue berry.jpg",
+        rating: 3
     },
     {
         id: "p012",
@@ -105,7 +116,8 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg"
+        image: "images/chocolate.jpg",
+        rating: 4
     },
     {
         id: "p013",
@@ -114,7 +126,8 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/strawberry.jpg"
+        image: "images/strawberry.jpg",
+        rating: 5
     },
     {
         id: "p014",
@@ -123,7 +136,8 @@ const products_list = [
         off: 4,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg"
+        image: "images/chocolate.jpg",
+        rating: 4
     },
     {
         id: "p015",
@@ -132,7 +146,8 @@ const products_list = [
         off: 25,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/peanut-butter.jpg"
+        image: "images/peanut-butter.jpg",
+        rating: 5
     },
     {
         id: "p016",
@@ -141,16 +156,18 @@ const products_list = [
         off: 10,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/vannila.jpg"
+        image: "images/vannila.jpg",
+        rating: 4
     },
     {
         id: "p017",
-        name: " Strawberry",
+        name: "Strawberry",
         flavor_id: "f004",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/strawberry.jpg"
+        image: "images/strawberry.jpg",
+        rating: 4
     },
     {
         id: "p018",
@@ -159,7 +176,8 @@ const products_list = [
         off: 12,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/rainbow.jpg"
+        image: "images/rainbow.jpg",
+        rating: 3
     },
     {
         id: "p019",
@@ -168,7 +186,8 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/vannila.jpg"
+        image: "images/vannila.jpg",
+        rating: 5
     },
     {
         id: "p020",
@@ -177,7 +196,8 @@ const products_list = [
         off: 1,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg"
+        image: "images/chocolate.jpg",
+        rating: 4
     },
     {
         id: "p021",
@@ -186,7 +206,8 @@ const products_list = [
         off: 0,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/blue berry.jpg"
+        image: "images/blue berry.jpg",
+        rating: 5
     },
     {
         id: "p022",
@@ -195,7 +216,8 @@ const products_list = [
         off: 3,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/rainbow.jpg"
+        image: "images/rainbow.jpg",
+        rating: 4
     },
     {
         id: "p023",
@@ -204,7 +226,8 @@ const products_list = [
         off: 15,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mint.jpg"
+        image: "images/mint.jpg",
+        rating: 4
     },
     {
         id: "p024",
@@ -213,8 +236,9 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg"
-    },
+        image: "images/chocolate.jpg",
+        rating: 3
+    }
 ]
 
 export default products_list;

@@ -12,6 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
     handleQuantityButtonsInCart();        
 });
 
+function getStarRating(rating) {
+    let stars = '';
+    for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+            stars += `<span class="star filled">★</span>`;
+        } else {
+            stars += `<span class="star">★</span>`;
+        }
+    }
+    return stars;
+}
+
 // display products
 function displayProducts(products) {
     let productsSection = document.querySelector(".products-box");
@@ -33,12 +45,13 @@ function displayProducts(products) {
                                 <div class="price">$${product.price}</div>
                             </div>
                             <div class="description">${product.description}</div>
-                           <div class="qty">
-                            <span class="decrease">-</span>
-                            <span class="pcs">1</span>
-                            <span class="increase">+</span>
-                           </div>
-                            `;
+
+                             <div class="rating">${getStarRating(product.rating)}</div>
+                            <div class="qty">
+                                <span class="decrease">-</span>
+                                <span class="pcs">1</span>
+                                <span class="increase">+</span>
+                            </div>`;
 
 
 

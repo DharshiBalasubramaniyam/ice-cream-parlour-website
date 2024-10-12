@@ -1,5 +1,8 @@
 // nav.js
 const menu = document.querySelector(".menu");
+// Selecting the links and sections
+const links = document.querySelectorAll(".link");
+const sections = document.querySelectorAll("section");
 
 menu.addEventListener("click", controlMenu)
 
@@ -46,19 +49,16 @@ scrollButton?.addEventListener("click", () => {
   });
 });
 
-const links = document.querySelectorAll(".link");
-const sections = document.querySelector(".index")?.querySelectorAll("section");
-
+// Intersection Observer options
 const observerOptions = {
-    root: null, // Use the viewport as the root
+    root: null, // Using the viewport as the root
     rootMargin: "0px",
-    threshold: 0.1 // Trigger when at least 10% of the section is visible
+    threshold: 0.3 // Trigger when at least 30% of the section is visible
 };
 
 // Function to handle active link update
 function observerCallback(entries) {
     entries.forEach(entry => {
-        console.log(`Observing section: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}`);
         const id = entry.target.id;
         const activeLink = document.querySelector(`.link[href="#${id}"]`);
 
@@ -73,18 +73,19 @@ function observerCallback(entries) {
     });
 }
 
+// Creating the observer
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-// Observe each section
-sections?.forEach(section => {
+// Observing each section
+sections.forEach(section => {
     observer.observe(section);
 });
 
-// Ensure the links are clickable and toggle the active state
+// Smooth scrolling and manual link activation
 links.forEach(link => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", function() {
         links.forEach(link => link.classList.remove("active"));
-        link.classList.add("active");
+        this.classList.add("active");
     });
 });
 
@@ -93,3 +94,4 @@ window.addEventListener('load', function() {
         document.body.classList.add('loaded');
     }, 3000); // 3 seconds delay
 });
+
