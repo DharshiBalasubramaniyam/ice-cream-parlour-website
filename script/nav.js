@@ -40,6 +40,7 @@ function controlLinks() {
 
 controlLinks();
 
+
 // ================scroll  bottom to top==========================
 const scrollButton = document.querySelector(".scroll-button");
 
@@ -48,7 +49,7 @@ window.addEventListener("scroll", () => {
         ? scrollButton.classList.add("show-btn")
         : scrollButton.classList.remove("show-btn");
 });
-
+/*
 function smoothScrollToTop() {
     const scrollY = window.pageYOffset;
     const scrollStep = Math.max(10, Math.floor(scrollY / 20)); 
@@ -57,6 +58,13 @@ function smoothScrollToTop() {
         requestAnimationFrame(smoothScrollToTop);
     }
 }
+*/
+
+// When the button is clicked, scroll to the top instantly
+scrollButton?.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0; // For modern browsers
+    document.body.scrollTop = 0; // For older browsers
+});
 
 // When the button is clicked, scroll to the top smoothly
 scrollButton?.addEventListener("click", () => {
