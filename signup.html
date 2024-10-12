@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - IcyCo Ice Cream</title>
+    <title>ICYCO - SIGN-UP</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="mediaqueries.css">
 </head>
-<body>
-    <div class="login-container">
-        <div id="logo">
-            <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true" width="15%"></img>
-        </div>
-        <h1>IcyCo</h1>
-        <br/>
-        <form>
-            <div class="input-fields">
-                <div class="input-field-header">Username or primary email</div>
-                <input type="email" class="input-field">
-            </div>
 
-            <div class="input-fields">
-                <div class="input-field-header">Password</div>
-                <div class="password-container">
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
+
+    <a href="./index.html">
+
+        <div id="logo">
+            <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true"
+                width="15%"></img>
+        </div>
+    </a>
+
+    <h1 style="text-align: center; margin-bottom: 20px;">Sign up with IcyCo</h1>
+
+    <form>
+        <div id="name-fields">
+            <div id="first-name-field">
+                <div class="input-field-header">First name</div>
+                <input type="text" class="input-field">
+            </div>
+            <div id="last-name-field">
+                <div class="input-field-header">Last name</div>
+                <input type="text" class="input-field">
+            </div>
+        </div>
+
+        <div class="input-fields">
+            <div class="input-field-header">Email</div>
+            <input type="email" class="input-field">
+        </div>
+
+        <div class="input-fields">
+            <div class="input-field-header">Password</div>
+            <div class="password-container">
                 <input type="password" class="input-field" id="password-input-field">
                 <i class="fa-solid fa-eye-slash" id="toggle-password"></i>
-                </div>
-            <a href="#">Forgot your password?</a>
             </div>
+        </div>
+    </form>
 
-            <div class="check-button">
-                <input type="checkbox">
-                <span>Remember me</span>
-            </div>
-            <div class="signin-btn">
-                <button>Sign in</button>
-            </div>
-        </form>
+    <div class="terms">
 
-        <div class="terms">
-            By signing in you accept the 
-            <a href="#">Terms of Use and acknowledge the Privacy Statement and Cookie Policy</a>
+        <div class="signin-btn">
+            <button>Continue</button>
         </div>
+        <br>
+        By clicking Continue or registering through a third party you accept the Icyco
+        <a href="#">Terms of Use and acknowledge the Privacy Statement and Cookie Policy</a>
+    </div>
+    <div id="line-container">
+        <span>Already have an account?</span><a href="./login.html" class="register-now-link">Login</a>
+        <div class="sign-in">or continue with</div>
+    </div>
+    <div class="social-links">
+        <button><img src="images/social-icons/google.png" class="imgs" width="20px" height="20px">Google</button>
+        <button><img src="images/social-icons/github.png" width="20px" height="20px">GitHub</button>
+    </div>
 
-        <div id="line-container">
-            <span>Don't have an account?</span><a href="login.html" class="register-now-link">Register now</a>
-            <div class="sign-in">or sign in with</div>
-        </div>
-        
-        <div class="social-links">
-            <button><img src="images/social-icons/google.png" class="imgs" width="20px" height="20px">Google</button>
-            <button><img src="images/social-icons/github.png" width="20px" height="20px">GitHub</button><!--
-            <button><img src="images/social-icons/bitbucket.png" width="20px" height="20px">Bitbucket</button>
-            <button><img src="images/social-icons/salesforce.png" width="20px" height="20px">Salesforce</button> -->
-            <div class="check-button">
-                <input type="checkbox">
-                <span>Remember me</span>
-            </div>
-        </div>
-        </div>
-        <script src="script/login.js"></script>
+    <script src="script/login.js"></script>
+
+    <script src="./script/nav.js"></script>
+    <script src="./script/topscrollindicator.js"></script>
 </body>
+
+</html>

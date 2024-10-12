@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Island-Wide Delivery</title>
+    <title>ICYCO - DINE IN</title>
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="./styles/dine.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     
@@ -31,6 +30,9 @@
         <img src="images/logo.png" alt="Preloader" class="preloader-icon">
         <p class="loading-text">Loading...</p>
     </div>
+
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
     
     <!-- nav bar -->
     <div class="nav-bar">
@@ -40,6 +42,7 @@
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
+            <a href="./products.html" class="link">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link active">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
@@ -58,98 +61,93 @@
         </div>
     </div>
 
-    <div style="padding-top: 90px;"></div>
-        <h2
-            style="text-align: center; font-weight:600; font-size: 45px; font-family: Spicy Rice, serif; color: #D91656;">
-            Dine In</h2>
-    </div>
-
-    <h2 class="heading">Find your nearest store</h2>
-
-    <div class="search-bar">
-        <input type="text" placeholder="Enter your Current Location">
-        <button><i class="fa fa-search"></i></button>
-    </div>
-
-    <section class="restaurants">
-        <div class="restaurant-card">
-            <img src="./images/ice-1.jpg" alt="Restaurant 1">
-            <div class="restaurant-info">
-                <h3>Frozen Fusion </h3>
-                <p>Sector 2, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
-            </div>
+    <section>
+        <h1 style="margin-top: 100px; padding: 0 40px;">Dine In</h1>
+        <h2 class="heading">Find your nearest store</h2>
+        <div class="search-bar">
+            <input type="text" placeholder="Enter your Current Location">
+            <button><i class="fa fa-search"></i></button>
         </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-2.jpg" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Kulfi Station Express</h3>
-                <p>Sector 5, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐⭐ (5.0)</p>
+        <div class="restaurants">
+            <div class="restaurant-card">
+                <img src="./images/ice-1.jpg" alt="Restaurant 1">
+                <div class="restaurant-info">
+                    <h3>Frozen Fusion </h3>
+                    <p>Sector 2, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐⭐ (4.0)</p>
+                </div>
             </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./images//ice-3.jpg" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Kookie Jar</h3>
-                <p>Sector 3, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
+            <div class="restaurant-card">
+                <img src="./images/ice-2.jpg" alt="Restaurant 2">
+                <div class="restaurant-info">
+                    <h3>Kulfi Station Express</h3>
+                    <p>Sector 5, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐⭐⭐ (5.0)</p>
+                </div>
             </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-4.avif" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Flury's</h3>
-                <p>Sector 1, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐ (3.0)</p>
+            <div class="restaurant-card">
+                <img src="./images//ice-3.jpg" alt="Restaurant 2">
+                <div class="restaurant-info">
+                    <h3>Kookie Jar</h3>
+                    <p>Sector 3, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐⭐ (4.0)</p>
+                </div>
             </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./images//ice-5.webp" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Icy Fusion</h3>
-                <p>Sector 2, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐⭐ (5.0)</p>
+            <div class="restaurant-card">
+                <img src="./images/ice-4.avif" alt="Restaurant 2">
+                <div class="restaurant-info">
+                    <h3>Flury's</h3>
+                    <p>Sector 1, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐ (3.0)</p>
+                </div>
             </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-6.webp" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Waffle Junction</h3>
-                <p>Sector 2, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
+            <div class="restaurant-card">
+                <img src="./images//ice-5.webp" alt="Restaurant 2">
+                <div class="restaurant-info">
+                    <h3>Icy Fusion</h3>
+                    <p>Sector 2, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐⭐⭐ (5.0)</p>
+                </div>
             </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-1.jpg" alt="Restaurant 1">
-            <div class="restaurant-info">
-                <h3>Frozen Fusion </h3>
-                <p>Sector 2, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
+            <div class="restaurant-card">
+                <img src="./images/ice-6.webp" alt="Restaurant 2">
+                <div class="restaurant-info">
+                    <h3>Waffle Junction</h3>
+                    <p>Sector 2, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐⭐ (4.0)</p>
+                </div>
             </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-2.jpg" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Kulfi Station Express</h3>
-                <p>Sector 5, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐⭐ (5.0)</p>
+            <div class="restaurant-card">
+                <img src="./images/ice-1.jpg" alt="Restaurant 1">
+                <div class="restaurant-info">
+                    <h3>Frozen Fusion </h3>
+                    <p>Sector 2, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐⭐ (4.0)</p>
+                </div>
             </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./images//ice-3.jpg" alt="Restaurant 2">
-            <div class="restaurant-info">
-                <h3>Kookie Jar</h3>
-                <p>Sector 3, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
+            <div class="restaurant-card">
+                <img src="./images/ice-2.jpg" alt="Restaurant 2">
+                <div class="restaurant-info">
+                    <h3>Kulfi Station Express</h3>
+                    <p>Sector 5, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐⭐⭐ (5.0)</p>
+                </div>
             </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./images/ice-1.jpg" alt="Restaurant 1">
-            <div class="restaurant-info">
-                <h3>Frozen Fusion </h3>
-                <p>Sector 2, Salt Lake, Kolkata</p>
-                <p>⭐⭐⭐⭐ (4.0)</p>
+            <div class="restaurant-card">
+                <img src="./images//ice-3.jpg" alt="Restaurant 2">
+                <div class="restaurant-info">
+                    <h3>Kookie Jar</h3>
+                    <p>Sector 3, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐⭐ (4.0)</p>
+                </div>
+            </div>
+            <div class="restaurant-card">
+                <img src="./images/ice-1.jpg" alt="Restaurant 1">
+                <div class="restaurant-info">
+                    <h3>Frozen Fusion </h3>
+                    <p>Sector 2, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐⭐ (4.0)</p>
+                </div>
             </div>
         </div>
     </section>
@@ -265,6 +263,7 @@
 
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
+    <script src="./script/topscrollindicator.js"></script>
     <script type="module" src="./script/products.js"></script>
 
 </body>
