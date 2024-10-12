@@ -8,21 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     displayFlavorFilter();
     displayProducts(products_list);
     displayCartItems();
-    // handleQuantityButtonsInProductCard(); 
     handleQuantityButtonsInCart();        
 });
-
-function getStarRating(rating) {
-    let stars = '';
-    for (let i = 1; i <= 5; i++) {
-        if (i <= rating) {
-            stars += `<span class="star filled">★</span>`;
-        } else {
-            stars += `<span class="star">★</span>`;
-        }
-    }
-    return stars;
-}
 
 // display products
 function displayProducts(products) {
@@ -319,9 +306,6 @@ function handleQuantityButtonsInCart() {
 // Scroll animation
 
 document.addEventListener("DOMContentLoaded", () => {
-    displayFlavorFilter();
-    displayProducts(products_list);
-    displayCartItems();
     
     const sr = ScrollReveal();
 
@@ -330,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
     productBoxes.forEach(box => {
         sr.reveal(box, {
             origin: 'left',
-            distance: '150px',
+            distance: '80px',
             duration: 600,
             easing: 'ease-in',
             interval: 400,
@@ -338,18 +322,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Apply ScrollReveal to cart items
-    const cartListItems = document.querySelectorAll(".cart-list-items li");
-    cartListItems.forEach(item => {
-        sr.reveal(item, {
-            origin: 'left',
-            distance: '100px',
-            duration: 800,
-            easing: 'ease-in-out',
-            interval: 400,
-            reset:true
-        });
-    });
-
-    handleQuantityButtonsInCart();
 });

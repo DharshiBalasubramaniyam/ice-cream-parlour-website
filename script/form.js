@@ -9,7 +9,7 @@ const phoneRegex = /^[0-9]{10}$/;
 
 
 
-contactForm.addEventListener("submit", (e)=> {
+contactForm?.addEventListener("submit", (e)=> {
     e.preventDefault();
     let isValid = true;
 
@@ -53,7 +53,7 @@ contactForm.addEventListener("submit", (e)=> {
     if (isValid) {
         const formData = new FormData(contactForm);
         contactForm.reset();
-        alert("Your details were submitted Successfully");
+        // alert("Your details were submitted Successfully");
     }
 });
 
@@ -61,7 +61,7 @@ contactForm.addEventListener("submit", (e)=> {
 const newsletterForm = document.getElementById("news-letter");
 const newsletterEmail = document.getElementById("newsletter-email");
 
-newsletterForm.addEventListener("submit", (e)=> {
+newsletterForm?.addEventListener("submit", (e)=> {
     e.preventDefault();
 
     if (newsletterEmail.value.trim() === "") {
