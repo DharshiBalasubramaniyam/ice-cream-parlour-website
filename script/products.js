@@ -45,8 +45,6 @@ function displayProducts(products) {
                                 <div class="price">$${product.price}</div>
                             </div>
                             <div class="description">${product.description}</div>
-
-                             <div class="rating">${getStarRating(product.rating)}</div>
                             <div class="qty">
                                 <span class="decrease">-</span>
                                 <span class="pcs">1</span>

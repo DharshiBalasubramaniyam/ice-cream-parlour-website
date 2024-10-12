@@ -28,6 +28,9 @@
         <p class="loading-text">Loading...</p>
     </div>
 
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
+
     <!-- nav bar -->
     <div class="nav-bar">
         <div class="logo">
@@ -36,6 +39,7 @@
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
+            <a href="./products.html" class="link">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link active">Catering</a>
@@ -54,101 +58,86 @@
         </div>
     </div>
 
+    <section>
+        <h1 style="margin-top: 100px; padding: 0 40px;">Event Catering</h1>
+        <h2 class="heading">Tell use about your event</h2>
+        <form class="form-contents">
 
-    <div style="padding-top: 90px;">
-        <h2
-            style="text-align: center; font-weight:600; font-size: 45px; font-family: Spicy Rice, serif; color: #D91656;">
-            Event Catering</h2>
-    </div>
-
-    <!-- DETAILS FORM -->
-    <h2 class="heading">Enter Your Details</h2>
-
-    <section class="form-contents">
-
-        <div class="indv-text">
-            <label for="name" class="text">NAME</label>
-            <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
-        </div>
-
-        <div class="indv-text">
-            <label for="email" class="text">EMAIL ID</label>
-            <input type="email" class="form-text" placeholder="example@gmail.com" required>
-        </div>
-
-        <div class="indv-text">
-            <label for="contact" class="text">CONTACT No.</label>
-            <input type="tel" class="form-text" name="" id="" placeholder="0123456789" required>
-        </div>
-
-        <div class="indv-text">
-            <label for="eventdate" class="text">Event Date</label>
-            <input type="date" class="form-text" name="" id="dateInput" required>
-        </div>
-
-        <div class="indv-text">
-            <label for="eventtype" class="text">Event Type</label>
-            <label style="margin-left: 0px;
-            padding: 6px;
-            display: inline-block;
-            border: var(--main-color) 2px solid;
-            border-radius: 3px;
-            width:100%;
-            height:100%;
-            background-color: transparent;">
-            <label><input type="radio" id="self-pickup" name="indoor-outdoor" value="self-pickup"> Self Service Pickup</label><br><br>
-            <label><input type="radio" id="self-delivery" name="indoor-outdoor" value="self-delivery"> Self Service Delivery</label><br><br>
-            <label><input type="radio" id="full-service" name="indoor-outdoor" value="full-service"> Full Service Catering</label><br><br>  
-            <label><input type="radio" id="not-sure" name="indoor-outdoor" value="not-sure"> Not Sure Want To Learn More</label>
-            <label>
-        </div> 
-
-        <div class="indv-text">
-            <label for="add1" class="text">Complete Address</label>
-            <input type="text" class="form-text" name="" id="" placeholder="Street Address"
-                required>
-        </div>
-
-        <div class="indv-text">
-            <label for="state" class="text">STATE</label>
-            <select class="form-text" id="state" required>
-              <option value="">Select State</option>
-              <option value="Andhra Pradesh">Andhra Pradesh</option>
-              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-              <option value="Assam">Assam</option>
-              <option value="Bihar">Bihar</option>
-              <option value="Chhattisgarh">Chhattisgarh</option>
-              <option value="Goa">Goa</option>
-              <option value="Gujarat">Gujarat</option>
-              <option value="Haryana">Haryana</option>
-              <option value="Himachal Pradesh">Himachal Pradesh</option>
-              <option value="Jharkhand">Jharkhand</option>
-              <option value="Karnataka">Karnataka</option>
-              <option value="Kerala">Kerala</option>
-              <option value="Madhya Pradesh">Madhya Pradesh</option>
-              <option value="Maharashtra">Maharashtra</option>
-              <option value="Manipur">Manipur</option>
-              <option value="Meghalaya">Meghalaya</option>
-              <option value="Mizoram">Mizoram</option>
-              <option value="Nagaland">Nagaland</option>
-              <option value="Odisha">Odisha</option>
-              <option value="Punjab">Punjab</option>
-              <option value="Rajasthan">Rajasthan</option>
-              <option value="Sikkim">Sikkim</option>
-              <option value="Tamil Nadu">Tamil Nadu</option>
-              <option value="Telangana">Telangana</option>
-              <option value="Tripura">Tripura</option>
-              <option value="Uttar Pradesh">Uttar Pradesh</option>
-              <option value="Uttarakhand">Uttarakhand</option>
-              <option value="West Bengal">West Bengal</option>
-            </select>
-          </div>
-
-        <div style="display: flex; margin: 20px;" class="btn">
-            <button type="reset" class="btn-style" value="RESET">RESET</button>
-            <button type="submit" value="SUMBIT" class="btn-style">SUBMIT</button>
-        </div>
-
+            <div class="indv-text">
+                <label for="name" class="text">NAME</label>
+                <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
+            </div>
+    
+            <div class="indv-text">
+                <label for="email" class="text">EMAIL ID</label>
+                <input type="email" class="form-text" placeholder="example@gmail.com" required>
+            </div>
+    
+            <div class="indv-text">
+                <label for="contact" class="text">CONTACT No.</label>
+                <input type="tel" class="form-text" name="" id="" placeholder="0123456789" required>
+            </div>
+    
+            <div class="indv-text">
+                <label for="eventdate" class="text">Event Date</label>
+                <input type="date" class="form-text" name="" id="dateInput" required>
+            </div>
+    
+            <div class="indv-text">
+                <label for="eventtype" class="text">Event Type</label>
+                <input type="radio" id="self-pickup" name="indoor-outdoor" value="self-pickup"> Self Service Pickup<br><br>
+                <input type="radio" id="self-delivery" name="indoor-outdoor" value="self-delivery"> Self Service Delivery<br><br>
+                <input type="radio" id="full-service" name="indoor-outdoor" value="full-service"> Full Service Catering<br><br>  
+                <input type="radio" id="not-sure" name="indoor-outdoor" value="not-sure"> Not Sure Want To Learn More
+            </div> 
+    
+            <div class="indv-text">
+                <label for="add1" class="text">Complete Address</label>
+                <input type="text" class="form-text" name="" id="" placeholder="Street Address"
+                    required>
+            </div>
+    
+            <div class="indv-text">
+                <label for="state" class="text">STATE</label>
+                <select class="form-text" id="state" required>
+                  <option value="">Select State</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+                </select>
+              </div>
+    
+            <div style="display: flex; margin: 20px;" class="btn">
+                <button type="reset" class="btn-style" value="RESET">RESET</button>
+                <button type="submit" value="SUMBIT" class="btn-style">SUBMIT</button>
+            </div>
+    
+        </form>
     </section>
 
     <!-- Cart -->
@@ -263,6 +252,7 @@
     <script src="./script/catering.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
+    <script src="./script/topscrollindicator.js"></script>
     <script type="module" src="./script/products.js"></script>
 </body>
 
