@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IcyCo Ice Cream</title>
+    <title>ICYCO - HOME</title>
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
     <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="styles/search.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -39,6 +40,7 @@
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link active">home</a>
+            <a href="./faq.html" class="link">FAQ</a>
             <a href="./products.html" class="link">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
@@ -54,6 +56,11 @@
             </div>
             <div class="icon">
                 <i class="fa fa-bars menu" aria-hidden="true"></i>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search...">
+                <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                <div id="search-dropdown" class="dropdown-content"></div>
             </div>
         </div>
     </div>
@@ -381,7 +388,7 @@
         </form>
     </section>
 
-    <!-- FAQs -->
+    <!-- FAQs 
     <section class="FAQs" id="FAQs">
         <h1><span>FAQs</span></h1>
         <h2>Find Out More About The Ice Cream Shop</h2>
@@ -434,7 +441,7 @@
             <div class="FAQ-answers">Yes, we offer a variety of vegan and dairy-free ice cream options. Availability may
                 vary by location.</div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- footer -->
@@ -447,7 +454,7 @@
                     <li><a href="#">My Account</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#FAQs">FAQs</a></li>
+                    <li><a href="./faq.html" class="link">FAQ</a></li>
                     <li><a href="contributor.html">Our Contributors</a></li>
                     <li><a href="#">Customer Agreement</a></li>
                     <li><a href="#">Privacy Policy</a></li>
@@ -550,6 +557,7 @@
     <script src="script/FAQ.js"></script>
     <script src="script/topscrollindicator.js"></script>
     <script src="script/popup.js"></script>
+    <script src="script/search.js"></script>
 </body>
 
 </html>
