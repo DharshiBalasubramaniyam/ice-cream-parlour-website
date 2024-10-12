@@ -45,8 +45,6 @@ function displayProducts(products) {
                                 <div class="price">$${product.price}</div>
                             </div>
                             <div class="description">${product.description}</div>
-
-                             <div class="rating">${getStarRating(product.rating)}</div>
                             <div class="qty">
                                 <span class="decrease">-</span>
                                 <span class="pcs">1</span>
@@ -318,3 +316,40 @@ function handleQuantityButtonsInCart() {
     });
 }
 
+// Scroll animation
+
+document.addEventListener("DOMContentLoaded", () => {
+    displayFlavorFilter();
+    displayProducts(products_list);
+    displayCartItems();
+    
+    const sr = ScrollReveal();
+
+    // Apply ScrollReveal to products
+    const productBoxes = document.querySelectorAll(".products-box .box");
+    productBoxes.forEach(box => {
+        sr.reveal(box, {
+            origin: 'left',
+            distance: '150px',
+            duration: 600,
+            easing: 'ease-in',
+            interval: 400,
+            reset:true
+        });
+    });
+
+    // Apply ScrollReveal to cart items
+    const cartListItems = document.querySelectorAll(".cart-list-items li");
+    cartListItems.forEach(item => {
+        sr.reveal(item, {
+            origin: 'left',
+            distance: '100px',
+            duration: 800,
+            easing: 'ease-in-out',
+            interval: 400,
+            reset:true
+        });
+    });
+
+    handleQuantityButtonsInCart();
+});

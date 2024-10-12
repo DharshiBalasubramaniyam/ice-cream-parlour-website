@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Island-Wide Delivery</title>
+    <title>ICYCO - DELIVERY</title>
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
@@ -27,6 +27,9 @@
         <p class="loading-text">Loading...</p>
     </div>
 
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
+
     <!-- nav bar -->
     <div class="nav-bar">
         <div class="logo">
@@ -35,6 +38,7 @@
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
+            <a href="./products.html" class="link">products</a>
             <a href="./delivery.html" class="link active">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
@@ -52,6 +56,11 @@
             </div>
         </div>
     </div>
+
+    <section>
+        <h1 style="margin-top: 100px; padding: 0 40px;">Island-Wide Delivery</h1>
+        <h2 class="heading">Enter Your Address</h2>
+        <form class="form-contents">
 
 
     <div style="padding-top: 90px;">
@@ -109,6 +118,75 @@
         <i class="fa fa-check-circle"></i>
         Submitted successfully!
     </div>
+
+            <div class="indv-text">
+                <label for="name" class="text">NAME</label>
+                <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
+            </div>
+
+            <div class="indv-text">
+                <label for="email" class="text">EMAIL ID</label>
+                <input type="email" class="form-text" placeholder="example@gmail.com" required>
+            </div>
+
+            <div class="indv-text">
+                <label for="contact" class="text">CONTACT No.</label>
+                <input type="tel" class="form-text" name="" id="" placeholder="0123456789" required>
+            </div>
+
+            <div class="indv-text">
+                <label for="add1" class="text">ADDRESS Line1</label>
+                <input type="text" class="form-text" name="" id="" placeholder="Street Address" required>
+            </div>
+
+            <div class="indv-text">
+                <label for="add2" class="text">ADDRESS Line2</label>
+                <input type="text" class="form-text" name="" id="" placeholder="City" required>
+            </div>
+
+            <div class="indv-text">
+                <label for="state" class="text">STATE</label>
+                <select class="form-text" id="state" required>
+                    <option value="">Select State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+
+            <div style="display: flex; margin: 20px;" class="btn">
+                <button type="reset" class="btn-style" value="RESET">RESET</button>
+                <button type="submit" value="SUMBIT" class="btn-style">SUBMIT</button>
+            </div>
+
+        </form>
+    </section>
+
 
     <!-- Cart -->
     <div class="cart">
@@ -221,6 +299,7 @@
 
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
+    <script src="./script/topscrollindicator.js"></script>
     <script type="module" src="./script/products.js"></script>
     <script>
         document.getElementById('detailsForm').addEventListener('submit', function (event) {

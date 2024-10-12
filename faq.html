@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    
+    body {
+        font-family: 'Arial', sans-serif; /* Ensure a clean sans-serif font */
+            background: linear-gradient(to bottom right, #e0f7fa, #ffffff); /* A softer gradient for a more appealing look */
+            padding: 30px; /* Increased padding for more breathing space */
+            text-align: center;
+            color: #333; /* Default text color for better readability */
+            line-height: 1.6; /* Increased line-height for improved readability */
+}
+
+.FAQs {
+    max-width: 700px; /* Increased width */
+    margin: 0 auto;
+    padding: 18px; /* Reduced padding for height */
+    background: #fff; /* White background for the FAQ container */
+    border-radius: 12px; /* Softer rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for depth */
+}
+
+h1 {
+    color: #333; /* Darker text for headers */
+    font-size: 24px; /* Larger font size for main title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+h2 {
+    color: #555; /* Slightly lighter text color for subheading */
+    font-size: 20px; /* Medium font size for subheading */
+    margin-bottom: 20px; /* More space below the subheading */
+}
+
+h3 {
+    color: #777; /* Lighter color for the tagline */
+    font-size: 16px; /* Smaller font size for tagline */
+    margin-bottom: 20px; /* Space below the tagline */
+}
+
+.FAQ {
+    border: 2px solid #ff69b4; /* Thicker border with the same color as the footer */
+    border-radius: 8px; /* Rounded corners for the FAQ items */
+    margin-bottom: 15px;
+    overflow: hidden;
+    background-color: #f9f9f9; /* Light background for the FAQ items */
+    position: relative; /* Position for the pseudo-element */
+    transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+.FAQ:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow on hover for depth */
+}
+
+.FAQ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.4); /* Light overlay for shine effect */
+    opacity: 0.5; /* Adjust opacity for shine */
+    pointer-events: none; /* Prevent interaction */
+}
+
+.FAQ-questions {
+    background-color: #ff69b4; /* Bright pink background for questions */
+    color: #fff; /* White text for contrast */
+    border: none; /* No border for buttons */
+    width: 100%;
+    text-align: left;
+    padding: 15px; /* Reduced padding for height */
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s; /* Transition for background and text color */
+}
+
+.FAQ-questions:hover {
+    background-color: #e6007e; /* Darker shade for hover effect */
+}
+
+.FAQ-answers {
+    padding: 15px; /* Reduced padding for height */
+    background-color: #f1f1f1; /* Light gray background for answers */
+    border-top: 1px solid #ff69b4; /* Border on top of the answers section for separation */
+    display: none; /* Hidden by default */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #ff69b4; /* Bright pink background for footer */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-top-right-radius: 10px; /* Rounded corner on the top-right */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1000; /* Make sure the footer is on top of other content */
+}
+
+    </style>
+</head>
+<body>
+    <section class="FAQs" id="FAQs">
+        <h1><span>Frequently Asked Questions</span></h1>
+        <h2>Find Out More About The Ice Cream Shop</h2>
+        <h3>We’ve got cones of wisdom for your burning questions!</h3>
+        <br />
+        <div class="FAQ">
+            <button class="FAQ-questions">WILL MY ICE CREAM MELT BEFORE IT ARRIVES? <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="FAQ-answers">Don’t worry, your ice cream is on a chill mission! We pack it to stay cool, so it’ll arrive frozen and ready to enjoy.</div>
+        </div>
+        <div class="FAQ">
+            <button class="FAQ-questions">I'M UNHAPPY WITH THE SERVICE, WHO SHOULD I TALK TO? <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="FAQ-answers">We’re sorry your experience wasn’t as sweet as our ice cream! Please reach out to our support team, and we’ll make things right quicker than you can say ‘sundae.</div>
+        </div>
+        <div class="FAQ">
+            <button class="FAQ-questions">WHAT ARE YOUR DELIVERY HOURS? <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="FAQ-answers">We deliver ice cream every day from 10am to 11 pm. Availability may vary by location.</div>
+        </div>
+        <div class="FAQ">
+            <button class="FAQ-questions">IS THERE A MINIMUM ORDER AMOUNT? <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="FAQ-answers">Yes, the minimum order amount is 100 to ensure smooth delivery.</div>
+        </div>
+        <div class="FAQ">
+            <button class="FAQ-questions">CAN I CANCEL OR MODIFY MY ORDER AFTER IT’S PLACED? <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="FAQ-answers">Once your order is placed, changes or cancellations may not be possible depending on how far along it is in the process. Check with the delivery platform for their policies.</div>
+        </div>
+        <div class="FAQ">
+            <button class="FAQ-questions">DO YOU OFFER ANY DISCOUNTS OR PROMOTIONS? <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="FAQ-answers">Yes, we occasionally offer discounts and promotions. Keep an eye on our website or delivery app for the latest deals!</div>
+        </div>
+        <div class="FAQ">
+            <button class="FAQ-questions">CAN I CUSTOMIZE MY ICE CREAM ORDER? <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="FAQ-answers">At the moment, customization options like adding toppings are not available for delivery orders. Stay tuned for updates!</div>
+        </div>
+        <div class="FAQ">
+            <button class="FAQ-questions">DO YOU HAVE VEGAN OR DAIRY-FREE OPTIONS? <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="FAQ-answers">Yes, we offer a variety of vegan and dairy-free ice cream options. Availability may vary by location.</div>
+        </div>
+    </section>
+
+    <script>
+        // Select all question buttons
+        const faqQuestions = document.querySelectorAll('.FAQ-questions');
+
+        // Add click event listeners to each button
+        faqQuestions.forEach((question) => {
+            question.addEventListener('click', () => {
+                // Get the currently active answer (if any)
+                const activeAnswer = document.querySelector('.FAQ-answers:not([style*="display: none"])');
+
+                // Get the clicked question's answer
+                const answer = question.nextElementSibling;
+
+                // If there's an active answer that is not the clicked one, hide it
+                if (activeAnswer && activeAnswer !== answer) {
+                    activeAnswer.style.display = 'none'; // Close the previously opened answer
+                }
+
+                // Toggle the clicked answer
+                answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
+            });
+        });
+    </script>
+    <footer>
+        <!-- Include your existing footer content here -->
+        <p>&copy; 2024 Ice Cream Parlour. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

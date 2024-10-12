@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IcyCo Ice Cream</title>
+    <title>ICYCO - HOME</title>
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
     <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="styles/search.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -28,8 +29,8 @@
         <p class="loading-text">Loading...</p>
     </div>
 
-        <!-- scroll progress -->
-        <div class="scroll-progress"></div>
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
 
     <!-- nav bar -->
     <div class="nav-bar">
@@ -38,12 +39,12 @@
             <a href="">IcyCo</a>
         </div>
         <div class="nav-links">
-            <a href="#home" class="link active">home</a>
-            <a href="#services" class="link">services</a>
-            <a href="#about" class="link">about</a>
-            <a href="products.html" class="link" target="_blank">products</a>
-            <a href="#reviews" class="link">reviews</a>
-            <a href="#contact" class="link">contact</a>
+            <a href="./index.html" class="link active">home</a>
+            <a href="./faq.html" class="link">FAQ</a>
+            <a href="./products.html" class="link">products</a>
+            <a href="./delivery.html" class="link">Delivery</a>
+            <a href="./dine-in.html" class="link">Dine In</a>
+            <a href="./catering.html" class="link">Catering</a>
         </div>
         <div class="icons">
             <div class="icon">
@@ -55,6 +56,11 @@
             </div>
             <div class="icon">
                 <i class="fa fa-bars menu" aria-hidden="true"></i>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search...">
+                <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                <div id="search-dropdown" class="dropdown-content"></div>
             </div>
         </div>
     </div>
@@ -88,6 +94,7 @@
                 a mouthwatering journey through a virtual ice cream paradise. Whether you’re craving a cozy in-store
                 treat, delivery to your doorstep, or a custom ice cream experience at your next event, we’re here to
                 serve you the sweetest moments, wherever you are.</h4>
+            <a href="./products.html"><button style="margin-top: 15px;">Order Now</button></a>
         </div>
         <div class="image">
             <img src="images/Hero1.png" alt="Hero-image">
@@ -102,7 +109,7 @@
                 <div>
                     <h2>Dine-In</h2>
                     <h3>Chill With Us – Indulge In-Store</h3>
-                    <img src="./images/dine in.png" height="150px" width="150px">
+                    <img src="./images/dine in.png" height="120px" width="120px">
                     <p>Whether you're enjoying a family outing, a date, or a treat just for yourself, our dine-in
                         experience is the perfect way to savor handcrafted scoops, decadent sundaes, and custom
                         creations.</p>
@@ -114,7 +121,7 @@
                 <div>
                     <h2>Island-Wide Delivery</h2>
                     <h3>Ice Cream On the Go – Delivered to Your Door</h3>
-                    <img src="./images/delivary.png" height="150px" width="150px">
+                    <img src="./images/delivary.png" height="120px" width="120px">
                     <p>Whether it’s a late-night craving or a sweet surprise for someone special, we’ll bring
                         freshly scooped goodness straight to your doorstep – fast, fresh, and frozen to perfection.
                     </p>
@@ -126,11 +133,12 @@
                 <div>
                     <h2>Catering</h2>
                     <h3>Sweeten Your Event – Ice Cream Catering</h3>
-                    <img src="./images/event.png" height="150px" width="150px">
+                    <img src="./images/event.png" height="120px" width="120px">
                     <p>Whether it's a birthday party, wedding, corporate event, or any celebration, we provide
                         custom ice cream bars, sundae stations, or full-service catering to keep your guests
                         delighted. </p>
-                    <a href="./catering.html"><button>Tell us about your event <i class="fa fa-arrow-right" aria-hidden="true"></i></button></a>
+                    <a href="./catering.html"><button>Tell us about your event <i class="fa fa-arrow-right"
+                                aria-hidden="true"></i></button></a>
                 </div>
             </div>
 
@@ -139,77 +147,58 @@
     </section>
 
     <!-- Pop-up for email registration -->
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <div class="popup-left">
-        <img src="images/popupice.jpg" alt="Discount Image">
-      </div>
-      <div class="popup-right">
-        <span class="close-btn">&times;</span>
-        <h2>Get a sweet deal before it melts away!</h2>
-        <p>Get 30% off your first order when you Sign up.</p>
-        <form id="emailForm">
-          <input type="email" id="email" placeholder="Enter your email" required>
-          <button type="submit" class="signup-btn">SIGN UP</button>
-        </form>
-        <a href="#" class="no-thanks">No thanks</a>
-        <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
-      </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/popupice.jpg" alt="Discount Image">
+            </div>
+            <div class="popup-right">
+                <h1>Wait!</h1>
+                <h2>Get a sweet deal before it melts away..</h2>
+                <p>Get 30% off your first order when you Sign up.</p>
+                <form id="emailForm">
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <button type="submit" class="signup-btn">Continue</button>
+                </form>
+                <a href="#" class="no-thanks close-btn">No thanks</a>
+                <p class="terms">By clicking continue, you agree to our <a href="#">Terms of Service</a> and <a
+                        href="#">Privacy Policy</a>.</p>
+            </div>
+        </div>
     </div>
-  </div>
-
     <!-- About -->
     <section class="about" id="about">
-        <h1><span>About</span> Us</h1>
+        <!-- <h1><span>About</span> Us</h1> -->
         <div class="box-container about-box">
-            <div class="box image">
-                <img src="images/about.png" alt="">
-            </div>
-            <div class="box text">
+            <div class="text">
                 <h2>Get The Cool Down With Our Creamy Creations!</h2>
                 <p>We at IcyCo, We're more than just a company – we're a community driven by a shared vision and
-                    commitment to excellence.
-                    We're excited to continue and expand our business all while staying true to our roots and the
-                    values that define us.
-                    Come visit us and let’s create sweet memories together!</p>
-                <ul>
+                    commitment to excellence. We're excited to continue and expand our business all while staying true
+                    to our roots and the values that define us. Come visit us and let’s create sweet memories together!
+                </p>
+                <!-- <ul>
                     <li>
                         <div class="feature-icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
                         <span><span>Range of flavours</span> from our parlour for <span>Dine-in</span> and
                             <span>Take-out</span> options</span>
                     </li>
                     <li>
-                    <li>
                         <div class="feature-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
                         <span>Manufactured under <span>strict hygiene</span> and <span>food safety
                                 conditions</span></span>
                     </li>
-                    <li>
                     <li>
                         <div class="feature-icon"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>
                         <span><span>Best quality ingredients</span> from globally and locally recognized
                             suppliers</span>
                     </li>
                     <li>
-                    <li>
                         <div class="feature-icon"><i class="fa fa-smile-o" aria-hidden="true"></i></div>
-                        <span>A welcoming space for families, offering a fun and <span>friendly atmosphere</span>
-                            for all ages.</span>
+                        <span>A welcoming space for families, offering a fun and <span>friendly atmosphere</span> for
+                            all ages.</span>
                     </li>
-                </ul>
-
+                </ul> -->
             </div>
-        </div>
-
-    </section>
-
-    <!-- Products -->
-    <section class="products" id="products">
-        <h1>Our <span>Products</span></h1>
-        <div class="categories-wrapper">
-            <!-- <button class="active" id="all">All</button> -->
-        </div>
-        <div class="box-container products-box">
         </div>
     </section>
 
@@ -399,7 +388,7 @@
         </form>
     </section>
 
-    <!-- FAQs -->
+    <!-- FAQs 
     <section class="FAQs" id="FAQs">
         <h1><span>FAQs</span></h1>
         <h2>Find Out More About The Ice Cream Shop</h2>
@@ -452,7 +441,7 @@
             <div class="FAQ-answers">Yes, we offer a variety of vegan and dairy-free ice cream options. Availability may
                 vary by location.</div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- footer -->
@@ -465,7 +454,8 @@
                     <li><a href="#">My Account</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#FAQs">FAQs</a></li>
+                    <li><a href="./faq.html" class="link">FAQ</a></li>
+                    <li><a href="contributor.html">Our Contributors</a></li>
                     <li><a href="#">Customer Agreement</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
@@ -506,17 +496,24 @@
             <div class="footer-col">
                 <h4>Need Help?</h4>
                 <ul class="links">
-                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
-                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
-                    <li><a href="mailto:mail@1234567.com" class="social"><i class="fa-solid fa-envelope"></i> mail@1234567.com</a></li>
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
+                    </li>
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
+                    </li>
+                    <li><a href="mailto:mail@1234567.com" class="social"><i class="fa-solid fa-envelope"></i>
+                            mail@1234567.com</a></li>
                 </ul>
                 <h4 style="margin-top: 15px;">Follow Us</h4>
                 <ul class="links">
-
-                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
-                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i>
+                            Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
+                            Linkedin</a></li>
+                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
+                            Twitter</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
 
                 </ul>
             </div>
@@ -560,6 +557,7 @@
     <script src="script/FAQ.js"></script>
     <script src="script/topscrollindicator.js"></script>
     <script src="script/popup.js"></script>
+    <script src="script/search.js"></script>
 </body>
 
 </html>
