@@ -43,19 +43,24 @@ controlLinks();
 // ================scroll  bottom to top==========================
 const scrollButton = document.querySelector(".scroll-button");
 
-// when the user scrolled then show the button otherwise hide it
 window.addEventListener("scroll", () => {
-  window.pageYOffset > 100
-    ? scrollButton.classList.add("show-btn")
-    : scrollButton.classList.remove("show-btn");
+    window.pageYOffset > 100
+        ? scrollButton.classList.add("show-btn")
+        : scrollButton.classList.remove("show-btn");
 });
 
-// when user click the button take him to the top with smooth behavior
+function smoothScrollToTop() {
+    const scrollY = window.pageYOffset;
+    const scrollStep = Math.max(10, Math.floor(scrollY / 20)); 
+    if (scrollY > 0) {
+        window.scrollBy(0, -scrollStep);
+        requestAnimationFrame(smoothScrollToTop);
+    }
+}
+
+// When the button is clicked, scroll to the top smoothly
 scrollButton?.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth" // for smoothly scrolling
-  });
+    requestAnimationFrame(smoothScrollToTop);
 });
 
 // Intersection Observer options
