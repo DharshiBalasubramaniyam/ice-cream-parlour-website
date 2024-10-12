@@ -701,7 +701,7 @@ h3 {
     max-width: 350px;
     border: 2px solid var(--secondary-color);
 
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .image-wrapper {
@@ -759,6 +759,7 @@ h3 {
     width: 100%;
     height: 100%;
     display: inline-block;
+    border-radius: 15px;
 }
 
 
