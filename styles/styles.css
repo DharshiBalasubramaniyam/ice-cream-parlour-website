@@ -498,67 +498,61 @@ h3 {
 }
 
 /* -------------about section styles------------------- */
+.about {
+    background-color: #640D5F;
+    background-image: url("../images/abot.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0;
+}
 .about-box {
+    padding: 60px 100px;
     margin-top: 50px;
     display: flex;
-    /* Use Flexbox to position children in a row */
+    background: rgba(255, 255, 255, 0.5);
     align-items: center;
-    /* Vertically center the items */
 }
 
 .about .about-box .video-container {
     position: relative;
     flex: 1;
-    /* Allow the video container to grow */
     max-width: 800px;
-    /* Limit the width of the video */
     overflow: hidden;
 }
 
 .video-container video {
     width: calc(100% + 100px);
-    /* Increase the width to crop from the right */
     height: auto;
-    /* Maintain aspect ratio */
     position: relative;
     right: -90px;
-    /* Move the video to the left to crop from the right */
 }
 
 .about .about-box .text {
-    flex: 1;
-    /* Allow the text container to grow */
-    max-width: 640px;
-    /* Optional: Limit the width of the text */
     display: flex;
-    padding-left: 20px;
     flex-direction: column;
     justify-content: center;
-    /* Center content vertically */
-    gap: 15px;
+    align-items: center;
 }
 
-.about .about-box .text h1 {
-    font-size: 35px;
-    /* Adjust font size as needed */
+.about .about-box .text h2 {
+    font-size: 50px;
     letter-spacing: 1.3px;
     font-weight: 900;
-    /* Increase this value to make it bolder */
-    color: var(--ternary-color);
-}
-
-/* Existing styles remain unchanged */
-.about .about-box .text h2 {
-    font-size: 35px;
-    letter-spacing: 1.3px;
-    font-weight: 600;
-    color: var(--ternary-color);
-    font-family: var(--curly-font);
+    color: var(--main-color);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: 45px;
 }
 
 .about .about-box .text p {
-    line-height: 25px;
-    font-family: var(--main-font);
+    line-height: 30px;
+    font-size: 25px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
 }
 
 .about .about-box .text ul li {
@@ -990,14 +984,20 @@ h3 {
 .footer {
     background: var(--ternary-color);
     margin: 0;
+    padding: 0;
+    background-image: url("../images/back.png");
+    background-position: center;
+    background-size: cover;
 }
 
 .footer .footer-row {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 3.5rem;
-    padding: 60px 0;
+    padding: 60px 100px;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .footer-row .footer-col h4 {
@@ -1079,7 +1079,7 @@ h3 {
 }
 
 .copyright {
-    background-color: var(--ternary-color);
+    background-color: var(--secondary-color);
     width: 100%;
     color: var(--body-color);
     text-align: center;
