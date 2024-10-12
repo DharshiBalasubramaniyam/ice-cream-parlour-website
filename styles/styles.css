@@ -1035,6 +1035,9 @@ h3 {
     display: flex;
     gap: 5px;
 }
+.footer-col button{
+    height: 40px;
+}
 
 .footer-col input {
     height: 40px;
