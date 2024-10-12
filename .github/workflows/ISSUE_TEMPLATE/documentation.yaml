@@ -1,0 +1,30 @@
+
+name: 📃 Documentation
+description: Suggest an idea for this project
+title: "📃 Documentation Update: "
+labels: 
+  - Documentation
+  - gssoc24-ext
+  - hacktoberfest
+  - hacktoberfest-accepted
+  - gssoc
+  - gssoc24
+  - gssoc-extd
+
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for taking the time to update docs.
+  - type: textarea
+    attributes:
+      label: Describe the documentation update.
+      description: ' A clear and concise description of the documentation that needs to be updated or added.'
+  - type: textarea
+    attributes:
+      label: Why is this needed?
+      description: 'Explain why this documentation update is important'
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: 'Add any other context or screenshots about the documentation update here'
+      
