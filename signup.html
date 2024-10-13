@@ -29,39 +29,41 @@
         </div>
     </a>
 
-    <h1 style="text-align: center; margin-bottom: 20px;">Sign up with IcyCo</h1>
+    <h1 style="text-align: center; margin-bottom: 20px;">Sign up to IcyCo</h1>
 
     <form>
         <div id="name-fields">
             <div id="first-name-field">
-                <div class="input-field-header">First name</div>
-                <input type="text" class="input-field">
+                <input type="text" class="input-field" placeholder="First name">
             </div>
             <div id="last-name-field">
-                <div class="input-field-header">Last name</div>
-                <input type="text" class="input-field">
+                <input type="text" class="input-field" placeholder="Last name">
             </div>
         </div>
 
         <div class="input-fields">
-            <div class="input-field-header">Email</div>
-            <input type="email" class="input-field">
+            <input type="email" class="input-field" placeholder="Email">
         </div>
 
         <div class="input-fields">
-            <div class="input-field-header">Password</div>
             <div class="password-container">
-                <input type="password" class="input-field" id="password-input-field">
-                <i class="fa-solid fa-eye-slash" id="toggle-password"></i>
+                <input type="password" class="input-field" id="password-input-field" placeholder="Password">
+                <i style="margin-top: 5px;" class="fa-solid fa-eye-slash" id="toggle-password"></i>
             </div>
         </div>
-    </form>
-
-    <div class="terms">
-
+        <div class="sep-container">
+            <div class="sep-line"></div>
+            <div><p>or</p></div>
+            <div class="sep-line"></div>    
+        </div>
+        <div class="social-links">
+            <button><img src="images/social-icons/google.png" class="imgs" width="20px" height="20px">Signup with Google</button>
+        </div>
         <div class="signin-btn">
             <button>Continue</button>
         </div>
+    </form>
+    <div class="terms">
         <br>
         By clicking Continue or registering through a third party you accept the Icyco
         <a href="#">Terms of Use and acknowledge the Privacy Statement and Cookie Policy</a>
@@ -70,9 +72,10 @@
         <span>Already have an account?</span><a href="./login.html" class="register-now-link">Login</a>
         <div class="sign-in">or continue with</div>
     </div>
-    <div class="social-links">
-        <button><img src="images/social-icons/google.png" class="imgs" width="20px" height="20px">Google</button>
-        <button><img src="images/social-icons/github.png" width="20px" height="20px">GitHub</button>
+    <div class="social-link-2" style="margin-top: -20px;">
+        <a href=""><img src="images/social-icons/google.png" width="25px" height="25px"></a>
+        <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px"></a>
+        <a href=""><img src="images/social-icons/github.png" width="25px" height="25px"></a>
     </div>
 
     <script src="script/login.js"></script>
