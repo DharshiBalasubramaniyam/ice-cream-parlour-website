@@ -54,6 +54,11 @@
                 <input type="password" class="input-field" id="password-input-field">
                 <i class="fa-solid fa-eye-slash" id="toggle-password"></i>
             </div>
+            <!-- Password strength meter -->
+            <div id="password-strength-meter">
+                <div id="strength-bar"></div>
+                <p id="password-strength-text"></p>
+            </div>
         </div>
     </form>
 
@@ -75,10 +80,51 @@
         <button><img src="images/social-icons/github.png" width="20px" height="20px">GitHub</button>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
     <script src="script/login.js"></script>
-
     <script src="./script/nav.js"></script>
     <script src="./script/topscrollindicator.js"></script>
+
+    <script>
+        const passwordInput = document.getElementById("password-input-field");
+        const strengthText = document.getElementById("password-strength-text");
+        const strengthBar = document.getElementById("strength-bar");
+
+        passwordInput.addEventListener("input", function () {
+            const password = passwordInput.value;
+            const result = zxcvbn(password);
+            const strength = result.score;
+
+            // Update strength bar and text
+            strengthBar.style.width = `${(strength + 1) * 20}%`;
+            const strengthLevels = ["Very Weak", "Weak", "Okay", "Good", "Strong"];
+            strengthText.textContent = strengthLevels[strength];
+            
+            // Color the strength bar based on strength
+            const colors = ["#ff4d4d", "#ff944d", "#ffd24d", "#d2ff4d", "#4dff88"];
+            strengthBar.style.backgroundColor = colors[strength];
+        });
+    </script>
+
+    <style>
+        #password-strength-meter {
+            margin-top: 10px;
+        }
+
+        #strength-bar {
+            height: 8px;
+            width: 0;
+            background-color: #ff4d4d;
+            transition: width 0.3s ease;
+        }
+
+        #password-strength-text {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+
 </body>
 
 </html>
