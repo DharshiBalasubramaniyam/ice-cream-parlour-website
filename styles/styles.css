@@ -16,8 +16,8 @@
 }
 
 :root {
-    --ternary-color: #640D5F;
-    --main-color: #D91656;
+    --ternary-color: #993737;
+    --main-color: var(--secondary-color);
     --body-color: #ffffff;
     --secondary-color: #EE66A6;
     --background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
@@ -67,11 +67,13 @@ body {
 /* Keyframe Animations */
 @keyframes spin {
     0% {
-        transform: rotate(0deg);
+        transform:scale(-30%);
+        transition: linear;
     }
 
     100% {
-        transform: rotate(360deg);
+        transform: scale(30%);
+        transition: linear;
     }
 }
 

@@ -402,12 +402,12 @@
             <div class="row">
                 <div class="input-box">
                     <label for="fname">Your First Name</label><br>
-                    <input type="text" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <input type="text" placeholder="Enter Your First Name" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
                 <div class="input-box">
                     <label for="lname">Your Last Name</label><br>
-                    <input type="text" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <input type="text"  placeholder="Enter Your Last Name" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
             </div>
@@ -415,19 +415,19 @@
             <div class="row">
                 <div class="input-box">
                     <label for="email">Your Email</label><br>
-                    <input type="email" id="email" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <input type="email"  placeholder="Enter Your E-mail" id="email" oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
                 <div class="input-box">
                     <label for="phone">Your Contact Number</label><br>
-                    <input type="tel" id="phone" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <input type="tel" minlength="10" maxlength="10" placeholder="+91 " id="phone" oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
             </div>
             <div class="row">
                 <div class="input-box">
                     <label for="message">Your Message</label><br>
-                    <textarea name="" id="message" cols="30" rows="10"
+                    <textarea name="" id="message" cols="30" rows="10"  placeholder="Enter Message..."
                         oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
