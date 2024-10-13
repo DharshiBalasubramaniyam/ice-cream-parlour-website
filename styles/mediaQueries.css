@@ -132,6 +132,11 @@
     .copyright {
         font-size: 10px;
     }
+    .inner {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px;
+    }
 
 }
 
