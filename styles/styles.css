@@ -469,7 +469,7 @@ h3 {
 
 .grid {
     width: 50%;
-    height: 450px;
+    aspect-ratio: 1.5;
     display: grid;
     grid-template-columns: auto auto;
     gap: 15px;
@@ -920,9 +920,6 @@ h3 {
 }
 
 /*------ WHY icyCO? styles----------------*/
-.why-icyco {
-    /* margin-top: 100px; */
-}
 .feature-container {
     display: flex;
     justify-content: space-between;

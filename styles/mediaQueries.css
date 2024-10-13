@@ -47,10 +47,6 @@
         height: 70%;
         margin: 0;
     }
-
-    footer {
-        padding: 20px;
-    }
 }
 
 @media all and (max-width:830px) {
@@ -63,10 +59,11 @@
     }
 
     .nav-bar .nav-links {
+        flex-direction: column;
         position: fixed;
         top: 70px;
-        height: fit-content;
-        background-color: var(--ternary-color);
+        height: calc(100vh-70px);
+        background-color: var(--body-color);
         width: 100%;
         left: -100%;
         transition: 0.3s;
@@ -80,6 +77,7 @@
         display: block;
         width: 100%;
         text-align: center;
+        line-height: 25px;
         margin: 0;
         padding: 25px 0;
         border-bottom: 1px solid var(--main-color);
@@ -98,6 +96,10 @@
         height: max-content;
         padding: 50px 10px 0 10px;
         flex-direction: column-reverse;
+    }
+    .grid {
+        padding: 0;
+        gap: 5px;
     }
 
     .home .text, .home .grid {
@@ -174,12 +176,20 @@
     }
 
     .footer .footer-row {
-        /* padding: 20px; */
         gap: 1rem;
+    }
+
+    .footer-col {
+        text-align: center;
+        width: 100%;
+    }
+    .footer-col li .social{
+        justify-content: center;
     }
 
     .footer-col form {
         display: block;
+        text-align: center;
     }
 
     .footer-col form :where(input, button) {

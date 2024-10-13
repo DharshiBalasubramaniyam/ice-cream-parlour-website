@@ -307,8 +307,6 @@ function handleQuantityButtonsInCart() {
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    const sr = ScrollReveal();
-
     // Apply ScrollReveal to products
     const productBoxes = document.querySelectorAll(".products-box .box");
     productBoxes.forEach(box => {
