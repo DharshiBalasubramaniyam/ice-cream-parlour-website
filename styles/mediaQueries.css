@@ -100,7 +100,7 @@
         flex-direction: column-reverse;
     }
 
-    .home .text {
+    .home .text, .home .grid {
         width: 100%;
     }
 

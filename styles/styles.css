@@ -28,6 +28,7 @@
 
 body {
     background-color: var(--body-color);
+    cursor: url("../images/logo.png"), auto;
 }
 
 /* Preloader styles */
@@ -382,38 +383,13 @@ h3 {
 
 /* -------------home styles------------------- */
 .home {
-    min-height: 100vh;
+    min-height: 95dvh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
     position: relative;
-}
-
-.home .design1 {
-    animation-name: zoom;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    top: 70px;
-    left: -75px;
-}
-
-.home .design2 {
-    bottom: 70px;
-    left: 40%;
-    height: 100px;
-    width: 100px;
-    animation-name: rotate;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-}
-
-.home .design3 {
-    top: 200px;
-    right: -80px;
-    animation-name: move;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+    gap: 25px;
 }
 
 @keyframes zoom {
@@ -470,7 +446,7 @@ h3 {
     font-size: 65px;
     font-weight: 600;
     margin-bottom: 15px;
-    background: -webkit-linear-gradient(120deg, var(--main-color), var(--ternary-color));
+    background: -webkit-linear-gradient(110deg, var(--main-color), var(--secondary-color));
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--curly-font);
@@ -484,8 +460,47 @@ h3 {
 
 }
 
+.grid {
+    width: 50%;
+    height: 450px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    padding: 15px;
+}
+.grid-box {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+    filter: brightness(70%);
+
+}
+.grid-box:hover {
+    transform: scale(1.04);
+    filter: brightness(100%);
+
+}
+.grid-box:nth-of-type(1){
+    border-radius: 25px;
+    background-image: url("../images/hero-grid1.jpg");
+}
+.grid-box:nth-of-type(2){
+    border-radius: 10px 15px 25px 0;
+    background-image: url("../images/hero-grid2.jpg");
+}
+.grid-box:nth-of-type(3){
+    border-radius: 0 0 0 35px;
+    background-image: url("../images/hero-grid3.jpg");
+}
+.grid-box:nth-of-type(4){
+    border-radius: 0 15px 0 15px;
+    background-image: url("../images/hero-grid4.jpg");
+}
+
 .home .image {
     width: 50%;
+    background-color: #D91656;
 }
 
 .home .image img {
