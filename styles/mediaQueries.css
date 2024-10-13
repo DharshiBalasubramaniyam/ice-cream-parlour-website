@@ -6,8 +6,6 @@
     }
 
     .nav-bar .nav-links a {
-        margin: 0;
-        padding: 0;
         font-size: 15px;
     }
 
@@ -15,11 +13,6 @@
         padding: 15px;
     }
 
-    .about .about-box .image,
-    .about .about-box .text {
-        margin: auto;
-        height: fit-content;
-    }
 
 }
 
@@ -54,10 +47,6 @@
         height: 70%;
         margin: 0;
     }
-
-    footer {
-        padding: 20px;
-    }
 }
 
 @media all and (max-width:830px) {
@@ -70,10 +59,11 @@
     }
 
     .nav-bar .nav-links {
+        flex-direction: column;
         position: fixed;
         top: 70px;
-        height: fit-content;
-        background-color: var(--ternary-color);
+        height: calc(100vh-70px);
+        background-color: var(--body-color);
         width: 100%;
         left: -100%;
         transition: 0.3s;
@@ -87,6 +77,7 @@
         display: block;
         width: 100%;
         text-align: center;
+        line-height: 25px;
         margin: 0;
         padding: 25px 0;
         border-bottom: 1px solid var(--main-color);
@@ -106,8 +97,12 @@
         padding: 50px 10px 0 10px;
         flex-direction: column-reverse;
     }
+    .grid {
+        padding: 0;
+        gap: 5px;
+    }
 
-    .home .text {
+    .home .text, .home .grid {
         width: 100%;
     }
 
@@ -139,15 +134,16 @@
     .copyright {
         font-size: 10px;
     }
+    .inner {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px;
+    }
 
 }
 
 @media all and (max-width:600px) {
 
-    .about .about-box .image,
-    .about .about-box .text {
-        height: max-content;
-    }
 
     footer .footer-box {
         margin-bottom: 15px;
@@ -180,12 +176,20 @@
     }
 
     .footer .footer-row {
-        /* padding: 20px; */
         gap: 1rem;
+    }
+
+    .footer-col {
+        text-align: center;
+        width: 100%;
+    }
+    .footer-col li .social{
+        justify-content: center;
     }
 
     .footer-col form {
         display: block;
+        text-align: center;
     }
 
     .footer-col form :where(input, button) {
@@ -194,5 +198,48 @@
 
     .footer-col form button {
         margin: 10px 0 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about .about-box {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin-left: 0; /* Remove left margin for small screens */
+    }
+
+    .about .about-box .video-container {
+        max-width: 100%; /* Allow video to take full width */
+        padding: 0; /* Remove padding for smaller screens */
+    }
+
+    .video-container video {
+        width: 100%; /* Make video responsive */
+        height: auto; /* Maintain aspect ratio */
+        right: 0; /* Center the video */
+    }
+
+    .about .about-box .text {
+        padding-left: 0; /* Remove padding for smaller screens */
+        text-align: center; /* Center text for better alignment */
+    }
+
+    .about .about-box .text h1 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    .about .about-box .text h2 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .about .about-box .text h1 {
+        font-size: 24px; /* Further adjust font size for mobile */
+    }
+
+    .about .about-box .text h2 {
+        font-size: 24px; /* Further adjust font size for mobile */
     }
 }
