@@ -59,7 +59,7 @@ body {
 
 /* Loading Text Styles */
 .loading-text {
-     margin-top: 20px;
+    margin-top: 20px;
     font-size: 18px;
     color: #333;
     animation: pulse 2.5s linear infinite;
