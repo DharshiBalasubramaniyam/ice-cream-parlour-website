@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
-    <link rel="stylesheet" href="styles/form.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -61,63 +60,6 @@
         <h1 style="margin-top: 100px; padding: 0 40px;">Island-Wide Delivery</h1>
         <h2 class="heading">Enter Your Address</h2>
         <form class="form-contents">
-
-
-    <div style="padding-top: 90px;">
-        <h2
-            style="text-align: center; font-weight:600; font-size: 45px; font-family: Spicy Rice, serif; color: #D91656;">
-            Island-Wide Delivery</h2>
-    </div>
-
-    <!-- DETAILS FORM -->
-    <h2 class="heading">Enter Your Details</h2>
-
-    <form class="form-contents" id="detailsForm" action="your-submit-url" method="POST">
-        <!-- Update your-submit-url accordingly -->
-        <div class="indv-text">
-            <label for="name" class="text">NAME</label>
-            <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
-        </div>
-
-        <div class="indv-text">
-            <label for="email" class="text">EMAIL ID</label>
-            <input type="email" class="form-text" id="email" name="email" placeholder="example@gmail.com" required />
-        </div>
-
-        <div class="indv-text">
-            <label for="contact" class="text">CONTACT No.</label>
-            <input type="tel" class="form-text" id="contact" name="contact" placeholder="0123456789" required />
-        </div>
-
-        <div class="indv-text">
-            <label for="add1" class="text">ADDRESS Line1</label>
-            <input type="text" class="form-text" id="add1" name="address1" placeholder="Street Address" required />
-        </div>
-
-        <div class="indv-text">
-            <label for="add2" class="text">ADDRESS Line2</label>
-            <input type="text" class="form-text" id="add2" name="address2" placeholder="City" required />
-        </div>
-
-        <div class="indv-text">
-            <label for="state" class="text">STATE</label>
-            <select class="form-text" id="state" name="state" required>
-                <option value="">Select State</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <!-- Add other states here -->
-            </select>
-        </div>
-
-        <div style="display: flex; margin: 20px;" class="btn">
-            <button type="reset" class="btn-style">RESET</button>
-            <button type="submit" class="btn-style">SUBMIT</button>
-        </div>
-    </form>
-
-    <div id="successMessage" class="success-message" style="display: none;">
-        <i class="fa fa-check-circle"></i>
-        Submitted successfully!
-    </div>
 
             <div class="indv-text">
                 <label for="name" class="text">NAME</label>
@@ -186,7 +128,6 @@
 
         </form>
     </section>
-
 
     <!-- Cart -->
     <div class="cart">
@@ -301,17 +242,6 @@
     <script src="./script/cart.js"></script>
     <script src="./script/topscrollindicator.js"></script>
     <script type="module" src="./script/products.js"></script>
-    <script>
-        document.getElementById('detailsForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            document.getElementById('successMessage').style.display = 'flex';
-            setTimeout(function () {
-                document.getElementById('successMessage').style.display = 'none';
-            }, 3000);
-            this.reset();
-        });
-
-    </script>
 </body>
 
 </html>
