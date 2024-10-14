@@ -6,7 +6,6 @@ body.dark #dark_bg{
     background-color: #212121;
 }
 
-body.dark #dark_bg2{
-    background-color: #212121;
+body.dark .dark_bg_txt {
     color: white;
 }
