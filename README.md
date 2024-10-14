@@ -1,134 +1,144 @@
- #   🍦 Ice Cream Parlour Website 🍨
-  
- ![Ice Cream Website Screenshot](/Screenshot%202024-10-02%20121926.png) 
 
- ## Table of Contents
+# 🍦 Ice Cream Parlour Website 🍨
+
+ ![Ice Cream Website Screenshot](/images/readme.png)
+
+## Table of Contents
 - [Overview](#-overview-)
 - [Technologies Used](#-technologies-used-)
 - [Key Features](#-key-features-)
 - [How to Contribute](#-how-to-contribute-to-this-project-)
 - [Contribution Points](#contribution-points)
 
-                                                                 
+---
+
 # 🌟 Overview 🌟
-This responsive, user-friendly ice cream store website is built using HTML, CSS, and Vanilla JavaScript. It offers a delightful experience with an user friendly interface and interactive features to make exploring ice cream options even more fun! Whether you're shopping for ice cream or browsing reviews, the website is optimized for both desktop and mobile users.
+Welcome to the Ice Cream Parlour Website! This responsive and user-friendly website is designed to provide a delightful experience for ice cream lovers. Built using HTML, CSS, and Vanilla JavaScript, it offers an interactive interface for browsing ice cream options, shopping, and leaving reviews. The website is optimized for both desktop and mobile users, ensuring a smooth experience across all devices.
 
+---
 
- #  ⚙️ Technologies Used ⚙️
+# ⚙️ Technologies Used ⚙️
 ### 1. *🟧 HTML (HyperText Markup Language)*
-HTML is the backbone of the web. It provides the structure for the website by defining elements such as headings, paragraphs, buttons, images, and more. For this project:
-HTML is used to create the layout of all sections, from the navbar to the footer. HTML helps in organizing content in form of Tags that are easy to acces and edit. 
+HTML serves as the backbone of the website, providing the structure and layout for various elements like headings, paragraphs, buttons, and images. In this project, HTML is used extensively to create the layout for sections such as the navbar, product display, and footer.
 
 ### 2. *🟦 CSS (Cascading Style Sheets)*
-CSS is responsible for the website's appearance, allowing us to apply styling rules to make the website visually attractive and responsive. In this project:
-CSS is used to style the entire page, including colors, fonts, and layouts. It also ensures that the website is responsive across all devices, adjusting elements to look great on different screen sizes.
+CSS is utilized to style the website, enhancing its visual appeal and responsiveness. This project employs CSS to define colors, fonts, and layouts, ensuring a seamless experience across different screen sizes.
 
 ### 3. *🟨 JavaScript (Vanilla JavaScript)*
-JavaScript is a programming language that brings the website to life by adding interactivity and functionality. For this project:
-Vanilla JavaScript handles dynamic features such as adding items to the shopping cart, viewing/removing them, and form validations.
-It is also responsible for the interactive review slider using Swiper.js.
+JavaScript adds interactivity and functionality to the website. This project uses Vanilla JavaScript to implement dynamic features such as:
+- Adding items to the shopping cart
+- Viewing and removing items from the cart
+- Validating forms for user inputs
+- Implementing an interactive review slider using Swiper.js
 
+---
 
+# ✨ Key Features ✨
+*📱 **Responsive Design**:*
+- **Responsive Navbar**: Smooth toggle menu with a scrollspy feature for easy navigation across devices.
+- **Fluid Layout**: Sections like Home, Products, About, and Contact adjust beautifully to fit various screen sizes.
 
- # ✨ Key Features ✨
-*📱 Responsive Design*
-Responsive Navbar: Smooth toggle menu and scrollspy feature to enhance navigation across devices.
-Fluid Layout: Sections like Home, Products, About, and Contact adjust beautifully across screen sizes.
+*🛒 **Shopping Cart Functionality**:*
+- **Add to Cart**: Effortlessly add your favorite ice cream flavors to your cart.
+- **View & Remove Items**: Easily view or remove items from your shopping cart.
 
-*🛒 Shopping Cart Functionality*
-Add to Cart: Easily add your favorite ice cream to the cart.
-View & Remove Items: A simple way to view or remove items from your cart.
+*📝 **Form Validations**:*
+- **Contact Form**: Ensures proper validation of fields, guaranteeing correct user inputs.
+- **Newsletter Signup**: Validates email entries to ensure proper subscription.
 
-*📝 Form Validations*
-Contact Form: Proper validation for fields, ensuring correct user inputs.
-Newsletter Signup: Validates email entries for the subscription form.
+*⭐ **Interactive Reviews Section**:*
+- **Swiper.js Slider**: Customers can view reviews in an engaging and smooth sliding effect, enhancing user interaction.
 
-*⭐ Interactive Reviews Section*
-Swiper.js Slider: Customers can view reviews with an engaging and smooth sliding effect.
+---
 
+## 📸 Screenshots
 
+**💻Desktop and📱Mobile View**
 
+<div style="text-align: center;">
+  <img src="https://github.com/user-attachments/assets/26071a96-00af-4a72-bdff-2d1f57f31d00" alt="First Image" width="50%" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+  <img src="https://github.com/user-attachments/assets/341b9e5e-ab35-4ace-94b0-89285cd4ecfd" alt="Second Image" width="20%" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+</div>
+
+---
 
 # 🚀 How to Contribute to This Project
-
-We’re excited to have you contribute to this *Ice Cream Parlour Website* project! Follow these simple steps to get started:
+We welcome contributions to the Ice Cream Parlour Website! To get started, please follow these simple steps:
 
 1. **🍴 Fork the Repository**  
-   - Go to the [repository page](https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website).
-   - Click the *Fork* button (top right). This creates a copy of the project in your GitHub account.
+   - Visit the [repository page](https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website).
+   - Click the *Fork* button (top right) to create a copy of the project in your GitHub account.
 
 2. **💻 Clone Your Fork**  
-   - Once the repository is forked, clone it to your local machine. Open your terminal and run:
-    ``` bash
-     git clone
-     https://github.com/your-username/ice-cream-parlour-website.git
-    ```
-     
-   - Replace your-username with your GitHub username.
+   - Clone the repository to your local machine by running the following command in your terminal:
+     ```bash
+     git clone https://github.com/your-username/ice-cream-parlour-website.git
+     ```
+   - Replace `your-username` with your GitHub username.
 
-3. **🌿 Create a New Branch** 
-   - Before making any changes, create a new branch for your work:
-    ``` bash
-     git checkout
-     -b your-branch-name
-    ```
-     
-   - Choose a branch name that describes what you're working on, such as fix-navbar or add-contact-form.
+3. **🌿 Create a New Branch**  
+   - Create a new branch for your work:
+     ```bash
+     git checkout -b your-branch-name
+     ```
+   - Use a descriptive branch name that indicates the feature or fix you’re working on, like `fix-navbar` or `add-contact-form`.
 
-4. **🛠️ Make Your Changes**
-   - Open the project files in your code editor (like VS Code) and make your changes.
-   - You can contact the project manager [Dharshi Balsubramaniyam](https://github.com/DharshiBalasubramaniyam) for any queiries you have.
+4. **🛠️ Make Your Changes**  
+   - Open the project files in your code editor (e.g., VS Code) and implement your changes.
+   - If you have questions, feel free to contact the project manager, [Dharshi Balsubramaniyam](https://github.com/DharshiBalasubramaniyam).
 
-5. **✅ Test Your Changes**
-   - Make sure your changes work correctly by testing the website locally. Open the index.html file in your browser to see your updates.
+5. **✅ Test Your Changes**  
+   - Test your changes locally by opening the `index.html` file in your web browser to ensure everything functions as expected.
 
-6. **💬 Commit Your Changes** 
-   - Once your changes are ready, commit them with a descriptive message:
+6. **💬 Commit Your Changes**  
+   - Commit your changes with a descriptive message:
      ```bash
      git add .
      git commit -m "Added feature X or Fixed issue Y"
      ```
-     
 
-7. **📤 Push Your Changes**
-   - Push your changes to your forked repository on GitHub:
-    ``` bash
+7. **📤 Push Your Changes**  
+   - Push your changes to your forked repository:
+     ```bash
      git push origin your-branch-name
-    ```
-     
+     ```
 
-8. **🔄 Create a Pull Request (PR)** 
+8. **🔄 Create a Pull Request (PR)**  
    - Go back to the original repository [here](https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website).
    - Click the *Compare & pull request* button.
-   - Write a short description of your changes and submit the pull request (PR).
+   - Provide a brief description of your changes and submit the PR.
 
-9. **🔎Review Changes
-   - The project manager will review your PR. If your changes are approved, your request would be merged.
+9. **🔎 Review Changes**  
+   - The project manager will review your PR. If approved, your changes will be merged.
 
 ---
 
-By following these steps, you can easily contribute to this project! If you have any questions, feel free to ask in the repository’s discussion or issue section.
-
 
 # Contribution Points 
-
-*🏆 Contribution Levels:*
-All the tasks will be assigned various levels based on the complexity of the task and skills required to complete it. Every level will provide you a different amount of Points that is:
+*🏆 **Contribution Levels:**  
+Tasks are categorized into various levels based on complexity and skills required. Each level provides different points as follows:
 - **🥇 Level 1**: 10 Points  
 - **🥈 Level 2**: 25 Points  
 - **🥉 Level 3**: 45 Points  
 
-# GSSoC Guidelines 
+---
 
-It is important for all to adhere to all the Guildines, if found guilty the concequesces can affect your profile. To review the guidlines refer [here](https://github.com/GSSoC24/Contributor/tree/main/gssoc-guidelines)
+# GSSoC Guidelines 
+All contributors must adhere to the guidelines. Violations can affect your profile. Review the guidelines [here](https://github.com/GSSoC24/Contributor/tree/main/gssoc-guidelines).
 
 ---
-# 📄Ending Note
-Thank you for checking out the Ice Cream Parlour Website! We hope you find this project enjoyable and informative. Your feedback, contributions, and suggestions are always welcome!
+
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35"> Contributors
+A big thank you to all the contributors! 🎉  
+<a href="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/pulse"> <img align="center" src="https://contrib.rocks/image?max=100&repo=DharshiBalasubramaniyam/ice-cream-parlour-website" /> </a> 
+
+---
+
+# 📄 Ending Note
+Thank you for exploring the Ice Cream Parlour Website! We hope you find this project enjoyable and informative. Your feedback, contributions, and suggestions are always welcome!
 
 If you have any questions or need assistance, please feel free to reach out through the Issues section of this repository.
 
 # 🌈 Join Us!
-We encourage you to explore the website, share your thoughts, and get involved in improving the project. Let’s make this ice cream experience even sweeter together!
 
-Happy coding! 🍦
+

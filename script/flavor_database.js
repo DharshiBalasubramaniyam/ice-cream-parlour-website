@@ -17,7 +17,7 @@ const falvors_list = [
     },
     {
         id: "f005",
-        name: "Non Diary/Vegen"
+        name: "Non-Dairy/Vegan"
     }
 ]
 

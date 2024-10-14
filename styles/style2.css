@@ -1,0 +1,166 @@
+body {
+    padding: 25px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+form {
+    width: 100%;
+    max-width: 450px;
+}
+
+#name-fields {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#first-name-field,
+#last-name-field {
+    flex: 1 1 200px;
+}
+
+#first-name-field input,
+#last-name-field input {
+    padding: 15px 12px;
+    width: 100%;
+}
+
+.input-fields {
+    margin-bottom: 12px;
+}
+
+.input-fields input {
+    width: 100%;
+    padding: 15px 12px;
+}
+
+.input-field-header {
+    margin-bottom: 7px;
+    font-weight: 550;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+}
+
+/* Style the eye icon */
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.input-fields a {
+    margin-top: 5px;
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+    color: #0b5cad;
+}
+
+.check-button {
+    display: flex;
+    align-items: center;
+}
+
+.check-button input {
+    height: 15px;
+    width: 15px;
+}
+
+.check-button span {
+    margin-left: 8px;
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.signin-btn button {
+    width: 100%;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+.terms {
+    margin-top: 10px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.terms a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+#line-container {
+    font-size: 14px;
+}
+
+.register-now-link {
+    margin-left: 3px;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.register-now-link:hover {
+    text-decoration: underline;
+}
+
+.sign-in {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+.social-links button {
+    width: 100%;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.social-links img {
+    margin-right: 5px;
+}
+
+.social-links img {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.social-links button span {
+    line-height: 20px;
+    padding-top: 4px;
+}

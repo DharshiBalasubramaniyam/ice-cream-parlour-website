@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICYCO - LOGIN</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
+
+    <a href="./index.html">
+
+        <div id="logo">
+            <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true"
+                width="15%"></img>
+        </div>
+    </a>
+
+    <h1>Login to IcyCo</h1>
+    <form>
+        <div class="input-fields">
+            <div class="input-field-header">Email</div>
+            <input type="email" class="input-field">
+        </div>
+
+        <div class="input-fields">
+            <div class="input-field-header">Password</div>
+            <div class="password-container">
+                <input type="password" class="input-field" id="password-input-field">
+                <i class="fa-solid fa-eye-slash" id="toggle-password"></i>
+            </div>
+            <a href="#">Forgot your password?</a>
+        </div>
+
+        <div class="check-button">
+            <input type="checkbox">
+            <span>Remember me</span>
+        </div>
+        <div class="signin-btn">
+            <button>Sign in</button>
+        </div>
+    </form>
+
+    <div id="line-container">
+        <br>
+        <span>Don't have an account?</span><a href="./signup.html" class="register-now-link">Create account</a>
+        <div class="sign-in">or login with</div>
+    </div>
+
+    <div class="social-links">
+        <button><img src="images/social-icons/google.png" class="imgs" width="20px" height="20px">Google</button>
+        <button><img src="images/social-icons/github.png" width="20px" height="20px">Facebook</button>
+    </div>
+
+    <script src="script/login.js"></script>
+    <script src="./script/nav.js"></script>
+    <script src="./script/topscrollindicator.js"></script>
+</body>
+</html>
