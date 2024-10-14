@@ -78,7 +78,7 @@ p{
     padding: 3vmin;
 }
 .image1{
-    background-image:url(/ice-cream-parlour-website/images/Hero.png) ;
+    background-image:url(/images/Hero.png) ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -94,13 +94,13 @@ p{
     zoom: 1;
 }
 .image2{
-    background-image: url(/ice-cream-parlour-website/images/mango.jpg);
+    background-image: url(/images/mango.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .image3{
-    background-image: url(/ice-cream-parlour-website/images/strawberry.jpg);
+    background-image: url(/images/strawberry.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
