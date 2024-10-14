@@ -51,6 +51,17 @@ JavaScript adds interactivity and functionality to the website. This project use
 
 ---
 
+## 📸 Screenshots
+
+**💻Desktop and📱Mobile View**
+
+<div style="text-align: center;">
+  <img src="https://github.com/user-attachments/assets/26071a96-00af-4a72-bdff-2d1f57f31d00" alt="First Image" width="50%" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+  <img src="https://github.com/user-attachments/assets/341b9e5e-ab35-4ace-94b0-89285cd4ecfd" alt="Second Image" width="20%" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
+</div>
+
+---
+
 # 🚀 How to Contribute to This Project
 We welcome contributions to the Ice Cream Parlour Website! To get started, please follow these simple steps:
 
