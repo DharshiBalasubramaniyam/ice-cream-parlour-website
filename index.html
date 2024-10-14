@@ -30,7 +30,7 @@
 
 
 
-    <!-- scroll progress -->
+    <!-- scroll progress -->`
     <div class="scroll-progress"></div>
 
     <!-- nav bar -->
@@ -57,10 +57,16 @@
                         class="no-of-cart-items">0</span></span>
             </div>
             <div class="icon">
-                <i class="fa fa-bars menu" aria-hidden="true"></i>
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            this.classList.toggle('fa-bars');
+            this.classList.toggle('fa-times');
+        });
+    </script>
 
     <!-- Cart -->
     <div class="cart">
