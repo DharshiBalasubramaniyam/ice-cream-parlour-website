@@ -620,6 +620,10 @@ h3 {
     transition: 0.3s;
 }
 
+.service-card1:hover{
+    box-shadow: 3px 3px 12px var(--secondary-color);
+}
+
 .service-card>div {
     width: 100%;
     height: 100%;
