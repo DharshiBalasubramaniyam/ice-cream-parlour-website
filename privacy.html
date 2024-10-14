@@ -4,190 +4,248 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IcyCo Ice Cream - Privacy Policy</title>
-    <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Times New Roman", Times, serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
-}
-
-
-h1 {
-    font-family: "Times New Roman", Times, serif;
-    text-align: center;
-    font-size: 45px;
-    margin-top: 15px;
-    font-weight: 400;
-    text-align: center;
-    color: #df2d9e;
-}
-
-nav ul {
-    font-family: "Times New Roman", Times, serif;
-    list-style: none;
-    text-align: center;
-    font-size: 18px;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-    font-size: 48px;
-}
-
-nav ul li a {
-    font-family: "Times New Roman", Times, serif;
-    text-decoration: none;
-    color: #333;
-   
-}
-
-nav ul li a:hover {
-    color: #df2d9e;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-li {
-    font-size: 18px;
-}
-
-main {
-    background-color: #ffffffd8;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h2, h3, h4 {
-    color: #df2d9e;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-p {
-    margin: 15px 0;
-    font-size: 18px;
-}
-
-ul {
-    margin: 10px 0;
-    padding-left: 20px;
-    font-size: 18px;
-}
-
-footer {
-    background-color: #ef0c76;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 30px;
-}
-
-footer p {
-    margin: 0;
-}
-
-    </style>
+    
+    <link rel="stylesheet" href="./styles/privacy.css">
+    <link rel="stylesheet" href="./styles/mediaQueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
 </head>
 <body>
-    
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- nav bar -->
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
+            <a href="">IcyCo</a>
+        </div>
+        <div class="nav-links">
+            <a href="./index.html" class="link">home</a>
+            <a href="./products.html" class="link">products</a>
+            <a href="./delivery.html" class="link">Delivery</a>
+            <a href="./dine-in.html" class="link">Dine In</a>
+            <a href="./catering.html" class="link">Catering</a>
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+            <div class="icon">
+                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                        class="no-of-cart-items">0</span></span>
+            </div>
+            <div class="icon">
+                <i class="fa fa-bars menu" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Cart -->
+    <div class="cart">
+        <i class="fa fa-times close-cart" aria-hidden="true"></i>
+        <h1>Your Cart</h1>
+
+        <div class="no-empty-cart">
+            <ul class="cart-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+        </div>
+
+        <div class="empty-cart active">
+            <p>No items in the cart!</p>
+        </div>
+
+    </div>
 
     <main class="container">
         <section id="privacy-policy">
-            <h1><b>Privacy Policy</b></h1>
+            <h1><b>&nbsp;&nbsp;&nbsp;Privacy Policy&nbsp;&nbsp;&nbsp;</b></h1>
             <p><i><strong>Last Updated:</strong>October 2024</i></p>
 
             <p>At IcyCo Ice Cream, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when
                  you visit our website, make purchases, or interact with our services.</p>
-
+            <hr>
             <h3>1. Information We Collect</h3>
             <p>We collect the following types of information to provide and improve our services:</p>
             
             <h4>a. Personal Information</h4>
             <ul>
-                <li>Contact Information: Name, email address, phone number, and delivery address.</li>
-                <li>Payment Information: Credit card details or other payment methods when you make a purchase.</li>
+                <li>~ <b>Contact Information:</b> Name, email address, phone number, and delivery address.</li>
+                <li>~ <b>Payment Information:</b> Credit card details or other payment methods when you make a purchase.</li>
             </ul>
 
             <h4>b. Automatically Collected Information</h4>
             <ul>
-                <li><b>Device Information:</b> IP address, browser type, and operating system.</li>
-                <li><b>Usage Data: </b>Pages visited, time spent on the website, and referring links.</li>
-                <li><b>Cookies:</b> Small data files used to remember your preferences.</li>
+                <li>~ <b>Device Information:</b> IP address, browser type, and operating system.</li>
+                <li>~ <b>Usage Data: </b>Pages visited, time spent on the website, and referring links.</li>
+                <li>~ <b>Cookies:</b> Small data files used to remember your preferences.</li>
             </ul>
+            <hr>
 
             <h3>2. How We Use Your Information</h3>
             <p>Personal data, or personal information, means any information about an individual from which that person can be identified. It does not include data where the identity has been removed (anonymous data).
 
                 We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:</p>
                 
-                <li>Identity Data includes first name, maiden name, last name, username or similar identifier, marital status, title, date of birth and gender.</li>
-                <li>Contact Data includes billing address, email address and telephone numbers.</li>
-                <li>Financial Data includes bank account and payment card details.</li>
-                <li>Transaction Data includes details about payments to and from you and other details of products and services you have purchased from us.</li>
-                <li> Technical Data includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform and other technology on the devices you use to access this website.</li>
-                <li> Profile Data includes your username and password, your interests, preferences, feedback and survey responses.</li> 
-                <li> Usage Data includes information about how you use our website.</li> 
-                <li>Marketing and Communications Data includes name, address, social handle, phone and email.</li>
-                <li>We also collect, use and share Aggregated Data such as statistical or demographic data for any purpose. Aggregated Data may be derived from your personal data but is not considered personal data in law as this data does not directly or indirectly reveal your identity. For example, we may aggregate your Usage Data to calculate the percentage of users accessing a specific website feature. However, if we combine or connect Aggregated Data with your personal data so that it can directly or indirectly identify you, we treat the combined data as personal data which will be used in accordance with this privacy policy.</li>
+                <li>~ Identity Data includes first name, maiden name, last name, username or similar identifier, marital status, title, date of birth and gender.</li>
+                <li>~ Contact Data includes billing address, email address and telephone numbers.</li>
+                <li>~ Financial Data includes bank account and payment card details.</li>
+                <li>~ Transaction Data includes details about payments to and from you and other details of products and services you have purchased from us.</li>
+                <li>~ Technical Data includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform and other technology on the devices you use to access this website.</li>
+                <li>~ Profile Data includes your username and password, your interests, preferences, feedback and survey responses.</li> 
+                <li>~ Usage Data includes information about how you use our website.</li> 
+                <li>~ Marketing and Communications Data includes name, address, social handle, phone and email.</li>
+                <li>~ We also collect, use and share Aggregated Data such as statistical or demographic data for any purpose. Aggregated Data may be derived from your personal data but is not considered personal data in law as this data does not directly or indirectly reveal your identity. For example, we may aggregate your Usage Data to calculate the percentage of users accessing a specific website feature. However, if we combine or connect Aggregated Data with your personal data so that it can directly or indirectly identify you, we treat the combined data as personal data which will be used in accordance with this privacy policy.</li>
                 
                <p>We do not collect any Special Categories of Personal Data about you (this includes details about your race or ethnicity, religious or philosophical beliefs, sex life, sexual orientation, political opinions, trade union membership, information about your health and genetic and biometric data). Nor do we collect any information about criminal convictions and offences.</p>
-
+                <hr>
             <h3>3. How We Share Your Information</h3>
             <p>We do not sell your personal information. However, we may share your information with third parties for the following purposes:</p>
 
-               <p> <b>Service Providers:</b> We may share your information with third-party service providers who assist with payment processing, delivery services, or website hosting.</p>
-               <p><b>Legal Obligations:</b> We may share your information if required by law, such as in response to a court order or government request.</p>
-              <p><b>Business Transfers:</b> In the event of a merger or acquisition, your information may be transferred as part of the business transaction.</p>
-
+               <p>~ <b>Service Providers:</b> We may share your information with third-party service providers who assist with payment processing, delivery services, or website hosting.</p>
+               <p>~ <b>Legal Obligations:</b> We may share your information if required by law, such as in response to a court order or government request.</p>
+              <p>~ <b>Business Transfers:</b> In the event of a merger or acquisition, your information may be transferred as part of the business transaction.</p>
+                <hr>
             <h3>4. Cookies and Tracking Technologies</h3>
             <p>We take appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
-
+                <hr>
             <h3>5. Data Security</h3>
             <p>We take appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
-
+                <hr>
             <h3>6. Your Rights</h3>
-            <p>You have the right to:</p>
+            <p><strong>You have the right to:</strong></p>
 
-              <p>Access the personal information we have collected about you.</p>  
-              <p>Correct inaccuracies in your personal information.</p>  
-              <p>Delete your personal information, subject to certain legal exceptions.</p>  
-              <p>Opt-Out of receiving promotional emails by following the unsubscribe link.</p>  
-               <p>To exercise any of these rights, please contact us at mail@1234567.com.</p>
-
+              <p>~ Access the personal information we have collected about you.</p>  
+              <p>~ Correct inaccuracies in your personal information.</p>  
+              <p>~ Delete your personal information, subject to certain legal exceptions.</p>  
+              <p>~ Opt-Out of receiving promotional emails by following the unsubscribe link.</p>  
+              <p>~ To exercise any of these rights, please contact us at mail@1234567.com.</p>
+                <hr>
             <h3>7. Children's Privacy</h3>
             <p>Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have inadvertently collected such information, we will take steps to delete it.</p>
-
+                <hr>
             <h3>8. Changes to this Privacy Policy</h3>
             <p>We may update this policy from time to time. Please check back for any changes.</p>
-
-            <h3>9. Contact Us</h3>
-            <p>If you have any questions or concerns, please contact us at:</p>
-            <p><strong>IcyCo Ice Cream</strong><br>
-                mail@1234567.com<br>
-                +91 90904500112<br>
+                
+            
                
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 IcyCo Ice Cream. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Useful links</h4>
+                <ul class="links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="./faq.html" class="link">FAQ</a></li>
+                    <li><a href="contributor.html">Our Contributors</a></li>
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Flavors</h4>
+                <ul class="links">
+                    <li><a href="#">Regular</a></li>
+                    <li><a href="#">Gelato</a></li>
+                    <li><a href="#">Sorbet</a></li>
+                    <li><a href="#">Soft serve</a></li>
+                    <li><a href="#">Frozen Yogurt</a></li>
+                    <li><a href="#">Non Diary/Vegen</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Opening Hours</h4>
+                <ul class="links">
+                    <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
+                    <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
+                </ul>
+                <h4 style="margin-top: 15px;">Locations</h4>
+                <ul class="links">
+                    <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
+                            ramankulam-
+                            Malappuram Dt</a></li>
+                    <li class="address2"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> MG Road,
+                            Bangalore - Karnataka</a></li>
+                    <li class="address3"><a href="" class="social"><i class="fa-solid fa-location-dot"></i>
+                            Connaught Place, New Delhi</a></li>
+                    <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
+                            Street, Kolkata - West Bengal</a></li>
 
-    
+                    </li>
+
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Need Help?</h4>
+                <ul class="links">
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
+                    </li>
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
+                    </li>
+                    <li><a href="mailto:mail@1234567.com" class="social"><i class="fa-solid fa-envelope"></i>
+                            mail@1234567.com</a></li>
+                </ul>
+                <h4 style="margin-top: 15px;">Follow Us</h4>
+                <ul class="links">
+                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i>
+                            Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
+                            Linkedin</a></li>
+                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
+                            Twitter</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                </p>
+                <form action="#">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-----scroll bottom to top------->
+    <button class="scroll-button">
+        <img src="images/icecream-cone.png" alt="icecream-cone" />
+    </button>
+   
+
+    <!-- copyright -->
+    <div class="copyright">
+        &copy; 2024 by <span>DharshiB</span> | All Rights Deserved
+    </div>
+
+    <script type="module" src="script/products.js"></script>
+    <script type="module" src="script/nav.js"></script>
+    <script type="module" src="script/cart.js"></script>
+    <script src="script/FAQ.js"></script>
+    <script src="script/topscrollindicator.js"></script>
 </body>
 </html>

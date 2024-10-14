@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+   
+}
+
+:root {
+    --ternary-color: #640D5F;
+    --main-color: #D91656;
+    --body-color: #ffffff;
+    --secondary-color: #EE66A6;
+    --background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    --main-font: "Afacad Flux", sans-serif;
+    --heading-font: "Afacad Flux", sans-serif;
+    --curly-font: "Afacad Flux", sans-serif;
+    --box-shadow: 0 0px 7px rgba(255, 196, 225, 0.7);
+    
+}
+
+
+
+
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+    color: #333;
+    cursor: url("../images/logo.png"), auto;
+    background-color: white;
+}
+
+
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 35px;
+    margin-top: 15px;
+    font-weight: 400;
+    color: #df2d9e;
+    justify-content: center;
+    text-align: center;
+    color: var(--body-color);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 ;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+    background-color: var(--secondary-color);
+}
+    
+    
+
+
+
+
+.container {
+    width: 80%;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+li {
+    font-size: 20px;
+}
+
+main {
+    background-color: #ffffffd8;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    
+}
+
+h2, h3 {
+    color: #e90596;
+    margin-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+h4 {
+    color:#f5348e;
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+p {
+    margin: 15px 0;
+    font-size: 20px;
+   
+}
+
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    font-size: 18px;
+}
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Spinner Styles */
+.preloader-icon {
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+}
+
+/* Loading Text Styles */
+.loading-text {
+     margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    animation: pulse 2.5s linear infinite;
+    font-family: var(--main-font);
+}
+
+/* Keyframe Animations */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Transition for Loaded State */
+body.loaded #preloader {
+    display: none;
+}
+
+body.loaded #main-content {
+    display: block;
+}
+
+/* ---------------------- */
+/* Top Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    border: 10px;
+    background-image: linear-gradient(135deg, var(--main-color), var(--ternary-color)); /* Matches scrollbar gradient */
+    z-index: 9999;
+    transition: width 0.25s ease;
+}
+/* -------------header styles------------------- */
+.nav {
+    background-color: white;
+}
+.nav-bar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--body-color);
+    height: 70px;
+    padding: 0 100px;
+    box-shadow: 0 1.5px 1.5px var(--secondary-color);
+    
+}
+
+.nav-bar .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+
+}
+
+.nav-bar .logo a {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--ternary-color);
+    font-family: var(--curly-font);
+}
+
+.nav-bar .nav-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-bar .nav-links a {
+    display: inline-block;
+    line-height: 70px;
+    position: relative;
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    text-transform: capitalize;
+    margin: 0 15px;
+    padding: 0 8px;
+}
+
+.nav-bar .nav-links a:after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -1.5px;
+    transition: 0.3s;
+    transform-origin: center;
+}
+
+.nav-bar .nav-links a:hover:after,
+.nav-bar .nav-links a.active:after {
+    width: 100%;
+
+}
+
+.nav-bar .icons {
+    display: flex;
+}
+
+.nav-bar .icons .icon {
+    padding: 0 5px;
+    position: relative;
+}
+
+.nav-bar .icons i {
+    font-size: 20px;
+    margin: 0 8px;
+    color: var(--main-color);
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-bar .icons i:hover {
+    color: var(--main-color);
+}
+
+.nav-bar .icons i.menu {
+    display: none;
+}
+
+.nav-bar .icons .no-of-cart-items,
+.no-of-wishlist-items {
+    position: absolute;
+    color: var(--main-color);
+    right: -15px;
+    width: 25px;
+    font-size: 12px;
+}
+
+/* cart styles */
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 350px;
+    height: 100vh;
+    background-color: var(--body-color);
+    border-left: 2px solid grey;
+    padding: 10px;
+    z-index: 1000;
+    right: -100%;
+    transition: right 0.3s ease;
+}
+
+.cart.active {
+    right: 0;
+}
+
+.cart .no-empty-cart {
+    display: none;
+}
+
+.cart .no-empty-cart.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart ul li {
+    padding: 7px;
+    margin: 10px 0;
+    border: 2px solid var(--ternary-color);
+}
+
+.cart ul li img {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.cart ul li .text {
+    position: relative;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.cart ul li .text .price {
+    font-weight: 600;
+}
+
+.cart h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.cart .total {
+    font-weight: 600;
+    padding: 10px;
+}
+
+.cart button {
+    margin: 10px auto;
+    width: 100%;
+}
+
+.cart .close-cart,
+.remove-cart-item-btn {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: var(--main-color);
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.cart .close-cart:hover,
+.remove-cart-item-btn:hover {
+    color: var(--ternary-color);
+}
+
+.cart ul li .text .remove-cart-item-btn {
+    font-size: 15px;
+    top: 0;
+    right: 0;
+}
+
+.cart .empty-cart {
+    display: none;
+}
+
+.cart .empty-cart p {
+    text-align: center;
+    padding-top: 25%;
+
+}
+
+.cart .empty-cart.active {
+    display: inline;
+}
+
+
+.footer {
+    background: var(--ternary-color);
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/back.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.footer .footer-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding: 60px 100px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.footer-row .footer-col h4 {
+    color: var(--body-color);
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: var(--heading-font);
+}
+
+.footer-col .links {
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
+.footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.footer-col .links li a:hover {
+    color: var(--body-color);
+}
+
+.footer-col p {
+    margin: 20px 0;
+    color: var(--secondary-color);
+    max-width: 300px;
+}
+
+.footer-col form {
+    display: flex;
+    gap: 1px;
+}
+.footer-col button{
+    height: 40px;
+    color:#EE66A6;
+}
+
+.footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    caret-color: var(--body-color);
+    color: var(--body-color);
+    padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+    color: #ccc;
+}
+
+.footer-col form button {
+    border: none;
+    border-radius: 6px;
+}
+
+.footer-col .icons {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.footer-col .icons i {
+    color: var(--secondary-color);
+}
+
+.footer-col .icons i:hover {
+    color: #fff;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.copyright {
+    background-color: var(--secondary-color);
+    width: 100%;
+    color: var(--body-color);
+    text-align: center;
+    border-top: 1px solid var(--secondary-color);
+    padding: 10px;
+
+}
+/* scroll bottom to top */
+.scroll-button {
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    outline: none;
+    border: none;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    -webkit-tap-highlight-color: transparent;
+    background-image: none;
+    background-color: transparent;
+    padding: 0;
+
+}
+
+.scroll-button:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+}
+
+.scroll-button>img {
+    width: 50px;
+    height: 50px;
+}
+
+.show-btn {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+
+
