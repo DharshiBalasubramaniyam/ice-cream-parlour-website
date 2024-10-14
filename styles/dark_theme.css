@@ -1,0 +1,11 @@
+body.dark {
+    background-color: #121212; /* Dark background color */           /* Light text color */
+}
+
+body.dark #dark_bg{
+    background-color: #212121;
+}
+
+body.dark .dark_bg_txt {
+    color: white;
+}

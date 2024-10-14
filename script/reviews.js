@@ -3,16 +3,16 @@ var swiper = new Swiper(".reviews-box", {
     slidesPerView:3,
     spaceBetween:20,
     autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
+            delay: 2500,
+            disableOnInteraction: false,
+        },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
     breakpoints: {
         0: {
