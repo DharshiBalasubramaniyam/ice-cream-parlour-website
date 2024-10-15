@@ -620,6 +620,10 @@ h3 {
     transition: 0.3s;
 }
 
+.service-card1:hover{
+    box-shadow: 3px 3px 12px var(--secondary-color);
+}
+
 .service-card>div {
     width: 100%;
     height: 100%;
@@ -781,10 +785,11 @@ h3 {
 .products .products-box .box .name-price {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Vertically center the name and price */
+    justify-content: space-between; /* Keep name and price at opposite ends */
     font-size: 22px;
     padding: 10px 1px;
+    text-align: center; /* Centers the text within each item */
 }
 
 .products .products-box .box .description {
@@ -1199,58 +1204,74 @@ h3 {
     pointer-events: all !important;
 }
 
-/* FAQ Section  */
-.FAQs h2 {
-    text-align: center;
-    margin: 25px 0;
-    font-family: var(--main-font);
-}
-
-.FAQs h3 {
-    text-align: center;
-}
-
-.FAQ-questions {
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    width: 100%;
-    padding: 1.5rem;
-    display: flex;
-    font-family: var(--main-font);
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bolder;
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: 2px solid var(--secondary-color);
-    background-color: var(--body-color);
-    background-image: none;
-    color: black;
-}
-.FAQ-questions i {
-    font-size: 1.6rem;
-    overflow: visible;
-    transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
-}
-
-.FAQ-answers {
-    color: var(--ternary-color);
-    font-size: 1.2rem;
-    line-height: 1.4;
-    font-family: var(--main-font);
-    display: none;
-    padding: 0.2rem 2.5rem 2rem;
-}
-
-.FAQ-answers.active {
-    display: block;
-}
-
-i {
-    overflow: visible;
-}
+/* FAQ Section */
+ * FAQ Section */
+ .FAQs h2 {
+     text-align: center;
+     margin: 15px 0; /* Reduced margin for tighter spacing */
+     font-family: var(--main-font);
+     font-size: 2rem; /* Larger heading for prominence */
+     color: var(--secondary-color); /* Themed color for heading */
+ }
+ 
+ .FAQs h3 {
+     text-align: center;
+     margin-bottom: 10px; /* Reduced margin for a tighter layout */
+     font-family: var(--main-font);
+     font-size: 1.6rem; /* Slightly larger for subheadings */
+     color: var(--secondary-color);
+ }
+ 
+ .FAQ-questions {
+     cursor: pointer;
+     font-size: 1.3rem; 
+     width: 100%;
+     padding: 1.2rem; /* Slightly reduced padding for a tighter look */
+     display: flex;
+     font-family: var(--main-font);
+     justify-content: space-between;
+     align-items: center;
+     font-weight: bold; /* Improved visibility by making it bold */
+     border-radius: 8px;
+     margin: 10px 0; 
+     border: 2px solid var(--secondary-color);
+     background-color: var(--body-color);
+     color: var(--secondary-color); /* Updated color for better visibility */
+     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+ }
+ 
+ .FAQ-questions:hover {
+     background-color: var(--secondary-color); /* Hover effect: change background */
+     color: var(--body-color); /* Invert text color on hover */
+ }
+ 
+ .FAQ-questions i {
+     font-size: 1.5rem;
+     transition: transform 0.3s ease; /* Faster transition for responsiveness */
+ }
+ 
+ .FAQ-questions.active i {
+     transform: rotate(180deg); /* Icon rotation when active */
+ }
+ 
+ .FAQ-answers {
+     color: var(--ternary-color);
+     font-size: 1.2rem;
+     line-height: 1.6;
+     display: none;
+     padding: 0.2rem 2rem 1.8rem; 
+     border-left: 4px solid var(--secondary-color); 
+     background-color: rgba(0, 0, 0, 0.05); 
+     border-radius: 0 0 8px 8px; 
+ }
+ 
+ .FAQ-answers.active {
+     display: block;
+ }
+ 
+ i {
+     transition: transform 0.3s ease; /* Consistent transition timing */
+ }
 
 /* delivery styles */
 section h1 {
@@ -1458,103 +1479,61 @@ section h1 {
     }
 }
 
-/* Top Scroll Progress Bar */
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    border: 10px;
-    background-image: linear-gradient(135deg, var(--main-color), var(--ternary-color)); /* Matches scrollbar gradient */
-    z-index: 9999;
-    transition: width 0.25s ease;
+/* Adding animation on what we do */
+@keyframes appearleft{
+    from{
+        opacity:0;
+        /* scale: 0.5; */
+        /* clip-path: insert(100% 100% 0 0); */
+        transform: translateX(100px);
+    }
+    to{
+        opacity:1;
+        /* scale:1; */
+        /* clip-path: insert(0 0 0 0); */
+        transform: translateX(0px);
+    }
 }
-
-/* -----gallary.html--------- */
-
-.gallery-section {
-    text-align: center;
-    padding: 50px 20px;
-    /* background-color: #fff5f8; */
-    /* margin: 0; */
+.leftani{
+    animation: appearleft linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
-
-.gallery-section h1 {
-    color: rgb(255,255,255);
-    font-size: 3em;
-    margin-bottom: 10px; 
-    font-family: "Rye", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.gallery-section p {
-    color: #757575;
-    font-size: 1.2em;
-    /* margin-bottom: 40px; */
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.gallery-item img {
-    width: 95%;
-    height: 95%;
-    /* object-fit: cover; */
-    transition: transform 0.3s;
-    border-radius: 7px;
-
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.gallery-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(145deg, rgba(255, 64, 129, 0.6), rgba(255, 235, 238, 0.4));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.gallery-item:hover::before {
-    opacity: 1;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+@keyframes appearright{
+    from{
+        opacity:0;
+        /* scale: 0.5; */
+        /* clip-path: insert(100% 100% 0 0); */
+        transform: translateX(-100px);
+    }
+    to{
+        opacity:1;
+        /* scale:1; */
+        /* clip-path: insert(0 0 0 0); */
+        transform: translateX(0px);
     }
 }
 
-/* Lightbox styling */
-.lightboxOverlay {
-    background-color: rgba(0, 0, 0, 0.8) !important;
+
+@keyframes appearbottom{
+    from{
+        opacity:0;
+        scale: 0.5;
+        /* clip-path: insert(100% 100% 0 0); */
+        /* transform: translateX(100px); */
+    }
+    to{
+        opacity:1;
+        scale:1;
+        /* clip-path: insert(0 0 0 0); */
+        /* transform: translateX(0px); */
+    }
 }
+.bottomani{
+    animation: appearbottom linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+
+/* 
