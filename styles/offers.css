@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f7ede2;
+    background-attachment: fixed;
+    /* background-color: rgb(233, 185, 167); */
+    scroll-behavior: smooth;
+    
+}
+h1{
+    font-size: 10vmin;
+    text-align: center;
+    margin-top: 2vmin;
+    color: darkorchid;
+    width: 95vw;
+    font-weight: 900;
+    text-decoration: underline;
+   
+}
+.main{
+    background: scroll;
+    height: 150vmin;
+    margin: 2vmin;
+    padding: 8vmin;
+    /* background-color: azure; */
+  
+
+}
+.inner{
+    height: 40vmin;
+    margin : 1vmin;
+    padding: 5vmin;
+    /* background-color: cadetblue; */
+    display: flex;
+    gap: 12vmin
+}
+.outline{
+    font-size: 8vmin;
+    color: white;
+}
+.rev{
+    flex-direction: row-reverse;
+}
+.detail{
+    border-radius: 3vmin;
+    margin-bottom: .8vmin;
+    /* background-color: rgb(0, 0, 0); */
+    height : 42vmin;
+    width  : 50vw;
+    color: white;
+    font-size: 3vmin;
+    text-align: center;
+    font-weight: 100;
+}
+.image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 3vmin;
+    margin-bottom:.8vmin; 
+    /* background-color: red; */
+    height: 42vmin;
+    width: 58vmin;
+    font-size: 5vmin;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p{
+    padding: 3vmin;
+}
+.image1{
+    background-image:url(/images/Hero.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.btn{
+    border: none;
+    border-radius: 3vmin;
+
+}
+.btn:hover{
+    opacity: 90%;
+    cursor: pointer;
+    zoom: 1;
+}
+.image2{
+    background-image: url(/images/mango.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.image3{
+    background-image: url(/images/strawberry.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.offer{
+    height: 11vmin;
+    width: 50vw;
+    font-size: 27px ;
+    font: weight bold;
+    font-family:Arial, Helvetica, sans-serif  ;
+    /* color: pink; */
+    border: none;
+    padding: 1vmin;
+    margin: 3vmin;
+    background: none;
+    color: purple;
+
+    
+}
+.btn2:hover{
+   color: green;
+   cursor: pointer;
+   zoom: 5fr; 
+   border-radius: 8vmin;   
+}
+.bottom{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+}
