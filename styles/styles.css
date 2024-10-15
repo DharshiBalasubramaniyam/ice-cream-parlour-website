@@ -975,8 +975,8 @@ h3 {
 .feature-text h3 {
     text-align: left;
     font-size: 1.26em;
-   margin: 15px 0;
-   font-weight: bold;
+    margin: 15px 0;
+    font-weight: bold;
 }
 
 .feature-text p {
@@ -985,86 +985,119 @@ h3 {
 }
 
 /* -------------reviews section styles------------------- */
-.reviews .reviews-box {
+.reviewSection .container {
     margin: 72px 0;
 }
 
-.reviews .reviews-box .box {
-    position: relative;
-    width: 400px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-    flex-direction: column;
-    border: 2px solid var(--main-color);
+.container {
+    background-color: #f7f7f7; /* Very light grey */
+    padding: 20px; /* Reduced padding for a smaller container */
     border-radius: 10px;
-    padding: 15px;
+}
+
+/* Review box styles */
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Reduced gap between review boxes */
+}
+
+.review-box {
+    position: relative;
+    width: calc(30% - 15px); /* Reduced width slightly for a smaller review box */
+    background-color: #fff;
+    padding: 15px; /* Reduced padding for smaller box */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.582);
     cursor: pointer;
     transition: 0.3s;
 }
 
-.reviews .reviews-box .box .top {
-    width: 100%;
-    height: max-content;
+.review-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+}
+
+/* Remove border for the first review box */
+#box_1 {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    cursor: default;
+    background-color: #f7f7f7; 
+}
+
+#box_1:hover {
+    transform: none;
+}
+
+/* Style the h2 font inside the first review */
+#box_1 h1 {
+    font-size: 40px; /* Reduced font size for the title */
+    color: #333;
+    font-weight: bold;
+    background-color: inherit;
+}
+
+.review-box .quote {
+    position: absolute;
+    font-size: 60px; /* Slightly reduced size for the quote icon */
+    color: var(--main-color, #007bff);
+    top: 0;
+    right: 10px; /* Adjusted positioning */
+    opacity: 0.2;
+}
+
+.review-box .top {
     display: flex;
     align-items: center;
-    justify-content: left;
-
+    margin-bottom: 15px;
 }
 
-.reviews .reviews-box .box .right {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.reviews .reviews-box .box .top img {
-    height: 120px;
-    width: 120px;
+.review-box .top img {
+    width: 100px; /* Reduced image size */
+    height: 100px; /* Reduced image size */
     border-radius: 50%;
-    margin-right: 15px;
     object-fit: cover;
+    margin-right: 10px; /* Reduced margin */
 }
 
-.reviews .reviews-box .box .top .name span {
-    font-size: 18px;
+.review-box .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review-box .name {
     font-weight: 600;
+    font-size: 16px; /* Reduced font size */
 }
 
-.reviews .reviews-box .box .stars {
-    margin: 10px 0;
-    color: var(--main-color);
+.review-box .stars i {
+    color: var(--main-color, #007bff);
+    margin-right: 3px; /* Adjusted margin */
 }
 
-.reviews .reviews-box .box .text {
-    margin-top: 15px;
-    line-height: 25px;
+.review-box .text {
+    margin-top: 10px; /* Reduced margin for smaller box */
+    font-size: 14px; /* Reduced font size for review text */
+    line-height: 20px; /* Reduced line height */
 }
 
-.reviews .reviews-box .box .quote {
-    position: absolute;
-    font-size: 75px;
-    color: var(--main-color);
-    z-index: 1000;
-    top: 0;
-    right: 15px;
-    opacity: 0.2;
-    overflow: hidden;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .review-box {
+        width: calc(45% - 15px); /* Adjust for 2 boxes per row */
+    }
 }
 
-.swiper-btn {
-    color: var(--main-color) !important;
-    height: 50px !important;
-    width: 50px !important;
-    border-radius: 50% !important;
-    padding: 5px !important;
-    font-size: 15px !important;
-    background-color: var(--body-color);
+@media (max-width: 768px) {
+    .review-box {
+        width: calc(100% - 15px); /* 1 box per row on smaller screens */
+    }
 }
 
-.swiper-pagination-bullet {
-    background-color: var(--main-color) !important;
-}
 
 /* -------------footer styles------------------- */
 .footer {
