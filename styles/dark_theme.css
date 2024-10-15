@@ -9,3 +9,30 @@ body.dark #dark_bg{
 body.dark .dark_bg_txt {
     color: white;
 }
+
+.form-check{
+    padding-top: 10px;
+}
+
+body.dark .dropdowns{
+    background-color: #212121;
+}
+
+body.dark .restaurant-card{
+    border: 2px solid black;
+    box-shadow: 0 4px 8px white;
+}
+
+body.dark .textShine{
+    animation: text-glow 2s infinite alternate;
+}
+
+@keyframes text-glow{
+    0%{
+        text-shadow: 0 0 5px white, 0 0 10px cyan;
+    }
+
+    100%{
+        text-shadow: 0 0 10px white, 0 0 20px cyan;
+    }
+}

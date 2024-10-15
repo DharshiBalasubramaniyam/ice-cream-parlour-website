@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
     <link rel="stylesheet" href="styles/popup.css">
-    <link rel="stylesheet" href="dark_theme.css">
+    <link rel="stylesheet" href="styles/dark_theme.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -27,10 +27,10 @@
 
 <body>
     <!-- Preloader -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <img src="images/logo.png" alt="Preloader" class="preloader-icon">
         <p class="loading-text">Loading...</p>
-    </div>
+    </div> -->
 
 
 
@@ -44,16 +44,16 @@
             <a href="" class="dark_bg_txt">IcyCo</a>
         </div>
         <div class="nav-links">
-            <a href="./index.html" class="link active">home</a>
-            <a href="./products.html" class="link">products</a>
-            <a href="./delivery.html" class="link">Delivery</a>
-            <a href="./dine-in.html" class="link">Dine In</a>
-            <a href="./catering.html" class="link">Catering</a>
+            <a href="./index.html" class="link active textShine">home</a>
+            <a href="./products.html" class="link textShine">products</a>
+            <a href="./delivery.html" class="link textShine">Delivery</a>
+            <a href="./dine-in.html" class="link textShine">Dine In</a>
+            <a href="./catering.html" class="link textShine">Catering</a>
         </div>
         <div class="icons">
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="themeToggle"">
-                <label class="form-check-label" for="themeToggle">Dark mode &#x1F319;</label>
+                <label class="form-check-label dark_bg_txt" id="themeLabel" for="themeToggle">Dark mode &#x1F319;</label>
             </div>
             <div class="icon">
                 <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
@@ -157,20 +157,20 @@
 
     <!-- Pop-up for email registration -->
     <div id="popup" class="popup">
-        <div class="popup-content">
-            <div class="popup-left" id="dark_bg">
+        <div class="popup-content" id="dark_bg" class="dark_bg_txt">
+            <div class="popup-left">
                 <img src="images/popupice.jpg" alt="Discount Image">
             </div>
             <div class="popup-right">
-                <h1>Wait!</h1>
-                <h2>Get a sweet deal before it melts away..</h2>
-                <p>Get 30% off your first order when you Sign up.</p>
-                <form id="emailForm">
-                    <input type="email" id="popup-email" placeholder="Enter your email" required>
+                <h1 class="dark_bg_txt">Wait!</h1>
+                <h2 class="dark_bg_txt">Get a sweet deal before it melts away..</h2>
+                <p class="dark_bg_txt">Get 30% off your first order when you Sign up.</p>
+                <form id="emailForm" class="dark_bg_txt">
+                    <input type="email" id="popup-email" class="dark_bg_txt" placeholder="Enter your email" required>
                     <button type="submit" class="signup-btn">Continue</button>
                 </form>
-                <a href="#" class="no-thanks close-btn">No thanks</a>
-                <p class="terms">By clicking continue, you agree to our <a href="#">Terms of Service</a> and <a
+                <a href="#" class="no-thanks close-btn dark_bg_txt">No thanks</a>
+                <p class="terms dark_bg_txt">By clicking continue, you agree to our <a href="#">Terms of Service</a> and <a
                         href="#">Privacy Policy</a>.</p>
             </div>
         </div>
@@ -179,7 +179,7 @@
     <!-- About -->
     <section class="about" id="about">
         <!-- <h1><span>About</span> Us</h1> -->
-        <div class="box-container about-box" id="dark_bg">
+        <div class="box-container about-box">
             <div class="text">
                 <h2>Get The Cool Down With Our Creamy Creations!</h2>
                 <p>We at IcyCo, We're more than just a company – we're a community driven by a shared vision and
@@ -221,7 +221,7 @@
                     <div class="icon-circle">
                         <img src="images/flavour-icon.png" alt="Flavors Icon">
                     </div>
-                    <div class="feature-text" id="dark_bg">
+                    <div class="feature-text dark_bg_txt">
                         <h3>Range of Flavors</h3>
                         <p>From classic vanilla to exotic matcha, Icyco offers a wide range of flavors to satisfy every
                             palate.</p>
@@ -231,7 +231,7 @@
                     <div class="icon-circle">
                         <img src="images/hygiene-icon.png" alt="Hygiene Icon">
                     </div>
-                    <div class="feature-text">
+                    <div class="feature-text dark_bg_txt">
                         <h3>Hygiene & Food Safety</h3>
                         <p>We maintain the highest hygiene standards, ensuring every scoop is safe and delicious.</p>
                     </div>
@@ -242,7 +242,7 @@
                     <div class="icon-circle">
                         <img src="images/quality-icon.png" alt="Quality Ingredients Icon">
                     </div>
-                    <div class="feature-text">
+                    <div class="feature-text dark_bg_txt">
                         <h3>Best Quality Ingredients</h3>
                         <p>Only the finest ingredients make it into our ice cream, for a rich and unforgettable
                             experience.</p>
@@ -252,7 +252,7 @@
                     <div class="icon-circle">
                         <img src="images/friendly-icon.png" alt="Fun Atmosphere Icon">
                     </div>
-                    <div class="feature-text">
+                    <div class="feature-text dark_bg_txt">
                         <h3>Fun & Friendly Atmosphere</h3>
                         <p>Our parlors are designed to be fun and inviting, making every visit a sweet memory.</p>
                     </div>
@@ -409,12 +409,12 @@
         <h1><span>Contact</span> Us</h1>
         <form action="#" novalidate class="box-container" id="contact-form" class="dark_bg_txt" style="background-color: #212121">
             <div class="row">
-                <div class="input-box">
+                <div class="input-box dark_bg_txt">
                     <label for="fname">Your First Name</label><br>
                     <input class="dark_bg_txt" type="text" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
-                <div class="input-box">
+                <div class="input-box dark_bg_txt">
                     <label for="lname">Your Last Name</label><br>
                     <input class="dark_bg_txt" type="text" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
@@ -422,19 +422,19 @@
             </div>
 
             <div class="row">
-                <div class="input-box">
+                <div class="input-box dark_bg_txt">
                     <label for="email">Your Email</label><br>
                     <input class="dark_bg_txt" type="email" id="email" oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
-                <div class="input-box">
+                <div class="input-box dark_bg_txt">
                     <label for="phone">Your Contact Number</label><br>
                     <input class="dark_bg_txt" type="tel" id="phone" oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
             </div>
             <div class="row">
-                <div class="input-box">
+                <div class="input-box dark_bg_txt">
                     <label for="message">Your Message</label><br>
                     <textarea class="dark_bg_txt" name="" id="message" cols="30" rows="10"
                         oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
@@ -561,6 +561,7 @@
     <script src="script/FAQ.js"></script>
     <script src="script/topscrollindicator.js"></script>
     <script src="script/popup.js"></script>
+    <script src="./script/dark_theme.js"></script>
 
 </body>
 

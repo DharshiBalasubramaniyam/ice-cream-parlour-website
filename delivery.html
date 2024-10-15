@@ -10,9 +10,14 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/dark_theme.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <!-- link to add bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
 
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
@@ -30,19 +35,23 @@
     <div class="scroll-progress"></div>
 
     <!-- nav bar -->
-    <div class="nav-bar">
+    <div class="nav-bar"  id="dark_bg">
         <div class="logo">
             <img src="./images/logo.png" alt="icyco-logo" height="25px" width="25px">
-            <a href="">IcyCo</a>
+            <a href="" class="dark_bg_txt">IcyCo</a>
         </div>
         <div class="nav-links">
-            <a href="./index.html" class="link">home</a>
-            <a href="./products.html" class="link">products</a>
-            <a href="./delivery.html" class="link active">Delivery</a>
-            <a href="./dine-in.html" class="link">Dine In</a>
-            <a href="./catering.html" class="link">Catering</a>
+            <a href="./index.html" class="link textShine">home</a>
+            <a href="./products.html" class="link textShine">products</a>
+            <a href="./delivery.html" class="link active textShine">Delivery</a>
+            <a href="./dine-in.html" class="link textShine">Dine In</a>
+            <a href="./catering.html" class="link textShine">Catering</a>
         </div>
         <div class="icons">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="themeToggle"">
+                <label class="form-check-label dark_bg_txt" id="themeLabel" for="themeToggle">Dark mode &#x1F319;</label>
+            </div>
             <div class="icon">
                 <i class="fa fa-user" aria-hidden="true"></i>
             </div>
@@ -56,39 +65,39 @@
         </div>
     </div>
 
-    <section>
+    <section id="dark_bg" class="dark_bg_txt">
         <h1 style="margin-top: 100px; padding: 0 40px;">Island-Wide Delivery</h1>
         <h2 class="heading">Enter Your Address</h2>
         <form class="form-contents">
 
             <div class="indv-text">
                 <label for="name" class="text">NAME</label>
-                <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
+                <input type="text" class="form-text dark_bg_txt" id="name" name="name" placeholder="Enter your Name" required />
             </div>
 
             <div class="indv-text">
                 <label for="email" class="text">EMAIL ID</label>
-                <input type="email" class="form-text" placeholder="example@gmail.com" required>
+                <input type="email" class="form-text dark_bg_txt" placeholder="example@gmail.com" required>
             </div>
 
             <div class="indv-text">
                 <label for="contact" class="text">CONTACT No.</label>
-                <input type="tel" class="form-text" name="" id="" placeholder="0123456789" required>
+                <input type="tel" class="form-text dark_bg_txt" name="" id="" placeholder="0123456789" required>
             </div>
 
             <div class="indv-text">
                 <label for="add1" class="text">ADDRESS Line1</label>
-                <input type="text" class="form-text" name="" id="" placeholder="Street Address" required>
+                <input type="text" class="form-text dark_bg_txt" name="" id="" placeholder="Street Address" required>
             </div>
 
             <div class="indv-text">
                 <label for="add2" class="text">ADDRESS Line2</label>
-                <input type="text" class="form-text" name="" id="" placeholder="City" required>
+                <input type="text" class="form-text dark_bg_txt" name="" id="" placeholder="City" required>
             </div>
 
             <div class="indv-text">
                 <label for="state" class="text">STATE</label>
-                <select class="form-text" id="state" required>
+                <select class="form-text dark_bg_txt dropdowns" id="state" required>
                     <option value="">Select State</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -244,6 +253,7 @@
     <script src="./script/cart.js"></script>
     <script src="./script/topscrollindicator.js"></script>
     <script type="module" src="./script/products.js"></script>
+    <script src="./script/dark_theme.js"></script>
 </body>
 
 </html>
