@@ -68,34 +68,51 @@ form {
     cursor: pointer;
 }
 
-.input-fields a {
-    margin-top: 5px;
+.check-container{
     display: flex;
-    justify-content: right;
-    text-decoration: none;
-    color: #0b5cad;
+    align-items:center ;
+    padding-left: 5px;
 }
-
 .check-button {
     display: flex;
     align-items: center;
+    width: 100%;
+    height: 15px;
 }
 
 .check-button input {
     height: 15px;
     width: 15px;
+    cursor: pointer;
 }
 
 .check-button span {
     margin-left: 8px;
-    margin-top: 2px;
     font-size: 14px;
+}
+.forget-button{
+    width: 50%;
 }
 
 .signin-btn button {
     width: 100%;
-    border-radius: 7px;
+    border-radius: auto;
+    margin-top: 15px;
+}
+.sep-container{
     margin-top: 20px;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    color: gray;
+    font-size: 14px;
+}
+.sep-line{
+    height: 1px;
+    width: 50px;
+    border: 1px solid rgb(168, 168, 168);
+    margin: 10px;
 }
 
 .terms {
@@ -139,6 +156,7 @@ form {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-top: 20px;
     max-width: 450px;
 }
 
@@ -164,3 +182,34 @@ form {
     line-height: 20px;
     padding-top: 4px;
 }
+.input-field::placeholder {
+    color: gray;      
+    font-size: 16px;
+    font-weight: bold; 
+    opacity: 1;       
+}
+.input-field{
+    margin-top: 10px;
+    border-radius: 7px;
+    border: 1px solid black;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.social-link-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+.social-link-2 a{
+    background-color: transparent;
+    color: none;
+    border: solid 1px black;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

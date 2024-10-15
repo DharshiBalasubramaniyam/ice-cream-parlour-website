@@ -489,19 +489,19 @@ h3 {
 
 }
 .grid-box:nth-of-type(1){
-    border-radius: 25px;
+    border-radius: 25px 0px 0px 0px;
     background-image: url("../images/hero-grid1.jpg");
 }
 .grid-box:nth-of-type(2){
-    border-radius: 10px 15px 25px 0;
+    border-radius: 0px 25px 0px 0;
     background-image: url("../images/hero-grid2.jpg");
 }
 .grid-box:nth-of-type(3){
-    border-radius: 0 0 0 35px;
+    border-radius: 0px 0px 0px 25px;
     background-image: url("../images/hero-grid3.jpg");
 }
 .grid-box:nth-of-type(4){
-    border-radius: 0 15px 0 15px;
+    border-radius: 0px 0px 25px 0px;
     background-image: url("../images/hero-grid4.jpg");
 }
 
@@ -781,10 +781,11 @@ h3 {
 .products .products-box .box .name-price {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Vertically center the name and price */
+    justify-content: space-between; /* Keep name and price at opposite ends */
     font-size: 22px;
     padding: 10px 1px;
+    text-align: center; /* Centers the text within each item */
 }
 
 .products .products-box .box .description {
@@ -1500,15 +1501,61 @@ section h1 {
     }
 }
 
-/* Top Scroll Progress Bar */
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    border: 10px;
-    background-image: linear-gradient(135deg, var(--main-color), var(--ternary-color)); /* Matches scrollbar gradient */
-    z-index: 9999;
-    transition: width 0.25s ease;
+/* Adding animation on what we do */
+@keyframes appearleft{
+    from{
+        opacity:0;
+        /* scale: 0.5; */
+        /* clip-path: insert(100% 100% 0 0); */
+        transform: translateX(100px);
+    }
+    to{
+        opacity:1;
+        /* scale:1; */
+        /* clip-path: insert(0 0 0 0); */
+        transform: translateX(0px);
+    }
 }
+.leftani{
+    animation: appearleft linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+@keyframes appearright{
+    from{
+        opacity:0;
+        /* scale: 0.5; */
+        /* clip-path: insert(100% 100% 0 0); */
+        transform: translateX(-100px);
+    }
+    to{
+        opacity:1;
+        /* scale:1; */
+        /* clip-path: insert(0 0 0 0); */
+        transform: translateX(0px);
+    }
+}
+
+
+@keyframes appearbottom{
+    from{
+        opacity:0;
+        scale: 0.5;
+        /* clip-path: insert(100% 100% 0 0); */
+        /* transform: translateX(100px); */
+    }
+    to{
+        opacity:1;
+        scale:1;
+        /* clip-path: insert(0 0 0 0); */
+        /* transform: translateX(0px); */
+    }
+}
+.bottomani{
+    animation: appearbottom linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+
+/* 

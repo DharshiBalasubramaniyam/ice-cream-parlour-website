@@ -1,0 +1,182 @@
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #eeb8eb;
+    text-shadow: 1px 1px 2px rgb(184, 45, 235), 0 0 1em rgba(216, 130, 200, 0.617),
+      0 0 0.2em rgba(99, 1, 124, 0.623);
+}
+h2 {
+    font-weight: 500;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.top-btn {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    background-color: #59038a;
+    color: #fff;
+    padding: 2px;
+    border: none;
+    margin-right: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.top-btn:hover {
+    background-color: #f689f2;
+}
+
+.contributors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+.contributor-card {
+    width: 300px;
+    position: relative;
+    aspect-ratio: 1/;
+    overflow: hidden;
+    max-width: calc(55% - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid rgb(229, 93, 193);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contributor-card:hover {
+    transform: scale(1.02);
+    box-shadow: 1px 1px 23px rgba(170, 1, 175, 0.915);
+    border: none;
+    cursor: pointer;
+}
+
+
+.contributor-card:hover::before {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.contributor-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out, border 0.1s ease-in-out;
+}
+
+.contributor-card:hover img {
+    border: 2px solid rgb(255, 234, 0);
+    box-shadow: -1px 2px 27px rgb(0, 217, 255);
+}
+
+.contributor-card h2, .contributor-card p {
+    font-size: 1.2em;
+    color: #040404;
+    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin: 0 0 10px;
+}
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #ffffff;
+}
+
+body.dark-mode .nav-container {
+    background-color: #343a40;
+}
+
+body.dark-mode .footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.toggle-container {
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+}
+
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+
+    .top-btn {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+        margin-right: 20px;
+    }
+
+    .contributors-grid {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .contributor-card {
+        width: 90%;
+        max-width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contributor-card img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 8px;
+    }
+
+    .contributor-card h2,
+    .contributor-card p {
+        font-size: 1em;
+        margin: 0 0 8px;
+    }
+
+    /* Dark mode adjustments */
+    body.dark-mode {
+        background-color: #222;
+    }
+
+    body.dark-mode .footer,
+    body.dark-mode .nav-container {
+        background-color: #222;
+    }
+
+    .toggle-container {
+        --size: 1.5rem;
+        width: var(--size);
+        height: var(--size);
+    }
+}
