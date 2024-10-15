@@ -227,11 +227,7 @@ h3 {
     margin: 0 15px;
     padding: 0 8px;
 }
-.nav-bar .nav-links a:hover{
-    background-color: #D91656 ;
-    color: white;
-    border-radius: 15px;
-}
+
 .nav-bar .nav-links a:after {
     content: "";
     position: absolute;
