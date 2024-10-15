@@ -17,7 +17,37 @@
 
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
-
+<style>
+     .marquee-container {
+            width: 100%;
+            background-color: black; /* Original bgcolor */
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 7px 0 5px 0; /* Original padding */
+            font-family: "Book Antiqua", sans-serif;
+            font-weight: bold;
+            color: #FFFFFF;
+            z-index: 999;
+            position: relative;
+        }
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%; /* Start the marquee off-screen */
+            animation: scroll-left 10s linear infinite; /* Scroll effect */
+        }
+        .marquee:hover {
+            animation-play-state: paused; /* Pause on hover */
+        }
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+</style>
 </head>
 
 <body>
@@ -27,11 +57,19 @@
         <p class="loading-text">Loading...</p>
     </div>
 
-        <!-- scroll progress -->
-        <div class="scroll-progress"></div>
-
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
+    <section>
+        <div class="marquee-container">
+            <div class="marquee">
+                <p>Latest offers: 50% off on selected products! | Free shipping on orders over $100! | Check out our new arrivals!</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- nav bar -->
     <div class="nav-bar">
+        
         <div class="logo">
             <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
             <a href="">IcyCo</a>
@@ -57,30 +95,31 @@
             </div>
         </div>
     </div>
-
+    <!-- Marquee container -->
+    <div class="marquee-container">
+        <marquee scrolldelay="50" scrollamount="10" id="scroll_news" style="font-family:Book Antiqua; font-weight: bold; color: #FFFFFF; padding: 10px 0; background: #000000;" bgcolor="#394787">
+            Latest offers: 50% off on selected products! &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; Free shipping on orders over $100! &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; Check out our new arrivals!
+        </marquee>
+    </div>
     <!-- Cart -->
     <div class="cart">
         <i class="fa fa-times close-cart" aria-hidden="true"></i>
         <h1>Your Cart</h1>
-
         <div class="no-empty-cart">
-            <ul class="cart-list-items">
-            </ul>
+            <ul class="cart-list-items"></ul>
             <div>
                 <div class="total">Sub Total: <span class="sub-total">$0</span></div>
                 <button>Check out</button>
             </div>
-
         </div>
-
         <div class="empty-cart active">
             <p>No items in the cart!</p>
         </div>
-
     </div>
 
     <!-- Hero -->
     <section class="home" id="home">
+        
         <div class="text">
             <h1>Scoop into Happiness, Anytime, Anywhere!</h1>
             <h4>Welcome to the frozen feast, where the world of frozen delights comes alive! Get ready to embark on
