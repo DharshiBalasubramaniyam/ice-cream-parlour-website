@@ -925,27 +925,45 @@ h3 {
 }
 
 /*------ WHY icyCO? styles----------------*/
-.feature-box {
+.why-icyco {
+    margin-bottom: 45px; 
+    text-align: center; 
+}
+
+.feature-container {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.inner {
     display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.feature-box {
+    flex: 0 0 48%; 
+    margin: 1%; 
+    display: flex; 
     align-items: center;
     border-radius: 15px;
     padding: 20px;
     box-shadow: var(--box-shadow);
-    margin-bottom: 20px;
     background: transparent;
     cursor: pointer;
     gap: 22px;
-    transition: background 0.3s ease, transform 0.3s ease; 
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .feature-box:hover {
-    background: rgba(255, 255, 255, 0.1); 
+    background: rgba(255, 255, 255, 0.1);
     transform: scale(1.05);
 }
 
 .icon-circle img {
     width: 75px;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .feature-box:hover .icon-circle img {
@@ -955,19 +973,19 @@ h3 {
 .feature-text h3 {
     text-align: left;
     font-size: 1.26em;
-    margin: 15px 0;
+    margin: 17px 0;
     font-weight: bold;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .feature-box:hover .feature-text h3 {
-    color: #ff6347;
+    color: #a10e70;
 }
 
 .feature-text p {
     color: #757575;
     font-size: 1em;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .feature-box:hover .feature-text p {
