@@ -1024,15 +1024,16 @@ h3 {
     background-color: #f7f7f7; 
 }
 
-.box_1:hover {
+#box_1:hover {
     transform: none;
 }
 
 /* Style the h2 font inside the first review */
-.box_1 h2 {
-    font-size: 20px; /* Reduced font size for the title */
+#box_1 h1 {
+    font-size: 40px; /* Reduced font size for the title */
     color: #333;
     font-weight: bold;
+    background-color: inherit;
 }
 
 .review-box .quote {
