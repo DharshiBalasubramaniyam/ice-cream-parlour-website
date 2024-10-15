@@ -8,8 +8,9 @@ body {
 /* Styling for Our Flavors section */
 #our-flavors {
     text-align: center;
-    padding: 50px 20px;
+    padding: 0px 0px;
     position: relative;
+    margin-top: -60px;
     
 }
 
@@ -17,6 +18,7 @@ body {
 .flavors-header {
     text-align: center;
     margin: 40px 0;
+   
 }
 
 /* Styling for "Find Your Taste" */
@@ -26,7 +28,8 @@ body {
     font-weight: bold;                       /* Bold for emphasis */
     color: #D91656;                        /* Same as main-color in :root */
     letter-spacing: 3px;                     /* Slightly spaced out letters */
-    text-transform: uppercase;               /* Uppercase letters */
+    text-transform: uppercase;
+    margin-bottom: -40px;               /* Uppercase letters */
     margin-bottom: 10px;                     /* Space between title and subtitle */
 }
 
