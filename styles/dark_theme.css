@@ -33,17 +33,6 @@ body.dark #box_1 h1 {
 }
 
 
-
 body.dark .textShine{
-    animation: text-glow 2s infinite alternate;
-}
-
-@keyframes text-glow{
-    0%{
-        text-shadow: 0 0 5px white, 0 0 10px cyan;
-    }
-
-    100%{
-        text-shadow: 0 0 10px white, 0 0 20px cyan;
-    }
+    text-shadow: 0px 0px 2px white;
 }
