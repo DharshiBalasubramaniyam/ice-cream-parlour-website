@@ -781,10 +781,11 @@ h3 {
 .products .products-box .box .name-price {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Vertically center the name and price */
+    justify-content: space-between; /* Keep name and price at opposite ends */
     font-size: 22px;
     padding: 10px 1px;
+    text-align: center; /* Centers the text within each item */
 }
 
 .products .products-box .box .description {
