@@ -21,15 +21,15 @@ body::before {
 
 
 .gallery-section{
-    margin-top: 75px;
+    margin-top: 80px;
 }
 .gallery-heading{
-    margin-top: 40px;
+    margin-top: 80px;
 }
 .gallery-sub-heading{
     font-size: 1.5rem;
     text-align:center;
-    margin: 7px 0px;
+    margin-top:7px;
 }
 .gallery-grid{
     display: flex;
@@ -58,6 +58,12 @@ body::before {
     }
 }
 @media (min-width: 1020px) and (max-width: 1150px) {
+    .gallery-heading{
+        margin-top: 10px;
+    }
+    .gallery-sub-heading{
+        font-size: 1.2rem;
+    }
     .gallery-images{
         height: 300px;
     width: 300px;
@@ -69,9 +75,15 @@ body::before {
     }
 }
 @media (min-width: 870px) and (max-width: 1020px) {
+    .gallery-heading{
+        margin-top: 10px;
+    }
+    .gallery-sub-heading{
+        font-size: 1.2rem;
+    }
     .gallery-images{
         height: 250px;
-    width: 250px;
+        width: 250px;
     }
     .gallery-grid{
         margin-left: 30px;
@@ -80,6 +92,12 @@ body::before {
     }
 }
 @media (min-width: 810px) and (max-width: 870px) {
+    .gallery-heading{
+        margin-top: 10px;
+    }
+    .gallery-sub-heading{
+        font-size: 1.2rem;
+    }
     .gallery-images{
         height: 350px;
     width: 350px;
@@ -90,6 +108,12 @@ body::before {
     }
 }
 @media (min-width: 710px) and (max-width: 810px) {
+    .gallery-heading{
+        margin-top: 10px;
+    }
+    .gallery-sub-heading{
+        font-size: 1.1rem;
+    }
     .gallery-images{
         height: 300px;
         width: 300px;
@@ -101,6 +125,12 @@ body::before {
     }
 }
 @media (min-width: 630px) and (max-width: 710px) {
+    .gallery-heading{
+        margin-top: 10px;
+    }
+    .gallery-sub-heading{
+        font-size: 1rem;
+    }
     .gallery-images{
         height: 280px;
         width: 260px;
@@ -112,6 +142,12 @@ body::before {
     }
 }
 @media (min-width: 440px) and (max-width: 630px) {
+    .gallery-heading{
+        margin-top: 10px;
+    }
+    .gallery-sub-heading{
+        font-size: 1rem;
+    }
     .gallery-images{
         height: 400px;
         width: 400px;
@@ -122,6 +158,12 @@ body::before {
     }
 }
 @media (min-width: 300px) and (max-width: 440px) {
+    .gallery-heading{
+        margin-top: 10px;
+    }
+    .gallery-sub-heading{
+        font-size: 1rem;
+    }
     .gallery-images{
         height: 300px;
         width: 300px;
