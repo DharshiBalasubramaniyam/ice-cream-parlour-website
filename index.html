@@ -12,9 +12,21 @@
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
     <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="styles/style3.css">
+    <link rel="stylesheet" href="styles/cursor.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <!-- Our flavor Section fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
@@ -22,6 +34,27 @@
 </head>
 
 <body>
+     <!-- cursor -->
+    <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
     <!-- Preloader -->
     <div id="preloader">
         <img src="images/logo.png" alt="Preloader" class="preloader-icon">
@@ -30,7 +63,7 @@
 
 
 
-    <!-- scroll progress -->
+    <!-- scroll progress -->`
     <div class="scroll-progress"></div>
 
     <!-- nav bar -->
@@ -45,7 +78,8 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
-            <a href="./gallary.html" class="link">Gallery</a>
+            <a href="./gallery.html" class="link">Gallery</a>
+            
 
         </div>
         <div class="icons">
@@ -57,7 +91,7 @@
                         class="no-of-cart-items">0</span></span>
             </div>
             <div class="icon">
-                <i class="fa fa-bars menu" aria-hidden="true"></i>
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
             </div>
         </div>
     </div>
@@ -91,7 +125,7 @@
                 a mouthwatering journey through a virtual ice cream paradise. Whether you’re craving a cozy in-store
                 treat, delivery to your doorstep, or a custom ice cream experience at your next event, we’re here to
                 serve you the sweetest moments, wherever you are.</h4>
-            <a href="./products.html"><button style="margin-top: 15px;">Order Now</button></a>
+            <a href="./products.html"><button style="margin-top: 15px;margin-left:40%;">Order Now</button></a>
         </div>
         <!-- <div class="image"> -->
         <!-- <img src="images/Hero1.png" alt="Hero-image"> -->
@@ -104,12 +138,55 @@
         <!-- </div> -->
     </section>
 
+    <!-- Our Flavors Section -->
+    <section id="our-flavors">
+        <div class="flavors-header">
+            <h2 class="find-your-taste">Find Your Taste</h2>
+            <p class="flavors-count">Over 60 Different Flavours</p>
+            <p class="flavors-description">
+                Including a wide selection of Ice Creams, Gelatos, Sorbets, Yogurts,
+                Non Dairy/Vegans and Toppings.
+            </p>
+        </div>
+
+        <div class="flavors-container">
+            <div class="flavor-item">
+                <img src="images/regular.jpg" alt="Regular Ice Cream" />
+                <h3>Regular</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/gelato.jpg" alt="Gelato" />
+                <h3>Gelato</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/sorbet.jpg" alt="Sorbet" />
+                <h3>Sorbet</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/yogurt.jpg" alt="Yogurt" />
+                <h3>Yogurt</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/vegan.jpg" alt="Non Dairy/Vegan" />
+                <h3>Non Dairy/Vegan</h3>
+            </div>
+        </div>
+        
+        <!-- Background Shapes -->
+        <img src="images/rainbow.svg" class="background-shape rainbow" alt="Rainbow" />
+        <img src="images/star.svg" class="background-shape star" alt="Star" />
+        <img src="images/heart.svg" class="background-shape heart" alt="Heart" />
+        <img src="images/crown.svg" class="background-shape crown" alt="Crown" />
+        <img src="images/snowflake.svg" class="background-shape snowflake" alt="Snowflake" />
+    </section>
+
+
     <!-- Services -->
     <section class="services" id="services">
         <h1>What <span>we do?</span></h1>
         <div class="services-card-wrapper">
             <div class="service-card rightani">
-                <div>
+                <div class="service-card1">
                     <h2>Dine-In</h2>
                     <h3>Chill With Us – Indulge In-Store</h3>
                     <img src="./images/dine in.png" height="120px" width="120px">
@@ -121,7 +198,7 @@
                 </div>
             </div>
             <div class="service-card bottomani">
-                <div>
+                <div class="service-card1">
                     <h2>Island-Wide Delivery</h2>
                     <h3>Ice Cream On the Go – Delivered to Your Door</h3>
                     <img src="./images/delivary.png" height="120px" width="120px">
@@ -133,7 +210,7 @@
                 </div>
             </div>
             <div class="service-card leftani">
-                <div>
+                <div class="service-card1">
                     <h2>Catering</h2>
                     <h3>Sweeten Your Event – Ice Cream Catering</h3>
                     <img src="./images/event.png" height="120px" width="120px">
@@ -256,74 +333,77 @@
     </section>
 
     <!-- reviews -->
-    <section class="reviews bottomani" id="reviews">
+    <section class="reviewSection" id="reviewsSection">
         <h1>Top <span>Reviews</span></h1>
-
-        <div class="swiper reviews-box block">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer1.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
+    <div class="container">
+        <div class="reviews">
+            <div class="review-box" id="box_1">
+                <h1>Top Reviews from our verified customers</h1>
+            </div>
+            <div class="review-box">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer1.jpg" alt="Reviewer Tom Stepher"">
+                    <div class="right">
+                        <div class="name"><span>Tom Stepher</span> <br> <small>Verified Customer</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
                         </div>
                     </div>
-
-                    <div class="text">“IcyCo’s ice cream is like a symphony for your taste buds. The salted caramel
-                        swirl? Divine!”</div>
                 </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer4.webp" alt="">
-                        <div class="right">
-                            <div class="name"><span>Oliviya Lee</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
+                <div class="text">“IcyCo’s ice cream is like a symphony for your taste buds. The salted caramel
+                    swirl? Divine!”</div>  
+            </div>
+    
+            <div class="review-box">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer4.webp" alt="">
+                    <div class="right">
+                        <div class="name"><span>Oliviya Lee</span> <br> <small>Verified Customer</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
                         </div>
                     </div>
-
-                    <div class="text">“Visited here on a hot day!
-                        The mint chocolate took me straight to heavens.”</div>
                 </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer2.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
+    
+                <div class="text">“Visited here on a hot day!
+                    The mint chocolate took me straight to heavens.”</div>
+            </div>
+    
+            <div class="review-box"><i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer2.jpg" alt="">
+                    <div class="right">
+                        <div class="name"><span>Andrew johnson</span> <br> <small>Verified Customer</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
                         </div>
                     </div>
-
-                    <div class="text">“The pistachio gelato here is nutty nirvana. Close your eyes and savor the
-                        green goodness.”</div>
                 </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+    
+                <div class="text">“The pistachio gelato here is nutty nirvana. Close your eyes and savor the
+                    green goodness.”</div>
+            </div>
+            <div class="review-box">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
                     <div class="top">
                         <img src="images/reveiwer5.jpg" alt="">
                         <div class="right">
-                            <div class="name"><span>Mia Patal</span> <br> <small>Verfied Customer</small></div>
+                            <div class="name"><span>Mia Patal</span> <br> <small>Verified Customer</small></div>
                             <div class="stars">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -335,13 +415,13 @@
                     </div>
                     <div class="text">“Shared a double scoop with my sweetheart.
                         Loved the strawberry and dark chocolate.”</div>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+            </div>
+            <div class="review-box">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
                     <div class="top">
                         <img src="images/reveiwer3.jpg" alt="">
                         <div class="right">
-                            <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
+                            <div class="name"><span>Nicolas Cage</span> <br> <small>Verified Customer</small></div>
                             <div class="stars">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -351,95 +431,57 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <div class="text">"From the name itself theses Ice Creams here are best in quality and taste of
-                        course."</div>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer6.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Sopia Devis</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
+                        course."
                     </div>
-
-                    <div class="text">"When it comes to taste, smell and flavor then strawberry is the best here".
-                    </div>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer7.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Emily Anderson</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text">"Very tasty ice-creams at such reasonable price!! And no compromise in
-                        quality"</div>
-                </div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
+    </div>
     </section>
-
-    <!-- contact -->
-    <section class="contact bottomani" id="contact">
-        <h1><span>Contact</span> Us</h1>
-        <form action="#" novalidate class="box-container block" id="contact-form">
-            <div class="row">
-                <div class="input-box">
-                    <label for="fname">Your First Name</label><br>
-                    <input type="text" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''">
-                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+    
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <h1><span>Contact</span> Us</h1>
+            <form action="#" novalidate class="box-container" id="contact-form">
+                <div class="row">
+                    <div class="input-box">
+                        <label for="fname">Your First Name</label><br>
+                        <input class="dark_bg_txt" type="text" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="lname">Your Last Name</label><br>
+                        <input class="dark_bg_txt" type="text" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
                 </div>
-                <div class="input-box">
-                    <label for="lname">Your Last Name</label><br>
-                    <input type="text" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''">
-                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+    
+                <div class="row">
+                    <div class="input-box">
+                        <label for="email">Your Email</label><br>
+                        <input class="dark_bg_txt" type="email" id="email" oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Your Contact Number</label><br>
+                        <input class="dark_bg_txt" type="tel" id="phone" oninput="this.parentElement.querySelector('small').textContent = ''">
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="input-box">
-                    <label for="email">Your Email</label><br>
-                    <input type="email" id="email" oninput="this.parentElement.querySelector('small').textContent = ''">
-                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="message">Your Message</label><br>
+                        <textarea class="dark_bg_txt" name="" id="message" cols="30" rows="10"
+                            oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
+                        <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
                 </div>
-                <div class="input-box">
-                    <label for="phone">Your Contact Number</label><br>
-                    <input type="tel" id="phone" oninput="this.parentElement.querySelector('small').textContent = ''">
-                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                <div class="row">
+                    <input type="submit" value="Send">
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-box">
-                    <label for="message">Your Message</label><br>
-                    <textarea name="" id="message" cols="30" rows="10"
-                        oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
-                    <small class="error" style="color: rgb(255, 0, 0);"></small>
-                </div>
-            </div>
-            <div class="row">
-                <input type="submit" value="Send">
-            </div>
-        </form>
-    </section>
+            </form>
+        </section>
 
 
     <!-- footer -->
@@ -451,6 +493,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#">My Account</a></li>
                     <li><a href="#products">Products</a></li>
+                    <li><a href="gallary.html">Gallery</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="./faq.html" class="link">FAQ</a></li>
                     <li><a href="contributor.html">Our Contributors</a></li>
@@ -512,7 +555,8 @@
                             Linkedin</a></li>
                     <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
                             Twitter</a></li>
-                    <li><a href="#" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
+                    <li><a href="#1" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
+<!--                     It's href is #1 for css purpose to get it's hover green  -->
 
                 </ul>
             </div>
@@ -539,7 +583,7 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; 2024 by <span>DharshiB</span> | All Rights Deserved
+        &copy; 2024 by <span>DharshiB</span> | All Rights Reserved
     </div>
 
     </div>
@@ -556,7 +600,9 @@
     <script src="script/FAQ.js"></script>
     <script src="script/topscrollindicator.js"></script>
     <script src="script/popup.js"></script>
-
+    <script src="script/flavor_section.js"></script>
+    <script src="script/cursor.js"></script>
+    <script src="script/script.js"></script> 
 </body>
 
 </html>

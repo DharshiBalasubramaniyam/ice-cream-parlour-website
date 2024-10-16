@@ -1,0 +1,133 @@
+body {
+    font-family: "Afacad Flux", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('icecream-bg.png') no-repeat center center fixed; /* Background image */
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255,0.5); /* White overlay with opacity */
+    backdrop-filter: blur(0.4px); /* Blurs the background image */
+    z-index: -1; /* Ensures it stays behind the content */
+}
+
+
+.gallery-section{
+    margin-top: 75px;
+}
+.gallery-heading{
+    margin-top: 40px;
+}
+.gallery-sub-heading{
+    font-size: 1.5rem;
+    text-align:center;
+    margin: 7px 0px;
+}
+.gallery-grid{
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.gallery-images{
+    height: 550px;
+    width: 550px;
+    padding: 5px;
+    border: 4px #EE66A6 solid;
+    margin-bottom: 30px;
+    margin:5px;
+    border-radius: 5px;
+}
+@media (min-width: 1200px) and (max-width: 1320px) {
+    .gallery-images{
+        height: 300px;
+    width: 300px;
+    }
+    .gallery-grid{
+        margin-left: 30px;
+        margin-right: 30px;
+        justify-content: space-around;
+    }
+}
+@media (min-width: 1020px) and (max-width: 1150px) {
+    .gallery-images{
+        height: 300px;
+    width: 300px;
+    }
+    .gallery-grid{
+        margin-left: 30px;
+        margin-right: 30px;
+        justify-content: space-around;
+    }
+}
+@media (min-width: 870px) and (max-width: 1020px) {
+    .gallery-images{
+        height: 250px;
+    width: 250px;
+    }
+    .gallery-grid{
+        margin-left: 30px;
+        margin-right: 30px;
+        justify-content: space-around;
+    }
+}
+@media (min-width: 810px) and (max-width: 870px) {
+    .gallery-images{
+        height: 350px;
+    width: 350px;
+    }
+    .gallery-grid{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+@media (min-width: 710px) and (max-width: 810px) {
+    .gallery-images{
+        height: 300px;
+        width: 300px;
+    }
+    .gallery-grid{
+        margin-left: 30px;
+        margin-right: 30px;
+        justify-content: space-around;
+    }
+}
+@media (min-width: 630px) and (max-width: 710px) {
+    .gallery-images{
+        height: 280px;
+        width: 260px;
+    }
+    .gallery-grid{
+        margin-left: 30px;
+        margin-right: 30px;
+        justify-content: space-around;
+    }
+}
+@media (min-width: 440px) and (max-width: 630px) {
+    .gallery-images{
+        height: 400px;
+        width: 400px;
+        justify-content: space-around;
+    }
+    .gallery-grid{
+        justify-content: space-around;
+    }
+}
+@media (min-width: 300px) and (max-width: 440px) {
+    .gallery-images{
+        height: 300px;
+        width: 300px;
+        justify-content: space-around;
+    }
+    .gallery-grid{
+        justify-content: space-around;
+    }
+}
