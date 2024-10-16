@@ -1630,5 +1630,13 @@ section h1 {
     animation-range: entry 0 cover 40%;
 }
 
+/* gallery Section */
 
-/* 
+.gallery-para{
+    padding:20px;
+    display:flex;
+    justify-content: center;
+}
+.gallery-para p{
+    font-size:1.4rem;
+}
