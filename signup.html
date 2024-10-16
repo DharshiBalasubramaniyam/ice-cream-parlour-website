@@ -61,26 +61,24 @@
                 <input type="text" class="input-field" placeholder="Last name">
             </div>
         </div>
-
+    
         <div class="input-fields">
             <input type="email" class="input-field" placeholder="Email">
         </div>
-
+    
         <div class="input-fields">
             <div class="password-container">
                 <input type="password" class="input-field" id="password-input-field" placeholder="Password">
                 <i style="margin-top: 5px;" class="fa-solid fa-eye-slash" id="toggle-password"></i>
             </div>
-            <!-- Password strength meter -->
-            <div id="password-strength-meter">
-                <div id="strength-bar"></div>
-                <p id="password-strength-text"></p>
-            </div>
         </div>
+    
         <div class="signin-btn">
-            <button>Continue</button>
+            <button type="submit">Continue</button>
         </div>
     </form>
+  
+    
     <div class="terms">
         <br>
         By clicking Continue or registering through a third party you accept the Icyco
@@ -127,6 +125,20 @@
     </script>
 
     <style>
+        .error {
+            border: 2px solid red;
+        }
+    
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+    
+        .show-message {
+            display: block;
+        }
         #password-strength-meter {
             margin-top: 10px;
         }
@@ -146,6 +158,64 @@
     </style>
   <script src="script/cursor.js"></script>
 
+  <!-- Required validation -->
+  
+  <script>
+    document.querySelector("form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const firstName = document.querySelector("input[placeholder='First name']");
+        const lastName = document.querySelector("input[placeholder='Last name']");
+        const email = document.querySelector("input[type='email']");
+        const password = document.getElementById("password-input-field");
+
+        clearErrors();
+
+        let isValid = true;
+
+        if (firstName.value.trim() === "") {
+            showError(firstName, "First name is required");
+            isValid = false;
+        }
+
+        if (lastName.value.trim() === "") {
+            showError(lastName, "Last name is required");
+            isValid = false;
+        }
+
+        if (email.value.trim() === "") {
+            showError(email, "Email is required");
+            isValid = false;
+        }
+
+        if (password.value.trim() === "") {
+            showError(password, "Password is required");
+            isValid = false;
+        }
+
+        if (isValid) {
+            this.submit();
+        }
+    });
+
+    function showError(inputElement, message) {
+        inputElement.classList.add("error");
+
+        const errorMessage = document.createElement("div");
+        errorMessage.className = "error-message show-message";
+        errorMessage.innerText = message;
+
+        inputElement.parentNode.appendChild(errorMessage);
+    }
+
+    function clearErrors() {
+        const inputs = document.querySelectorAll(".input-field");
+        inputs.forEach(input => input.classList.remove("error"));
+
+        const errorMessages = document.querySelectorAll(".error-message");
+        errorMessages.forEach(message => message.remove());
+    }
+</script>
 </body>
 
 </html>
