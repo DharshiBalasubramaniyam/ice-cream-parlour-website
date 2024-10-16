@@ -966,6 +966,7 @@ h3 {
 
 .feature-box:hover{
     box-shadow: 3px 3px 12px var(--secondary-color); /* added hover effect on feature box */
+    transform: scale(1.025); /*add transform property*/
 }
 
 .feature-box img {
