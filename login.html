@@ -7,11 +7,33 @@
     <title>ICYCO - LOGIN</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/style2.css">
+    <link rel="stylesheet" href="styles/cursor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 
 <body>
+     <!-- cursor -->
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -30,25 +52,29 @@
         </div>
     </a>
 
-    <h1>Login to IcyCo</h1>
+    <h1 style="margin-bottom: 10px;">Login to IcyCo</h1>
     <form>
         <div class="input-fields">
-            <div class="input-field-header">Email</div>
-            <input type="email" class="input-field">
+            <!-- <div class="input-field-header">Email</div> -->
+            <input type="email" class="input-field" placeholder="Email">
         </div>
 
         <div class="input-fields">
-            <div class="input-field-header">Password</div>
+            <!-- <div class="input-field-header">Password</div> -->
             <div class="password-container">
-                <input type="password" class="input-field" id="password-input-field">
-                <i class="fa-solid fa-eye-slash" id="toggle-password"></i>
+                <input type="password" class="input-field" id="password-input-field" placeholder="Password">
+                <i style="margin-top: 5px;" class="fa-solid fa-eye-slash" id="toggle-password"></i>
             </div>
-            <a href="#">Forgot your password?</a>
+            
         </div>
-
-        <div class="check-button">
-            <input type="checkbox">
-            <span>Remember me</span>
+        <div class="check-container">
+            <div class="check-button">
+                <input type="checkbox">
+                <span>Remember me</span>
+            </div>
+            <div class="forget-button">
+                <a href="#" style="color: var(--main-color);">Forgot your password?</a>
+            </div>
         </div>
         <div class="signin-btn">
             <button>Sign in</button>
@@ -58,16 +84,21 @@
     <div id="line-container">
         <br>
         <span>Don't have an account?</span><a href="./signup.html" class="register-now-link">Create account</a>
-        <div class="sign-in">or login with</div>
     </div>
-
-    <div class="social-links">
-        <button><img src="images/social-icons/google.png" class="imgs" width="20px" height="20px">Google</button>
-        <button><img src="images/social-icons/github.png" width="20px" height="20px">Facebook</button>
+    <div class="sep-container">
+        <div class="sep-line"></div>
+        <div><p>or</p></div>
+        <div class="sep-line"></div>    
+    </div>
+    <div class="social-link-2">
+        <a href=""><img src="images/social-icons/google.png" width="25px" height="25px"></a>
+        <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px"></a>
     </div>
 
     <script src="script/login.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/topscrollindicator.js"></script>
+    <script src="script/cursor.js"></script>
+
 </body>
 </html>
