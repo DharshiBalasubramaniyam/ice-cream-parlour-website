@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="styles/cursor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.875em; /* Adjust font size as needed */
+            margin-top: 5px; /* Space above error messages */
+        }
+    </style>
 </head>
 
 <body>
@@ -45,7 +52,6 @@
     <div class="scroll-progress"></div>
 
     <a href="./index.html">
-
         <div id="logo">
             <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true"
                 width="15%"></img>
@@ -53,23 +59,22 @@
     </a>
 
     <h1 style="margin-bottom: 10px;">Login to IcyCo</h1>
-    <form>
+    <form id="login-form">
         <div class="input-fields">
-            <!-- <div class="input-field-header">Email</div> -->
-            <input type="email" class="input-field" placeholder="Email">
+            <input type="email" class="input-field " id="email" placeholder="Email" >
+            <p class="error-message" id="email-error"></p> <!-- Email error message -->
         </div>
-
+    
         <div class="input-fields">
-            <!-- <div class="input-field-header">Password</div> -->
             <div class="password-container">
-                <input type="password" class="input-field" id="password-input-field" placeholder="Password">
+                <input type="password" class="input-field password-field" id="password-input-field" placeholder="Password" >
                 <i style="margin-top: 5px;" class="fa-solid fa-eye-slash" id="toggle-password"></i>
             </div>
-            
+            <p class="error-message" id="password-error"></p> <!-- Password error message -->
         </div>
         <div class="check-container">
             <div class="check-button">
-                <input type="checkbox">
+                <input type="checkbox" class="remember-me-checkbox">
                 <span>Remember me</span>
             </div>
             <div class="forget-button">
@@ -77,9 +82,10 @@
             </div>
         </div>
         <div class="signin-btn">
-            <button>Sign in</button>
+            <button type="submit" class="sign-in-button">Sign in</button>
         </div>
     </form>
+    
 
     <div id="line-container">
         <br>
@@ -94,6 +100,47 @@
         <a href=""><img src="images/social-icons/google.png" width="25px" height="25px"></a>
         <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px"></a>
     </div>
+
+    <script>
+        const form = document.getElementById('login-form');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password-input-field');
+        
+        const emailError = document.getElementById('email-error');
+        const passwordError = document.getElementById('password-error');
+
+        form.addEventListener('submit', function (e) {
+            // Prevent the form from submitting
+            e.preventDefault();
+        
+            let isValid = true;
+
+            // Reset previous error messages
+            emailError.textContent = '';
+            passwordError.textContent = '';
+
+            // Check if the email is valid
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (email.value.trim() === '') {
+                emailError.textContent = 'Email must not be empty';
+                isValid = false;
+            } else if (!emailPattern.test(email.value)) {
+                emailError.textContent = 'Please enter a valid email address';
+                isValid = false;
+            }
+
+            // Check if the password is not empty
+            if (password.value.trim() === '') {
+                passwordError.textContent = 'Password must not be empty';
+                isValid = false;
+            }
+
+            // If all validations pass, submit the form
+            if (isValid) {
+                form.submit();  // Submit the form if everything is valid
+            }
+        });
+    </script>
 
     <script src="script/login.js"></script>
     <script src="./script/nav.js"></script>

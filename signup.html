@@ -52,23 +52,27 @@
 
     <h1 style="text-align: center; margin-bottom: 20px;">Sign up to IcyCo</h1>
 
-    <form>
+    <form id="signup-form">
         <div id="name-fields">
             <div id="first-name-field">
-                <input type="text" class="input-field" placeholder="First name">
+                <input type="text" class="input-field" id="first-name" placeholder="First name">
+                <p class="error-message" id="first-name-error"></p>
             </div>
             <div id="last-name-field">
-                <input type="text" class="input-field" placeholder="Last name">
+                <input type="text" class="input-field" id="last-name" placeholder="Last name">
+                <p class="error-message" id="last-name-error"></p>
             </div>
         </div>
-
+    
         <div class="input-fields">
-            <input type="email" class="input-field" placeholder="Email">
+            <input type="email" class="input-field" id="email" placeholder="Email">
+            <p class="error-message" id="email-error"></p>
         </div>
-
+    
         <div class="input-fields">
             <div class="password-container">
                 <input type="password" class="input-field" id="password-input-field" placeholder="Password">
+                <p class="error-message" id="password-error"></p>
                 <i style="margin-top: 5px;" class="fa-solid fa-eye-slash" id="toggle-password"></i>
             </div>
             <!-- Password strength meter -->
@@ -78,9 +82,13 @@
             </div>
         </div>
         <div class="signin-btn">
-            <button>Continue</button>
+            <button type="submit">Continue</button>
         </div>
     </form>
+
+
+
+
     <div class="terms">
         <br>
         By clicking Continue or registering through a third party you accept the Icyco
@@ -99,6 +107,68 @@
         <a href=""><img src="images/social-icons/google.png" width="25px" height="25px"></a>
         <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px"></a>
     </div>
+
+    <script>
+           const form = document.getElementById('signup-form');
+    const firstName = document.getElementById('first-name');
+    const lastName = document.getElementById('last-name');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password-input-field');
+    
+    const firstNameError = document.getElementById('first-name-error');
+    const lastNameError = document.getElementById('last-name-error');
+    const emailError = document.getElementById('email-error');
+    const passwordError = document.getElementById('password-error');
+
+    form.addEventListener('submit', function (e) {
+          // Prevent the form from submitting
+          e.preventDefault()
+          e.preventDefault()
+        
+        let isValid = true;
+
+        // Reset previous error messages
+        firstNameError.textContent = '';
+        lastNameError.textContent = '';  // Reset last name error
+        emailError.textContent = '';
+        passwordError.textContent = '';
+
+        // Check if the first name is not empty
+        if (firstName.value.trim() === '') {
+            firstNameError.textContent = 'First name must not be empty';
+            
+            isValid = false;
+        }
+
+        // Check if the last name is not empty (optional)
+        
+
+        // Check if the email is valid
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (email.value.trim() === '') {
+            emailError.textContent = 'Email must not be empty';
+            isValid = false;
+        } else if (!emailPattern.test(email.value)) {
+            emailError.textContent = 'Please enter a valid email address';
+            isValid = false;
+        }
+
+        // Check if the password is not empty
+        if (password.value.trim() === '') {
+            passwordError.textContent = 'Password must not be empty';
+            isValid = false;
+        }
+
+        // If all validations pass, submit the form
+        if (isValid) {
+            form.submit();  // Submit the form if everything is valid
+        }
+    });
+</script>
+
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
     <script src="script/login.js"></script>
@@ -125,6 +195,13 @@
             strengthBar.style.backgroundColor = colors[strength];
         });
     </script>
+   
+
+  
+ 
+
+    
+    
 
     <style>
         #password-strength-meter {
@@ -136,6 +213,9 @@
             width: 0;
             background-color: #ff4d4d;
             transition: width 0.3s ease;
+        }
+        .error-message{
+            color: red;
         }
 
         #password-strength-text {
