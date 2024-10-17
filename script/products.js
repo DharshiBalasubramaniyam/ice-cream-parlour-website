@@ -322,3 +322,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+// Create search bar and search button dynamically
+function createSearchBar() {
+    const searchBarContainer = document.querySelector(".search-container");
+
+    // Check if the search bar already exists
+    if (document.getElementById("search-bar")) return;
+
+    // Create the search bar only if it doesn't already exist
+    const searchBar = document.createElement("input");
+    searchBar.setAttribute("type", "text");
+    searchBar.setAttribute("id", "search-bar");
+    searchBar.setAttribute("placeholder", "Search for flavors...");
+    searchBarContainer.appendChild(searchBar);
+
+    // Check if the search button already exists
+    if (document.getElementById("search-btn")) return;
+
+    // Create the search button only if it doesn't already exist
+    const searchButton = document.createElement("button");
+    searchButton.setAttribute("id", "search-btn");
+    searchButton.innerText = "Search";
+    searchBarContainer.appendChild(searchButton);
+
+    // Attach event listener for the search button
+    searchButton.addEventListener("click", () => {
+        const query = searchBar.value.toLowerCase();
+        const filteredProducts = products_list.filter(product => {
+            const flavorName = flavor_list.find(f => f.id === product.flavor_id)?.name.toLowerCase();
+            return product.name.toLowerCase().includes(query) || flavorName.includes(query);
+        });
+        displayProducts(filteredProducts);
+    });
+
+    // Handle input event for live search
+    handleSearchInput();
+}
+
+// Handle input event for search functionality
+function handleSearchInput() {
+    const searchInput = document.getElementById("search-bar");
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        const filteredProducts = products_list.filter(product => {
+            const flavorName = flavor_list.find(f => f.id === product.flavor_id)?.name.toLowerCase();
+            return product.name.toLowerCase().includes(query) || flavorName.includes(query);
+        });
+        displayProducts(filteredProducts);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    createSearchBar(); // Create the search bar and button on page load
+});
