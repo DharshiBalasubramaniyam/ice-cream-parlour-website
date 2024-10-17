@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICYCO - DINE IN</title>
+    <title>ICYCO - SUBSCRIPTIONS</title>
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="styles/style3.css">
     
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -44,9 +46,9 @@
             <a href="./index.html" class="link">home</a>
             <a href="./products.html" class="link">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
-            <a href="./dine-in.html" class="link active">Dine In</a>
+            <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
-            <a href="./subscriptions.html" class="link">Subscriptions</a>
+            <a href="./subscriptions.html" class="link active">Subscriptions</a>
         </div>
         <div class="icons">
             <div class="icon">
@@ -62,97 +64,39 @@
         </div>
     </div>
 
-    <section>
-        <h1 style="margin-top: 100px; padding: 0 40px;">Dine In</h1>
-        <h2 class="heading">Find your nearest store</h2>
-        <div class="search-bar">
-            <input type="text" placeholder="Enter your Current Location">
-            <button><i class="fa fa-search"></i></button>
-        </div>
-        <div class="restaurants">
-            <div class="restaurant-card">
-                <img src="./images/ice-1.jpg" alt="Restaurant 1">
-                <div class="restaurant-info">
-                    <h3>Frozen Fusion </h3>
-                    <p>Sector 2, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
-                </div>
+    <!-- Subscription Section -->
+    <section id="subscription-plans">
+        <h1 style="margin-top: 100px; padding: 0 40px;">ICYCO Subscription Plans</h1>
+        <p style="font-size: 20px; margin: 33px;">Exclusive Treats for True Ice Cream Lovers! <br> "Become a part of our ice cream community and gain access to limited-edition flavors, special discounts,<br> and first dibs on new arrivals. Don’t miss out on exclusive, mouth-watering flavors delivered fresh every month! <br>Choose the perfect plan for your cravings!"</p>
+
+        <div class="plans-container">
+            <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ice Cream" class="ice-cream-img" />
+            <!-- Basic Plan -->
+            <div class="plan">
+                <h3>Basic Plan</h3>
+                <p>$6 / Month</p>
+                <ul>
+                    <li>2 Monthly Ice Cream Deliveries</li>
+                    <li>Exclusive Deals on New Flavors</li>
+                    <li>Free Shipping</li>
+                </ul>
+                <button class="btn-style" onclick="subscribe('Basic')">Subscribe Now</button>
             </div>
-            <div class="restaurant-card">
-                <img src="./images/ice-2.jpg" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Kulfi Station Express</h3>
-                    <p>Sector 5, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐⭐ (5.0)</p>
-                </div>
+
+            <!-- Premium Plan -->
+            <div class="plan">
+                <h3>Premium Plan</h3>
+                <p>$10 / Month</p>
+                <ul>
+                    <li>4 Monthly Ice Cream Deliveries</li>
+                    <li>Exclusive Access to Limited Editions</li>
+                    <li>Free Shipping & Early Access to New Flavors</li>
+                </ul>
+                <button class="btn-style" onclick="subscribe('Premium')">Subscribe Now</button>
             </div>
-            <div class="restaurant-card">
-                <img src="./images//ice-3.jpg" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Kookie Jar</h3>
-                    <p>Sector 3, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images/ice-4.avif" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Flury's</h3>
-                    <p>Sector 1, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐ (3.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images//ice-5.webp" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Icy Fusion</h3>
-                    <p>Sector 2, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐⭐ (5.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images/ice-6.webp" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Waffle Junction</h3>
-                    <p>Sector 2, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images/ice-1.jpg" alt="Restaurant 1">
-                <div class="restaurant-info">
-                    <h3>Frozen Fusion </h3>
-                    <p>Sector 2, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images/ice-2.jpg" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Kulfi Station Express</h3>
-                    <p>Sector 5, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐⭐ (5.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images//ice-3.jpg" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Kookie Jar</h3>
-                    <p>Sector 3, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images/ice-1.jpg" alt="Restaurant 1">
-                <div class="restaurant-info">
-                    <h3>Frozen Fusion </h3>
-                    <p>Sector 2, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
-                </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1496533141630-d6731a403292?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ice Cream" class="ice-cream-img" />
         </div>
     </section>
-    
     <!-- Cart -->
     <div class="cart">
         <i class="fa fa-times close-cart" aria-hidden="true"></i>
@@ -173,6 +117,7 @@
         </div>
 
     </div>
+    
 
     <!-- footer -->
     <section class="footer">
@@ -273,3 +218,4 @@
 </body>
 
 </html>
+
