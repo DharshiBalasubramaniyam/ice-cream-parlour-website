@@ -936,34 +936,44 @@ h3 {
 
 }
 
+
 /*------ WHY icyCO? styles----------------*/
+.why-icyco {
+    margin-bottom: 45px; 
+    text-align: center; 
+}
+
 .feature-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 50px 0 30px;
-    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
 }
 
 .inner {
     display: flex;
-    gap: 40px;
-    margin-top: 20px;
-    width: 100%;
+    justify-content: space-between; 
+    width: 100%; 
 }
 
 .feature-box {
-    display: flex;
+    flex: 0 0 48%; 
+    margin: 1%; 
+    display: flex; 
     align-items: center;
     border-radius: 15px;
     padding: 20px;
     box-shadow: var(--box-shadow);
-    margin-bottom: 20px;
     background: transparent;
     cursor: pointer;
     gap: 22px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
+.feature-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+    box-shadow: 3px 3px 12px var(--secondary-color); /* added hover effect on feature box */
+}
 
 .icon-circle {
     display: flex;
@@ -974,8 +984,8 @@ h3 {
 
 .icon-circle img {
     width: 75px;
+    transition: transform 0.3s ease;
 }
-
 
 .feature-box img {
     transition: 0.3s;
@@ -999,14 +1009,25 @@ h3 {
 .feature-text h3 {
     text-align: left;
     font-size: 1.26em;
-    margin: 15px 0;
+    margin: 17px 0; /* Keeping the margin from patch-1 */
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.feature-box:hover .feature-text h3 {
+    color: #a10e70;
 }
 
 .feature-text p {
     color: #757575;
     font-size: 1em;
+    transition: color 0.3s ease;
 }
+
+.feature-box:hover .feature-text p {
+    color: #b0b0b0;
+}
+
 
 /* -------------reviews section styles------------------- */
 .reviewSection .container {
