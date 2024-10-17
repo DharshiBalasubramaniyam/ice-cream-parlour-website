@@ -133,6 +133,9 @@ A big thank you to all the contributors! 🎉
 <a href="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/pulse"> <img align="center" src="https://contrib.rocks/image?max=100&repo=DharshiBalasubramaniyam/ice-cream-parlour-website" /> </a> 
 
 ---
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
 
 # 📄 Ending Note
 Thank you for exploring the Ice Cream Parlour Website! We hope you find this project enjoyable and informative. Your feedback, contributions, and suggestions are always welcome!
