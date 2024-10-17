@@ -108,93 +108,18 @@
         <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px"></a>
     </div>
 
-    <script>
-           const form = document.getElementById('signup-form');
-    const firstName = document.getElementById('first-name');
-    const lastName = document.getElementById('last-name');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password-input-field');
-    
-    const firstNameError = document.getElementById('first-name-error');
-    const lastNameError = document.getElementById('last-name-error');
-    const emailError = document.getElementById('email-error');
-    const passwordError = document.getElementById('password-error');
-
-    form.addEventListener('submit', function (e) {
-          // Prevent the form from submitting
-          e.preventDefault()
-          e.preventDefault()
-        
-        let isValid = true;
-
-        // Reset previous error messages
-        firstNameError.textContent = '';
-        lastNameError.textContent = '';  // Reset last name error
-        emailError.textContent = '';
-        passwordError.textContent = '';
-
-        // Check if the first name is not empty
-        if (firstName.value.trim() === '') {
-            firstNameError.textContent = 'First name must not be empty';
-            
-            isValid = false;
-        }
-
-        // Check if the last name is not empty (optional)
-        
-
-        // Check if the email is valid
-        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (email.value.trim() === '') {
-            emailError.textContent = 'Email must not be empty';
-            isValid = false;
-        } else if (!emailPattern.test(email.value)) {
-            emailError.textContent = 'Please enter a valid email address';
-            isValid = false;
-        }
-
-        // Check if the password is not empty
-        if (password.value.trim() === '') {
-            passwordError.textContent = 'Password must not be empty';
-            isValid = false;
-        }
-
-        // If all validations pass, submit the form
-        if (isValid) {
-            form.submit();  // Submit the form if everything is valid
-        }
-    });
-</script>
+   
 
 
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
-    <script src="script/login.js"></script>
+    <script src="script/signup.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/topscrollindicator.js"></script>
 
-    <script>
-        const passwordInput = document.getElementById("password-input-field");
-        const strengthText = document.getElementById("password-strength-text");
-        const strengthBar = document.getElementById("strength-bar");
-
-        passwordInput.addEventListener("input", function () {
-            const password = passwordInput.value;
-            const result = zxcvbn(password);
-            const strength = result.score;
-
-            // Update strength bar and text
-            strengthBar.style.width = `${(strength + 1) * 20}%`;
-            const strengthLevels = ["Very Weak", "Weak", "Okay", "Good", "Strong"];
-            strengthText.textContent = strengthLevels[strength];
-            
-            // Color the strength bar based on strength
-            const colors = ["#ff4d4d", "#ff944d", "#ffd24d", "#d2ff4d", "#4dff88"];
-            strengthBar.style.backgroundColor = colors[strength];
-        });
-    </script>
+    
    
 
   
