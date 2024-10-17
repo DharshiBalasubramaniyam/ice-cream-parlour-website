@@ -204,11 +204,14 @@ footer p {
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 IcyCo Ice Cream. All Rights Reserved.</p>
+            <p>&copy; <span id="year"></span> IcyCo Ice Cream. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script src="script/cursor.js"></script>
-  
+    <script>
+        const year = new Date().getFullYear();
+        document.getElementById("year").innerText = year;
+    </script> 
 </body>
 </html>
