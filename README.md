@@ -140,5 +140,12 @@ Thank you for exploring the Ice Cream Parlour Website! We hope you find this pro
 If you have any questions or need assistance, please feel free to reach out through the Issues section of this repository.
 
 # 🌈 Join Us!
+## 📫 Contact
+
+For any inquiries or support, please contact:
+
+- **LinkedIn:** https://www.linkedin.com/in/dharshibalasubramaniyam/
+- **GitHub:** (https://github.com/DharshiBalasubramaniyam)
+---
 
 
