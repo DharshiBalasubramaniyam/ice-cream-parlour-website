@@ -86,7 +86,10 @@
 
             <div class="indv-text">
                 <label for="name" class="text">NAME</label>
-                <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
+                <input type="text" class="form-text"  placeholder="Enter your Name" required required
+                pattern="[a-zA-Z ]+" 
+                oninvalid="this.setCustomValidity('Please enter your name  without using numbers or special characters.')" 
+                oninput="this.setCustomValidity('')"/>
             </div>
     
             <div class="indv-text">
