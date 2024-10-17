@@ -389,6 +389,7 @@ h3 {
 
 /* -------------home styles------------------- */
 .home {
+    /* border: 2px solid black; */
     min-height: 95dvh;
     display: flex;
     align-items: center;
