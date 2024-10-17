@@ -1653,6 +1653,23 @@ section h1 {
 
 /* gallery Section */
 
+
+/* Hover animation for feature boxes in the "Why IcyCo?" section */
+/* Shrinks the feature box and adds a shadow effect on hover */
+
+.feature-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: scale(0.95); /* Shrinks the feature box slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+
 .gallery-para{
     padding:20px;
     display:flex;
@@ -1661,3 +1678,4 @@ section h1 {
 .gallery-para p{
     font-size:1.4rem;
 }
+
