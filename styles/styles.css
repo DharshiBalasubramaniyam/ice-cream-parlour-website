@@ -952,6 +952,7 @@ h3 {
     gap: 22px;
 }
 
+
 .icon-circle {
     display: flex;
     justify-content: center;
@@ -961,6 +962,19 @@ h3 {
 
 .icon-circle img {
     width: 75px;
+}
+
+.feature-box:hover{
+    box-shadow: 3px 3px 12px var(--secondary-color); /* added hover effect on feature box */
+    transform: scale(1.025); /*add transform property*/
+}
+
+.feature-box img {
+    transition: 0.3s;           /* added transition on image inside feature box */
+}
+
+.feature-box:hover img {
+    transform: scale(1.12);           /* added hover effect on img */
 }
 
 .feature-text {
@@ -1193,6 +1207,44 @@ h3 {
 .footer-col .icons i:hover {
     color: #fff;
 }
+
+.footer-col .links li a.social:hover {
+    color: var(--body-color); /* Default hover color */
+
+
+}
+
+/* Facebook */
+.footer-col .links li a[href*="facebook.com"]:hover {
+    background: linear-gradient(to right, blue, white);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Instagram */
+.footer-col .links li a[href*="instagram.com"]:hover {
+    color: red; /* Instagram hover color */
+}
+
+/* Linkedin */
+.footer-col .links li a[href*="linkedin.com"]:hover {
+    color: lightblue; /* Instagram hover color */
+}
+
+/* Twitter */
+.footer-col .links li a[href*="twitter.com"]:hover {
+    color: #fffcfc; /* Base color */
+    text-shadow: 0 0 50px rgba(0, 0, 0, 0.8); /* Greyish glow */
+}
+
+/* Whatsapp */
+.footer-col .links li a[href*="#1"]:hover {
+    background: linear-gradient(to right, rgba(0, 255, 0, 0.8), rgba(0, 0, 0, 0.2));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/*Footer Css ends here  */
 
 .social {
     display: flex;
@@ -1578,5 +1630,13 @@ section h1 {
     animation-range: entry 0 cover 40%;
 }
 
+/* gallery Section */
 
-/* 
+.gallery-para{
+    padding:20px;
+    display:flex;
+    justify-content: center;
+}
+.gallery-para p{
+    font-size:1.4rem;
+}
