@@ -1,0 +1,62 @@
+main {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+}
+
+.terms {
+    max-width: 700px; /* Slightly narrower for a clean look */
+    margin: auto;
+    background: #fff;
+    padding: 20px; /* Reduced padding for a simpler layout */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #666;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #E90596;
+    margin-bottom: 15px;
+    font-size: 2.2em;
+}
+
+.term-item {
+    margin-bottom: 15px; /* Less space between items */
+    padding: 10px; /* Reduced padding */
+    border-left: 4px solid #EE66A6;
+    background-color: #fafafa;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.term-item:hover {
+    background-color: rgba(255, 196, 225, 0.5); /* Subtle hover effect */
+}
+
+.term-item h3 {
+    color: #333;
+    margin: 0 0 8px;
+    font-size: 1.4em; /* Slightly smaller heading */
+}
+
+p {
+    color: #555;
+    line-height: 1.5; /* Slightly tighter line height */
+}
+
+a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
