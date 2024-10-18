@@ -1629,7 +1629,11 @@ section h1 {
         transform: translateX(0px);
     }
 }
-
+.rightani{
+    animation: appearright linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
 
 @keyframes appearbottom{
     from{
