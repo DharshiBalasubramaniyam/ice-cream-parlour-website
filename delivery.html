@@ -96,9 +96,10 @@
 
             <div class="indv-text">
                 <label for="contact" class="text">CONTACT No.</label>
-                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" 
-                       pattern="[0-9]{10}" title="Please enter a 10-digit contact number" required>
+                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required>
+                <span id="contact-error" style="color:red; display:none;">Please enter a valid 10-digit contact number.</span>
             </div>
+            
             
 
             <div class="indv-text">
@@ -268,6 +269,20 @@
     <script src="./script/topscrollindicator.js"></script>
     <script type="module" src="./script/products.js"></script>
     <script src="script/cursor.js"></script>
+    <script>
+        const contactInput = document.getElementById('contact');
+        const contactError = document.getElementById('contact-error');
+    
+        contactInput.addEventListener('input', function () {
+            const regex = /^[0-9]{10}$/;  // Regular expression for 10-digit number
+    
+            if (!regex.test(contactInput.value)) {
+                contactError.style.display = 'block';  // Show error message
+            } else {
+                contactError.style.display = 'none';   // Hide error message
+            }
+        });
+    </script>
 
 </body>
 
