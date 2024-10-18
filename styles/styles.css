@@ -49,32 +49,96 @@ body {
     z-index: 9999;
 }
 
-/* Spinner Styles */
-.preloader-icon {
-    width: 100px;
-    height: 100px;
-    animation: spin 2s linear infinite;
-}
 
-/* Loading Text Styles */
-.loading-text {
-     margin-top: 20px;
-    font-size: 18px;
-    color: #333;
-    animation: pulse 2.5s linear infinite;
-    font-family: var(--main-font);
-}
-
-/* Keyframe Animations */
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
+  .loader-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .flavor-circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fade 1.6s infinite ease-in-out;
+  }
+  
+  @keyframes fade {
+    0%, 100% {
+      opacity: 0;
     }
-
-    100% {
-        transform: rotate(360deg);
+    50% {
+      opacity: 1;
     }
-}
+  }
+  
+  /* Positioning the circles in a perfect circle using trigonometry */
+  .flavor-circle:nth-child(1) {
+    background-color: #8b4513; /* Chocolate */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translate(60px) rotate(0deg);
+    animation-delay: 0s;
+  }
+  
+  .flavor-circle:nth-child(2) {
+    background-color: #ff69b4; /* Strawberry */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg) translate(60px) rotate(-45deg);
+    animation-delay: 0.2s;
+  }
+  
+  .flavor-circle:nth-child(3) {
+    background-color: #fff5e1; /* Vanilla */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg) translate(60px) rotate(-90deg);
+    animation-delay: 0.4s;
+  }
+  
+  .flavor-circle:nth-child(4) {
+    background-color: #98ff98; /* Mint */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg) translate(60px) rotate(-135deg);
+    animation-delay: 0.6s;
+  }
+  
+  .flavor-circle:nth-child(5) {
+    background-color: #6495ed; /* Blueberry */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg) translate(60px) rotate(-180deg);
+    animation-delay: 0.8s;
+  }
+  
+  .flavor-circle:nth-child(6) {
+    background-color: #ffb347; /* Mango */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(225deg) translate(60px) rotate(-225deg);
+    animation-delay: 1s;
+  }
+  
+  .flavor-circle:nth-child(7) {
+    background-color: #93c572; /* Pistachio */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(270deg) translate(60px) rotate(-270deg);
+    animation-delay: 1.2s;
+  }
+  
+  .flavor-circle:nth-child(8) {
+    background-color: #e30b5d; /* Raspberry */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(315deg) translate(60px) rotate(-315deg);
+    animation-delay: 1.4s;
+  }
+  
 
 /* Transition for Loaded State */
 body.loaded #preloader {
@@ -973,6 +1037,15 @@ h3 {
 .icon-circle img {
     width: 75px;
     transition: transform 0.3s ease;
+}
+
+.loader-container {
+    width: 150px;
+    height: 150px;
+}
+.flavor-circle {
+    width: 25px;
+    height: 25px;
 }
 
 .feature-box:hover .icon-circle img {
