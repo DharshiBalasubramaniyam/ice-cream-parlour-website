@@ -111,4 +111,6 @@ scrollButton?.addEventListener("click", () => {
 //     });
 // });
 
-
+// Dynamically update the copyright year in the footer
+    const year = new Date().getFullYear();
+    document.getElementById("year").innerText = year;

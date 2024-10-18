@@ -64,6 +64,7 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link active">Catering</a>
+            <a href="./subscriptions.html" class="link">Subscriptions</a>
         </div>
         <div class="icons">
             <div class="icon">
@@ -96,7 +97,7 @@
     
             <div class="indv-text">
                 <label for="contact" class="text">CONTACT No.</label>
-                <input type="tel" class="form-text" name="" id="" placeholder="0123456789" required>
+                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             </div>
     
             <div class="indv-text">
@@ -272,10 +273,6 @@
     <div class="copyright">
         &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
-    <script>
-        const year = new Date().getFullYear();
-        document.getElementById("year").innerText = year;
-      </script>
 
     <script src="./script/catering.js"></script>
     <script src="./script/nav.js"></script>

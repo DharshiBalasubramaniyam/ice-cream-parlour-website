@@ -11,7 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
+
+
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+
+    
  <!-- cursor -->
  <div class="circle"></div>
  <div class="circle"></div>
@@ -46,7 +51,7 @@
 
         <div id="logo">
             <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true"
-                width="15%"></img>
+                width="15%">
         </div>
     </a>
 
@@ -61,11 +66,11 @@
                 <input type="text" class="input-field" placeholder="Last name">
             </div>
         </div>
-
+    
         <div class="input-fields">
             <input type="email" class="input-field" placeholder="Email">
         </div>
-
+    
         <div class="input-fields">
             <div class="password-container">
                 <input type="password" class="input-field" id="password-input-field" placeholder="Password">
@@ -77,10 +82,23 @@
                 <p id="password-strength-text"></p>
             </div>
         </div>
+
+        <!-- Subscription Options in Signup Form -->
+        <div class="form-group">
+            <label for="subscription-plan">Choose Subscription Plan:</label>
+            <select id="subscription-plan" name="subscription-plan">
+                <option value="none">No Subscription</option>
+                <option value="basic">Basic - $6/Month</option>
+                <option value="premium">Premium - $10/Month</option>
+            </select>
+        </div>
+
         <div class="signin-btn">
-            <button>Continue</button>
+            <button type="submit">Continue</button>
         </div>
     </form>
+  
+    
     <div class="terms">
         <br>
         By clicking Continue or registering through a third party you accept the Icyco
@@ -100,52 +118,19 @@
         <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px"></a>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
-    <script src="script/login.js"></script>
-    <script src="./script/nav.js"></script>
-    <script src="./script/topscrollindicator.js"></script>
 
-    <script>
-        const passwordInput = document.getElementById("password-input-field");
-        const strengthText = document.getElementById("password-strength-text");
-        const strengthBar = document.getElementById("strength-bar");
 
-        passwordInput.addEventListener("input", function () {
-            const password = passwordInput.value;
-            const result = zxcvbn(password);
-            const strength = result.score;
 
-            // Update strength bar and text
-            strengthBar.style.width = `${(strength + 1) * 20}%`;
-            const strengthLevels = ["Very Weak", "Weak", "Okay", "Good", "Strong"];
-            strengthText.textContent = strengthLevels[strength];
-            
-            // Color the strength bar based on strength
-            const colors = ["#ff4d4d", "#ff944d", "#ffd24d", "#d2ff4d", "#4dff88"];
-            strengthBar.style.backgroundColor = colors[strength];
-        });
-    </script>
 
-    <style>
-        #password-strength-meter {
-            margin-top: 10px;
-        }
 
-        #strength-bar {
-            height: 8px;
-            width: 0;
-            background-color: #ff4d4d;
-            transition: width 0.3s ease;
-        }
-
-        #password-strength-text {
-            margin-top: 5px;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
+    
   <script src="script/cursor.js"></script>
+  <script src="./script/signup.js"></script>
+  <script src="script/login.js"></script>
+  <script src="./script/nav.js"></script>
+  <script src="./script/topscrollindicator.js"></script>
 
+ 
 </body>
 
 </html>
