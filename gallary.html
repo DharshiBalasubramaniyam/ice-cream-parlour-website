@@ -1,67 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICYCO - Gallery</title>
+
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/gallery.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/cursor.css">
 
-    
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <!-- font awesome icons script -->
+    <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
 
-<!-- font awesome icons script -->
-<script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
+    <!-- link to add favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
 
-<!-- link to add favicon -->
-<link rel="icon" href="./images/logo.png" type="image/png">
-   
 </head>
-<body>
-    <style>
-        
-        body {
-            margin-top: 6rem;
-            position: relative; /* Ensures the pseudo-element covers the entire body */
-        }
-        .bgimg{
-            background: url('images/icecream-bg.png') no-repeat center center fixed; background-size: cover;
-            margin-top: -10px;
-            position:absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity:0.5;
-        }
-    </style>
-     <!-- cursor -->
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
 
-     <!-- Preloader -->
-     <div id="preloader">
+<body>
+
+    <!-- cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
         <div class="loader-container">
             <div class="flavor-circle chocolate"></div>
             <div class="flavor-circle strawberry"></div>
@@ -71,10 +54,8 @@
             <div class="flavor-circle mango"></div>
             <div class="flavor-circle pistachio"></div>
             <div class="flavor-circle raspberry"></div>
-          </div>
+        </div>
     </div>
-
-
 
     <!-- scroll progress -->
     <div class="scroll-progress"></div>
@@ -91,7 +72,6 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
-            <a href="./subscriptions.html" class="link">Subscriptions</a>
 
         </div>
         <div class="icons">
@@ -110,15 +90,15 @@
 
 
     <!-- ---- gallary section----- -->
-
-
     <div class="bgimg"></div>
 
 
     <section class="gallery-section">
 
         <h1 class="gallery-heading">IcyCo - Gallery</h1>
-        <div class="gallery-para gallery-sub-heading"><p>Indulge in the delightful world of Icyco with our wide range of flavors and fun moments!</p></div>
+        <div class="gallery-para gallery-sub-heading">
+            <p>Indulge in the delightful world of Icyco with our wide range of flavors and fun moments!</p>
+        </div>
         <div class="gallery-grid">
             <div class="gallery-item">
                 <a href="images/gallary1.jpg" data-lightbox="gallery">
@@ -132,7 +112,7 @@
             </div>
             <div class="gallery-item">
                 <a href="images/gallary3.jpg" data-lightbox="gallery">
-                    <img src="images/gallary3.jpg" class="gallery-images"  alt="Store Interior 1">
+                    <img src="images/gallary3.jpg" class="gallery-images" alt="Store Interior 1">
                 </a>
             </div>
             <div class="gallery-item">
@@ -202,123 +182,119 @@
             </div>
         </div>
     </section>
-<!-- ------footer------------ -->
+    <!-- ------footer------------ -->
 
-<section class="footer">
-    <div class="footer-row">
-        <div class="footer-col">
-            <h4>Useful links</h4>
-            <ul class="links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My Account</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="gallary.html">Gallery</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="./faq.html" class="link">FAQ</a></li>
-                <li><a href="contributor.html">Our Contributors</a></li>
-                <li><a href="blogs.html">Our Blogs</a></li>
-                <li><a href="#">Customer Agreement</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms&condition.html">Terms&Condition</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Flavors</h4>
-            <ul class="links">
-                <li><a href="#">Regular</a></li>
-                <li><a href="#">Gelato</a></li>
-                <li><a href="#">Sorbet</a></li>
-                <li><a href="#">Soft serve</a></li>
-                <li><a href="#">Frozen Yogurt</a></li>
-                <li><a href="#">Non Diary/Vegen</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Opening Hours</h4>
-            <ul class="links">
-                <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
-                <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
-            </ul>
-            <h4 style="margin-top: 15px;">Locations</h4>
-            <ul class="links">
-                <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
-                        ramankulam-
-                        Malappuram Dt</a></li>
-                <li class="address2"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> MG Road,
-                        Bangalore - Karnataka</a></li>
-                <li class="address3"><a href="" class="social"><i class="fa-solid fa-location-dot"></i>
-                        Connaught Place, New Delhi</a></li>
-                <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
-                        Street, Kolkata - West Bengal</a></li>
+    <section class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Useful links</h4>
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="gallary.html">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="./faq.html" class="link">FAQ</a></li>
+                    <li><a href="contributor.html">Our Contributors</a></li>
+                    <li><a href="blogs.html">Our Blogs</a></li>
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms&condition.html">Terms&Condition</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Flavors</h4>
+                <ul class="links">
+                    <li><a href="#">Regular</a></li>
+                    <li><a href="#">Gelato</a></li>
+                    <li><a href="#">Sorbet</a></li>
+                    <li><a href="#">Soft serve</a></li>
+                    <li><a href="#">Frozen Yogurt</a></li>
+                    <li><a href="#">Non Diary/Vegen</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Opening Hours</h4>
+                <ul class="links">
+                    <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
+                    <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
+                </ul>
+                <h4 style="margin-top: 15px;">Locations</h4>
+                <ul class="links">
+                    <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
+                            ramankulam-
+                            Malappuram Dt</a></li>
+                    <li class="address2"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> MG Road,
+                            Bangalore - Karnataka</a></li>
+                    <li class="address3"><a href="" class="social"><i class="fa-solid fa-location-dot"></i>
+                            Connaught Place, New Delhi</a></li>
+                    <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
+                            Street, Kolkata - West Bengal</a></li>
 
-                </li>
+                    </li>
 
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Need Help?</h4>
-            <ul class="links">
-                <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
-                </li>
-                <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
-                </li>
-                <li><a href="mailto:mail@1234567.com" class="social"><i class="fa-solid fa-envelope"></i>
-                        mail@1234567.com</a></li>
-            </ul>
-            <h4 style="margin-top: 15px;">Follow Us</h4>
-            <ul class="links">
-                <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i>
-                        Facebook</a></li>
-                <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i>
-                        Instagram</a></li>
-                <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
-                        Linkedin</a></li>
-                <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
-                        Twitter</a></li>
-                <li><a href="#" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Need Help?</h4>
+                <ul class="links">
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
+                    </li>
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
+                    </li>
+                    <li><a href="mailto:mail@1234567.com" class="social"><i class="fa-solid fa-envelope"></i>
+                            mail@1234567.com</a></li>
+                </ul>
+                <h4 style="margin-top: 15px;">Follow Us</h4>
+                <ul class="links">
+                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i>
+                            Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
+                            Linkedin</a></li>
+                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
+                            Twitter</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
 
-            </ul>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                </p>
+                <form action="#">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         </div>
-        <div class="footer-col">
-            <h4>Newsletter</h4>
-            <p>
-                Subscribe to our newsletter for a weekly dose
-                of news, updates, helpful tips, and
-                exclusive offers.
-            </p>
-            <form action="#">
-                <input type="email" placeholder="Your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
+    </section>
+
+
+    <!-----scroll bottom to top------->
+    <button class="scroll-button">
+        <img src="images/icecream-cone.png" alt="icecream-cone" />
+    </button>
+
+    <!-- copyright -->
+    <div class="copyright">
+        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
-</section>
 
+    </div>
 
-<!-----scroll bottom to top------->
-<button class="scroll-button">
-    <img src="images/icecream-cone.png" alt="icecream-cone" />
-</button>
+    <!-- Toaster -->
+    <div id="toast-container" class="toast-container"></div>
 
-<!-- copyright -->
-<div class="copyright">
-    &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
-</div>
-
-</div>
-
-<!-- Toaster -->
-<div id="toast-container" class="toast-container"></div>
-
-<script src="script/swiper-bundle.min.js"></script>
-<script src="script/reviews.js"></script>
-<script src="script/form.js"></script>
-<script type="module" src="script/products.js"></script>
-<script type="module" src="script/nav.js"></script>
-<script type="module" src="script/cart.js"></script>
-<script src="script/FAQ.js"></script>
-<script src="script/topscrollindicator.js"></script>
-<script src="script/popup.js"></script>
-<script src="script/cursor.js"></script>
+    <script type="module" src="script/products.js"></script>
+    <script type="module" src="script/nav.js"></script>
+    <script type="module" src="script/cart.js"></script>
+    <script src="script/topscrollindicator.js"></script>
+    <script src="script/cursor.js"></script>
 </body>
+
 </html>
