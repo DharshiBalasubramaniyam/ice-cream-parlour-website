@@ -1,38 +1,3 @@
-.flavors-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin: 65px 0;
-}
-
-.flavor-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    text-align: center;
-    padding: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Transition for smooth effect */
-}
-
-.flavor-item:hover {
-    transform: scale(1.1); 
-}
-
-.flavor-item img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 10px solid rgba(211, 211, 211, 0.4);;     /* Border around the image */
-}
-
-.flavor-item h3 {
-    font-size: 1.4em;
-    letter-spacing: 1px;
-    margin-top: 12px;
-}
 
 
 
