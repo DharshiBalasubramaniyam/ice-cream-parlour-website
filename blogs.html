@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ICYCO - BLOGS</title>
+
   <!-- custom style sheets -->
   <link rel="stylesheet" href="styles/blogs.css">
   <link rel="stylesheet" href="styles/styles.css">
@@ -19,27 +20,29 @@
 </head>
 
 <body>
-   <!-- cursor -->
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
+
+  <!-- cursor -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
   <!-- Preloader -->
   <div id="preloader">
     <div class="loader-container">
@@ -451,66 +454,6 @@
   <script src="./script/cart.js"></script>
   <script src="./script/topscrollindicator.js"></script>
   <script type="module" src="./script/products.js"></script>
-  <script>
-    // Get the button
-    var mybutton = document.getElementById("goToTopBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () {
-      scrollFunction();
-    };
-
-    function scrollFunction() {
-      if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-      ) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function goToTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-  <script>
-    window.addEventListener("scroll", function () {
-      const winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      const height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.getElementById("progress-bar").style.width = scrolled + "%";
-    });
-    // Dark mode (remains unchanged)
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleCheckbox = document.getElementById("themeToggle");
-      const body = document.body;
-
-      if (localStorage.getItem("dark-mode") === "enabled") {
-        body.classList.add("dark-mode");
-        toggleCheckbox.checked = true;
-      } else {
-        toggleCheckbox.checked = false;
-      }
-
-      toggleCheckbox.addEventListener("change", () => {
-        if (toggleCheckbox.checked) {
-          body.classList.add("dark-mode");
-          localStorage.setItem("dark-mode", "enabled");
-        } else {
-          body.classList.remove("dark-mode");
-          localStorage.setItem("dark-mode", "disabled");
-        }
-      });
-    });
-
-  </script>
   <script src="script/cursor.js"></script>
 
 </body>
