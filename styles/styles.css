@@ -621,7 +621,7 @@ h3 {
 .scroll-button {
     position: fixed;
     bottom: 4%;
-    right: 2%;
+    left: 2%;
     outline: none;
     border: none;
     border-radius: 100%;
