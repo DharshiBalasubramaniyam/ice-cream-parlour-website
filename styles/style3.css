@@ -7,9 +7,11 @@ body {
 
 /* Styling for Our Flavors section */
 #our-flavors {
+    /* border: 1px solid black; */
     text-align: center;
     padding: 50px 20px;
     position: relative;
+    margin-top:-115px;
     
 }
 
