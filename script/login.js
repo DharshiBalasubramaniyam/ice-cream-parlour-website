@@ -18,11 +18,25 @@ toggle_password.addEventListener("click", function(){
 const form = document.getElementById('login-form');
 const email = document.getElementById('email');
 
+const button=document.querySelector('.submit-button')
 
-const emailError = document.getElementById('email-error');
-const passwordError = document.getElementById('password-error');
 
-form.addEventListener('submit', function (e) {
+const emailError = document.createElement('p');
+const passwordError = document.createElement('p');
+
+
+// Insert error messages after respective fields
+email.parentElement.appendChild(emailError);
+password.parentElement.appendChild(passwordError);
+
+
+// Add styles for error messages
+emailError.style.color = 'red';
+passwordError.style.color = 'red';
+
+
+
+button.addEventListener('click', function (e) {
 // Prevent the form from submitting
 e.preventDefault();
 
