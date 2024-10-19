@@ -8,21 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     displayFlavorFilter();
     displayProducts(products_list);
     displayCartItems();
-    // handleQuantityButtonsInProductCard(); 
     handleQuantityButtonsInCart();        
 });
-
-function getStarRating(rating) {
-    let stars = '';
-    for (let i = 1; i <= 5; i++) {
-        if (i <= rating) {
-            stars += `<span class="star filled">★</span>`;
-        } else {
-            stars += `<span class="star">★</span>`;
-        }
-    }
-    return stars;
-}
 
 // display products
 function displayProducts(products) {
@@ -42,6 +29,7 @@ function displayProducts(products) {
                     </div>
                             <div class="name-price">
                                 <div class="name">${product.name}</div>
+                                
                                 <div class="price">$${product.price}</div>
                             </div>
                             <div class="description">${product.description}</div>
@@ -319,18 +307,13 @@ function handleQuantityButtonsInCart() {
 // Scroll animation
 
 document.addEventListener("DOMContentLoaded", () => {
-    displayFlavorFilter();
-    displayProducts(products_list);
-    displayCartItems();
     
-    const sr = ScrollReveal();
-
     // Apply ScrollReveal to products
     const productBoxes = document.querySelectorAll(".products-box .box");
     productBoxes.forEach(box => {
         sr.reveal(box, {
             origin: 'left',
-            distance: '150px',
+            distance: '80px',
             duration: 600,
             easing: 'ease-in',
             interval: 400,
@@ -338,18 +321,58 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Apply ScrollReveal to cart items
-    const cartListItems = document.querySelectorAll(".cart-list-items li");
-    cartListItems.forEach(item => {
-        sr.reveal(item, {
-            origin: 'left',
-            distance: '100px',
-            duration: 800,
-            easing: 'ease-in-out',
-            interval: 400,
-            reset:true
+});
+
+// Create search bar and search button dynamically
+function createSearchBar() {
+    const searchBarContainer = document.querySelector(".search-container");
+
+    // Check if the search bar already exists
+    if (document.getElementById("search-bar")) return;
+
+    // Create the search bar only if it doesn't already exist
+    const searchBar = document.createElement("input");
+    searchBar.setAttribute("type", "text");
+    searchBar.setAttribute("id", "search-bar");
+    searchBar.setAttribute("placeholder", "Search for flavors...");
+    searchBarContainer.appendChild(searchBar);
+
+    // Check if the search button already exists
+    if (document.getElementById("search-btn")) return;
+
+    // Create the search button only if it doesn't already exist
+    const searchButton = document.createElement("button");
+    searchButton.setAttribute("id", "search-btn");
+    searchButton.innerText = "Search";
+    searchBarContainer.appendChild(searchButton);
+
+    // Attach event listener for the search button
+    searchButton.addEventListener("click", () => {
+        const query = searchBar.value.toLowerCase();
+        const filteredProducts = products_list.filter(product => {
+            const flavorName = flavor_list.find(f => f.id === product.flavor_id)?.name.toLowerCase();
+            return product.name.toLowerCase().includes(query) || flavorName.includes(query);
         });
+        displayProducts(filteredProducts);
     });
 
-    handleQuantityButtonsInCart();
+    // Handle input event for live search
+    handleSearchInput();
+}
+
+// Handle input event for search functionality
+function handleSearchInput() {
+    const searchInput = document.getElementById("search-bar");
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        const filteredProducts = products_list.filter(product => {
+            const flavorName = flavor_list.find(f => f.id === product.flavor_id)?.name.toLowerCase();
+            return product.name.toLowerCase().includes(query) || flavorName.includes(query);
+        });
+        displayProducts(filteredProducts);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    createSearchBar(); // Create the search bar and button on page load
 });

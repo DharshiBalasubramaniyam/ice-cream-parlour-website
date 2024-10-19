@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>ICYCO - HOME</title>
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
-    <link rel="stylesheet" href="styles/topscrollindicator.css">
-    <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="styles/cursor.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -22,13 +23,43 @@
 </head>
 
 <body>
+    <!-- cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
     <!-- Preloader -->
     <div id="preloader">
-        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-        <p class="loading-text">Loading...</p>
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+        </div>
     </div>
 
-    <!-- scroll progress -->
+    <!-- scroll progress -->`
     <div class="scroll-progress"></div>
 
     <!-- nav bar -->
@@ -39,7 +70,6 @@
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link active">home</a>
-            <a href="./faq.html" class="link">FAQ</a>
             <a href="./products.html" class="link">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
@@ -54,7 +84,7 @@
                         class="no-of-cart-items">0</span></span>
             </div>
             <div class="icon">
-                <i class="fa fa-bars menu" aria-hidden="true"></i>
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
             </div>
         </div>
     </div>
@@ -77,7 +107,6 @@
         <div class="empty-cart active">
             <p>No items in the cart!</p>
         </div>
-
     </div>
 
     <!-- Hero -->
@@ -90,8 +119,39 @@
                 serve you the sweetest moments, wherever you are.</h4>
             <a href="./products.html"><button style="margin-top: 15px;">Order Now</button></a>
         </div>
-        <div class="image">
-            <img src="images/Hero1.png" alt="Hero-image">
+        <div class="grid">
+            <div class="grid-box"></div>
+            <div class="grid-box"></div>
+            <div class="grid-box"></div>
+            <div class="grid-box"></div>
+        </div>
+    </section>
+
+    <!-- Our Flavors -->
+    <section id="our-flavors">
+        <h1>Find Your <span>Taste</span></h1>
+
+        <div class="flavors-container bottomani">
+            <div class="flavor-item">
+                <img src="images/regular.jpg" alt="Regular Ice Cream" />
+                <h3>Regular</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/gelato.jpg" alt="Gelato" />
+                <h3>Gelato</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/sorbet.jpg" alt="Sorbet" />
+                <h3>Sorbet</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/yogurt.jpg" alt="Yogurt" />
+                <h3>Yogurt</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/vegan.jpg" alt="Non Dairy/Vegan" />
+                <h3>Non Dairy/Vegan</h3>
+            </div>
         </div>
     </section>
 
@@ -99,8 +159,8 @@
     <section class="services" id="services">
         <h1>What <span>we do?</span></h1>
         <div class="services-card-wrapper">
-            <div class="service-card">
-                <div>
+            <div class="service-card rightani">
+                <div class="service-card1">
                     <h2>Dine-In</h2>
                     <h3>Chill With Us – Indulge In-Store</h3>
                     <img src="./images/dine in.png" height="120px" width="120px">
@@ -111,8 +171,8 @@
                             aria-hidden="true"></i></button>
                 </div>
             </div>
-            <div class="service-card">
-                <div>
+            <div class="service-card bottomani">
+                <div class="service-card1">
                     <h2>Island-Wide Delivery</h2>
                     <h3>Ice Cream On the Go – Delivered to Your Door</h3>
                     <img src="./images/delivary.png" height="120px" width="120px">
@@ -123,8 +183,8 @@
                                 aria-hidden="true"></i></button></a>
                 </div>
             </div>
-            <div class="service-card">
-                <div>
+            <div class="service-card leftani">
+                <div class="service-card1">
                     <h2>Catering</h2>
                     <h3>Sweeten Your Event – Ice Cream Catering</h3>
                     <img src="./images/event.png" height="120px" width="120px">
@@ -137,7 +197,6 @@
             </div>
 
         </div>
-
     </section>
 
     <!-- Pop-up for email registration -->
@@ -151,207 +210,202 @@
                 <h2>Get a sweet deal before it melts away..</h2>
                 <p>Get 30% off your first order when you Sign up.</p>
                 <form id="emailForm">
-                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <input type="email" id="popup-email" placeholder="Enter your email" required>
                     <button type="submit" class="signup-btn">Continue</button>
                 </form>
                 <a href="#" class="no-thanks close-btn">No thanks</a>
-                <p class="terms">By clicking continue, you agree to our <a href="#">Terms of Service</a> and <a
-                        href="#">Privacy Policy</a>.</p>
+                <p class="terms">By clicking continue, you agree to our <a href="terms&condition.html">Terms of
+                        Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
             </div>
         </div>
     </div>
+
     <!-- About -->
     <section class="about" id="about">
-        <!-- <h1><span>About</span> Us</h1> -->
         <div class="box-container about-box">
-            <div class="text">
-                <h2>Get The Cool Down With Our Creamy Creations!</h2>
-                <p>We at IcyCo, We're more than just a company – we're a community driven by a shared vision and
-                    commitment to excellence. We're excited to continue and expand our business all while staying true
-                    to our roots and the values that define us. Come visit us and let’s create sweet memories together!
-                </p>
-                <!-- <ul>
-                    <li>
-                        <div class="feature-icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
-                        <span><span>Range of flavours</span> from our parlour for <span>Dine-in</span> and
-                            <span>Take-out</span> options</span>
-                    </li>
-                    <li>
-                        <div class="feature-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
-                        <span>Manufactured under <span>strict hygiene</span> and <span>food safety
-                                conditions</span></span>
-                    </li>
-                    <li>
-                        <div class="feature-icon"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>
-                        <span><span>Best quality ingredients</span> from globally and locally recognized
-                            suppliers</span>
-                    </li>
-                    <li>
-                        <div class="feature-icon"><i class="fa fa-smile-o" aria-hidden="true"></i></div>
-                        <span>A welcoming space for families, offering a fun and <span>friendly atmosphere</span> for
-                            all ages.</span>
-                    </li>
-                </ul> -->
+            <h2 class="rightani">Get The Cool Down With Our Creamy Creations!</h2>
+            <p class="leftani">We at IcyCo, We're more than just a company – we're a community driven by a shared vision
+                and
+                commitment to excellence. We're excited to continue and expand our business all while staying true
+                to our roots and the values that define us. Come visit us and let’s create sweet memories together!
+            </p>
+        </div>
+    </section>
+
+    <!-- WHY icyCO ? -->
+    <section class="why-icyco">
+        <h1>Why IcyCo?</h1>
+        <div class="feature-container">
+            <div class="inner">
+                <div class="feature-box rightani">
+                    <div class="icon-circle">
+                        <img src="images/flavour-icon.png" alt="Flavors Icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Range of Flavors</h3>
+                        <p>From classic vanilla to exotic matcha, Icyco offers a wide range of flavors to satisfy every
+                            palate.</p>
+                    </div>
+                </div>
+                <div class="feature-box leftani">
+                    <div class="icon-circle ">
+                        <img src="images/hygiene-icon.png" alt="Hygiene Icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Hygiene & Food Safety</h3>
+                        <p>We maintain the highest hygiene standards, ensuring every scoop is safe and delicious.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="inner">
+                <div class="feature-box rightani">
+                    <div class="icon-circle">
+                        <img src="images/quality-icon.png" alt="Quality Ingredients Icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Best Quality Ingredients</h3>
+                        <p>Only the finest ingredients make it into our ice cream, for a rich and unforgettable
+                            experience.</p>
+                    </div>
+                </div>
+                <div class="feature-box leftani">
+                    <div class="icon-circle">
+                        <img src="images/friendly-icon.png" alt="Fun Atmosphere Icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Fun & Friendly Atmosphere</h3>
+                        <p>Our parlors are designed to be fun and inviting, making every visit a sweet memory.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- reviews -->
-    <section class="reviews" id="reviews">
-        <h1>Top <span>Reviews</span></h1>
-
-        <div class="swiper reviews-box">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer1.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
+    <section class="reviewSection" id="reviewsSection">
+        <h1>Top Reviews</h1>
+        <div class="reviews">
+            <div class="review-box" id="box_1">
+                <h1>Top Reviews from our verified customers</h1>
+            </div>
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer1.jpg" alt="Reviewer Tom Stepher">
+                    <div class=" right">
+                        <div class="name"><span>Tom Stepher</span> <br> <small>Verified Customer</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
                         </div>
-                    </div>
-
-                    <div class="text">“IcyCo’s ice cream is like a symphony for your taste buds. The salted caramel
-                        swirl? Divine!”</div>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer4.webp" alt="">
-                        <div class="right">
-                            <div class="name"><span>Oliviya Lee</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text">“Visited here on a hot day!
-                        The mint chocolate took me straight to heavens.”</div>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer2.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text">“The pistachio gelato here is nutty nirvana. Close your eyes and savor the
-                        green goodness.”</div>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer5.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Mia Patal</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text">“Shared a double scoop with my sweetheart.
-                        Loved the strawberry and dark chocolate.”</div>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer3.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Tom Stepher</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text">"From the name itself theses Ice Creams here are best in quality and taste of
-                        course."</div>
-                </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer6.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Sopia Devis</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text">"When it comes to taste, smell and flavor then strawberry is the best here".
                     </div>
                 </div>
-                <div class="swiper-slide box">
-                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer7.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Emily Anderson</span> <br> <small>Verfied Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text">"Very tasty ice-creams at such reasonable price!! And no compromise in
-                        quality"</div>
+                <div class="text">“IcyCo’s ice cream is like a symphony for your taste buds. The salted caramel
+                    swirl? Divine!”
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer4.webp" alt="">
+                    <div class="right">
+                        <div class="name"><span>Oliviya Lee</span> <br> <small>Verified Customer</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text">“Visited here on a hot day!
+                    The mint chocolate took me straight to heavens.”</div>
+            </div>
+
+            <div class="review-box bottomani"><i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer2.jpg" alt="">
+                    <div class="right">
+                        <div class="name"><span>Andrew johnson</span> <br> <small>Verified Customer</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text">“The pistachio gelato here is nutty nirvana. Close your eyes and savor the
+                    green goodness.”</div>
+            </div>
+
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer5.jpg" alt="">
+                    <div class="right">
+                        <div class="name"><span>Mia Patal</span> <br> <small>Verified Customer</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">“Shared a double scoop with my sweetheart.
+                    Loved the strawberry and dark chocolate.”</div>
+            </div>
+
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer3.jpg" alt="">
+                    <div class="right">
+                        <div class="name"><span>Nicolas Cage</span> <br> <small>Verified Customer</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text">"From the name itself theses Ice Creams here are best in quality and taste of
+                    course."
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- contact -->
     <section class="contact" id="contact">
         <h1><span>Contact</span> Us</h1>
-        <form action="#" novalidate class="box-container" id="contact-form">
+        <form action="#" novalidate class="box-container bottomani" id="contact-form">
             <div class="row">
                 <div class="input-box">
                     <label for="fname">Your First Name</label><br>
-                    <input type="text" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <input class="dark_bg_txt" type="text" id="fname"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
                 <div class="input-box">
                     <label for="lname">Your Last Name</label><br>
-                    <input type="text" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <input class="dark_bg_txt" type="text" id="lname"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
             </div>
@@ -359,19 +413,21 @@
             <div class="row">
                 <div class="input-box">
                     <label for="email">Your Email</label><br>
-                    <input type="email" id="email" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <input class="dark_bg_txt" type="email" id="email"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
                 <div class="input-box">
                     <label for="phone">Your Contact Number</label><br>
-                    <input type="tel" id="phone" oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <input class="dark_bg_txt" type="tel" id="phone"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
             </div>
             <div class="row">
                 <div class="input-box">
                     <label for="message">Your Message</label><br>
-                    <textarea name="" id="message" cols="30" rows="10"
+                    <textarea class="dark_bg_txt" name="" id="message" cols="30" rows="10"
                         oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
@@ -382,62 +438,6 @@
         </form>
     </section>
 
-    <!-- FAQs 
-    <section class="FAQs" id="FAQs">
-        <h1><span>FAQs</span></h1>
-        <h2>Find Out More About The Ice Cream Shop</h2>
-        <br /><br />
-        <h3>We’ve got cones of wisdom for your burning questions!</h3>
-        <br />
-        <div class="FAQ">
-            <button class="FAQ-questions">WILL MY ICE CREAM MELT BEFORE IT ARRIVES?<i
-                    class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">Don’t worry, your ice cream is on a chill mission! We pack it to stay cool, so
-                it’ll arrive frozen and ready to enjoy.</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">I'M UNHAPPY WITH THE SERVICE, WHO SHOULD I TALK TO?<i
-                    class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">We’re sorry your experience wasn’t as sweet as our ice cream! Please reach out
-                to our support team, and we’ll make things right quicker than you can say ‘sundae.</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">WHAT ARE YOUR DELIVERY HOURS?<i class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">We deliver ice cream every day from 10am to 11 pm. Availability may vary by
-                location.</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">IS THERE A MINIMUM ORDER AMOUNT?<i
-                    class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">Yes, the minimum order amount is 100 to ensure smooth delivery.</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">CAN I CANCEL OR MODIFY MY ORDER AFTER IT’S PLACED?<i
-                    class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">Once your order is placed, changes or cancellations may not be possible depending
-                on how far along it is in the process. Check with the delivery platform for their policies.</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">DO YOU OFFER ANY DISCOUNTS OR PROMOTIONS?<i
-                    class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">Yes, we occasionally offer discounts and promotions. Keep an eye on our website or
-                delivery app for the latest deals!</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">CAN I CUSTOMIZE MY ICE CREAM ORDER?<i
-                    class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">At the moment, customization options like adding toppings are not available for
-                delivery orders. Stay tuned for updates!</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">DO YOU HAVE VEGAN OR DAIRY-FREE OPTIONS?<i
-                    class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">Yes, we offer a variety of vegan and dairy-free ice cream options. Availability may
-                vary by location.</div>
-        </div>
-    </section> -->
-
-
     <!-- footer -->
     <section class="footer">
         <div class="footer-row">
@@ -445,16 +445,17 @@
                 <h4>Useful links</h4>
                 <ul class="links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="gallary.html">Gallery</a></li>
+                    <li><a href="About.html">About Us</a></li>
                     <li><a href="./faq.html" class="link">FAQ</a></li>
                     <li><a href="contributor.html">Our Contributors</a></li>
-                    <li><a href="#">Customer Agreement</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="blogs.html">Our Blogs</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms&condition.html">Terms&Condition</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
+            <!-- <div class="footer-col">
                 <h4>Flavors</h4>
                 <ul class="links">
                     <li><a href="#">Regular</a></li>
@@ -462,9 +463,9 @@
                     <li><a href="#">Sorbet</a></li>
                     <li><a href="#">Soft serve</a></li>
                     <li><a href="#">Frozen Yogurt</a></li>
-                    <li><a href="#">Non Diary/Vegen</a></li>
+                    <li><a href="#">Non-Dairy/Vegan</a></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="footer-col">
                 <h4>Opening Hours</h4>
                 <ul class="links">
@@ -507,7 +508,8 @@
                             Linkedin</a></li>
                     <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
                             Twitter</a></li>
-                    <li><a href="#" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
+                    <li><a href="#1" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
+                    <!--                     It's href is #1 for css purpose to get it's hover green  -->
 
                 </ul>
             </div>
@@ -526,7 +528,6 @@
         </div>
     </section>
 
-
     <!-----scroll bottom to top------->
     <button class="scroll-button">
         <img src="images/icecream-cone.png" alt="icecream-cone" />
@@ -534,23 +535,24 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; 2024 by <span>DharshiB</span> | All Rights Deserved
-    </div>
-
+        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
 
     <!-- Toaster -->
     <div id="toast-container" class="toast-container"></div>
 
-    <script src="script/swiper-bundle.min.js"></script>
-    <script src="script/reviews.js"></script>
-    <script src="script/form.js"></script>
+    <!-- script files -->
+    <script src="script/contact.js"></script>
     <script type="module" src="script/products.js"></script>
     <script type="module" src="script/nav.js"></script>
     <script type="module" src="script/cart.js"></script>
     <script src="script/FAQ.js"></script>
     <script src="script/topscrollindicator.js"></script>
     <script src="script/popup.js"></script>
+    <script src="script/flavor_section.js"></script>
+    <script src="script/cursor.js"></script>
+    <script src="script/script.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICYCO - SUBSCRIPTIONS</title>
+
+    <!-- custom style sheets -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mediaQueries.css">
+    <link rel="stylesheet" href="styles/subscriptions.css">
+    <link rel="stylesheet" href="styles/cursor.css">
+    
+    <!-- link to add favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <!-- font awesome icons script -->
+    <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
+    <style>
+       /* Container for each cart item */
+
+
+    </style>
+    
+</head>
+
+<body>
+    <!-- cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+          </div>
+    </div>
+
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
+    
+    <!-- nav bar -->
+    <div class="nav-bar">
+        <a href="index.html">
+        <div class="logo">
+            <img src="./images/logo.png" alt="icyco-logo" height="25px" width="25px">
+            IcyCo</a>
+        </div>
+        <div class="nav-links">
+            <a href="./index.html" class="link">home</a>
+            <a href="./products.html" class="link">products</a>
+            <a href="./delivery.html" class="link">Delivery</a>
+            <a href="./dine-in.html" class="link">Dine In</a>
+            <a href="./catering.html" class="link">Catering</a>
+            <a href="./subscriptions.html" class="link active">Subscriptions</a>
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+            <div class="icon">
+                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                        class="no-of-cart-items">0</span></span>
+            </div>
+            <div class="icon">
+                <i class="fa fa-bars menu" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subscription Section -->
+    <section id="subscription-plans">
+        <h1 style="margin-top: 100px; padding: 0 40px;">ICYCO Subscription Plans</h1>
+        <p style="font-size: 20px; margin: 33px;">Exclusive Treats for True Ice Cream Lovers! <br> "Become a part of our ice cream community and gain access to limited-edition flavors, special discounts,<br> and first dibs on new arrivals. Don’t miss out on exclusive, mouth-watering flavors delivered fresh every month! <br>Choose the perfect plan for your cravings!"</p>
+
+        <div class="plans-container">
+            <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ice Cream" class="ice-cream-img" />
+            <!-- Basic Plan -->
+            <div class="plan">
+                <h3>Basic Plan</h3>
+                <p>$6 / Month</p>
+                <ul>
+                    <li>2 Monthly Ice Cream Deliveries</li>
+                    <li>Exclusive Deals on New Flavors</li>
+                    <li>Free Shipping</li>
+                </ul>
+                <button class="btn-style" onclick="subscribe('Basic')">Subscribe Now</button>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="plan">
+                <h3>Premium Plan</h3>
+                <p>$10 / Month</p>
+                <ul>
+                    <li>4 Monthly Ice Cream Deliveries</li>
+                    <li>Exclusive Access to Limited Editions</li>
+                    <li>Free Shipping & Early Access to New Flavors</li>
+                </ul>
+                <button class="btn-style" onclick="subscribe('Premium')">Subscribe Now</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1496533141630-d6731a403292?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ice Cream" class="ice-cream-img" />
+        </div>
+    </section>
+    <!-- Cart -->
+    <div class="cart">
+        <i class="fa fa-times close-cart" aria-hidden="true"></i>
+        <h1>Your Cart</h1>
+
+        <div class="no-empty-cart">
+            <ul class="cart-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+        </div>
+
+        <div class="empty-cart active">
+            <p>No items in the cart!</p>
+        </div>
+
+    </div>
+    
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Useful links</h4>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="gallary.html">Gallery</a></li>
+
+                    <li><a href="contributor.html">Our Contributors</a></li>
+                    <li><a href="blogs.html">Our Blogs</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms&condition.html">Terms&Condition</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Opening Hours</h4>
+                <ul class="links">
+                    <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
+                    <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
+                </ul>
+                <h4 style="margin-top: 15px;">Locations</h4>
+                <ul class="links">
+                    <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
+                            ramankulam-
+                            Malappuram Dt</a></li>
+                    <li class="address2"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> MG Road,
+                            Bangalore - Karnataka</a></li>
+                    <li class="address3"><a href="" class="social"><i class="fa-solid fa-location-dot"></i>
+                            Connaught Place, New Delhi</a></li>
+                    <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
+                            Street, Kolkata - West Bengal</a></li>
+
+                    </li>
+
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Need Help?</h4>
+                <ul class="links">
+                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+                    <li><a href="" class="social"><i class="fa-solid fa-envelope"></i> mail@1234567.com</a></li>
+                </ul>
+                <h4 style="margin-top: 15px;">Follow Us</h4>
+                <ul class="links">
+                    <li><a href="#" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                </p>
+                <form action="#">
+                    <input type="text" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-----scroll bottom to top------->
+    <button class="scroll-button">
+        <img src="images/icecream-cone.png" alt="icecream-cone" />
+    </button>
+
+    <!-- copyright -->
+    <div class="copyright">
+        &copy;  <span id="year"></span> by <span>DharshiB</span> | All Rights Deserved
+    </div>
+
+    <script src="./script/nav.js"></script>
+    <script src="./script/cart.js"></script>
+    <script src="./script/topscrollindicator.js"></script>
+    <script type="module" src="./script/products.js"></script>
+    <script src="script/cursor.js"></script>
+
+</body>
+
+</html>
+
