@@ -38,7 +38,7 @@ function controlLinks() {
     });
 }
 
-document.getElementById('menu-icon').addEventListener('click', function () {
+document.querySelector('.menu').addEventListener('click', function () {
     this.classList.toggle('fa-bars');
     this.classList.toggle('fa-times');
 });
