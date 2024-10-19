@@ -107,6 +107,9 @@ ul {
     padding-left: 20px;
     font-size: 18px;
 }
+.privacy-heading{
+    margin-top: 10px;
+}
 /* Preloader Styles */
 #preloader {
     position: fixed;
