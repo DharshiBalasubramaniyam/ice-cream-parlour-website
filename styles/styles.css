@@ -387,6 +387,111 @@ h3 {
     display: inline;
 }
 
+/* wishlist style */
+.wishlist {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 350px;
+    height: 100vh;
+    background-color: var(--body-color);
+    border-left: 2px solid grey;
+    padding: 10px;
+    z-index: 1000;
+    right: -100%;
+    transition: right 0.3s ease;
+}
+
+.wishlist.active {
+    right: 0;
+}
+
+.wishlist .no-empty-wishlist {
+    display: none;
+}
+
+.wishlist .no-empty-wishlist.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.wishlist ul li {
+    padding: 7px;
+    margin: 10px 0;
+    border: 2px solid var(--ternary-color);
+}
+
+.wishlist ul li img {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.wishlist ul li .text {
+    position: relative;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.wishlist ul li .text .price {
+    font-weight: 600;
+}
+
+.wishlist h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.wishlist .total {
+    font-weight: 600;
+    padding: 10px;
+}
+
+.wishlist button {
+    margin: 10px auto;
+    width: 100%;
+}
+
+.wishlist .close-wishlist,
+.remove-wishlist-item-btn {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: var(--main-color);
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.wishlist .close-wishlist:hover,
+.remove-wishlist-item-btn:hover {
+    color: var(--ternary-color);
+}
+
+.wishlist ul li .text .remove-wishlist-item-btn {
+    font-size: 15px;
+    top: 0;
+    right: 0;
+}
+
+.wishlist .empty-wishlist {
+    display: none;
+}
+
+.wishlist .empty-wishlist p {
+    text-align: center;
+    padding-top: 25%;
+
+}
+
+.wishlist .empty-wishlist.active {
+    display: inline;
+}
+
+
 /* -------------home styles------------------- */
 .home {
     min-height: 95dvh;
@@ -840,6 +945,18 @@ h3 {
     text-align: center;
     transition: 0.3s;
 }
+.search-container{
+    margin-top: 20px;
+    display: flex;
+    gap: 1rem;
+}
+.products-searchbar{
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    width: 20%;
+    font-size: 14px;
+    border: 1px solid var(--main-color);
+}
 
 
 
@@ -871,6 +988,53 @@ h3 {
 .products-box button {
     width: 100%;
 }
+/* Align quantity and wishlist button in the same row */
+.qty-wishlist-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+/* Styling the quantity buttons */
+.qty {
+    display: inline-flex;
+    align-items: center;
+}
+
+.qty span {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Circular wishlist button */
+.wishlist-btn {
+    background-color: #fff;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;  /* Makes the button circular */
+    width: 30px;         /* Adjust the size */
+    height: auto;        /* Adjust the size */
+    color: var(--main-color);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;          /* Add padding for spacing */
+}
+
+/* Wishlist button hover effect */
+.wishlist-btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.wishlist-btn i {
+    font-size: 16px;  /* Adjust heart icon size */
+}
+
+
 
 /* -------------contact section styles------------------- */
 .contact form {

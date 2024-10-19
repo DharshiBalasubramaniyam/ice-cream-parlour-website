@@ -3,6 +3,8 @@ import flavor_list from "./flavor_database.js";
 
 const LOCAL_STORAGE_CART_KEY = "icyco_cart";
 let cartItems = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CART_KEY)) || [];
+let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+
 
 document.addEventListener("DOMContentLoaded", () => {
     displayFlavorFilter();
@@ -14,55 +16,87 @@ document.addEventListener("DOMContentLoaded", () => {
 // display products
 function displayProducts(products) {
     let productsSection = document.querySelector(".products-box");
-    productsSection ? productsSection.innerHTML = "" : null
+    productsSection ? productsSection.innerHTML = "" : null;
 
     products.forEach(product => {
         let box = document.createElement("div");
         let flavorName = flavor_list.find(f => f.id == product.flavor_id)?.name;
 
-        box.setAttribute("class", "box"); box.setAttribute("id", product.id);
+        box.setAttribute("class", "box");
+        box.setAttribute("id", product.id);
 
-        box.innerHTML = `<div class="image-wrapper">
-                        <div class="off">-${product.off}%</div>
-                        <img src="${product.image}" alt="">
-                        <div class="cat-label">${flavorName}</div>
-                    </div>
-                            <div class="name-price">
-                                <div class="name">${product.name}</div>
-                                
-                                <div class="price">$${product.price}</div>
-                            </div>
-                            <div class="description">${product.description}</div>
-                            <div class="qty">
-                                <span class="decrease">-</span>
-                                <span class="pcs">1</span>
-                                <span class="increase">+</span>
-                            </div>`;
+        box.innerHTML = `
+            <div class="image-wrapper">
+                <div class="off">-${product.off}%</div>
+                <img src="${product.image}" alt="">
+                <div class="cat-label">${flavorName}</div>
+            </div>
+            <div class="name-price">
+                <div class="name">${product.name}</div>
+                <div class="price">$${product.price}</div>
+            </div>
+            <div class="description">${product.description}</div>
+            <!-- Row for quantity and wishlist -->
+            <div class="qty-wishlist-row">
+                <div class="qty">
+                    <span class="decrease">-</span>
+                    <span class="pcs">1</span>
+                    <span class="increase">+</span>
+                </div>
+                <button class="wishlist-btn">
+                    <i class="fa fa-heart ${isItemInWishlist(product.id) ? 'wishlist-active' : ''}"></i>
+                </button>
+            </div>`;
 
-
-
-
+        // Add "Add to Cart" button
         let addToCartButton = document.createElement("button");
-        // if website got reloded and item already exist in cart
         let existingCartItem = cartItems.find(item => item?.itemId == product.id);
-        if(existingCartItem){
+        if (existingCartItem) {
             addToCartButton.textContent = "Already in the cart - Add again?";
-        }
-        else{
-        addToCartButton.textContent = "Add to Cart";
+        } else {
+            addToCartButton.textContent = "Add to Cart";
         }
         addToCartButton.addEventListener("click", (e) => {
-            addToCart(e)
-        })
+            addToCart(e);
+        });
 
-        box.appendChild(addToCartButton)
+        // Append Add to Cart button to the box
+        box.appendChild(addToCartButton);
 
+        // Add the box to the products section
         productsSection?.appendChild(box);
-    });
-    handleQuantityButtonsInProductCard()
-    // handleQuantityButtonsInCart()
 
+        // Add event listener for wishlist functionality
+        let wishlistIcon = box.querySelector(".wishlist-btn i");
+        wishlistIcon.addEventListener("click", (e) => {
+            addToWishlist(e);
+            toggleWishlist(product.id);
+            wishlistIcon.classList.toggle('wishlist-active'); // Toggle wishlist-active class for visual change
+        });
+    });
+
+    handleQuantityButtonsInProductCard();
 }
+
+
+// Example helper function to check if item is in the wishlist
+function isItemInWishlist(productId) {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    return wishlist.some(item => item === productId);
+}
+
+// Function to toggle wishlist status
+function toggleWishlist(productId) {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+    if (wishlist.includes(productId)) {
+        wishlist = wishlist.filter(item => item !== productId); // Remove item from wishlist
+    } else {
+        wishlist.push(productId); // Add item to wishlist
+    }
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+}
+
 
 // display flavors filter
 function displayFlavorFilter() {
@@ -304,6 +338,135 @@ function handleQuantityButtonsInCart() {
     });
 }
 
+// Add items to wishlist
+
+function addToWishlist(e) {
+    let wishlistItemId = e.target.closest(".box").getAttribute("id");
+    let pcs = parseInt(e.target.closest(".box").querySelector(".pcs").textContent, 10);
+
+    // Ensure pcs is a valid number
+    if (isNaN(pcs) || pcs <= 0) {
+        showToast("Please select the number of cups you want!");
+        return;
+    }
+
+    let existingWishlistItem = wishlistItems.find(item => item.itemId == wishlistItemId);
+    let item = products_list.find(item => item.id == wishlistItemId);
+    let amount = item.price * pcs;
+
+    if (existingWishlistItem) {
+        existingWishlistItem.pcs += pcs; // Increment by the correct number of pcs
+        existingWishlistItem.amount = existingWishlistItem.pcs * item.price;
+        showToast(`${pcs} more ${item.name} ice cream/s successfully added to the wishlist!`);
+    } else {
+        wishlistItems.push({
+            itemId: wishlistItemId,
+            pcs: pcs,  // Ensure pcs is a number
+            amount: amount
+        });
+        showToast(`${pcs} ${item.name} ice cream/s successfully added to the wishlist!`);
+    }
+
+    localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+    displayWishlistItems();
+}
+
+
+
+
+function handleRemoveButtonInWishlist() {
+    let removeBtns = document.querySelectorAll(".remove-wishlist-item-btn");
+    removeBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            let itemId = btn.closest('li').getAttribute("id");
+            wishlistItems = wishlistItems.filter(item => item.itemId !== itemId);
+
+            localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+            displayWishlistItems(); // Update the wishlist display
+
+            // Reset button text to "Add to Wishlist" if necessary
+            const productBox = document.querySelector(`.box[id='${itemId}']`);
+            if (productBox) {
+                const addToWishlistButton = productBox.querySelector(".wishlist-btn");
+                addToWishlistButton.innerHTML = '<i class="fa fa-heart"></i>'; // Reset icon and text
+            }
+        });
+    });
+}
+
+
+function displayWishlistItems() {
+    const wishlistUlList = document.querySelector(".wishlist-list-items");
+    wishlistUlList.innerHTML = "";
+
+    if (wishlistItems.length > 0) {
+        document.querySelector(".empty-wishlist").classList.remove("active");
+        document.querySelector(".no-empty-wishlist").classList.add("active");
+    } else {
+        document.querySelector(".empty-wishlist").classList.add("active");
+        document.querySelector(".no-empty-wishlist").classList.remove("active");
+    }
+
+    wishlistItems.forEach(wi => {
+        let itemLi = document.createElement("li");
+        itemLi.setAttribute("id", wi.itemId);
+        let product = products_list.find(p => p.id == wi.itemId);
+    
+        if (product) {
+            itemLi.innerHTML = `
+                <img src="${product.image}" alt="">
+                <div class="text">
+                    <span class="name">${product.name}</span><br>
+                    <span class="qty">${wi.pcs}</span><br>
+                    <div class="price">$${wi.amount}</div>
+                    <button class="move-to-cart">Move to Cart</button>
+                    <i class="fa fa-times remove-wishlist-item-btn" aria-hidden="true"></i>
+                </div>
+            `;
+            wishlistUlList.appendChild(itemLi);
+            handleRemoveButtonInWishlist();  // Attach remove functionality
+    
+            let moveToCartBtn = itemLi.querySelector(".move-to-cart");
+            moveToCartBtn.addEventListener("click", () => moveToCart(wi.itemId));
+        }
+    });
+    
+}
+
+
+// Function to move item from wishlist to cart
+function moveToCart(wishlistItemId) {
+    // Find the item in wishlist
+    let wishlistItemIndex = wishlistItems.findIndex(item => item.itemId == wishlistItemId);
+    if (wishlistItemIndex > -1) {
+        let wishlistItem = wishlistItems[wishlistItemIndex];
+
+        // Check if the item already exists in the cart
+        let existingCartItem = cartItems.find(item => item.itemId == wishlistItemId);
+        if (existingCartItem) {
+            existingCartItem.pcs += wishlistItem.pcs; // Update quantity if it already exists
+            existingCartItem.amount = existingCartItem.pcs * products_list.find(p => p.id == wishlistItemId).price; // Update amount
+            showToast(`${wishlistItem.pcs} ${products_list.find(p => p.id == wishlistItemId).name} moved to cart!`);
+        } else {
+            cartItems.push({
+                itemId: wishlistItem.itemId,
+                pcs: wishlistItem.pcs,
+                amount: wishlistItem.amount
+            });
+            showToast(`${wishlistItem.pcs} ${products_list.find(p => p.id == wishlistItemId).name} added to cart!`);
+        }
+
+        // Remove the item from the wishlist
+        wishlistItems.splice(wishlistItemIndex, 1);
+        localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+
+        // Re-display the wishlist and cart items
+        displayWishlistItems();
+        displayCartItems();
+    }
+}
+
+
 // Scroll animation
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -332,6 +495,7 @@ function createSearchBar() {
 
     // Create the search bar only if it doesn't already exist
     const searchBar = document.createElement("input");
+    searchBar.classList.add("products-searchbar");
     searchBar.setAttribute("type", "text");
     searchBar.setAttribute("id", "search-bar");
     searchBar.setAttribute("placeholder", "Search for flavors...");
