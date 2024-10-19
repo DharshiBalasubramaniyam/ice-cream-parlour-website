@@ -8,9 +8,9 @@
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/delivery-catering.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
-    <link rel="stylesheet" href="styles/cursor.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -42,6 +42,7 @@
      <div class="circle"></div>
      <div class="circle"></div>
      <div class="circle"></div>
+
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-container">
@@ -61,9 +62,10 @@
 
     <!-- nav bar -->
     <div class="nav-bar">
+        <a href="index.html">
         <div class="logo">
             <img src="./images/logo.png" alt="icyco-logo" height="25px" width="25px">
-            <a href="">IcyCo</a>
+            IcyCo</a>
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
@@ -71,7 +73,6 @@
             <a href="./delivery.html" class="link active">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
-            <a href="./subscriptions.html" class="link">Subscriptions</a>
         </div>
         <div class="icons">
             <div class="icon">
@@ -105,10 +106,7 @@
             <div class="indv-text">
                 <label for="contact" class="text">CONTACT No.</label>
                 <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required>
-                <span id="contact-error" style="color:red; display:none;">Please enter a valid 10-digit contact number.</span>
             </div>
-            
-            
 
             <div class="indv-text">
                 <label for="add1" class="text">ADDRESS Line1</label>
@@ -153,8 +151,8 @@
             </div>
 
             <div style="display: flex; margin: 20px;" class="btn">
-                <button type="reset" class="btn-style" value="RESET">RESET</button>
-                <button type="submit" value="SUMBIT" class="btn-style">SUBMIT</button>
+                <button type="submit" value="SUMBIT" class="btn-style">Submit</button>
+                <button type="reset" class="btn-style reset-btn" value="RESET">Clear</button>
             </div>
 
         </form>
@@ -260,25 +258,13 @@
     <div class="copyright">
         &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
+
+    <!-- scripts -->
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
     <script src="./script/topscrollindicator.js"></script>
     <script type="module" src="./script/products.js"></script>
     <script src="script/cursor.js"></script>
-    <script>
-        const contactInput = document.getElementById('contact');
-        const contactError = document.getElementById('contact-error');
-    
-        contactInput.addEventListener('input', function () {
-            const regex = /^[0-9]{10}$/;  // Regular expression for 10-digit number
-    
-            if (!regex.test(contactInput.value)) {
-                contactError.style.display = 'block';  // Show error message
-            } else {
-                contactError.style.display = 'none';   // Hide error message
-            }
-        });
-    </script>
 
 </body>
 
