@@ -1,74 +1,82 @@
+const toggle_password=document.getElementById("toggle-password");
+const password=document.getElementById("password-input-field");
 
-    const passwordInput = document.getElementById("password-input-field");
-    const strengthText = document.getElementById("password-strength-text");
-    const strengthBar = document.getElementById("strength-bar");
+password.setAttribute('type', 'password'); 
 
-    passwordInput.addEventListener("input", function () {
-        const password = passwordInput.value;
-        const result = zxcvbn(password);
-        const strength = result.score;
+toggle_password.addEventListener("click", function(){
+    const type=password.getAttribute('type')==='password'? 'text':'password'
+    password.setAttribute("type",type);
 
-        // Update strength bar and text
-        strengthBar.style.width = `${(strength + 1) * 20}%`;
-        const strengthLevels = ["Very Weak", "Weak", "Okay", "Good", "Strong"];
-        strengthText.textContent = strengthLevels[strength];
-        
-        const colors = ["#ff4d4d", "#ff944d", "#ffd24d", "#d2ff4d", "#4dff88"];
-        strengthBar.style.backgroundColor = colors[strength];
-    });
+  this.classList.toggle('fa-eye-slash');
+  this.classList.toggle('fa-eye');
+})
 
-    // Form validation logic
-    document.querySelector("form").addEventListener("submit", function (event) {
-        event.preventDefault();
 
-        const firstName = document.querySelector("input[placeholder='First name']");
-        const lastName = document.querySelector("input[placeholder='Last name']");
-        const email = document.querySelector("input[type='email']");
-        const password = document.getElementById("password-input-field");
+// Select form elements
+const form = document.querySelector('form');  // Selects the sign-up form
+const firstName = document.querySelector('#first-name-field input');
+const lastName = document.querySelector('#last-name-field input');
+const email = document.querySelector('.input-fields input[type="email"]');
+const button=document.querySelector('.submit-button')
+const subscriptionPlan = document.getElementById('subscription-plan');
 
-        clearErrors();
+// Error message elements
+const emailError = document.createElement('p');
+const passwordError = document.createElement('p');
+const firstNameError = document.createElement('p');
+const lastNameError = document.createElement('p');
 
-        let isValid = true;
+// Insert error messages after respective fields
+email.parentElement.appendChild(emailError);
+password.parentElement.appendChild(passwordError);
+firstName.parentElement.appendChild(firstNameError);
+lastName.parentElement.appendChild(lastNameError);
 
-        if (firstName.value.trim() === "") {
-            showError(firstName, "First name is required");
-            isValid = false;
-        }
+// Add styles for error messages
+emailError.style.color = 'red';
+passwordError.style.color = 'red';
+firstNameError.style.color = 'red';
+lastNameError.style.color = 'red';
 
-        if (lastName.value.trim() === "") {
-            showError(lastName, "Last name is required");
-            isValid = false;
-        }
+button.addEventListener('click', function (e) {
+    // Prevent the form from submitting
+    e.preventDefault();
 
-        if (email.value.trim() === "") {
-            showError(email, "Email is required");
-            isValid = false;
-        }
+    let isValid = true;
 
-        if (password.value.trim() === "") {
-            showError(password, "Password is required");
-            isValid = false;
-        }
+    // Reset previous error messages
+    emailError.textContent = '';
+    passwordError.textContent = '';
+    firstNameError.textContent = '';
+    lastNameError.textContent = '';
 
-        if (isValid) {
-            this.submit();
-        }
-    });
-
-    function showError(inputElement, message) {
-        inputElement.classList.add("error");
-
-        const errorMessage = document.createElement("div");
-        errorMessage.className = "error-message show-message";
-        errorMessage.innerText = message;
-
-        inputElement.parentNode.appendChild(errorMessage);
+    // Check if the first name is not empty
+    if (firstName.value.trim() === '') {
+        firstNameError.textContent = 'First name must not be empty';
+        isValid = false;
     }
 
-    function clearErrors() {
-        const inputs = document.querySelectorAll(".input-field");
-        inputs.forEach(input => input.classList.remove("error"));
+    // Check if the last name is not empty
+    
 
-        const errorMessages = document.querySelectorAll(".error-message");
-        errorMessages.forEach(message => message.remove());
+    // Check if the email is valid
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (email.value.trim() === '') {
+        emailError.textContent = 'Email must not be empty';
+        isValid = false;
+    } else if (!emailPattern.test(email.value)) {
+        emailError.textContent = 'Please enter a valid email address';
+        isValid = false;
     }
+
+    // Check if the password is not empty
+    if (password.value.trim() === '') {
+        passwordError.textContent = 'Password must not be empty';
+        isValid = false;
+    }
+
+    // If all validations pass, submit the form
+    if (isValid) {
+        form.submit();  // Submit the form if everything is valid
+    }
+});
