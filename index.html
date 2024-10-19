@@ -57,8 +57,16 @@
   <div class="circle"></div>
     <!-- Preloader -->
     <div id="preloader">
-        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-        <p class="loading-text">Loading...</p>
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+          </div>
     </div>
 
 
@@ -78,7 +86,7 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
-            <a href="./gallery.html" class="link">Gallery</a>
+            <a href="./subscriptions.html" class="link">Subscriptions</a>
             
 
         </div>
@@ -241,8 +249,8 @@
                     <button type="submit" class="signup-btn">Continue</button>
                 </form>
                 <a href="#" class="no-thanks close-btn">No thanks</a>
-                <p class="terms">By clicking continue, you agree to our <a href="#">Terms of Service</a> and <a
-                        href="#">Privacy Policy</a>.</p>
+                <p class="terms">By clicking continue, you agree to our <a href="terms&condition.html">Terms of Service</a> and <a
+                        href="privacy.html">Privacy Policy</a>.</p>
             </div>
         </div>
     </div>
@@ -500,6 +508,7 @@
                     <li><a href="blogs.html">Our Blogs</a></li>
                     <li><a href="#">Customer Agreement</a></li>
                     <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms&condition.html">Terms&Condition</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -583,7 +592,7 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; 2024 by <span>DharshiB</span> | All Rights Reserved
+        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
 
     </div>
@@ -602,7 +611,7 @@
     <script src="script/popup.js"></script>
     <script src="script/flavor_section.js"></script>
     <script src="script/cursor.js"></script>
-    <script src="script/script.js"></script> 
+    <script src="script/script.js"></script>
 </body>
 
 </html>
