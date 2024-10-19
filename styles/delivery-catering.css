@@ -1,0 +1,51 @@
+section h1 {
+    background-color: #EE66A6;
+}
+
+.heading {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.form-text {
+    margin-left: 0px;
+    padding: 6px;
+    display: flex;
+    border: var(--main-color) 2px solid;
+    border-radius: 3px;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+}
+
+.indv-text label {
+    font-weight: bold;
+}
+
+.form-text:focus {
+    outline: 2px solid var(--secondary-color);
+}
+
+.text {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.indv-text {
+    margin: 20px;
+}
+
+.btn-style {
+    margin-right: 15px;
+}
+.reset-btn {
+    background: transparent;
+    color: var(--main-color);
+}
+.reset-btn:hover {
+    background-image: var(--background-image);
+    background-color: var(--main-color);
+    color: var(--body-color);
+}

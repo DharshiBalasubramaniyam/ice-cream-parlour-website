@@ -6,6 +6,7 @@
     <title>ICYCO - Contributors</title>
     <link rel="stylesheet" href="styles/contributor.css" />
     <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -31,7 +32,7 @@
         scroll-behavior: smooth;
       }
       body {
-        background-color: #ffeb55;
+        background-color: white;
       }
       .top-btn {
         display: none;
@@ -68,6 +69,7 @@
       .pagination-btns button.btn i.bi {
         font-size: 2rem;
       }
+    
     </style>
   </head>
   <body>
@@ -92,6 +94,53 @@
      <div class="circle"></div>
      <div class="circle"></div>
      <div class="circle"></div>
+      
+    <!-- nav bar -->
+    <div class="nav-bar">
+      <div class="logo">
+          <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
+          <a href="">IcyCo</a>
+      </div>
+      <div class="nav-links">
+          <a href="./index.html" class="link">home</a>
+          <a href="./products.html" class="link">products</a>
+          <a href="./delivery.html" class="link">Delivery</a>
+          <a href="./dine-in.html" class="link">Dine In</a>
+          <a href="./catering.html" class="link">Catering</a>
+      </div>
+      <div class="icons">
+          <div class="icon">
+              <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+          </div>
+          <div class="icon">
+              <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                      class="no-of-cart-items">0</span></span>
+          </div>
+          <div class="icon">
+              <i class="fa fa-bars menu" aria-hidden="true"></i>
+          </div>
+      </div>
+  </div>
+  <!-- Cart -->
+  <div class="cart">
+      <i class="fa fa-times close-cart" aria-hidden="true"></i>
+      <h1>Your Cart</h1>
+
+      <div class="no-empty-cart">
+          <ul class="cart-list-items">
+          </ul>
+          <div>
+              <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+              <button>Check out</button>
+          </div>
+
+      </div>
+
+      <div class="empty-cart active">
+          <p>No items in the cart!</p>
+      </div>
+
+  </div>
     <div class="container">
       <div class="toggle-container aos-init aos-animate" data-aos="fade-down">
         <input id="themeToggle" class="toggle" type="checkbox" />

@@ -4,29 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>ICYCO - HOME</title>
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
-    <link rel="stylesheet" href="styles/topscrollindicator.css">
-    <link rel="stylesheet" href="styles/popup.css">
-    <link rel="stylesheet" href="styles/style3.css">
     <link rel="stylesheet" href="styles/cursor.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
-
-    <!-- Our flavor Section fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400&family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
@@ -34,34 +23,41 @@
 </head>
 
 <body>
-     <!-- cursor -->
+    <!-- cursor -->
     <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
     <!-- Preloader -->
     <div id="preloader">
-        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-        <p class="loading-text">Loading...</p>
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+        </div>
     </div>
-
-
 
     <!-- scroll progress -->`
     <div class="scroll-progress"></div>
@@ -78,9 +74,6 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
-            <a href="./gallery.html" class="link">Gallery</a>
-            
-
         </div>
         <div class="icons">
             <div class="icon">
@@ -114,7 +107,6 @@
         <div class="empty-cart active">
             <p>No items in the cart!</p>
         </div>
-
     </div>
 
     <!-- Hero -->
@@ -125,31 +117,21 @@
                 a mouthwatering journey through a virtual ice cream paradise. Whether you’re craving a cozy in-store
                 treat, delivery to your doorstep, or a custom ice cream experience at your next event, we’re here to
                 serve you the sweetest moments, wherever you are.</h4>
-            <a href="./products.html"><button style="margin-top: 15px;margin-left:40%;">Order Now</button></a>
+            <a href="./products.html"><button style="margin-top: 15px;">Order Now</button></a>
         </div>
-        <!-- <div class="image"> -->
-        <!-- <img src="images/Hero1.png" alt="Hero-image"> -->
         <div class="grid">
             <div class="grid-box"></div>
             <div class="grid-box"></div>
             <div class="grid-box"></div>
             <div class="grid-box"></div>
         </div>
-        <!-- </div> -->
     </section>
 
-    <!-- Our Flavors Section -->
+    <!-- Our Flavors -->
     <section id="our-flavors">
-        <div class="flavors-header">
-            <h2 class="find-your-taste">Find Your Taste</h2>
-            <p class="flavors-count">Over 60 Different Flavours</p>
-            <p class="flavors-description">
-                Including a wide selection of Ice Creams, Gelatos, Sorbets, Yogurts,
-                Non Dairy/Vegans and Toppings.
-            </p>
-        </div>
+        <h1>Find Your <span>Taste</span></h1>
 
-        <div class="flavors-container">
+        <div class="flavors-container bottomani">
             <div class="flavor-item">
                 <img src="images/regular.jpg" alt="Regular Ice Cream" />
                 <h3>Regular</h3>
@@ -171,15 +153,7 @@
                 <h3>Non Dairy/Vegan</h3>
             </div>
         </div>
-        
-        <!-- Background Shapes -->
-        <img src="images/rainbow.svg" class="background-shape rainbow" alt="Rainbow" />
-        <img src="images/star.svg" class="background-shape star" alt="Star" />
-        <img src="images/heart.svg" class="background-shape heart" alt="Heart" />
-        <img src="images/crown.svg" class="background-shape crown" alt="Crown" />
-        <img src="images/snowflake.svg" class="background-shape snowflake" alt="Snowflake" />
     </section>
-
 
     <!-- Services -->
     <section class="services" id="services">
@@ -223,7 +197,6 @@
             </div>
 
         </div>
-
     </section>
 
     <!-- Pop-up for email registration -->
@@ -241,45 +214,21 @@
                     <button type="submit" class="signup-btn">Continue</button>
                 </form>
                 <a href="#" class="no-thanks close-btn">No thanks</a>
-                <p class="terms">By clicking continue, you agree to our <a href="#">Terms of Service</a> and <a
-                        href="#">Privacy Policy</a>.</p>
+                <p class="terms">By clicking continue, you agree to our <a href="terms&condition.html">Terms of
+                        Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
             </div>
         </div>
     </div>
 
     <!-- About -->
     <section class="about" id="about">
-        <!-- <h1><span>About</span> Us</h1> -->
         <div class="box-container about-box">
-
-                <h2>Get The Cool Down With Our Creamy Creations!</h2>
-                <p>We at IcyCo, We're more than just a company – we're a community driven by a shared vision and
-                    commitment to excellence. We're excited to continue and expand our business all while staying true
-                    to our roots and the values that define us. Come visit us and let’s create sweet memories together!
-                </p>
-                <!-- <ul>
-                    <li>
-                        <div class="feature-icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
-                        <span><span>Range of flavours</span> from our parlour for <span>Dine-in</span> and
-                            <span>Take-out</span> options</span>
-                    </li>
-                    <li>
-                        <div class="feature-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
-                        <span>Manufactured under <span>strict hygiene</span> and <span>food safety
-                                conditions</span></span>
-                    </li>
-                    <li>
-                        <div class="feature-icon"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>
-                        <span><span>Best quality ingredients</span> from globally and locally recognized
-                            suppliers</span>
-                    </li>
-                    <li>
-                        <div class="feature-icon"><i class="fa fa-smile-o" aria-hidden="true"></i></div>
-                        <span>A welcoming space for families, offering a fun and <span>friendly atmosphere</span> for
-                            all ages.</span>
-                    </li>
-                </ul> -->
-            </div>
+            <h2 class="rightani">Get The Cool Down With Our Creamy Creations!</h2>
+            <p class="leftani">We at IcyCo, We're more than just a company – we're a community driven by a shared vision
+                and
+                commitment to excellence. We're excited to continue and expand our business all while staying true
+                to our roots and the values that define us. Come visit us and let’s create sweet memories together!
+            </p>
         </div>
     </section>
 
@@ -288,7 +237,7 @@
         <h1>Why IcyCo?</h1>
         <div class="feature-container">
             <div class="inner">
-                <div class="feature-box">
+                <div class="feature-box rightani">
                     <div class="icon-circle">
                         <img src="images/flavour-icon.png" alt="Flavors Icon">
                     </div>
@@ -298,8 +247,8 @@
                             palate.</p>
                     </div>
                 </div>
-                <div class="feature-box">
-                    <div class="icon-circle">
+                <div class="feature-box leftani">
+                    <div class="icon-circle ">
                         <img src="images/hygiene-icon.png" alt="Hygiene Icon">
                     </div>
                     <div class="feature-text">
@@ -309,7 +258,7 @@
                 </div>
             </div>
             <div class="inner">
-                <div class="feature-box">
+                <div class="feature-box rightani">
                     <div class="icon-circle">
                         <img src="images/quality-icon.png" alt="Quality Ingredients Icon">
                     </div>
@@ -319,7 +268,7 @@
                             experience.</p>
                     </div>
                 </div>
-                <div class="feature-box">
+                <div class="feature-box leftani">
                     <div class="icon-circle">
                         <img src="images/friendly-icon.png" alt="Fun Atmosphere Icon">
                     </div>
@@ -334,18 +283,17 @@
 
     <!-- reviews -->
     <section class="reviewSection" id="reviewsSection">
-        <h1>Top <span>Reviews</span></h1>
-    <div class="container">
+        <h1>Top Reviews</h1>
         <div class="reviews">
             <div class="review-box" id="box_1">
                 <h1>Top Reviews from our verified customers</h1>
             </div>
-            <div class="review-box">
+            <div class="review-box bottomani">
                 <i class="fa fa-quote-right quote" aria-hidden="true"></i>
                 <i class="fa fa-quote-right quote" aria-hidden="true"></i>
                 <div class="top">
-                    <img src="images/reveiwer1.jpg" alt="Reviewer Tom Stepher"">
-                    <div class="right">
+                    <img src="images/reveiwer1.jpg" alt="Reviewer Tom Stepher">
+                    <div class=" right">
                         <div class="name"><span>Tom Stepher</span> <br> <small>Verified Customer</small></div>
                         <div class="stars">
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -357,10 +305,11 @@
                     </div>
                 </div>
                 <div class="text">“IcyCo’s ice cream is like a symphony for your taste buds. The salted caramel
-                    swirl? Divine!”</div>  
+                    swirl? Divine!”
+                </div>
             </div>
-    
-            <div class="review-box">
+
+            <div class="review-box bottomani">
                 <i class="fa fa-quote-right quote" aria-hidden="true"></i>
                 <div class="top">
                     <img src="images/reveiwer4.webp" alt="">
@@ -375,12 +324,12 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="text">“Visited here on a hot day!
                     The mint chocolate took me straight to heavens.”</div>
             </div>
-    
-            <div class="review-box"><i class="fa fa-quote-right quote" aria-hidden="true"></i>
+
+            <div class="review-box bottomani"><i class="fa fa-quote-right quote" aria-hidden="true"></i>
                 <div class="top">
                     <img src="images/reveiwer2.jpg" alt="">
                     <div class="right">
@@ -394,95 +343,100 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="text">“The pistachio gelato here is nutty nirvana. Close your eyes and savor the
                     green goodness.”</div>
             </div>
-            <div class="review-box">
-                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer5.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Mia Patal</span> <br> <small>Verified Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text">“Shared a double scoop with my sweetheart.
-                        Loved the strawberry and dark chocolate.”</div>
-            </div>
-            <div class="review-box">
-                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
-                    <div class="top">
-                        <img src="images/reveiwer3.jpg" alt="">
-                        <div class="right">
-                            <div class="name"><span>Nicolas Cage</span> <br> <small>Verified Customer</small></div>
-                            <div class="stars">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="text">"From the name itself theses Ice Creams here are best in quality and taste of
-                        course."
-                    </div>
-            </div>
-        </div>
-    </div>
-    </section>
-    
-        <!-- contact -->
-        <section class="contact" id="contact">
-            <h1><span>Contact</span> Us</h1>
-            <form action="#" novalidate class="box-container" id="contact-form">
-                <div class="row">
-                    <div class="input-box">
-                        <label for="fname">Your First Name</label><br>
-                        <input class="dark_bg_txt" type="text" id="fname" oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                    <div class="input-box">
-                        <label for="lname">Your Last Name</label><br>
-                        <input class="dark_bg_txt" type="text" id="lname" oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="input-box">
-                        <label for="email">Your Email</label><br>
-                        <input class="dark_bg_txt" type="email" id="email" oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                    <div class="input-box">
-                        <label for="phone">Your Contact Number</label><br>
-                        <input class="dark_bg_txt" type="tel" id="phone" oninput="this.parentElement.querySelector('small').textContent = ''">
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-box">
-                        <label for="message">Your Message</label><br>
-                        <textarea class="dark_bg_txt" name="" id="message" cols="30" rows="10"
-                            oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
-                        <small class="error" style="color: rgb(255, 0, 0);"></small>
-                    </div>
-                </div>
-                <div class="row">
-                    <input type="submit" value="Send">
-                </div>
-            </form>
-        </section>
 
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer5.jpg" alt="">
+                    <div class="right">
+                        <div class="name"><span>Mia Patal</span> <br> <small>Verified Customer</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">“Shared a double scoop with my sweetheart.
+                    Loved the strawberry and dark chocolate.”</div>
+            </div>
+
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer3.jpg" alt="">
+                    <div class="right">
+                        <div class="name"><span>Nicolas Cage</span> <br> <small>Verified Customer</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text">"From the name itself theses Ice Creams here are best in quality and taste of
+                    course."
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <h1><span>Contact</span> Us</h1>
+        <form action="#" novalidate class="box-container bottomani" id="contact-form">
+            <div class="row">
+                <div class="input-box">
+                    <label for="fname">Your First Name</label><br>
+                    <input class="dark_bg_txt" type="text" id="fname"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+                <div class="input-box">
+                    <label for="lname">Your Last Name</label><br>
+                    <input class="dark_bg_txt" type="text" id="lname"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-box">
+                    <label for="email">Your Email</label><br>
+                    <input class="dark_bg_txt" type="email" id="email"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+                <div class="input-box">
+                    <label for="phone">Your Contact Number</label><br>
+                    <input class="dark_bg_txt" type="tel" id="phone"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-box">
+                    <label for="message">Your Message</label><br>
+                    <textarea class="dark_bg_txt" name="" id="message" cols="30" rows="10"
+                        oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Send">
+            </div>
+        </form>
+    </section>
 
     <!-- footer -->
     <section class="footer">
@@ -491,18 +445,17 @@
                 <h4>Useful links</h4>
                 <ul class="links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#">My Account</a></li>
                     <li><a href="./products.html">Products</a></li>
                     <li><a href="gallary.html">Gallery</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="./faq.html" class="link">FAQ</a></li>
                     <li><a href="contributor.html">Our Contributors</a></li>
                     <li><a href="blogs.html">Our Blogs</a></li>
-                    <li><a href="#">Customer Agreement</a></li>
                     <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms&condition.html">Terms&Condition</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
+            <!-- <div class="footer-col">
                 <h4>Flavors</h4>
                 <ul class="links">
                     <li><a href="#">Regular</a></li>
@@ -512,7 +465,7 @@
                     <li><a href="#">Frozen Yogurt</a></li>
                     <li><a href="#">Non-Dairy/Vegan</a></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="footer-col">
                 <h4>Opening Hours</h4>
                 <ul class="links">
@@ -556,7 +509,7 @@
                     <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
                             Twitter</a></li>
                     <li><a href="#1" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
-<!--                     It's href is #1 for css purpose to get it's hover green  -->
+                    <!--                     It's href is #1 for css purpose to get it's hover green  -->
 
                 </ul>
             </div>
@@ -575,7 +528,6 @@
         </div>
     </section>
 
-
     <!-----scroll bottom to top------->
     <button class="scroll-button">
         <img src="images/icecream-cone.png" alt="icecream-cone" />
@@ -583,17 +535,14 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; 2024 by <span>DharshiB</span> | All Rights Reserved
-    </div>
-
+        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
 
     <!-- Toaster -->
     <div id="toast-container" class="toast-container"></div>
 
-    <script src="script/swiper-bundle.min.js"></script>
-    <script src="script/reviews.js"></script>
-    <script src="script/form.js"></script>
+    <!-- script files -->
+    <script src="script/contact.js"></script>
     <script type="module" src="script/products.js"></script>
     <script type="module" src="script/nav.js"></script>
     <script type="module" src="script/cart.js"></script>
@@ -602,7 +551,8 @@
     <script src="script/popup.js"></script>
     <script src="script/flavor_section.js"></script>
     <script src="script/cursor.js"></script>
-    <script src="script/script.js"></script> 
+    <script src="script/script.js"></script>
+
 </body>
 
 </html>

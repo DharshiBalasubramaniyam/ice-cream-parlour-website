@@ -243,3 +243,14 @@
         font-size: 24px; /* Further adjust font size for mobile */
     }
 }
+/* Responsive design for subscription plans */
+@media (max-width: 768px) {
+    .plans-container {
+        flex-direction: column;
+    }
+
+    .plan {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

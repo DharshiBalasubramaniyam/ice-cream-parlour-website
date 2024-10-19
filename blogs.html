@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ICYCO - BLOGS</title>
+
   <!-- custom style sheets -->
   <link rel="stylesheet" href="styles/blogs.css">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/mediaQueries.css">
   <link rel="stylesheet" href="styles/cursor.css">
   <link rel="stylesheet" href="styles/styles.css">
 
@@ -20,31 +22,41 @@
 </head>
 
 <body>
-   <!-- cursor -->
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
+
+  <!-- cursor -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
   <!-- Preloader -->
   <div id="preloader">
-    <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-    <p class="loading-text">Loading...</p>
+    <div class="loader-container">
+      <div class="flavor-circle chocolate"></div>
+      <div class="flavor-circle strawberry"></div>
+      <div class="flavor-circle vanilla"></div>
+      <div class="flavor-circle mint"></div>
+      <div class="flavor-circle blueberry"></div>
+      <div class="flavor-circle mango"></div>
+      <div class="flavor-circle pistachio"></div>
+      <div class="flavor-circle raspberry"></div>
+    </div>
   </div>
 
   <!-- scroll progress -->
@@ -97,6 +109,7 @@
       </div>
     </div>
   </div>
+
   <section>
     <div class="toggle-container aos-init aos-animate" data-aos="fade-down">
       <input id="themeToggle" class="toggle" type="checkbox" />
@@ -376,29 +389,18 @@
       <div class="footer-col">
         <h4>Useful links</h4>
         <ul class="links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#">My Account</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="gallary.html">Gallery</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#FAQs">FAQs</a></li>
-          <li><a href="contributor.html">Our Contributors</a></li>
-          <li><a href="blogs.html">Our Blogs</a></li>
-          <li><a href="#">Customer Agreement</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="gallary.html">Gallery</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="./faq.html" class="link">FAQ</a></li>
+            <li><a href="contributor.html">Our Contributors</a></li>
+            <li><a href="blogs.html">Our Blogs</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms&condition.html">Terms&Condition</a></li>
         </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Flavors</h4>
-        <ul class="links">
-          <li><a href="#">Regular</a></li>
-          <li><a href="#">Gelato</a></li>
-          <li><a href="#">Sorbet</a></li>
-          <li><a href="#">Soft serve</a></li>
-          <li><a href="#">Frozen Yogurt</a></li>
-          <li><a href="#">Non Diary/Vegen</a></li>
-        </ul>
-      </div>
+    </div>
+
       <div class="footer-col">
         <h4>Opening Hours</h4>
         <ul class="links">
@@ -456,74 +458,13 @@
 
   <!-- copyright -->
   <div class="copyright">
-    &copy; 2024 by <span>DharshiB</span> | All Rights Reserved
+    &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
   </div>
 
-  <script src="./script/catering.js"></script>
   <script src="./script/nav.js"></script>
   <script src="./script/cart.js"></script>
   <script src="./script/topscrollindicator.js"></script>
   <script type="module" src="./script/products.js"></script>
-  <script>
-    // Get the button
-    var mybutton = document.getElementById("goToTopBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () {
-      scrollFunction();
-    };
-
-    function scrollFunction() {
-      if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-      ) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function goToTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-  <script>
-    window.addEventListener("scroll", function () {
-      const winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      const height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.getElementById("progress-bar").style.width = scrolled + "%";
-    });
-    // Dark mode (remains unchanged)
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleCheckbox = document.getElementById("themeToggle");
-      const body = document.body;
-
-      if (localStorage.getItem("dark-mode") === "enabled") {
-        body.classList.add("dark-mode");
-        toggleCheckbox.checked = true;
-      } else {
-        toggleCheckbox.checked = false;
-      }
-
-      toggleCheckbox.addEventListener("change", () => {
-        if (toggleCheckbox.checked) {
-          body.classList.add("dark-mode");
-          localStorage.setItem("dark-mode", "enabled");
-        } else {
-          body.classList.remove("dark-mode");
-          localStorage.setItem("dark-mode", "disabled");
-        }
-      });
-    });
-
-  </script>
   <script src="script/cursor.js"></script>
   
 

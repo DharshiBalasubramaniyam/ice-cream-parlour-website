@@ -1,5 +1,5 @@
 
-# 🍦 Ice Cream Parlour Website 🍨
+# 🍦 [Ice Cream Parlour Website](https://ice-cream-parlour-website-one.vercel.app/) 🍨
 
  ![Ice Cream Website Screenshot](/images/readme.png)
 
@@ -60,6 +60,15 @@ JavaScript adds interactivity and functionality to the website. This project use
   <img src="https://github.com/user-attachments/assets/341b9e5e-ab35-4ace-94b0-89285cd4ecfd" alt="Second Image" width="20%" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
 </div>
 
+---
+<!-- Added Hacktoberfest 2024 and GSSoc Extended 2024 banners -->
+### This project is now OFFICIALLY accepted for
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/SwanandD121/FeatherPerfect_fe/refs/heads/main/Untitled%20design.png" alt="GSSoC 2024 Extd" width="80%">
+  <img src="https://cdn.discordapp.com/attachments/657543125190967316/1294560786114674748/Screenshot_2024-10-12_122347.png?ex=670b752f&is=670a23af&hm=26ddd7f41740b8b19ee4985e7568b3892091384b3b85e7165770a4b10f4d1050&" alt="Hacktoberfest 2024" width="80%">
+</div>
+<br>
 ---
 
 # 🚀 How to Contribute to This Project
