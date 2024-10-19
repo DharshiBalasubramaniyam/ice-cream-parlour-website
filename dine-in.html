@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
-    
+    <link rel="stylesheet" href="styles/cursor.css">
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
 
@@ -25,10 +25,39 @@
 </head>
 
 <body>
+     <!-- cursor -->
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
     <!-- Preloader -->
     <div id="preloader">
-        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-        <p class="loading-text">Loading...</p>
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+          </div>
     </div>
 
     <!-- scroll progress -->
@@ -46,6 +75,7 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link active">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
+            <a href="./subscriptions.html" class="link">Subscriptions</a>
         </div>
         <div class="icons">
             <div class="icon">
@@ -118,37 +148,37 @@
                 </div>
             </div>
             <div class="restaurant-card">
-                <img src="./images/ice-1.jpg" alt="Restaurant 1">
+                <img src="./images/ice-1.jpg" alt="Restaurant 2">
                 <div class="restaurant-info">
-                    <h3>Frozen Fusion </h3>
-                    <p>Sector 2, Salt Lake, Kolkata</p>
+                    <h3>Scoop heaven</h3>
+                    <p>Sector 11, Salt Lake, Kolkata</p>
                     <p>⭐⭐⭐⭐ (4.0)</p>
                 </div>
             </div>
             <div class="restaurant-card">
                 <img src="./images/ice-2.jpg" alt="Restaurant 2">
                 <div class="restaurant-info">
-                    <h3>Kulfi Station Express</h3>
-                    <p>Sector 5, Salt Lake, Kolkata</p>
+                    <h3>Freezy ice</h3>
+                    <p>Sector 8, Salt Lake, Kolkata</p>
+                    <p>⭐⭐⭐⭐ (4.0)</p>
+                </div>
+            </div>
+            <div class="restaurant-card">
+                <img src="./images/ice-3.jpg" alt="Restaurant 2">
+                <div class="restaurant-info">
+                    <h3>Icy Bros</h3>
+                    <p>Sector 10, Salt Lake, Kolkata</p>
                     <p>⭐⭐⭐⭐⭐ (5.0)</p>
                 </div>
             </div>
-            <div class="restaurant-card">
-                <img src="./images//ice-3.jpg" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Kookie Jar</h3>
-                    <p>Sector 3, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images/ice-1.jpg" alt="Restaurant 1">
-                <div class="restaurant-info">
-                    <h3>Frozen Fusion </h3>
-                    <p>Sector 2, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
-                </div>
-            </div>
+         
+         
+            
+            
+          
+          
+           
+         
         </div>
     </section>
     
@@ -179,15 +209,17 @@
             <div class="footer-col">
                 <h4>Useful links</h4>
                 <ul class="links">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">My Account</a></li>
                     <li><a href="#products">Products</a></li>
+                    <li><a href="gallary.html">Gallery</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#FAQs">FAQs</a></li>
                     <li><a href="contributor.html">Our Contributors</a></li>
                     <li><a href="blogs.html">Our Blogs</a></li>
                     <li><a href="#">Customer Agreement</a></li>
                     <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="terms&condition.html">Terms&Condition</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -260,13 +292,14 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; 2024 by <span>DharshiB</span> | All Rights Deserved
+        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
-
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
     <script src="./script/topscrollindicator.js"></script>
     <script type="module" src="./script/products.js"></script>
+    <script src="script/cursor.js"></script>
+
 
 </body>
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/cursor.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -20,10 +21,39 @@
 </head>
 
 <body>
+     <!-- cursor -->
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
     <!-- Preloader -->
     <div id="preloader">
-        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-        <p class="loading-text">Loading...</p>
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+          </div>
     </div>
 
     <!-- scroll progress -->
@@ -41,6 +71,7 @@
             <a href="./delivery.html" class="link active">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
+            <a href="./subscriptions.html" class="link">Subscriptions</a>
         </div>
         <div class="icons">
             <div class="icon">
@@ -58,10 +89,10 @@
 
     <section>
         <h1 style="margin-top: 100px; padding: 0 40px;">Island-Wide Delivery</h1>
-        <h2 class="heading">Enter Your Address</h2>
+        <h2 class="heading">Enter Your Details</h2>
+      
         <form class="form-contents">
-
-            <div class="indv-text">
+         <div class="indv-text">
                 <label for="name" class="text">NAME</label>
                 <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
             </div>
@@ -73,8 +104,11 @@
 
             <div class="indv-text">
                 <label for="contact" class="text">CONTACT No.</label>
-                <input type="tel" class="form-text" name="" id="" placeholder="0123456789" required>
+                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required>
+                <span id="contact-error" style="color:red; display:none;">Please enter a valid 10-digit contact number.</span>
             </div>
+            
+            
 
             <div class="indv-text">
                 <label for="add1" class="text">ADDRESS Line1</label>
@@ -90,34 +124,31 @@
                 <label for="state" class="text">STATE</label>
                 <select class="form-text" id="state" required>
                     <option value="">Select State</option>
-                    <option value="Andhra Pradesh">Andhra Pradesh</option>
-                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                    <option value="Assam">Assam</option>
-                    <option value="Bihar">Bihar</option>
-                    <option value="Chhattisgarh">Chhattisgarh</option>
-                    <option value="Goa">Goa</option>
-                    <option value="Gujarat">Gujarat</option>
-                    <option value="Haryana">Haryana</option>
-                    <option value="Himachal Pradesh">Himachal Pradesh</option>
-                    <option value="Jharkhand">Jharkhand</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Kerala">Kerala</option>
-                    <option value="Madhya Pradesh">Madhya Pradesh</option>
-                    <option value="Maharashtra">Maharashtra</option>
-                    <option value="Manipur">Manipur</option>
-                    <option value="Meghalaya">Meghalaya</option>
-                    <option value="Mizoram">Mizoram</option>
-                    <option value="Nagaland">Nagaland</option>
-                    <option value="Odisha">Odisha</option>
-                    <option value="Punjab">Punjab</option>
-                    <option value="Rajasthan">Rajasthan</option>
-                    <option value="Sikkim">Sikkim</option>
-                    <option value="Tamil Nadu">Tamil Nadu</option>
-                    <option value="Telangana">Telangana</option>
-                    <option value="Tripura">Tripura</option>
-                    <option value="Uttar Pradesh">Uttar Pradesh</option>
-                    <option value="Uttarakhand">Uttarakhand</option>
-                    <option value="West Bengal">West Bengal</option>
+                    <option value="Andhra Pradesh">Colombo</option>
+                    <option value="Arunachal Pradesh">Gampaha</option>
+                    <option value="Assam">Kalutara</option>
+                    <option value="Bihar">Kandy</option>
+                    <option value="Chhattisgarh">Matale</option>
+                    <option value="Goa">Nuwara Eliya</option>
+                    <option value="Gujarat">Galle</option>
+                    <option value="Haryana">Matara</option>
+                    <option value="Himachal Pradesh">Hambantota</option>
+                    <option value="Jharkhand">Jaffna</option>
+                    <option value="Karnataka">Kilinochchi</option>
+                    <option value="Kerala">Mannar</option>
+                    <option value="Madhya Pradesh">Vavuniya</option>
+                    <option value="Maharashtra">Mullaitivu</option>
+                    <option value="Manipur">Batticaloa</option>
+                    <option value="Meghalaya">Ampara</option>
+                    <option value="Mizoram">Trincomalee</option>
+                    <option value="Nagaland">Kurunegala</option>
+                    <option value="Odisha">Puttalam</option>
+                    <option value="Punjab">Anuradhapura</option>
+                    <option value="Rajasthan">Polonnaruwa</option>
+                    <option value="Sikkim">Badulla</option>
+                    <option value="Tamil Nadu">Moneragala</option>
+                    <option value="Telangana">Ratnapura</option>
+                    <option value="Tripura">Kegalle</option>
                 </select>
             </div>
 
@@ -156,15 +187,17 @@
             <div class="footer-col">
                 <h4>Useful links</h4>
                 <ul class="links">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">My Account</a></li>
                     <li><a href="#products">Products</a></li>
+                    <li><a href="gallary.html">Gallery</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#FAQs">FAQs</a></li>
                     <li><a href="contributor.html">Our Contributors</a></li>
                     <li><a href="blogs.html">Our Blogs</a></li>
                     <li><a href="#">Customer Agreement</a></li>
                     <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="terms&condition.html">Terms&Condition</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -237,13 +270,28 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; 2024 by <span>DharshiB</span> | All Rights Deserved
+        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
-
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
     <script src="./script/topscrollindicator.js"></script>
     <script type="module" src="./script/products.js"></script>
+    <script src="script/cursor.js"></script>
+    <script>
+        const contactInput = document.getElementById('contact');
+        const contactError = document.getElementById('contact-error');
+    
+        contactInput.addEventListener('input', function () {
+            const regex = /^[0-9]{10}$/;  // Regular expression for 10-digit number
+    
+            if (!regex.test(contactInput.value)) {
+                contactError.style.display = 'block';  // Show error message
+            } else {
+                contactError.style.display = 'none';   // Hide error message
+            }
+        });
+    </script>
+
 </body>
 
 </html>

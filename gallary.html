@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICYCO - Gallery</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/gallery.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
+    <link rel="stylesheet" href="styles/cursor.css">
 
     
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,48 +19,18 @@
 
 <!-- link to add favicon -->
 <link rel="icon" href="./images/logo.png" type="image/png">
-
-<style>
-/* Order Button Styles */
-.gallary-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: #fff;
-    background-color: rgb(201,20,80);
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 6px 12px rgba(255, 64, 129, 0.2);
-    margin-bottom: 40px;
-    cursor: pointer;
-    z-index: 5;
-}
-
-.gallary-btn:hover {
-    background-color: #bd0026;
-    box-shadow: 0 10px 20px rgba(255, 64, 129, 0.4);
-}
-
-.gallary-btn:active {
-    background-color: #fa0a3e;
-    box-shadow: 0 4px 8px rgba(255, 64, 129, 0.3);
-}
-
-
-</style>
-    
+   
 </head>
 <body>
     <style>
         
         body {
-            margin: 0;
+            margin-top: 6rem;
             position: relative; /* Ensures the pseudo-element covers the entire body */
         }
         .bgimg{
             background: url('images/icecream-bg.png') no-repeat center center fixed; background-size: cover;
+            margin-top: -10px;
             position:absolute;
             width: 100%;
             height: 100%;
@@ -66,11 +38,40 @@
             opacity:0.5;
         }
     </style>
+     <!-- cursor -->
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
 
      <!-- Preloader -->
      <div id="preloader">
-        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-        <p class="loading-text">Loading...</p>
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+          </div>
     </div>
 
 
@@ -90,7 +91,7 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
-            <a href="./gallary.html" class="link active">Gallery</a>
+            <a href="./subscriptions.html" class="link">Subscriptions</a>
 
         </div>
         <div class="icons">
@@ -106,92 +107,97 @@
             </div>
         </div>
     </div>
+
+
     <!-- ---- gallary section----- -->
+
+
     <div class="bgimg"></div>
 
+
     <section class="gallery-section">
-        <h1>IcyCo - Gallery</h1>
-        <p>Indulge in the delightful world of Icyco with our wide range of flavors and fun moments!</p>
-        <a href="#" class="gallary-btn">Order Online</a>
+
+        <h1 class="gallery-heading">IcyCo - Gallery</h1>
+        <div class="gallery-para gallery-sub-heading"><p>Indulge in the delightful world of Icyco with our wide range of flavors and fun moments!</p></div>
         <div class="gallery-grid">
             <div class="gallery-item">
                 <a href="images/gallary1.jpg" data-lightbox="gallery">
-                    <img src="images/gallary1.jpg" alt="Ice Cream Flavor 1">
+                    <img src="images/gallary1.jpg" class="gallery-images" alt="Ice Cream Flavor 1">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary2.jpg" data-lightbox="gallery">
-                    <img src="images/gallary2.jpg" alt="Ice Cream Flavor 2">
+                    <img src="images/gallary2.jpg" class="gallery-images" alt="Ice Cream Flavor 2">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary3.jpg" data-lightbox="gallery">
-                    <img src="images/gallary3.jpg" alt="Store Interior 1">
+                    <img src="images/gallary3.jpg" class="gallery-images"  alt="Store Interior 1">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary4.jpg" data-lightbox="gallery">
-                    <img src="images/gallary4.jpg" alt="Store Interior 2">
+                    <img src="images/gallary4.jpg" class="gallery-images" alt="Store Interior 2">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary5.jpg" data-lightbox="gallery">
-                    <img src="images/gallary5.jpg" alt="Ice Cream Flavor 3">
+                    <img src="images/gallary5.jpg" class="gallery-images" alt="Ice Cream Flavor 3">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary6.jpg" data-lightbox="gallery">
-                    <img src="images/gallary6.jpg" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary6.jpg" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary7.jpg" data-lightbox="gallery">
-                    <img src="images/gallary7.jpg" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary7.jpg" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary8.jpg" data-lightbox="gallery">
-                    <img src="images/gallary8.jpg" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary8.jpg" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary9.jpg" data-lightbox="gallery">
-                    <img src="images/gallary9.jpg" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary9.jpg" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary10.jpg" data-lightbox="gallery">
-                    <img src="images/gallary10.jpg" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary10.jpg" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary16.png" data-lightbox="gallery">
-                    <img src="images/gallary16.png" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary16.png" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary11.jpg" data-lightbox="gallery">
-                    <img src="images/gallary11.jpg" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary11.jpg" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary13.jpg" data-lightbox="gallery">
-                    <img src="images/gallary13.jpg" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary13.jpg" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary12.jpg" data-lightbox="gallery">
-                    <img src="images/gallary12.jpg" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary12.jpg" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary14.jpg" data-lightbox="gallery">
-                    <img src="images/gallary14.jpg" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary14.jpg" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
             <div class="gallery-item">
                 <a href="images/gallary15.jpg" data-lightbox="gallery">
-                    <img src="images/gallary15.jpg" alt="Ice Cream Flavor 4">
+                    <img src="images/gallary15.jpg" class="gallery-images" alt="Ice Cream Flavor 4">
                 </a>
             </div>
         </div>
@@ -203,15 +209,17 @@
         <div class="footer-col">
             <h4>Useful links</h4>
             <ul class="links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">My Account</a></li>
                 <li><a href="#products">Products</a></li>
+                <li><a href="gallary.html">Gallery</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="./faq.html" class="link">FAQ</a></li>
                 <li><a href="contributor.html">Our Contributors</a></li>
                 <li><a href="blogs.html">Our Blogs</a></li>
                 <li><a href="#">Customer Agreement</a></li>
                 <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms&condition.html">Terms&Condition</a></li>
             </ul>
         </div>
         <div class="footer-col">
@@ -294,7 +302,7 @@
 
 <!-- copyright -->
 <div class="copyright">
-    &copy; 2024 by <span>DharshiB</span> | All Rights Deserved
+    &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
 </div>
 
 </div>
@@ -311,6 +319,6 @@
 <script src="script/FAQ.js"></script>
 <script src="script/topscrollindicator.js"></script>
 <script src="script/popup.js"></script>
-    
+<script src="script/cursor.js"></script>
 </body>
 </html>
