@@ -9,39 +9,43 @@
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
-    <link rel="stylesheet" href="styles/dine-in.css">
-
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/cursor.css">
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
 
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
+    <style>
+       /* Container for each cart item */
 
+
+    </style>
+    
 </head>
 
 <body>
-    <!-- cursor -->
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-
+     <!-- cursor -->
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
+     <div class="circle"></div>
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-container">
@@ -53,18 +57,17 @@
             <div class="flavor-circle mango"></div>
             <div class="flavor-circle pistachio"></div>
             <div class="flavor-circle raspberry"></div>
-        </div>
+          </div>
     </div>
 
     <!-- scroll progress -->
     <div class="scroll-progress"></div>
-
+    
     <!-- nav bar -->
     <div class="nav-bar">
-        <a href="index.html">
         <div class="logo">
             <img src="./images/logo.png" alt="icyco-logo" height="25px" width="25px">
-            IcyCo</a>
+            <a href="">IcyCo</a>
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
@@ -72,6 +75,7 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link active">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
+            <a href="./subscriptions.html" class="link">Subscriptions</a>
         </div>
         <div class="icons">
             <div class="icon">
@@ -87,7 +91,6 @@
         </div>
     </div>
 
-    <!-- dine in section -->
     <section>
         <h1 style="margin-top: 100px; padding: 0 40px;">Dine In</h1>
         <h2 class="heading">Find your nearest store</h2>
@@ -97,80 +100,101 @@
         </div>
         <div class="restaurants">
             <div class="restaurant-card">
-                <img src="./images/ice-1.jpg" alt="Restaurant 1">
-                <div class="restaurant-info">
-                    <h3>Frozen Fusion </h3>
-                    <p>Sector 2, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
+                    <a href="https://www.google.com/maps/place/Icy+Fusion/@22.5357681,88.2716856,12z/data=!4m10!1m2!2m1!1sIcy+Fusion!3m6!1s0x3a0277231f125e31:0xb561c2b78ed655ae!8m2!3d22.5357681!4d88.3540831!15sCgpJY3kgRnVzaW9uWgwiCmljeSBmdXNpb26SAQ5pY2VfY3JlYW1fc2hvcOABAA!16s%2Fg%2F11b7d_sct0?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                        <img src="https://b.zmtcdn.com/data/pictures/chains/2/24892/5a651f11de73aa6a3c27682a3459ac89.jpg" alt="Restaurant 1">
+                    </a>
+                    <div class="restaurant-info">
+                        <h3>Icy Fusion </h3>
+                        <p>Sector 1, Salt Lake, Kolkata</p>
+                        <p>⭐⭐⭐⭐ (4.0)</p>
                 </div>
             </div>
             <div class="restaurant-card">
-                <img src="./images/ice-2.jpg" alt="Restaurant 2">
+                <a href="https://www.google.com/maps/place/Haagen+Dazs/@22.5386183,88.3566069,16z/data=!4m10!1m2!2m1!1sHaagen+Dazs!3m6!1s0x3a0276de3626f9c7:0xe3b987be71b9f452!8m2!3d22.5386183!4d88.3656191!15sCgtIYWFnZW4gRGF6cyIDiAEBWg0iC2hhYWdlbiBkYXpzkgEOaWNlX2NyZWFtX3Nob3DgAQA!16s%2Fg%2F11f1n0b19d?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="https://tb-static.uber.com/prod/image-proc/processed_images/6a9daa1febc214aac8fef3fbcff4e739/97e6648b3593c29cb4a6335f976e6d84.jpeg" alt="Restaurant 2">
+                </a>
                 <div class="restaurant-info">
-                    <h3>Kulfi Station Express</h3>
-                    <p>Sector 5, Salt Lake, Kolkata</p>
+                    <h3>Haagen Dazs </h3>
+                    <p>Park Circus, Ballygunge, Kolkata</p>
                     <p>⭐⭐⭐⭐⭐ (5.0)</p>
                 </div>
             </div>
             <div class="restaurant-card">
-                <img src="./images//ice-3.jpg" alt="Restaurant 2">
+                <a href="https://www.google.com/maps/place/Mama+Mia!/@22.5283602,88.3381291,14z/data=!4m10!1m2!2m1!1smama+mia+kolk!3m6!1s0x3a0277261d91b363:0xe437320aed879188!8m2!3d22.5283602!4d88.3587285!15sChBtYW1hIG1pYSBrb2xrYXRhWhIiEG1hbWEgbWlhIGtvbGthdGGSAQ5pY2VfY3JlYW1fc2hvcOABAA!16s%2Fg%2F1tgc7yps?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="https://d4t7t8y8xqo0t.cloudfront.net/app//resized/818X450/group/3301/menu1020190406080209.jpg" alt="Restaurant 3">
+                </a>
                 <div class="restaurant-info">
-                    <h3>Kookie Jar</h3>
-                    <p>Sector 3, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images/ice-4.avif" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Flury's</h3>
-                    <p>Sector 1, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐ (3.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images//ice-5.webp" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Icy Fusion</h3>
-                    <p>Sector 2, Salt Lake, Kolkata</p>
+                    <h3>Mama Mia </h3>
+                    <p>Ballygunge, Kolkata</p>
                     <p>⭐⭐⭐⭐⭐ (5.0)</p>
                 </div>
             </div>
             <div class="restaurant-card">
-                <img src="./images/ice-6.webp" alt="Restaurant 2">
+                <a href="https://www.google.com/maps/place/Rollick+Ice+Cream/@22.5885099,88.3695627,13z/data=!4m10!1m2!2m1!1sRollick!3m6!1s0x3a02755fceae3c83:0xd635aefa48a1c84c!8m2!3d22.6070716!4d88.4105452!15sCgdSb2xsaWNrIgOIAQFaCSIHcm9sbGlja5IBDmljZV9jcmVhbV9zaG9w4AEA!16s%2Fg%2F11ghlk8p_d?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="https://b.zmtcdn.com/data/pictures/7/20299317/160a19c0d8e5065bc6ff4b413adcf5c3.jpg?fit=around|750:500&crop=750:500;*,*" alt="Restaurant 4">
+                </a>
                 <div class="restaurant-info">
-                    <h3>Waffle Junction</h3>
-                    <p>Sector 2, Salt Lake, Kolkata</p>
+                    <h3>Rollick</h3>
+                    <p>Sector 1, Bidhannagar, Kolkata</p>
                     <p>⭐⭐⭐⭐ (4.0)</p>
                 </div>
             </div>
             <div class="restaurant-card">
-                <img src="./images/ice-1.jpg" alt="Restaurant 2">
+                <a href="https://www.google.com/maps/place/Turkisyano+Turkish+Ice+Cream/@22.502301,88.0673359,11z/data=!4m10!1m2!2m1!1sTurkisyano!3m6!1s0x3a027136dbf410db:0x939767657f3f7045!8m2!3d22.502301!4d88.355727!15sCgpUdXJraXN5YW5vWgwiCnR1cmtpc3lhbm-SAQ5pY2VfY3JlYW1fc2hvcOABAA!16s%2Fg%2F11hz7d5n_t?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="https://im.whatshot.in/img/2021/Jul/twisting-scoop-1-7-cropped-1625812783.jpg?wp=1" alt="Restaurant 5">
+                </a>
                 <div class="restaurant-info">
-                    <h3>Scoop heaven</h3>
-                    <p>Sector 11, Salt Lake, Kolkata</p>
+                    <h3>Turkisyano</h3>
+                    <p>Lake Gardens, Kolkata</p>
                     <p>⭐⭐⭐⭐ (4.0)</p>
                 </div>
             </div>
             <div class="restaurant-card">
-                <img src="./images/ice-2.jpg" alt="Restaurant 2">
+                <a href="https://www.google.com/maps/place/Natural+Ice+Cream/@22.5027678,88.0673342,11z/data=!4m10!1m2!2m1!1sNatural+ice+cream!3m6!1s0x3a02771ab222a993:0xc460254bf9a32019!8m2!3d22.5506811!4d88.3548097!15sChFOYXR1cmFsIGljZSBjcmVhbSIDiAEBWhMiEW5hdHVyYWwgaWNlIGNyZWFtkgEOaWNlX2NyZWFtX3Nob3DgAQA!16s%2Fg%2F11f31ynsfn?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="https://naturalicecreams.in/wp-content/uploads/2023/11/Mocha-Hazelnut_Lid_App-by-Meen-MP_07.08.23-scaled.jpg" alt="Restaurant 6">
+                </a>
                 <div class="restaurant-info">
-                    <h3>Freezy ice</h3>
-                    <p>Sector 8, Salt Lake, Kolkata</p>
-                    <p>⭐⭐⭐⭐ (4.0)</p>
-                </div>
-            </div>
-            <div class="restaurant-card">
-                <img src="./images/ice-3.jpg" alt="Restaurant 2">
-                <div class="restaurant-info">
-                    <h3>Icy Bros</h3>
-                    <p>Sector 10, Salt Lake, Kolkata</p>
+                    <h3>Natural ice cream</h3>
+                    <p>Park street, Kolkata</p>
                     <p>⭐⭐⭐⭐⭐ (5.0)</p>
                 </div>
             </div>
+            <div class="restaurant-card">
+                <a href="https://www.google.com/maps/place/Cream+%26+Fudge/@22.5015671,88.3589574,17z/data=!4m10!1m2!2m1!1sice+cream+shop!3m6!1s0x3a0270d863d63dc1:0xe671cf7a084b7a0!8m2!3d22.5015671!4d88.3615323!15sCg5pY2UgY3JlYW0gc2hvcFoQIg5pY2UgY3JlYW0gc2hvcJIBDmljZV9jcmVhbV9zaG9w4AEA!16s%2Fg%2F124srrmwx?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="https://b.zmtcdn.com/data/dish_photos/d3f/0d007e958bbdf4bf571832b233a4fd3f.jpg" alt="Restaurant 7">
+                </a>
+                <div class="restaurant-info">
+                    <h3>Cream & Fudge</h3>
+                    <p>South City Mall, Kolkata</p>
+                    <p>⭐⭐⭐⭐ (4.0)</p>
+                </div>
+            </div>
+            <div class="restaurant-card">
+                <a href="https://www.google.com/maps/place/Pabrai's+Fresh+%26+Naturelle+Ice-creams,+Jodhpur+Park+Kolkata/@22.5054132,88.3624564,17z/data=!4m10!1m2!2m1!1sice+cream+shop!3m6!1s0x3a0271cd0872e7a9:0x95190aab1ba2837d!8m2!3d22.5054132!4d88.3669625!15sCg5pY2UgY3JlYW0gc2hvcFoQIg5pY2UgY3JlYW0gc2hvcJIBDmljZV9jcmVhbV9zaG9w4AEA!16s%2Fg%2F11lh9tt00m?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="https://lh3.googleusercontent.com/ByTv_jlJTpRN-KcJ049QMhK0luMSi80Eh3GeMf5vp6ind8nSORDrjWx0Y7pugVNN2pp13HQ4q-cZ5ZwU0R3D3zKLEQ=w300-rw" alt="Restaurant 8">
+                </a>
+                <div class="restaurant-info">
+                    <h3>Pabrai's Fresh & Naturelle Ice-creams</h3>
+                    <p>Jodhpur Park, Kolkata</p>
+                    <p>⭐⭐⭐⭐⭐ (5.0)</p>
+                </div>
+            </div>
+            <div class="restaurant-card">
+                <a href="https://www.google.com/maps/place/Him+Cream/@22.5114802,88.3258421,17z/data=!4m10!1m2!2m1!1sice+cream+shop!3m6!1s0x3a027b7edf57fc25:0xb9b1dfcdbf2a9562!8m2!3d22.5114802!4d88.3303482!15sCg5pY2UgY3JlYW0gc2hvcFoQIg5pY2UgY3JlYW0gc2hvcJIBDmljZV9jcmVhbV9zaG9w4AEA!16s%2Fg%2F11shg7plvl?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="https://b.zmtcdn.com/data/pictures/7/19696117/a3a08dca6425cfcb05387572afabdac7.jpg?fit=around|960:500&crop=960:500;*,*" alt="Restaurant 9">
+                </a>
+                <div class="restaurant-info">
+                    <h3>Him Cream</h3>
+                    <p>New Alipore, Kolkata</p>
+                    <p>⭐⭐⭐⭐⭐ (5.0)</p>
+                </div>
+            </div>
+
+        </div>
+         
         </div>
     </section>
-
+    
     <!-- Cart -->
     <div class="cart">
         <i class="fa fa-times close-cart" aria-hidden="true"></i>
@@ -273,7 +297,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-----scroll bottom to top------->
     <button class="scroll-button">
         <img src="images/icecream-cone.png" alt="icecream-cone" />
@@ -283,7 +307,6 @@
     <div class="copyright">
         &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
-
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
     <script src="./script/topscrollindicator.js"></script>
