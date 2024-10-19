@@ -1483,10 +1483,13 @@ section h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .restaurant-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+    transform: scale(1.02);
+    box-shadow: 1px 1px 23px rgba(247, 15, 100, 0.915); /*Added Color to restaurant cards */
+    border: none;
+    cursor: pointer;
+  }
 
 .restaurant-card img {
     width: 100%;
