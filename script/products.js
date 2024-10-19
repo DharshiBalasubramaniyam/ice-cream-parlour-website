@@ -342,10 +342,9 @@ function handleQuantityButtonsInCart() {
 
 function addToWishlist(e) {
     let wishlistItemId = e.target.closest(".box").getAttribute("id");
-    let pcs = parseInt(e.target.closest(".box").querySelector(".pcs").textContent, 10);
+    let pcs = parseInt(e.target.closest(".box").querySelector(".pcs").textContent);
 
-    // Ensure pcs is a valid number
-    if (isNaN(pcs) || pcs <= 0) {
+    if (pcs <= 0) {
         showToast("Please select the number of cups you want!");
         return;
     }
@@ -355,13 +354,13 @@ function addToWishlist(e) {
     let amount = item.price * pcs;
 
     if (existingWishlistItem) {
-        existingWishlistItem.pcs += pcs; // Increment by the correct number of pcs
+        existingWishlistItem.pcs += pcs;
         existingWishlistItem.amount = existingWishlistItem.pcs * item.price;
         showToast(`${pcs} more ${item.name} ice cream/s successfully added to the wishlist!`);
     } else {
         wishlistItems.push({
             itemId: wishlistItemId,
-            pcs: pcs,  // Ensure pcs is a number
+            pcs: pcs,
             amount: amount
         });
         showToast(`${pcs} ${item.name} ice cream/s successfully added to the wishlist!`);
@@ -370,7 +369,6 @@ function addToWishlist(e) {
     localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
     displayWishlistItems();
 }
-
 
 
 
@@ -411,7 +409,7 @@ function displayWishlistItems() {
         let itemLi = document.createElement("li");
         itemLi.setAttribute("id", wi.itemId);
         let product = products_list.find(p => p.id == wi.itemId);
-    
+
         if (product) {
             itemLi.innerHTML = `
                 <img src="${product.image}" alt="">
@@ -424,13 +422,13 @@ function displayWishlistItems() {
                 </div>
             `;
             wishlistUlList.appendChild(itemLi);
-            handleRemoveButtonInWishlist();  // Attach remove functionality
-    
+            handleRemoveButtonInWishlist(); // Attach remove functionality
+
+            // Add event listener for "Move to Cart"
             let moveToCartBtn = itemLi.querySelector(".move-to-cart");
             moveToCartBtn.addEventListener("click", () => moveToCart(wi.itemId));
         }
     });
-    
 }
 
 
