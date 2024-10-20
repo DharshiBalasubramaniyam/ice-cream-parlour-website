@@ -74,6 +74,7 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
         </div>
         <div class="icons">
             <div class="icon">
@@ -556,3 +557,42 @@
 </body>
 
 </html>
+
+<style>
+    
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.navbar, .footer {
+  background-color: #f8f9fa; /* Light mode navbar */
+}
+
+body.dark-mode .navbar, 
+body.dark-mode .footer {
+  background-color: #333; /* Dark mode navbar */
+}
+</style>
+
+<script>
+    const toggleButton = document.getElementById('dark-mode-toggle');
+
+// Check if dark mode preference is stored in localStorage
+if (localStorage.getItem('darkMode') === 'enabled') {
+  document.body.classList.add('dark-mode');
+}
+
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+
+  // Save the user's preference in localStorage
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    localStorage.removeItem('darkMode');
+  }
+});
+
+</script>
