@@ -18,9 +18,7 @@
     font-size: 65px;
     font-weight: 600;
     margin-bottom: 15px;
-    background: -webkit-linear-gradient(110deg, var(--main-color), var(--secondary-color));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--main-color);
     font-family: var(--curly-font);
 }
 
