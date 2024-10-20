@@ -18,9 +18,7 @@
     font-size: 65px;
     font-weight: 600;
     margin-bottom: 15px;
-    background: -webkit-linear-gradient(110deg, var(--main-color), var(--secondary-color));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--main-color);
     font-family: var(--curly-font);
 }
 
@@ -470,7 +468,7 @@
     text-align: center;
     padding: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Transition for smooth effect */
+    cursor: pointer;
 }
 
 .flavor-item:hover {
@@ -491,6 +489,7 @@
     font-size: 1.4em;
     letter-spacing: 1px;
     margin-top: 12px;
+    color: black;
 }
 
 /* Styling for the pop-up */
