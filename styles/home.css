@@ -468,7 +468,7 @@
     text-align: center;
     padding: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Transition for smooth effect */
+    cursor: pointer;
 }
 
 .flavor-item:hover {
@@ -489,6 +489,7 @@
     font-size: 1.4em;
     letter-spacing: 1px;
     margin-top: 12px;
+    color: black;
 }
 
 /* Styling for the pop-up */
