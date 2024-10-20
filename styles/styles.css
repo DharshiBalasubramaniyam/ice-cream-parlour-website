@@ -566,31 +566,23 @@ h3 {
 
 }
 
-/* Facebook */
 .footer-col .links li a[href*="facebook.com"]:hover {
     background: linear-gradient(to right, blue, white);
     -webkit-background-clip: text;
     color: transparent;
 }
 
-/* Instagram */
 .footer-col .links li a[href*="instagram.com"]:hover {
     color: red;
-    /* Instagram hover color */
 }
 
-/* Linkedin */
 .footer-col .links li a[href*="linkedin.com"]:hover {
     color: lightblue;
-    /* Instagram hover color */
 }
 
-/* Twitter */
 .footer-col .links li a[href*="twitter.com"]:hover {
     color: #fffcfc;
-    /* Base color */
     text-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-    /* Greyish glow */
 }
 
 /* Whatsapp */
@@ -664,14 +656,11 @@ h3 {
 
 ::-webkit-scrollbar-track {
     background: transparent;
-    /* border-radius: 100vw; */
-    /* margin-block: .5em; */
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--secondary-color);
     background-image: var(--background-image);
-    /* border-radius: 100vw; */
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -732,15 +721,11 @@ h3 {
 @keyframes appearleft {
     from {
         opacity: 0;
-        /* scale: 0.5; */
-        /* clip-path: insert(100% 100% 0 0); */
         transform: translateX(100px);
     }
 
     to {
         opacity: 1;
-        /* scale:1; */
-        /* clip-path: insert(0 0 0 0); */
         transform: translateX(0px);
     }
 }
@@ -750,6 +735,7 @@ h3 {
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
 }
+
 .rightani {
     animation: appearright linear;
     animation-timeline: view();
@@ -814,9 +800,10 @@ h3 {
     width: 24px;
     border-radius: 24px;
     background-color: black;
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 99999999; /* so that it stays on top of all other elements */
-  }
+    z-index: 99999999;
+    /* so that it stays on top of all other elements */
+}
