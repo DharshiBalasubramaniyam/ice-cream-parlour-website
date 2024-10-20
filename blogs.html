@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/mediaQueries.css">
   <link rel="stylesheet" href="styles/cursor.css">
+  <link rel="stylesheet" href="styles/styles.css">
 
   <!-- link to add favicon -->
   <link rel="icon" href="./images/logo.png" type="image/png">
@@ -74,6 +75,27 @@
       <a href="./dine-in.html" class="link">Dine In</a>
       <a href="./catering.html" class="link active">Catering</a>
     </div>
+  <!-- Cart -->
+  <div class="cart">
+    <i class="fa fa-times close-cart" aria-hidden="true"></i>
+    <h1>Your Cart</h1>
+
+    <div class="no-empty-cart">
+        <ul class="cart-list-items">
+        </ul>
+        <div>
+            <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+            <button>Check out</button>
+        </div>
+
+    </div>
+
+    <div class="empty-cart active">
+        <p>No items in the cart!</p>
+    </div>
+
+</div>
+
     <div class="icons">
       <div class="icon">
         <i class="fa fa-user" aria-hidden="true"></i>
@@ -444,6 +466,7 @@
   <script src="./script/topscrollindicator.js"></script>
   <script type="module" src="./script/products.js"></script>
   <script src="script/cursor.js"></script>
+  
 
 </body>
 
