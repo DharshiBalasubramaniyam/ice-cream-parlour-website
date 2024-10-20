@@ -5,3 +5,4 @@ window.onscroll = function() {
     var scrolled = (scrollTop / scrollHeight) * 100;
     scrollProgress.style.width = scrolled + "%";
 };
+
