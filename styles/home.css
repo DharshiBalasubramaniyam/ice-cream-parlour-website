@@ -210,12 +210,12 @@
     margin: 50px 0;
     padding: 25px 0;
     box-shadow: 0 0 15px rgb(208, 208, 208);
+    width:50vw;
 }
 
 .contact form .row {
     padding: 0;
     width: 95%;
-    display: flex;
     gap: 25px;
     justify-content: center;
     margin: 0 auto;
@@ -226,7 +226,7 @@
 }
 
 .contact form .input-box label {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 3px;
 }
 
@@ -252,6 +252,27 @@
     justify-content: center;
     overflow: hidden;
 
+}
+
+.contact-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.contact-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.img-container {
+    width: 50vw;
+    height: 650px;
+    overflow: hidden;
+  border-radius: 10px;
 }
 
 
