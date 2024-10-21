@@ -49,3 +49,49 @@ section h1 {
     background-color: var(--main-color);
     color: var(--body-color);
 }
+    /* Style for progress bar container */
+    .progress-bar-wrapper {
+        position: relative;
+        /* width: 100%; */
+        height: 20px;
+        margin: 0 20px;
+        background-color: #f3f3f3;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styled progress bar */
+    .styled-progress {
+        width: 100%;
+        height: 100%;
+        appearance: none;
+    }
+
+    /* For browsers that support progress bar styling */
+    .styled-progress::-webkit-progress-bar {
+        background-color: #f3f3f3;
+    }
+
+    .styled-progress::-webkit-progress-value {
+        background-color:#EE66A6; /* Green progress bar */
+        border-radius: 10px;
+        transition: width 0.4s ease;
+    }
+
+    .styled-progress::-moz-progress-bar {
+        background-color: #EE66A6; /* For Firefox */
+        border-radius: 10px;
+        transition: width 0.4s ease;
+    }
+
+    /* Progress percentage text */
+    .progress-percentage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+    }
