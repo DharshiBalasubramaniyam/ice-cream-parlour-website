@@ -7,8 +7,6 @@ const message = document.getElementById("message");
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const phoneRegex = /^[0-9]{10}$/;
 
-
-
 contactForm?.addEventListener("submit", (e)=> {
     e.preventDefault();
     let isValid = true;

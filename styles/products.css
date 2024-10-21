@@ -1,0 +1,221 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.search-container input {
+    width: 70%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px 0 0 10px;
+}
+
+.search-container input:focus {
+    outline: 2px solid var(--secondary-color);
+}
+
+.search-container button {
+    padding: 10px 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+
+.categories-wrapper {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.categories-wrapper button {
+    font-size: 15px;
+    width: fit-content;
+    padding: 7px 20px;
+    border: 1px solid var(--main-color);
+    margin: 5px;
+    background-image: var(--background-image);
+}
+
+.categories-wrapper button:not(.active) {
+    background-image: none;
+    color: var(--ternary-color);
+    background-color: transparent;
+}
+
+.categories-wrapper button:hover {
+    background-color: var(--main-color);
+    color: var(--body-color);
+}
+
+.products .products-box {
+    gap: 20px;
+}
+
+.products .products-box .box {
+    position: relative;
+    flex: 1 1 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px whitesmoke;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cat-label {
+    background-color: var(--body-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 5px;
+    position: absolute;
+    bottom: 5px;
+    font-size: 12px;
+    left: 5px;
+    border-radius: 25px;
+}
+
+.products .products-box .box .off,
+.products .products-box .box .wish {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    top: 15px;
+    left: 0px;
+    background-color: var(--main-color);
+    color: var(--body-color);
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.products .products-box .box .wish {
+    left: auto;
+    right: -60px;
+    transition: right 0.2s ease;
+}
+
+.products .products-box .box:hover .wish {
+    right: 0;
+}
+
+.products .products-box .box:hover {
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.products .products-box .box img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+
+.products .products-box .box .name-price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* Vertically center the name and price */
+    justify-content: space-between;
+    /* Keep name and price at opposite ends */
+    font-size: 22px;
+    padding: 10px 1px;
+    text-align: center;
+    /* Centers the text within each item */
+}
+
+.products .products-box .box .description {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.products .products-box .box .qty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qtycart {
+    width: fit-content !important;
+    border: 2px solid red !important;
+    border-radius: 25px !important;
+    padding: 0 5px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.decreasecart {
+    border-right: 2px solid red !important;
+    padding: 5px !important;
+}
+
+.increasecart {
+    cursor: pointer !important;
+    padding: 5px !important;
+}
+
+.pcscart {
+    border-right: 2px solid red !important;
+    padding: 5px;
+}
+
+.products .products-box .box .qty span {
+    margin: 15px 0;
+    display: inline-block;
+    height: 35px;
+    width: 45px;
+    line-height: 31px;
+    font-size: 20px;
+    border: 2px solid var(--main-color);
+    text-align: center;
+    transition: 0.3s;
+}
+
+
+
+.products .products-box .box .qty .increase,
+.decrease {
+    cursor: pointer !important;
+    user-select: none;
+}
+
+.products .products-box .box .qty .pcs {
+    cursor: default;
+}
+
+.products .products-box .box .qty span:first-of-type:hover,
+.products .products-box .box .qty span:last-of-type:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.products .products-box .box .qty span:first-of-type {
+    border-radius: 25px 0 0 25px;
+    border-right-width: 0;
+}
+
+.products .products-box .box .qty span:last-of-type {
+    border-radius: 0 25px 25px 0;
+    border-left-width: 0;
+}
+
+.products-box button {
+    width: 100%;
+}

@@ -6,42 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICYCO - SIGN-UP</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/style2.css">
-    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/login-signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
-
 
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
 
-    
- <!-- cursor -->
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
+
+    <!-- cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
     <!-- Preloader -->
     <div id="preloader">
-        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-        <p class="loading-text">Loading...</p>
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+        </div>
     </div>
 
     <!-- scroll progress -->
@@ -66,11 +72,11 @@
                 <input type="text" class="input-field" placeholder="Last name">
             </div>
         </div>
-    
+
         <div class="input-fields">
             <input type="email" class="input-field" placeholder="Email">
         </div>
-    
+
         <div class="input-fields">
             <div class="password-container">
                 <input type="password" class="input-field" id="password-input-field" placeholder="Password">
@@ -82,13 +88,13 @@
                 <p id="password-strength-text"></p>
             </div>
         </div>
-    
+
         <div class="signin-btn">
             <button type="submit">Continue</button>
         </div>
     </form>
-  
-    
+
+
     <div class="terms">
         <br>
         By clicking Continue or registering through a third party you accept the Icyco
@@ -98,11 +104,13 @@
         <span>Already have an account?</span><a href="./login.html" class="register-now-link">Login</a>
         <div class="sep-container" style="margin-top: 5px;">
             <div class="sep-line"></div>
-            <div><p>or</p></div>
-            <div class="sep-line"></div>    
+            <div>
+                <p>or</p>
+            </div>
+            <div class="sep-line"></div>
         </div>
     </div>
-    
+
     <div class="social-link-2">
         <a href=""><img src="images/social-icons/google.png" width="25px" height="25px"></a>
         <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px"></a>
@@ -113,14 +121,14 @@
 
 
 
-    
-  <script src="script/cursor.js"></script>
-  <script src="./script/signup.js"></script>
-  <script src="script/login.js"></script>
-  <script src="./script/nav.js"></script>
-  <script src="./script/topscrollindicator.js"></script>
 
- 
+    <script src="script/cursor.js"></script>
+    <script src="./script/signup.js"></script>
+    <script src="script/login.js"></script>
+    <script src="./script/nav.js"></script>
+    <script src="./script/topscrollindicator.js"></script>
+
+
 </body>
 
 </html>

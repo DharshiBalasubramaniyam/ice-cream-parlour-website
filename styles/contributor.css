@@ -1,7 +1,7 @@
 body {
   font-family: "Poppins";
   color: #333;
-  display: flex;
+  
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -11,6 +11,9 @@ body {
 .container {
   text-align: center;
 }
+.container h1 {
+  margin-top: 40px;
+}
 
 .title {
   display: inline-block;
@@ -18,7 +21,7 @@ body {
   margin-bottom: 20px;
   padding: 10px;
   color: #eeb8eb;
-  text-shadow: 1px 1px 2px rgb(184, 45, 235), 0 0 1em rgba(216, 130, 200, 0.617),
+  text-shadow: 1px 1px 2px rgb(240, 4, 150), 0 0 1em rgba(216, 130, 200, 0.617),
     0 0 0.2em rgba(99, 1, 124, 0.623);
   /* border-radius: 20px; */
   /* background-color: rgba(209, 209, 255, 0.8); */
@@ -136,8 +139,8 @@ body {
 /* Toggle button styles */
 .toggle-container {
   position: fixed; /* Change this as needed for positioning */
-  top: 25px;
-  right: 40px;
+  top: 60px;
+  right: 10px;
 }
 
 .toggle {
