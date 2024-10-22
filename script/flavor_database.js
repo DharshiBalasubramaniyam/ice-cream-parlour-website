@@ -1,5 +1,10 @@
 const falvors_list = [
     {
+        id: "f006",
+        name: "Top Picks",
+        image: "images/regular.jpg"
+    },
+    {
         id: "f001",
         name: "Regular",
         image: "images/regular.jpg"

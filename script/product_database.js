@@ -62,7 +62,7 @@ const products_list = [
     {
         id: "p007",
         name: "Pistachio Gelato",
-        flavor_id: "f002",
+        flavor_id: "f006",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -72,7 +72,7 @@ const products_list = [
     {
         id: "p008",
         name: "Mediterranean Mint",
-        flavor_id: "f002",
+        flavor_id: "f006",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
@@ -82,12 +82,16 @@ const products_list = [
     {
         id: "p009",
         name: "Raspberry Sorbetto",
-        flavor_id: "f003",
+        flavor_id: "f006",
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
         image: "images/rainbow.jpg",
-        rating: 4
+        rating:     {
+            id: "f001",
+            name: "Regular",
+            image: "images/regular.jpg"
+        },
     },
     {
         id: "p010",
