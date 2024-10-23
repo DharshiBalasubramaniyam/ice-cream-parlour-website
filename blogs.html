@@ -63,6 +63,13 @@
   <div class="scroll-progress"></div>
 
   <!-- nav bar -->
+
+    <!-- nav bar -->
+    <div class="nav-bar">
+      <div class="logo">
+          <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
+          <a href="">IcyCo</a>
+
   <div class="nav-bar">
     <div class="logo">
       <img src="./images/logo.png" alt="icyco-logo" height="25px" width="25px">
@@ -99,15 +106,75 @@
     <div class="icons">
       <div class="icon">
         <i class="fa fa-user" aria-hidden="true"></i>
+
       </div>
-      <div class="icon">
-        <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
-            class="no-of-cart-items">0</span></span>
+      <div class="nav-links">
+          <a href="./index.html" class="link">home</a>
+          <a href="./products.html" class="link">products</a>
+          <a href="./delivery.html" class="link">Delivery</a>
+          <a href="./dine-in.html" class="link">Dine In</a>
+          <a href="./catering.html" class="link active">Catering</a>
+          <a href="./subscriptions.html" class="link">Subscriptions</a>
+          
+
       </div>
-      <div class="icon">
-        <i class="fa fa-bars menu" aria-hidden="true"></i>
+      <div class="icons">
+          <div class="icon">
+              <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+          </div>
+          <div class="icon">
+              <i class="fa fa-heart wishlist-icon" aria-hidden="true"></i>
+          </div>
+          <div class="icon">
+              <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                      class="no-of-cart-items">0</span></span>
+          </div>
+          <div class="icon">
+              <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
+          </div>
       </div>
-    </div>
+  </div>
+
+  <!-- Cart -->
+  <div class="cart">
+      <i class="fa fa-times close-cart" aria-hidden="true"></i>
+      <h1>Your Cart</h1>
+
+      <div class="no-empty-cart">
+          <ul class="cart-list-items">
+          </ul>
+          <div>
+              <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+              <button>Check out</button>
+          </div>
+
+      </div>
+
+      <div class="empty-cart active">
+          <p>No items in the cart!</p>
+      </div>
+
+  </div>
+
+  <!-- Wishlist -->
+  <div class="wishlist">
+      <i class="fa fa-times close-wishlist" aria-hidden="true"></i>
+      <h1>Your Wishlist</h1>
+
+      <div class="no-empty-wishlist">
+          <ul class="wishlist-list-items">
+          </ul>
+          <div>
+              <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+              <button>Check out</button>
+          </div>
+
+      </div>
+
+      <div class="empty-wishlist active">
+          <p>No items in the wishlist!</p>
+      </div>
+
   </div>
 
   <section>
@@ -463,6 +530,7 @@
 
   <script src="./script/nav.js"></script>
   <script src="./script/cart.js"></script>
+  <script type="module" src="script/wishlist.js"></script>
   <script src="./script/topscrollindicator.js"></script>
   <script type="module" src="./script/products.js"></script>
   <script src="script/topscrollindicator.js"></script>
