@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles/contributor.css" />
     <link rel="stylesheet" href="styles/cursor.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -35,23 +37,24 @@
         background-color: white;
       }
       .top-btn {
-        display: none;
+        
+        display: block;
+        border: none;
+        background-color: transparent;
         width: 50px;
-        height: 50px;
+        
+        height: 60px;
         position: fixed;
         bottom: 10px;
         right: 0px;
-        background-color: #59038a;
-        color: #fff;
-        padding: 2px;
-        border: none;
-        margin-right: 36px;
-        border-radius: 50%;
-        cursor: pointer;
+        background-image: url(images/icecream-cone.png) ;
+        
+        background-size: cover;
       }
 
       .top-btn:hover {
-        background-color: #f689f2;
+        
+        background-image: url(images/icecream-cone.png) ;
       }
 
       .pagination-btns {
@@ -149,7 +152,7 @@
       <div id="contributors" class="contributors-grid"></div>
     </div>
     <button class="top-btn" id="goToTopBtn" onclick="goToTop()">
-      <i class="fa-solid fa-chevron-up" style="color: #ffffff"></i>
+      
     </button>
 
     <section class="footer">
@@ -271,6 +274,8 @@
       }
     </script>
     <script src="script/contributor.js"></script>
+    <script src="script/topscrollindicator.js"></script>
+
     <script>
       window.addEventListener("scroll", function () {
         const winScroll =

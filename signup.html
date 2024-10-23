@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/login-signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+
 </head>
 
 <body>
@@ -66,20 +68,20 @@
     <form>
         <div id="name-fields">
             <div id="first-name-field">
-                <input type="text" class="input-field" placeholder="First name">
+                <input type="text" class="input-field" placeholder="First name" required>
             </div>
             <div id="last-name-field">
-                <input type="text" class="input-field" placeholder="Last name">
+                <input type="text" class="input-field" placeholder="Last name" required>
             </div>
         </div>
 
         <div class="input-fields">
-            <input type="email" class="input-field" placeholder="Email">
+            <input type="email" class="input-field" placeholder="Email" required>
         </div>
 
         <div class="input-fields">
             <div class="password-container">
-                <input type="password" class="input-field" id="password-input-field" placeholder="Password">
+                <input type="password" class="input-field" id="password-input-field" placeholder="Password" required>
                 <i style="margin-top: 5px;" class="fa-solid fa-eye-slash" id="toggle-password"></i>
             </div>
             <!-- Password strength meter -->
