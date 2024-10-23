@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="./styles/mediaQueries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+
+    
 
 </head>
 
@@ -40,21 +43,27 @@
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
-            <a href="./products.html" class="link">products</a>
+            <a href="./products.html" class="link active">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
+            <a href="./subscriptions.html" class="link">Subscriptions</a>
+            
+
         </div>
         <div class="icons">
             <div class="icon">
                 <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="icon">
+                <i class="fa fa-heart wishlist-icon" aria-hidden="true"></i>
+            </div>
+            <div class="icon">
                 <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
                         class="no-of-cart-items">0</span></span>
             </div>
             <div class="icon">
-                <i class="fa fa-bars menu" aria-hidden="true"></i>
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
             </div>
         </div>
     </div>
@@ -84,9 +93,49 @@
         <h1>Privacy Policy</h1>
         <p><i><strong>Last Updated:</strong>October 2024</i></p>
 
+
+    <!-- Wishlist -->
+    <div class="wishlist">
+        <i class="fa fa-times close-wishlist" aria-hidden="true"></i>
+        <h1>Your Wishlist</h1>
+
+        <div class="no-empty-wishlist">
+            <ul class="wishlist-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+        </div>
+
+        <div class="empty-wishlist active">
+            <p>No items in the wishlist!</p>
+        </div>
+
+    </div>
+
+    <main class="container">
+        <section id="privacy-policy">
+            <h1><b>&nbsp;&nbsp;&nbsp;Privacy Policy&nbsp;&nbsp;&nbsp;</b></h1>
+            <p><i><strong>Last Updated:</strong>October 2024</i></p>
+
+            <p>At IcyCo Ice Cream, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when
+                 you visit our website, make purchases, or interact with our services.</p>
+            <hr>
+            <h3>1. Information We Collect</h3>
+            <p>We collect the following types of information to provide and improve our services:</p>
+            
+            <h4>a. Personal Information</h4>
+            <ul>
+                <li>~ <b>Contact Information:</b> Name, email address, phone number, and delivery address.</li>
+                <li>~ <b>Payment Information:</b> Credit card details or other payment methods when you make a purchase.</li>
+            </ul>
+
         <p>At IcyCo Ice Cream, we are committed to protecting your privacy. This Privacy Policy explains how we
             collect, use, and share information about you when
             you visit our website, make purchases, or interact with our services.</p>
+
 
         <h3>1. Information We Collect</h3>
         <p>We collect the following types of information to provide and improve our services:</p>
@@ -274,6 +323,10 @@
     <script type="module" src="script/products.js"></script>
     <script type="module" src="script/nav.js"></script>
     <script type="module" src="script/cart.js"></script>
+
+    <script type="module" src="script/wishlist.js"></script>
+    <script src="script/FAQ.js"></script>
+
     <script src="script/topscrollindicator.js"></script>
 </body>
 

@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="styles/gallery.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+  
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
 
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
@@ -68,10 +74,36 @@
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
-            <a href="./products.html" class="link">products</a>
+            <a href="./products.html" class="link active">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
+          
+            <a href="./gallery.html" class="link" style="text-decoration: underline;">Gallery</a>
+            
+    <!-- Cart -->
+    <div class="cart">
+        <i class="fa fa-times close-cart" aria-hidden="true"></i>
+        <h1>Your Cart</h1>
+
+            <a href="./subscriptions.html" class="link">Subscriptions</a>
+
+        <div class="no-empty-cart">
+            <ul class="cart-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+
+        </div>
+
+        <div class="empty-cart active">
+            <p>No items in the cart!</p>
+        </div>
+
+    </div>
 
         </div>
         <div class="icons">
@@ -79,13 +111,58 @@
                 <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="icon">
+                <i class="fa fa-heart wishlist-icon" aria-hidden="true"></i>
+            </div>
+            <div class="icon">
                 <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
                         class="no-of-cart-items">0</span></span>
             </div>
             <div class="icon">
-                <i class="fa fa-bars menu" aria-hidden="true"></i>
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
             </div>
         </div>
+    </div>
+
+    <!-- Cart -->
+    <div class="cart">
+        <i class="fa fa-times close-cart" aria-hidden="true"></i>
+        <h1>Your Cart</h1>
+
+        <div class="no-empty-cart">
+            <ul class="cart-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+        </div>
+
+        <div class="empty-cart active">
+            <p>No items in the cart!</p>
+        </div>
+
+    </div>
+
+    <!-- Wishlist -->
+    <div class="wishlist">
+        <i class="fa fa-times close-wishlist" aria-hidden="true"></i>
+        <h1>Your Wishlist</h1>
+
+        <div class="no-empty-wishlist">
+            <ul class="wishlist-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+        </div>
+
+        <div class="empty-wishlist active">
+            <p>No items in the wishlist!</p>
+        </div>
+
     </div>
 
 
@@ -280,11 +357,18 @@
     <!-- Toaster -->
     <div id="toast-container" class="toast-container"></div>
 
-    <script type="module" src="script/products.js"></script>
-    <script type="module" src="script/nav.js"></script>
-    <script type="module" src="script/cart.js"></script>
-    <script src="script/topscrollindicator.js"></script>
-    <script src="script/cursor.js"></script>
+<script src="script/swiper-bundle.min.js"></script>
+<script src="script/reviews.js"></script>
+<script src="script/form.js"></script>
+<script type="module" src="script/products.js"></script>
+<script type="module" src="script/nav.js"></script>
+<script type="module" src="script/cart.js"></script>
+<script type="module" src="script/wishlist.js"></script>
+<script src="script/FAQ.js"></script>
+<script src="script/topscrollindicator.js"></script>
+<script src="script/popup.js"></script>
+<script src="script/cursor.js"></script>
+
 </body>
 
 </html>
