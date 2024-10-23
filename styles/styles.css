@@ -676,7 +676,26 @@ h3 {
 }
 
 /* -------------products section styles------------------- */
+.search-bar{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px silver;
+}
 
+.search-bar input[type="text"]
+{
+    width: 80%;
+    padding: 10px;
+    font-size:16px;
+    border: none;
+    outline: none;
+}
+.categories-wrapper {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
 .categories-wrapper {
     margin-bottom: 20px;
     text-align: center;
