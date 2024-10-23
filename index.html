@@ -16,6 +16,7 @@
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
 
+ 
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
 
@@ -43,7 +44,14 @@
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
-
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+ 
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-container">
@@ -64,8 +72,8 @@
     <!-- nav bar -->
     <div class="nav-bar">
         <div class="logo">
-            <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
-            <a href="">IcyCo</a>
+            <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px" class="logo-img">
+            <a href="" class="logo-text">IcyCo</a>
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link active">home</a>
@@ -73,14 +81,16 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
+            <a href="./gallery.html" class="link">Gallery</a>
+ 
         </div>
         <div class="icons">
             <div class="icon">
-                <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+                <a href="./login.html"  class="icon-link"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="icon">
-                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
-                        class="no-of-cart-items">0</span></span>
+                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i>
+                    <span class="no-of-cart-items">0</span></span>
             </div>
             <div class="icon">
                 <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
@@ -131,6 +141,35 @@
         <h1>Find Your <span>Taste</span></h1>
         <div class="flavors-container bottomani">
         </div>
+        <div class="flavors-container">
+            <div class="flavor-item">
+                <img src="images/regular.jpg" alt="Regular Ice Cream" />
+                <h3>Regular</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/gelato.jpg" alt="Gelato" />
+                <h3>Gelato</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/sorbet.jpg" alt="Sorbet" />
+                <h3>Sorbet</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/yogurt.jpg" alt="Yogurt" />
+                <h3>Yogurt</h3>
+            </div>
+            <div class="flavor-item">
+                <img src="images/vegan.jpg" alt="Non Dairy/Vegan" />
+                <h3>Non Dairy/Vegan</h3>
+            </div>
+        </div>
+
+        <!-- Background Shapes -->
+        <img src="images/rainbow.svg" class="background-shape rainbow" alt="Rainbow" />
+        <img src="images/star.svg" class="background-shape star" alt="Star" />
+        <img src="images/heart.svg" class="background-shape heart" alt="Heart" />
+        <img src="images/crown.svg" class="background-shape crown" alt="Crown" />
+        <img src="images/snowflake.svg" class="background-shape snowflake" alt="Snowflake" />
     </section>
 
     <!-- Services -->
@@ -201,6 +240,34 @@
     <!-- About -->
     <section class="about" id="about">
         <div class="box-container about-box">
+            <h2>Get The Cool Down With Our Creamy Creations!</h2>
+            <p>We at IcyCo, We're more than just a company – we're a community driven by a shared vision and
+                commitment to excellence. We're excited to continue and expand our business all while staying true
+                to our roots and the values that define us. Come visit us and let’s create sweet memories together!
+            </p>
+            <!-- <ul>
+                    <li>
+                        <div class="feature-icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                        <span><span>Range of flavours</span> from our parlour for <span>Dine-in</span> and
+                            <span>Take-out</span> options</span>
+                    </li>
+                    <li>
+                        <div class="feature-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
+                        <span>Manufactured under <span>strict hygiene</span> and <span>food safety
+                                conditions</span></span>
+                    </li>
+                    <li>
+                        <div class="feature-icon"><i class="fa fa-snowflake-o" aria-hidden="true"></i></div>
+                        <span><span>Best quality ingredients</span> from globally and locally recognized
+                            suppliers</span>
+                    </li>
+                    <li>
+                        <div class="feature-icon"><i class="fa fa-smile-o" aria-hidden="true"></i></div>
+                        <span>A welcoming space for families, offering a fun and <span>friendly atmosphere</span> for
+                            all ages.</span>
+                    </li>
+                </ul> -->
+        </div>
             <h2 class="rightani">Get The Cool Down With Our Creamy Creations!</h2>
             <p class="leftani">We at IcyCo, We're more than just a company – we're a community driven by a shared vision
                 and
@@ -261,6 +328,17 @@
 
     <!-- reviews -->
     <section class="reviewSection" id="reviewsSection">
+        <h1>Top <span>Reviews</span></h1>
+        <div class="container">
+            <div class="reviews">
+                <div class="review-box" id="box_1">
+                    <h1>Top Reviews from our verified customers</h1>
+                </div>
+                <div class="review-box">
+                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                    <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                    <div class="top">
+                        <img src="images/reveiwer1.jpg" alt="Reviewer Tom Stepher"">
         <h1>Top Reviews</h1>
         <div class="reviews">
             <div class="review-box" id="box_1">
@@ -283,10 +361,12 @@
                     </div>
                 </div>
                 <div class="text">“IcyCo’s ice cream is like a symphony for your taste buds. The salted caramel
+                    swirl? Divine!”</div>
+            </div>
+            <div class="review-box">
                     swirl? Divine!”
                 </div>
             </div>
-
             <div class="review-box bottomani">
                 <i class="fa fa-quote-right quote" aria-hidden="true"></i>
                 <div class="top">
@@ -306,7 +386,7 @@
                 <div class="text">“Visited here on a hot day!
                     The mint chocolate took me straight to heavens.”</div>
             </div>
-
+            <div class="review-box"><i class="fa fa-quote-right quote" aria-hidden="true"></i>
             <div class="review-box bottomani"><i class="fa fa-quote-right quote" aria-hidden="true"></i>
                 <div class="top">
                     <img src="images/reveiwer2.jpg" alt="">
@@ -367,11 +447,13 @@
             </div>
 
         </div>
+        </div>
     </section>
 
     <!-- contact -->
     <section class="contact" id="contact">
         <h1><span>Contact</span> Us</h1>
+        <form action="#" novalidate class="box-container" id="contact-form">
         <form action="#" novalidate class="box-container bottomani" id="contact-form">
             <div class="row">
                 <div class="input-box">
@@ -415,7 +497,6 @@
             </div>
         </form>
     </section>
-
     <!-- footer -->
     <section class="footer">
         <div class="footer-row">
@@ -519,7 +600,6 @@
     <script type="module" src="script/flavor_section.js"></script>
     <script src="script/cursor.js"></script>
     <script src="script/script.js"></script>
-
 </body>
 
 </html>
