@@ -52,6 +52,8 @@
 .restaurant-card img {
     width: 100%;
     height: 200px;
+    /* Given the property object-fit as cover so that the image quality is set to original the image fits the container's aspect ratio */
+    object-fit:cover;
 }
 
 .restaurant-info {
