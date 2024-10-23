@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="styles/gallery.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+  
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
 
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
@@ -68,10 +74,36 @@
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
-            <a href="./products.html" class="link">products</a>
+            <a href="./products.html" class="link active">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
+          
+            <a href="./gallery.html" class="link" style="text-decoration: underline;">Gallery</a>
+            
+    <!-- Cart -->
+    <div class="cart">
+        <i class="fa fa-times close-cart" aria-hidden="true"></i>
+        <h1>Your Cart</h1>
+
+            <a href="./subscriptions.html" class="link">Subscriptions</a>
+
+        <div class="no-empty-cart">
+            <ul class="cart-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+
+        </div>
+
+        <div class="empty-cart active">
+            <p>No items in the cart!</p>
+        </div>
+
+    </div>
 
         </div>
         <div class="icons">
@@ -79,13 +111,58 @@
                 <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
             </div>
             <div class="icon">
+                <i class="fa fa-heart wishlist-icon" aria-hidden="true"></i>
+            </div>
+            <div class="icon">
                 <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
                         class="no-of-cart-items">0</span></span>
             </div>
             <div class="icon">
-                <i class="fa fa-bars menu" aria-hidden="true"></i>
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
             </div>
         </div>
+    </div>
+
+    <!-- Cart -->
+    <div class="cart">
+        <i class="fa fa-times close-cart" aria-hidden="true"></i>
+        <h1>Your Cart</h1>
+
+        <div class="no-empty-cart">
+            <ul class="cart-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+        </div>
+
+        <div class="empty-cart active">
+            <p>No items in the cart!</p>
+        </div>
+
+    </div>
+
+    <!-- Wishlist -->
+    <div class="wishlist">
+        <i class="fa fa-times close-wishlist" aria-hidden="true"></i>
+        <h1>Your Wishlist</h1>
+
+        <div class="no-empty-wishlist">
+            <ul class="wishlist-list-items">
+            </ul>
+            <div>
+                <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+                <button>Check out</button>
+            </div>
+
+        </div>
+
+        <div class="empty-wishlist active">
+            <p>No items in the wishlist!</p>
+        </div>
+
     </div>
 
 
@@ -184,52 +261,42 @@
     </section>
     <!-- ------footer------------ -->
 
-    <section class="footer">
-        <div class="footer-row">
-            <div class="footer-col">
-                <h4>Useful links</h4>
-                <ul class="links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="gallary.html">Gallery</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="./faq.html" class="link">FAQ</a></li>
-                    <li><a href="contributor.html">Our Contributors</a></li>
-                    <li><a href="blogs.html">Our Blogs</a></li>
-                    <li><a href="#">Customer Agreement</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms&condition.html">Terms&Condition</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Flavors</h4>
-                <ul class="links">
-                    <li><a href="#">Regular</a></li>
-                    <li><a href="#">Gelato</a></li>
-                    <li><a href="#">Sorbet</a></li>
-                    <li><a href="#">Soft serve</a></li>
-                    <li><a href="#">Frozen Yogurt</a></li>
-                    <li><a href="#">Non Diary/Vegen</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Opening Hours</h4>
-                <ul class="links">
-                    <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
-                    <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
-                </ul>
-                <h4 style="margin-top: 15px;">Locations</h4>
-                <ul class="links">
-                    <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
-                            ramankulam-
-                            Malappuram Dt</a></li>
-                    <li class="address2"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> MG Road,
-                            Bangalore - Karnataka</a></li>
-                    <li class="address3"><a href="" class="social"><i class="fa-solid fa-location-dot"></i>
-                            Connaught Place, New Delhi</a></li>
-                    <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
-                            Street, Kolkata - West Bengal</a></li>
+
+<section class="footer">
+    <div class="footer-row">
+        <div class="footer-col">
+            <h4>Useful links</h4>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="gallary.html">Gallery</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="./faq.html" class="link">FAQ</a></li>
+                <li><a href="contributor.html">Our Contributors</a></li>
+                <li><a href="blogs.html">Our Blogs</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms&condition.html">Terms&Condition</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Opening Hours</h4>
+            <ul class="links">
+                <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
+                <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
+            </ul>
+            <h4 style="margin-top: 15px;">Locations</h4>
+            <ul class="links">
+                <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
+                        ramankulam-
+                        Malappuram Dt</a></li>
+                <li class="address2"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> MG Road,
+                        Bangalore - Karnataka</a></li>
+                <li class="address3"><a href="" class="social"><i class="fa-solid fa-location-dot"></i>
+                        Connaught Place, New Delhi</a></li>
+                <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
+                        Street, Kolkata - West Bengal</a></li>
+
 
                     </li>
 
@@ -290,11 +357,18 @@
     <!-- Toaster -->
     <div id="toast-container" class="toast-container"></div>
 
-    <script type="module" src="script/products.js"></script>
-    <script type="module" src="script/nav.js"></script>
-    <script type="module" src="script/cart.js"></script>
-    <script src="script/topscrollindicator.js"></script>
-    <script src="script/cursor.js"></script>
+<script src="script/swiper-bundle.min.js"></script>
+<script src="script/reviews.js"></script>
+<script src="script/form.js"></script>
+<script type="module" src="script/products.js"></script>
+<script type="module" src="script/nav.js"></script>
+<script type="module" src="script/cart.js"></script>
+<script type="module" src="script/wishlist.js"></script>
+<script src="script/FAQ.js"></script>
+<script src="script/topscrollindicator.js"></script>
+<script src="script/popup.js"></script>
+<script src="script/cursor.js"></script>
+
 </body>
 
 </html>

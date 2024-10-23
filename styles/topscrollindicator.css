@@ -1,0 +1,11 @@
+ /* Scroll progress bar styles */
+ .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%; 
+    height: 8px; 
+    background-color: rgb(226,79,127);
+    z-index:9999; 
+    transition: width 0.25s ease-out; 
+}
