@@ -497,10 +497,16 @@ function displayWishlistItems() {
                 <img src="${product.image}" alt="">
                 <div class="text">
                     <span class="name">${product.name}</span><br>
-                    <span class="qty">${wi.pcs}</span><br>
-                    <div class="price">$${wi.amount}</div>
-                    <button class="move-to-cart">Move to Cart</button>
-                    <i class="fa fa-times remove-wishlist-item-btn" aria-hidden="true"></i>
+
+                    <span class="qty">${ci.pcs}</span> x ${product.price} <br>
+                    <div class="price">$${ci.amount}</div>
+                    <i class="fa fa-trash remove-cart-item-btn" aria-hidden="true"></i>
+                </div>
+                <div class="qty qtycart">
+                    <span class="decrease decreasecart">-</span>
+                    <span class="pcs pcscart">${ci.pcs}</span>
+                    <span class="increase increasecart">+</span>
+
                 </div>
             `;
             wishlistUlList.appendChild(itemLi);
