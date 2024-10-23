@@ -269,51 +269,20 @@ h3 {
     box-shadow: 0 1.5px 1.5px var(--secondary-color);
 }
 
-
-
- 
- 
-
- 
- 
-
-.logo {
+.nav-bar .logo {
     display: flex;
     align-items: center;
-    gap: 10px;  
+    gap: 5px;
+    justify-content: center;
+
 }
 
-/* Logo image styles */
-.logo-img {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    transform-origin: center;  
-    will-change: transform;    
+.nav-bar .logo a {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--ternary-color);
+    font-family: var(--curly-font);
 }
-
-.logo-img:hover {
-    transform: scale(1.1);  
-    box-shadow: 0 5px 15px rgba(0, 0, 255, 0.2);  
-}
- 
-.logo-text {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'Nunito', sans-serif;
-    color: pink; 
-    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-    transform-origin: center;
-    will-change: transform;
-}
-
-.logo-text:hover {
-    transform: scale(1.05);  
-    text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.5);  
-}
-
- 
- 
-
-
 
 .nav-bar .nav-links {
     height: 100%;
@@ -354,65 +323,40 @@ h3 {
 
 }
 
-
-
- 
-.icons {
-    display: flex;  
-    gap: 15px;  
+.nav-bar .icons {
+    display: flex;
 }
 
-.icon {
-    position: relative;  
-    transition: transform 0.3s ease;  
+.nav-bar .icons .icon {
+    padding: 0 5px;
+    position: relative;
 }
 
-.icon-link,
-.icon .i {
-    display: flex;  
-    align-items: center;  
+.nav-bar .icons i {
+    font-size: 20px;
+    margin: 0 8px;
+    color: var(--main-color);
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Login icon hover effect */
-.icon-link:hover {
-    transform: scale(1.2) rotate(15deg); 
-    animation: bounce 0.5s;  
+.nav-bar .icons i:hover {
+    color: var(--main-color);
 }
 
-/* Cart icon hover effect */
-.cart-icon:hover {
-    transform: scale(1.2);  
-    animation: spin 0.5s;  
-}
 .nav-bar .icons i.menu {
     display: none;
 }
 
-/* Animation keyframes */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);  
-    }
-    40% {
-        transform: translateY(-10px);  
-    }
-    60% {
-        transform: translateY(-5px);  
-    }
+.nav-bar .icons .no-of-cart-items,
+.no-of-wishlist-items {
+    position: absolute;
+    color: var(--main-color);
+    right: -15px;
+    width: 25px;
+    font-size: 12px;
 }
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);  
-    }
-    100% {
-        transform: rotate(360deg);  
-    }
-}
-
-
-
-
 
 /* cart styles */
 
