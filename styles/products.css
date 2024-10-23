@@ -1,3 +1,29 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.search-container input {
+    width: 70%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px 0 0 10px;
+}
+
+.search-container input:focus {
+    outline: 2px solid var(--secondary-color);
+}
+
+.search-container button {
+    padding: 10px 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+
 .categories-wrapper {
     margin-bottom: 20px;
     text-align: center;
