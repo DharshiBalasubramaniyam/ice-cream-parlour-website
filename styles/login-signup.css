@@ -51,15 +51,18 @@ form {
     font-weight: 550;
 }
 
-.password-container {
-    position: relative;
-}
+
 
 .password-container input {
     width: 100%;
 }
 
+
 /* Style the eye icon */
+.password-container {
+    position: relative;
+}
+
 .password-container i {
     position: absolute;
     right: 10px;
@@ -67,6 +70,7 @@ form {
     transform: translateY(-50%);
     cursor: pointer;
 }
+
 
 .check-container{
     display: flex;
