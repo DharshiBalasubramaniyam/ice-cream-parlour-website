@@ -22,6 +22,30 @@
     <!-- font awesome icons script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
     
+
+   <style>
+   
+.icon-label-container {
+    display: flex;
+    align-items: center;
+    padding: 5px 0; /* Adds padding between the icon-label and select input */
+}
+
+.icon-label-container i {
+    margin-right: 10px; /* Space between icon and label */
+    font-size: 1.2rem; /* Adjust icon size */
+}
+
+.icon-label-container label {
+    font-size: 1.2rem; /* Adjust label size if necessary */
+    padding-left: 3.5px; /* Additional space between icon and label */
+}
+
+
+
+   </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
@@ -148,89 +172,120 @@
     <!-- catering form -->
     <section>
         <h1 style="margin-top: 100px; padding: 0 40px;">Event Catering</h1>
-        <h2 class="heading">Tell us about your event</h2>
+        <h1 class="heading" style="color:pink ">Tell us about your event</h1>
         <form class="form-contents">
-
-            <div class="indv-text">
+    
+            <div class="indv-text input-icon-container">
+                <div class="icon-label-container">
+                <i class="fas fa-user"></i>
                 <label for="name" class="text">NAME</label>
-                <input type="text" class="form-text"  placeholder="Enter your Name" required required
-                pattern="[a-zA-Z ]+" 
-                oninvalid="this.setCustomValidity('Please enter your name  without using numbers or special characters.')" 
-                oninput="this.setCustomValidity('')"/>
+                </div>
+               
+                <input type="text" class="form-text" placeholder="Enter your Name" required pattern="[a-zA-Z ]+"
+                    oninvalid="this.setCustomValidity('Please enter your name without using numbers or special characters.')"
+                    oninput="this.setCustomValidity('')" />
             </div>
     
-            <div class="indv-text">
-                <label for="email" class="text">EMAIL ID</label>
+            <div class="indv-text input-icon-container">
+                <div class="icon-label-container">
+                    <i class="fas fa-envelope"></i>
+                    <label for="email" class="text">EMAIL ID</label>
+                </div>
+               
                 <input type="email" class="form-text" placeholder="example@gmail.com" required>
             </div>
     
-            <div class="indv-text">
+            <div class="indv-text input-icon-container">
+                <div class="icon-label-container">
+                <i class="fas fa-phone"></i>
                 <label for="contact" class="text">CONTACT No.</label>
-                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+                
+                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required
+                    pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             </div>
     
-            <div class="indv-text">
-                <label for="eventdate" class="text">Event Date</label>
+            <div class="indv-text input-icon-container">
+                <div class="icon-label-container">
+                    <i class="fas fa-calendar-alt"></i>
+                    <label for="eventdate" class="text">Event Date</label>
+                </div>
+                
                 <input type="date" class="form-text" name="" id="dateInput" required>
             </div>
     
             <div class="indv-text">
-                <label for="eventtype" class="text">Event Type</label>
-                <input type="radio" id="self-pickup" name="indoor-outdoor" value="self-pickup"> Self Service Pickup<br><br>
-                <input type="radio" id="self-delivery" name="indoor-outdoor" value="self-delivery"> Self Service Delivery<br><br>
-                <input type="radio" id="full-service" name="indoor-outdoor" value="full-service"> Full Service Catering<br><br>  
-                <input type="radio" id="not-sure" name="indoor-outdoor" value="not-sure"> Not Sure, Want To Learn More
-            </div> 
-    
-            <div class="indv-text">
-                <label for="add1" class="text">Complete Address</label>
-                <input type="text" class="form-text" name="" id="" placeholder="Street Address"
-                    required>
+                <div class="icon-label-container">
+                    <i class="fas fa-concierge-bell"></i>
+                    <label for="eventtype" class="text">Event Type</label>
+                </div>
+                
+                <select class="form-text" id="eventtype" required>
+                    <option value="">Select Event Type</option>
+                    <option value="self-pickup">Self Service Pickup</option>
+                    <option value="self-delivery">Self Service Delivery</option>
+                    <option value="full-service">Full Service Catering</option>
+                    <option value="not-sure">Not Sure, Want To Learn More</option>
+                </select>
             </div>
     
-            <div class="indv-text">
-                <label for="state" class="text">STATE</label>
-                <select class="form-text" id="state" required>
-                  <option value="">Select State</option>
-                  <option value="Andhra Pradesh">Andhra Pradesh</option>
-                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                  <option value="Assam">Assam</option>
-                  <option value="Bihar">Bihar</option>
-                  <option value="Chhattisgarh">Chhattisgarh</option>
-                  <option value="Goa">Goa</option>
-                  <option value="Gujarat">Gujarat</option>
-                  <option value="Haryana">Haryana</option>
-                  <option value="Himachal Pradesh">Himachal Pradesh</option>
-                  <option value="Jharkhand">Jharkhand</option>
-                  <option value="Karnataka">Karnataka</option>
-                  <option value="Kerala">Kerala</option>
-                  <option value="Madhya Pradesh">Madhya Pradesh</option>
-                  <option value="Maharashtra">Maharashtra</option>
-                  <option value="Manipur">Manipur</option>
-                  <option value="Meghalaya">Meghalaya</option>
-                  <option value="Mizoram">Mizoram</option>
-                  <option value="Nagaland">Nagaland</option>
-                  <option value="Odisha">Odisha</option>
-                  <option value="Punjab">Punjab</option>
-                  <option value="Rajasthan">Rajasthan</option>
-                  <option value="Sikkim">Sikkim</option>
-                  <option value="Tamil Nadu">Tamil Nadu</option>
-                  <option value="Telangana">Telangana</option>
-                  <option value="Tripura">Tripura</option>
-                  <option value="Uttar Pradesh">Uttar Pradesh</option>
-                  <option value="Uttarakhand">Uttarakhand</option>
-                  <option value="West Bengal">West Bengal</option>
-                </select>
-              </div>
+            <div class="indv-text input-icon-container">
+                <div class="icon-label-container">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <label for="add1" class="text">Complete Address</label>
+                </div>
+                
+                <input type="text" class="form-text" name="" id="" placeholder="Street Address" required>
+            </div>
     
+            <div class="indv-text input-icon-container">
+                <div class="icon-label-container">
+                    <i class="fas fa-globe"></i>
+                    <label for="state" class="text">STATE</label>
+                </div>
+                <select class="form-text" id="state" required>
+                    <option value="">Select State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+
             <div style="display: flex; margin: 20px;" class="btn">
-                <button type="submit" value="SUMBIT" class="btn-style">Submit</button>
+                <button type="submit" value="SUBMIT" class="btn-style">Submit</button>
                 <button type="reset" class="btn-style reset-btn" value="RESET">Clear</button>
             </div>
-    
         </form>
+        <!-- Success Message -->
+        <div id="success-message" style="display:none; margin-top: 20px; color: green; font-size: 1.2rem;">
+            Thank you! Your form has been successfully submitted.
+        </div>
     </section>
-
 
 
     <!-- footer -->
@@ -312,7 +367,24 @@
     <div class="copyright">
         &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
+<script>
+    function showMessage(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
 
+            // Show the success message
+            const messageDiv = document.getElementById("success-message");
+            messageDiv.style.display = "block";
+
+            // Optionally, clear the form after submission
+            document.getElementById("event-form").reset();
+
+            // Hide the message after a few seconds (optional)
+            setTimeout(() => {
+                messageDiv.style.display = "none";
+            }, 5000); // Hide message after 5 seconds
+        }
+
+</script>
     <script src="./script/catering.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
