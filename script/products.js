@@ -422,16 +422,10 @@ function handleQuantityButtonsInCart() {
 
 function addToWishlist(e) {
     let wishlistItemId = e.target.closest(".box").getAttribute("id");
-
-    let pcs = parseInt(e.target.closest(".box").querySelector(".pcs").textContent);
-
-    if (pcs <= 0) {
-
     let pcs = parseInt(e.target.closest(".box").querySelector(".pcs").textContent, 10);
 
     // Ensure pcs is a valid number
     if (isNaN(pcs) || pcs <= 0) {
-
         showToast("Please select the number of cups you want!");
         return;
     }
@@ -441,17 +435,13 @@ function addToWishlist(e) {
     let amount = item.price * pcs;
 
     if (existingWishlistItem) {
-
-        existingWishlistItem.pcs += pcs;
-
+        existingWishlistItem.pcs += pcs; // Increment by the correct number of pcs
         existingWishlistItem.amount = existingWishlistItem.pcs * item.price;
         showToast(`${pcs} more ${item.name} ice cream/s successfully added to the wishlist!`);
     } else {
         wishlistItems.push({
             itemId: wishlistItemId,
-
-            pcs: pcs,
-
+            pcs: pcs,  // Ensure pcs is a number
             amount: amount
         });
         showToast(`${pcs} ${item.name} ice cream/s successfully added to the wishlist!`);
@@ -460,6 +450,8 @@ function addToWishlist(e) {
     localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
     displayWishlistItems();
 }
+
+
 
 
 function handleRemoveButtonInWishlist() {
@@ -499,7 +491,7 @@ function displayWishlistItems() {
         let itemLi = document.createElement("li");
         itemLi.setAttribute("id", wi.itemId);
         let product = products_list.find(p => p.id == wi.itemId);
-
+    
         if (product) {
             itemLi.innerHTML = `
                 <img src="${product.image}" alt="">
@@ -518,7 +510,7 @@ function displayWishlistItems() {
             moveToCartBtn.addEventListener("click", () => moveToCart(wi.itemId));
         }
     });
-
+    
 }
 
 
