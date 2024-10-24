@@ -139,6 +139,23 @@
         margin-top: 10px;
         gap: 10px;
     }
+    .contact-div{
+        display:flex;
+        flex-direction: column;
+        
+    }
+    .img-container {
+        width: 100vw !important;  /* Make sure this applies to the image container */
+        margin: 0;  /* Remove default margins */
+        padding: 0; /* Remove any padding if necessary */
+        
+    }
+    
+    .contact form {
+        width: 100vw !important;  /* Make sure this applies to the image container */
+        
+       
+    }
 
 }
 
@@ -241,5 +258,16 @@
 
     .about .about-box .text h2 {
         font-size: 24px; /* Further adjust font size for mobile */
+    }
+}
+/* Responsive design for subscription plans */
+@media (max-width: 768px) {
+    .plans-container {
+        flex-direction: column;
+    }
+
+    .plan {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }

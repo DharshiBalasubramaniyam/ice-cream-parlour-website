@@ -211,5 +211,49 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .38s ease-in-out;
+    margin-left: 5px;
+}
+.social-link-2 a:hover {
+    transform: scale(1.2);
+    box-shadow: 1px 1px 6px 1px #D91656;
+  }
+
+
+
+
+   
+
+/* signup page  */
+
+
+.error {
+    border: 2px solid red;
 }
 
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.show-message {
+    display: block;
+}
+#password-strength-meter {
+    margin-top: 10px;
+}
+
+#strength-bar {
+    height: 8px;
+    width: 0;
+    background-color: #ff4d4d;
+    transition: width 0.3s ease;
+}
+
+#password-strength-text {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}

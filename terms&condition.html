@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Section</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="styles/faq.css">
-    <link rel="stylesheet" href="./styles/mediaQueries.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Terms and Conditions - Ice Cream Delight</title>
+    <link rel="stylesheet" href="styles/terms.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mediaQueries.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
+    <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="styles/style3.css">
+    <link rel="stylesheet" href="styles/cursor.css">
+    <!-- link to add favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
 
+    <!-- Our flavor Section fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet" />
+
+    <!-- font awesome icons script -->
+    <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-     <!-- cursor -->
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
+    <!-- cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -45,10 +60,10 @@
             <div class="flavor-circle mango"></div>
             <div class="flavor-circle pistachio"></div>
             <div class="flavor-circle raspberry"></div>
-          </div>
+        </div>
     </div>
 
-    <!-- scroll progress -->
+    <!-- scroll progress -->`
     <div class="scroll-progress"></div>
 
     <!-- nav bar -->
@@ -58,7 +73,7 @@
             <a href="">IcyCo</a>
         </div>
         <div class="nav-links">
-            <a href="./index.html" class="link">home</a>
+            <a href="./index.html" class="link active">home</a>
             <a href="./products.html" class="link">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
@@ -73,10 +88,11 @@
                         class="no-of-cart-items">0</span></span>
             </div>
             <div class="icon">
-                <i class="fa fa-bars menu" aria-hidden="true"></i>
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
             </div>
         </div>
     </div>
+
     <!-- Cart -->
     <div class="cart">
         <i class="fa fa-times close-cart" aria-hidden="true"></i>
@@ -98,43 +114,73 @@
 
     </div>
 
-    <section class="FAQs" id="FAQs" style="margin-top: 120px;">
-        <h1>FAQs</h1><br><br>
-        <h3>We’ve got cones of wisdom for your burning questions!</h3>
-        <br />
-        <div class="FAQ">
-            <button class="FAQ-questions">WILL MY ICE CREAM MELT BEFORE IT ARRIVES? <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">Don’t worry, your ice cream is on a chill mission! We pack it to stay cool, so it’ll arrive frozen and ready to enjoy.</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">I'M UNHAPPY WITH THE SERVICE, WHO SHOULD I TALK TO? <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">We’re sorry your experience wasn’t as sweet as our ice cream! Please reach out to our support team, and we’ll make things right quicker than you can say ‘sundae.</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">WHAT ARE YOUR DELIVERY HOURS? <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">We deliver ice cream every day from 10am to 11 pm. Availability may vary by location.</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">IS THERE A MINIMUM ORDER AMOUNT? <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">Yes, the minimum order amount is 100 to ensure smooth delivery.</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">CAN I CANCEL OR MODIFY MY ORDER AFTER IT’S PLACED? <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">Once your order is placed, changes or cancellations may not be possible depending on how far along it is in the process. Check with the delivery platform for their policies.</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">DO YOU OFFER ANY DISCOUNTS OR PROMOTIONS? <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">Yes, we occasionally offer discounts and promotions. Keep an eye on our website or delivery app for the latest deals!</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">CAN I CUSTOMIZE MY ICE CREAM ORDER? <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">At the moment, customization options like adding toppings are not available for delivery orders. Stay tuned for updates!</div>
-        </div>
-        <div class="FAQ">
-            <button class="FAQ-questions">DO YOU HAVE VEGAN OR DAIRY-FREE OPTIONS? <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="FAQ-answers">Yes, we offer a variety of vegan and dairy-free ice cream options. Availability may vary by location.</div>
-        </div>
-    </section>
+    <main>
+        <section class="terms">
+            <h1>Terms and Conditions</h1>
+            <p class="intro">Welcome to Ice Cream Parlour! By using our services, you agree to the following terms.
+                Please read them carefully.</p>
+
+            <div class="term-item">
+                <h3>1. Acceptance of Terms</h3>
+                <p>By using our website and services, you accept our terms. If you have questions, feel free to reach
+                    out. We appreciate your understanding!</p>
+            </div>
+
+            <div class="term-item">
+                <h3>2. Modifications to Terms</h3>
+                <p>We may update these terms from time to time. Changes will be posted here. Continued use means you
+                    accept the updated terms.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>3. Product Information</h3>
+                <p>We’re excited to offer a variety of flavors! We strive for accuracy, but availability may change.
+                    Reach out if you have questions.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>4. Pricing</h3>
+                <p>Prices may change without notice and are displayed in your local currency. Promotions may apply at
+                    our discretion.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>5. Customer Responsibilities</h3>
+                <p>Please provide accurate information for your orders. We aren’t responsible for errors due to
+                    incomplete info.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>6. Refund Policy</h3>
+                <p>All sales are final. If there’s an issue, contact us within 24 hours, and we’ll assist you.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>7. Governing Law</h3>
+                <p>These terms are governed by the laws of india. Any disputes will be resolved accordingly.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>8. Limitation of Liability</h3>
+                <p>Ice Cream Parlour isn’t liable for any indirect or consequential damages from using our products or
+                    services.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>9. Privacy Policy</h3>
+                <p>Your privacy matters. Please review our <a href="privacy.html">Privacy Policy</a> to understand how
+                    we protect your information.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>10. Contact Us</h3>
+                <p>If you have questions about these terms, contact us at <a
+                        href="mailto:support@icecreamparlour.com">support@icecreamparlour.com</a>. We’re here to help!
+                </p>
+            </div>
+        </section>
+    </main>
+
 
     <!-- footer -->
     <section class="footer">
@@ -194,9 +240,9 @@
                             Instagram</a></li>
                     <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
                             Linkedin</a></li>
-                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-twitter"></i>
+                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
                             Twitter</a></li>
-                    <li><a href="#" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
+                    <li><a href="#1" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
 
                 </ul>
             </div>
@@ -223,24 +269,19 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
+        &copy; 2024 by <span>DharshiB</span> | All Rights Reserved
     </div>
 
-    <!-- scripts -->
+    </div>
+
+    <!-- Toaster -->
+    <div id="toast-container" class="toast-container"></div>
+
     <script type="module" src="script/products.js"></script>
     <script type="module" src="script/nav.js"></script>
     <script type="module" src="script/cart.js"></script>
-    <script src="script/FAQ.js"></script>
     <script src="script/topscrollindicator.js"></script>
     <script src="script/cursor.js"></script>
-
 </body>
+
 </html>
-
-
-
-
-
-
-
-

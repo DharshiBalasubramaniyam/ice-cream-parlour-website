@@ -7,11 +7,12 @@
     <title>ICYCO - PRODUCTS</title>
 
     <!-- custom style sheets -->
+    <link rel="stylesheet" href="styles/products.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
-    <link rel="stylesheet" href="styles/cursor.css">
+
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -22,31 +23,40 @@
 </head>
 
 <body>
-     <!-- cursor -->
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
-     <div class="circle"></div>
+    <!-- cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
     <!-- Preloader -->
     <div id="preloader">
-        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-        <p class="loading-text">Loading...</p>
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+        </div>
     </div>
 
     <!-- scroll progress -->
@@ -56,7 +66,7 @@
     <div class="nav-bar">
         <div class="logo">
             <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
-            <a href="index.html">IcyCo</a>
+            <a href="">IcyCo</a>
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
@@ -91,7 +101,6 @@
                 <div class="total">Sub Total: <span class="sub-total">$0</span></div>
                 <button>Check out</button>
             </div>
-
         </div>
 
         <div class="empty-cart active">
@@ -103,11 +112,13 @@
     <!-- Products -->
     <section class="products" id="products" style="margin-top: 100px;">
         <h1>Our <span>Products</span></h1>
-        <div class="categories-wrapper">
-            <!-- <button class="active" id="all">All</button> -->
-        </div>
-        <div class="box-container products-box">
-        </div>
+        
+        
+        
+
+        <div class="categories-wrapper" style="margin-bottom: 20px;"></div>
+        <div class="search-container" style=" width: 65%; margin: auto;"></div>
+        <div class="box-container products-box " style="margin-top: 40px;"></div>
     </section>
 
     <!-- footer -->
@@ -116,29 +127,18 @@
             <div class="footer-col">
                 <h4>Useful links</h4>
                 <ul class="links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./products.html">Products</a></li>
                     <li><a href="gallary.html">Gallery</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#FAQs">FAQs</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="./faq.html" class="link">FAQ</a></li>
                     <li><a href="contributor.html">Our Contributors</a></li>
                     <li><a href="blogs.html">Our Blogs</a></li>
-                    <li><a href="#">Customer Agreement</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms&condition.html">Terms&Condition</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Flavors</h4>
-                <ul class="links">
-                    <li><a href="#">Regular</a></li>
-                    <li><a href="#">Gelato</a></li>
-                    <li><a href="#">Sorbet</a></li>
-                    <li><a href="#">Soft serve</a></li>
-                    <li><a href="#">Frozen Yogurt</a></li>
-                    <li><a href="#">Non-Dairy/Vegan</a></li>
-                </ul>
-            </div>
+
             <div class="footer-col">
                 <h4>Opening Hours</h4>
                 <ul class="links">
@@ -156,7 +156,6 @@
                             Connaught Place, New Delhi</a></li>
                     <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
                             Street, Kolkata - West Bengal</a></li>
-
                     </li>
 
                 </ul>
@@ -203,7 +202,7 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; 2024 by <span>DharshiB</span> | All Rights Reserved
+        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
 
     </div>
@@ -212,13 +211,9 @@
     <div id="toast-container" class="toast-container"></div>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="script/swiper-bundle.min.js"></script>
-    <script src="script/reviews.js"></script>
-    <script src="script/form.js"></script>
     <script type="module" src="script/products.js"></script>
     <script type="module" src="script/nav.js"></script>
     <script type="module" src="script/cart.js"></script>
-    <script src="script/FAQ.js"></script>
     <script src="script/topscrollindicator.js"></script>
     <script src="script/cursor.js"></script>
 

@@ -8,9 +8,12 @@
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/delivery-catering.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -42,10 +45,19 @@
      <div class="circle"></div>
      <div class="circle"></div>
      <div class="circle"></div>
+
     <!-- Preloader -->
     <div id="preloader">
-        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-        <p class="loading-text">Loading...</p>
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+          </div>
     </div>
 
     <!-- scroll progress -->
@@ -53,9 +65,10 @@
 
     <!-- nav bar -->
     <div class="nav-bar">
+        <a href="index.html">
         <div class="logo">
             <img src="./images/logo.png" alt="icyco-logo" height="25px" width="25px">
-            <a href="">IcyCo</a>
+            IcyCo</a>
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
@@ -80,10 +93,10 @@
 
     <section>
         <h1 style="margin-top: 100px; padding: 0 40px;">Island-Wide Delivery</h1>
-        <h2 class="heading">Enter Your Address</h2>
+        <h2 class="heading">Enter Your Details</h2>
+      
         <form class="form-contents">
-
-            <div class="indv-text">
+         <div class="indv-text">
                 <label for="name" class="text">NAME</label>
                 <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
             </div>
@@ -95,7 +108,7 @@
 
             <div class="indv-text">
                 <label for="contact" class="text">CONTACT No.</label>
-                <input type="tel" class="form-text" name="" id="" placeholder="0123456789" required>
+                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required>
             </div>
 
             <div class="indv-text">
@@ -141,8 +154,8 @@
             </div>
 
             <div style="display: flex; margin: 20px;" class="btn">
-                <button type="reset" class="btn-style" value="RESET">RESET</button>
-                <button type="submit" value="SUMBIT" class="btn-style">SUBMIT</button>
+                <button type="submit" value="SUMBIT" class="btn-style">Submit</button>
+                <button type="reset" class="btn-style reset-btn" value="RESET">Clear</button>
             </div>
 
         </form>
@@ -175,29 +188,18 @@
             <div class="footer-col">
                 <h4>Useful links</h4>
                 <ul class="links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./products.html">Products</a></li>
                     <li><a href="gallary.html">Gallery</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#FAQs">FAQs</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="./faq.html" class="link">FAQ</a></li>
                     <li><a href="contributor.html">Our Contributors</a></li>
                     <li><a href="blogs.html">Our Blogs</a></li>
-                    <li><a href="#">Customer Agreement</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms&condition.html">Terms&Condition</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Flavors</h4>
-                <ul class="links">
-                    <li><a href="#">Regular</a></li>
-                    <li><a href="#">Gelato</a></li>
-                    <li><a href="#">Sorbet</a></li>
-                    <li><a href="#">Soft serve</a></li>
-                    <li><a href="#">Frozen Yogurt</a></li>
-                    <li><a href="#">Non-Dairy/Vegan</a></li>
-                </ul>
-            </div>
+
             <div class="footer-col">
                 <h4>Opening Hours</h4>
                 <ul class="links">
@@ -257,9 +259,10 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; 2024 by <span>DharshiB</span> | All Rights Reserved
+        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
 
+    <!-- scripts -->
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
     <script src="./script/topscrollindicator.js"></script>
