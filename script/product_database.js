@@ -26,7 +26,7 @@ const products_list = [
         off: 5,
         price: 35,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mango.jpg",
+        image: "https://www.foodandwine.com/thmb/QnTrAIt3aY1g4ToQEk-jULmKMsQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vanilla-ice-cream-FT-RECIPE0324-cebca493f53c4431a0049ea65bfb4796.jpg",
         rating: 4
     },
     {
@@ -36,7 +36,7 @@ const products_list = [
         off: 5,
         price: 35,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/vannila.jpg",
+        image: "https://cdn.pixabay.com/photo/2024/06/02/17/02/ice-cream-8804689_640.jpg",
         rating: 5
     },
     {
@@ -66,7 +66,7 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mango.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQj6poU-Nf13cdAsACl_LR6VZOby9moLZyAw&s",
         rating: 4
     },
     {
@@ -86,7 +86,7 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/rainbow.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIOdxCgv2ZN60bu8aWPP8ucYu7FFLjvomnBg&s",
         rating: 4
     },
     {
@@ -146,7 +146,7 @@ const products_list = [
         off: 25,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/peanut-butter.jpg",
+        image: "https://theviewfromgreatisland.com/wp-content/uploads/2022/05/honeyfrozenyogurt-3.jpg",
         rating: 5
     },
     {
@@ -186,7 +186,7 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/vannila.jpg",
+        image: "https://www.bhg.com/thmb/5pxByFc-YVW7zOYDJE1WbxhISEw=/1244x0/filters:no_upscale():strip_icc()/RU1994601-1-3d5001b1ab0742829b15a138f6e9c45b.jpg",
         rating: 5
     },
     {
@@ -196,7 +196,7 @@ const products_list = [
         off: 1,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg",
+        image: "https://5.imimg.com/data5/YS/LU/MY-56124530/pista-ice-cream-500x500.png",
         rating: 4
     },
     {
@@ -216,7 +216,7 @@ const products_list = [
         off: 3,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/rainbow.jpg",
+        image: "https://chopnotch.com/wp-content/uploads/Peanut-Butter-Ice-Cream.jpg",
         rating: 4
     },
     {
@@ -236,7 +236,7 @@ const products_list = [
         off: 8,
         price: 50,
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg",
+        image: "https://willaskitchen.com/cdn/shop/articles/04922be300d14486a23df742c65e569a_1024x-imresizer.jpg?v=1628614038",
         rating: 3
     }
 ]
