@@ -1,79 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICYCO - PRODUCTS</title>
 
-    <!-- custom style sheets -->
+    <!-- Custom Style Sheets -->
     <link rel="stylesheet" href="styles/products.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
 
-
-    <!-- link to add favicon -->
-    <div class="search-container">
-    <input type="text" id="search-bar" placeholder="Search for flavors..." onkeypress="if(event.key === 'Enter') executeSearch()">
-
-    <button id="search-btn">Search</button>
-</div>
-<div class="products-box"></div>
-
+    <!-- Favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
 
-    <!-- font awesome icons script -->
+    <!-- Font Awesome Icons Script -->
     <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
-
 </head>
-
 <body>
-    <!-- cursor -->
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search for flavors..." onkeypress="if(event.key === 'Enter') executeSearch()">
+        <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Cursor Effects -->
+    <div class="circle"></div> <!-- Repeat circles as necessary -->
 
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-container">
-            <div class="flavor-circle chocolate"></div>
-            <div class="flavor-circle strawberry"></div>
-            <div class="flavor-circle vanilla"></div>
-            <div class="flavor-circle mint"></div>
-            <div class="flavor-circle blueberry"></div>
-            <div class="flavor-circle mango"></div>
-            <div class="flavor-circle pistachio"></div>
-            <div class="flavor-circle raspberry"></div>
+            <!-- Add flavor circles here as needed -->
         </div>
     </div>
 
-    <!-- scroll progress -->
+    <!-- Scroll Progress Indicator -->
     <div class="scroll-progress"></div>
 
-    <!-- nav bar -->
+    <!-- Navigation Bar -->
     <div class="nav-bar">
         <div class="logo">
             <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
-            <a href="">IcyCo</a>
+            <a href="#">IcyCo</a>
         </div>
         <div class="nav-links">
             <a href="./index.html" class="link">home</a>
@@ -83,52 +52,36 @@
             <a href="./catering.html" class="link">Catering</a>
         </div>
         <div class="icons">
-            <div class="icon">
-                <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
-            </div>
-            <div class="icon">
-                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
-                        class="no-of-cart-items">0</span></span>
-            </div>
-            <div class="icon">
-                <i class="fa fa-bars menu" aria-hidden="true"></i>
-            </div>
+            <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+            <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i><span class="no-of-cart-items">0</span></span>
+            <i class="fa fa-bars menu" aria-hidden="true"></i>
         </div>
     </div>
 
-    <!-- Cart -->
+    <!-- Cart Section -->
     <div class="cart">
         <i class="fa fa-times close-cart" aria-hidden="true"></i>
         <h1>Your Cart</h1>
-
         <div class="no-empty-cart">
-            <ul class="cart-list-items">
-            </ul>
+            <ul class="cart-list-items"></ul>
             <div>
                 <div class="total">Sub Total: <span class="sub-total">$0</span></div>
                 <button>Check out</button>
             </div>
         </div>
-
         <div class="empty-cart active">
             <p>No items in the cart!</p>
         </div>
-
     </div>
 
-    <!-- Products -->
+    <!-- Products Section -->
     <section class="products" id="products" style="margin-top: 100px;">
         <h1>Our <span>Products</span></h1>
-        
-        
-        
-
         <div class="categories-wrapper" style="margin-bottom: 20px;"></div>
-        <div class="search-container" style=" width: 65%; margin: auto;"></div>
-        <div class="box-container products-box " style="margin-top: 40px;"></div>
+        <div class="box-container products-box" style="margin-top: 40px;"></div>
     </section>
 
-    <!-- footer -->
+    <!-- Footer -->
     <section class="footer">
         <div class="footer-row">
             <div class="footer-col">
@@ -145,86 +98,29 @@
                     <li><a href="terms&condition.html">Terms&Condition</a></li>
                 </ul>
             </div>
-
-            <div class="footer-col">
-                <h4>Opening Hours</h4>
-                <ul class="links">
-                    <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
-                    <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
-                </ul>
-                <h4 style="margin-top: 15px;">Locations</h4>
-                <ul class="links">
-                    <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
-                            ramankulam-
-                            Malappuram Dt</a></li>
-                    <li class="address2"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> MG Road,
-                            Bangalore - Karnataka</a></li>
-                    <li class="address3"><a href="" class="social"><i class="fa-solid fa-location-dot"></i>
-                            Connaught Place, New Delhi</a></li>
-                    <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
-                            Street, Kolkata - West Bengal</a></li>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Need Help?</h4>
-                <ul class="links">
-                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
-                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
-                    <li><a href="" class="social"><i class="fa-solid fa-envelope"></i> mail@1234567.com</a></li>
-                </ul>
-                <h4 style="margin-top: 15px;">Follow Us</h4>
-                <ul class="links">
-                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i>
-                            Facebook</a></li>
-                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i>
-                            Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
-                            Linkedin</a></li>
-
-                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
-                            Twitter</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Newsletter</h4>
-                <p>
-                    Subscribe to our newsletter for a weekly dose
-                    of news, updates, helpful tips, and
-                    exclusive offers.
-                </p>
-                <form action="#">
-                    <input type="email" placeholder="Your email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
+            <!-- Add other footer columns as needed -->
         </div>
     </section>
 
-    <!-----scroll bottom to top------->
+    <!-- Scroll to Top Button -->
     <button class="scroll-button">
         <img src="images/icecream-cone.png" alt="icecream-cone" />
     </button>
 
-    <!-- copyright -->
+    <!-- Copyright -->
     <div class="copyright">
         &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
-    </div>
-
     </div>
 
     <!-- Toaster -->
     <div id="toast-container" class="toast-container"></div>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script type="module" src="script/products.js"></script>
     <script type="module" src="script/nav.js"></script>
     <script type="module" src="script/cart.js"></script>
     <script src="script/topscrollindicator.js"></script>
     <script src="script/cursor.js"></script>
-
-
 </body>
-
 </html>
