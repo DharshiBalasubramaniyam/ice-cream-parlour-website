@@ -1,9 +1,8 @@
+/* Search Container */
 .search-container {
     display: flex;
     justify-content: center;
-    margin: 20px 20px;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    margin: 40px 20px 50px;
 }
 
 .search-container input {
@@ -12,6 +11,7 @@
     font-size: 1rem;
     border: 1px solid var(--secondary-color);
     border-radius: 10px 0 0 10px;
+    transition: border 0.3s ease;
 }
 
 .search-container input:focus {
@@ -20,202 +20,179 @@
 
 .search-container button {
     padding: 10px 20px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: #fff;
     border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.search-container button:hover {
+    background-color: var(--main-color);
+}
 
+/* Categories Wrapper */
 .categories-wrapper {
-    margin-bottom: 20px;
+    margin: 40px auto 20px;
     text-align: center;
-    margin-top: 40px;
 }
 
 .categories-wrapper button {
     font-size: 15px;
-    width: fit-content;
     padding: 7px 20px;
     border: 1px solid var(--main-color);
     margin: 5px;
-    background-image: var(--background-image);
-}
-
-.categories-wrapper button:not(.active) {
-    background-image: none;
-    color: var(--ternary-color);
     background-color: transparent;
+    color: var(--ternary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.categories-wrapper button.active,
 .categories-wrapper button:hover {
     background-color: var(--main-color);
     color: var(--body-color);
 }
 
+/* Products Box */
 .products .products-box {
+    display: grid;
     gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    justify-content: center;
 }
 
 .products .products-box .box {
     position: relative;
-    flex: 1 1 310px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transition: 0.5s ease-in-out;
     max-width: 350px;
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 15px whitesmoke;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
+.products .products-box .box:hover {
+    box-shadow: 0 0 15px var(--secondary-color);
+}
+
+/* Image Wrapper */
 .image-wrapper {
     width: 100%;
     height: 200px;
     overflow: hidden;
+    border-radius: 15px;
     position: relative;
 }
 
 .cat-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 5px;
+    font-size: 12px;
     background-color: var(--body-color);
     color: var(--main-color);
     border: 1px solid var(--main-color);
-    padding: 5px;
-    position: absolute;
-    bottom: 5px;
-    font-size: 12px;
-    left: 5px;
     border-radius: 25px;
 }
 
+/* Discount and Wishlist */
 .products .products-box .box .off,
 .products .products-box .box .wish {
     position: absolute;
-    width: 60px;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
     top: 15px;
-    left: 0px;
-    background-color: var(--main-color);
-    color: var(--body-color);
     padding: 7px 10px;
+    font-size: 20px;
+    color: var(--body-color);
+    background-color: var(--main-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
+}
 
+.products .products-box .box .off {
+    left: 10px;
 }
 
 .products .products-box .box .wish {
-    left: auto;
     right: -60px;
-    transition: right 0.2s ease;
 }
 
 .products .products-box .box:hover .wish {
-    right: 0;
+    right: 10px;
 }
 
-.products .products-box .box:hover {
-    box-shadow: 0 0 10px var(--secondary-color);
+/* Product Info */
+.name-price,
+.description {
+    text-align: center;
 }
 
-.products .products-box .box img {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    border-radius: 15px;
-}
-
-
-.products .products-box .box .name-price {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    /* Vertically center the name and price */
-    justify-content: space-between;
-    /* Keep name and price at opposite ends */
+.name-price {
     font-size: 22px;
-    padding: 10px 1px;
-    text-align: center;
-    /* Centers the text within each item */
+    font-weight: bold;
+    margin: 15px 0;
 }
 
-.products .products-box .box .description {
-    width: 100%;
-    text-align: center;
+.description {
     font-size: 15px;
+    color: var(--secondary-text-color);
 }
 
-.products .products-box .box .qty {
+/* Quantity Selector */
+.qtycart {
     display: flex;
     align-items: center;
-    justify-content: center;
+    border: 2px solid red;
+    border-radius: 25px;
+    padding: 0 5px;
 }
 
-.qtycart {
-    width: fit-content !important;
-    border: 2px solid red !important;
-    border-radius: 25px !important;
-    padding: 0 5px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.decreasecart {
-    border-right: 2px solid red !important;
-    padding: 5px !important;
-}
-
-.increasecart {
-    cursor: pointer !important;
-    padding: 5px !important;
-}
-
-.pcscart {
-    border-right: 2px solid red !important;
+.qtycart .decreasecart,
+.qtycart .increasecart {
     padding: 5px;
+    cursor: pointer;
+}
+
+.qtycart .pcscart {
+    padding: 5px;
+    border-right: 2px solid red;
 }
 
 .products .products-box .box .qty span {
-    margin: 15px 0;
     display: inline-block;
-    height: 35px;
     width: 45px;
-    line-height: 31px;
+    height: 35px;
+    line-height: 35px;
     font-size: 20px;
-    border: 2px solid var(--main-color);
     text-align: center;
-    transition: 0.3s;
+    border: 2px solid var(--main-color);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-
-
-.products .products-box .box .qty .increase,
-.decrease {
-    cursor: pointer !important;
-    user-select: none;
-}
-
-.products .products-box .box .qty .pcs {
-    cursor: default;
-}
-
-.products .products-box .box .qty span:first-of-type:hover,
-.products .products-box .box .qty span:last-of-type:hover {
+.products .products-box .box .qty span:hover {
     background-color: var(--main-color);
-    color: white;
-}
-
-.products .products-box .box .qty span:first-of-type {
-    border-radius: 25px 0 0 25px;
-    border-right-width: 0;
-}
-
-.products .products-box .box .qty span:last-of-type {
-    border-radius: 0 25px 25px 0;
-    border-left-width: 0;
+    color: #fff;
 }
 
 .products-box button {
     width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.products-box button:hover {
+    background-color: var(--secondary-color);
 }
