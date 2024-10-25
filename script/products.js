@@ -27,7 +27,7 @@ function displayProducts(products) {
       }
       
       if(products == ''){
-            productsSection.innerHTML = "<h1>No Search Found </h1>"
+            productsSection.innerHTML = "<h1>No Product Found </h1>"
       }
       products.forEach((product) => {
             let box = document.createElement("div");
