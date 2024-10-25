@@ -357,6 +357,26 @@ function createSearchBar() {
       searchBar.setAttribute("id", "search-bar");
       searchBar.setAttribute("placeholder", "Search for flavors...");
       searchBarContainer.appendChild(searchBar);
+      searchBar.addEventListener("keypress", (event) => {
+      if (event.key === "Enter") {
+        executeSearch();
+          }
+      });
+      searchButton.addEventListener("click", executeSearch);
+
+function executeSearch() {
+    const query = searchBar.value.toLowerCase();
+    const filteredProducts = products_list.filter((product) => {
+        const flavorName = flavor_list.find((f) => f.id === product.flavor_id)?.name.toLowerCase();
+        return (
+            product.name.toLowerCase().includes(query) || flavorName.includes(query)
+        );
+    });
+    displayProducts(filteredProducts);
+}
+
+      
+
 
       // Check if the search button already exists
       if (document.getElementById("search-btn")) return;
