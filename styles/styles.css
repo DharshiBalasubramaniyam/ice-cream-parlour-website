@@ -176,6 +176,7 @@ input[type="submit"] {
     background-image: var(--background-image);
     font-size: 16px;
     padding: 8px 30px;
+    margin-bottom: 15px;
     background-color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 20px;

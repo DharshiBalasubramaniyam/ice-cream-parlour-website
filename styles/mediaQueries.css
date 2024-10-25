@@ -94,6 +94,7 @@
 
     .home {
         height: max-content;
+        min-height: auto;
         padding: 50px 10px 0 10px;
         flex-direction: column-reverse;
     }
