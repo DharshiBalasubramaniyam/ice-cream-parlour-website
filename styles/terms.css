@@ -24,6 +24,7 @@ h2 {
     font-size: 2.2em;
 }
 
+
 .term-item {
     margin-bottom: 15px; 
     padding: 10px; 
@@ -38,7 +39,7 @@ h2 {
 }
 
 .term-item h3 {
-    color: #333;
+    color: #e90596;
     margin: 0 0 8px;
     font-size: 1.4em; /* Slightly smaller heading */
 }
