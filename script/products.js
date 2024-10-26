@@ -3,8 +3,6 @@ import flavor_list from "./flavor_database.js";
 
 const LOCAL_STORAGE_CART_KEY = "icyco_cart";
 let cartItems = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CART_KEY)) || [];
-let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
-
 
 document.addEventListener("DOMContentLoaded", () => {
       displayFlavorFilter();
@@ -23,92 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function displayProducts(products) {
-
-    let productsSection = document.querySelector(".products-box");
-    productsSection ? productsSection.innerHTML = "" : null;
-
-    products.forEach(product => {
-        let box = document.createElement("div");
-        let flavorName = flavor_list.find(f => f.id == product.flavor_id)?.name;
-
-        box.setAttribute("class", "box");
-        box.setAttribute("id", product.id);
-
-        box.innerHTML = `
-            <div class="image-wrapper">
-                <div class="off">-${product.off}%</div>
-                <img src="${product.image}" alt="">
-                <div class="cat-label">${flavorName}</div>
-            </div>
-            <div class="name-price">
-                <div class="name">${product.name}</div>
-                <div class="price">$${product.price}</div>
-            </div>
-            <div class="description">${product.description}</div>
-            <!-- Row for quantity and wishlist -->
-            <div class="qty-wishlist-row">
-                <div class="qty">
-                    <span class="decrease">-</span>
-                    <span class="pcs">1</span>
-                    <span class="increase">+</span>
-                </div>
-                <button class="wishlist-btn">
-                    <i class="fa fa-heart ${isItemInWishlist(product.id) ? 'wishlist-active' : ''}"></i>
-                </button>
-            </div>`;
-
-        // Add "Add to Cart" button
-        let addToCartButton = document.createElement("button");
-        let existingCartItem = cartItems.find(item => item?.itemId == product.id);
-        if (existingCartItem) {
-            addToCartButton.textContent = "Already in the cart - Add again?";
-        } else {
-            addToCartButton.textContent = "Add to Cart";
-        }
-        addToCartButton.addEventListener("click", (e) => {
-            addToCart(e);
-        });
-
-        // Append Add to Cart button to the box
-        box.appendChild(addToCartButton);
-
-        // Add the box to the products section
-        productsSection?.appendChild(box);
-
-        // Add event listener for wishlist functionality
-        let wishlistIcon = box.querySelector(".wishlist-btn i");
-        wishlistIcon.addEventListener("click", (e) => {
-            addToWishlist(e);
-            toggleWishlist(product.id);
-            wishlistIcon.classList.toggle('wishlist-active'); // Toggle wishlist-active class for visual change
-        });
-    });
-
-    handleQuantityButtonsInProductCard();
-}
-
-
-// Example helper function to check if item is in the wishlist
-function isItemInWishlist(productId) {
-    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    return wishlist.some(item => item === productId);
-}
-
-// Function to toggle wishlist status
-function toggleWishlist(productId) {
-    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-
-    if (wishlist.includes(productId)) {
-        wishlist = wishlist.filter(item => item !== productId); // Remove item from wishlist
-    } else {
-        wishlist.push(productId); // Add item to wishlist
-    }
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
-}
-
-
-// display flavors filter
-
       let productsSection = document.querySelector(".products-box");
       if (productsSection) {
             productsSection.innerHTML = ""; 
@@ -418,6 +330,7 @@ function handleQuantityButtonsInCart() {
       });
 }
 
+
 // Add items to wishlist
 
 function addToWishlist(e) {
@@ -556,6 +469,7 @@ function moveToCart(wishlistItemId) {
 // Scroll animation
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
       // Apply ScrollReveal to products
       const productBoxes = document.querySelectorAll(".products-box .box");
@@ -572,42 +486,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function createSearchBar() {
-
-    const searchBarContainer = document.querySelector(".search-container");
-
-    // Check if the search bar already exists
-    if (document.getElementById("search-bar")) return;
-
-    // Create the search bar only if it doesn't already exist
-    const searchBar = document.createElement("input");
-    searchBar.classList.add("products-searchbar");
-    searchBar.setAttribute("type", "text");
-    searchBar.setAttribute("id", "search-bar");
-    searchBar.setAttribute("placeholder", "Search for flavors...");
-    searchBarContainer.appendChild(searchBar);
-
-    // Check if the search button already exists
-    if (document.getElementById("search-btn")) return;
-
-    // Create the search button only if it doesn't already exist
-    const searchButton = document.createElement("button");
-    searchButton.setAttribute("id", "search-btn");
-    searchButton.innerText = "Search";
-    searchBarContainer.appendChild(searchButton);
-
-    // Attach event listener for the search button
-    searchButton.addEventListener("click", () => {
-        const query = searchBar.value.toLowerCase();
-        const filteredProducts = products_list.filter(product => {
-            const flavorName = flavor_list.find(f => f.id === product.flavor_id)?.name.toLowerCase();
-            return product.name.toLowerCase().includes(query) || flavorName.includes(query);
-        });
-        displayProducts(filteredProducts);
-    });
-
-    // Handle input event for live search
-    handleSearchInput();
-
       const searchBarContainer = document.querySelector(".search-container");
 
       // Check if the search bar already exists
@@ -645,7 +523,6 @@ function createSearchBar() {
 
       // Handle input event for live search
       handleSearchInput();
-
 }
 
 function handleSearchInput() {
