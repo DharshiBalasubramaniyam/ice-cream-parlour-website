@@ -333,6 +333,146 @@ function handleQuantityButtonsInCart() {
       });
 }
 
+
+// Add items to wishlist
+
+function addToWishlist(e) {
+    let wishlistItemId = e.target.closest(".box").getAttribute("id");
+    let pcs = parseInt(e.target.closest(".box").querySelector(".pcs").textContent, 10);
+
+    // Ensure pcs is a valid number
+    if (isNaN(pcs) || pcs <= 0) {
+        showToast("Please select the number of cups you want!");
+        return;
+    }
+
+    let existingWishlistItem = wishlistItems.find(item => item.itemId == wishlistItemId);
+    let item = products_list.find(item => item.id == wishlistItemId);
+    let amount = item.price * pcs;
+
+    if (existingWishlistItem) {
+        existingWishlistItem.pcs += pcs; // Increment by the correct number of pcs
+        existingWishlistItem.amount = existingWishlistItem.pcs * item.price;
+        showToast(`${pcs} more ${item.name} ice cream/s successfully added to the wishlist!`);
+    } else {
+        wishlistItems.push({
+            itemId: wishlistItemId,
+            pcs: pcs,  // Ensure pcs is a number
+            amount: amount
+        });
+        showToast(`${pcs} ${item.name} ice cream/s successfully added to the wishlist!`);
+    }
+
+    localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+    displayWishlistItems();
+}
+
+
+
+
+function handleRemoveButtonInWishlist() {
+    let removeBtns = document.querySelectorAll(".remove-wishlist-item-btn");
+    removeBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            let itemId = btn.closest('li').getAttribute("id");
+            wishlistItems = wishlistItems.filter(item => item.itemId !== itemId);
+
+            localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+            displayWishlistItems(); // Update the wishlist display
+
+            // Reset button text to "Add to Wishlist" if necessary
+            const productBox = document.querySelector(`.box[id='${itemId}']`);
+            if (productBox) {
+                const addToWishlistButton = productBox.querySelector(".wishlist-btn");
+                addToWishlistButton.innerHTML = '<i class="fa fa-heart"></i>'; // Reset icon and text
+            }
+        });
+    });
+}
+
+
+function displayWishlistItems() {
+    const wishlistUlList = document.querySelector(".wishlist-list-items");
+    wishlistUlList.innerHTML = "";
+
+    if (wishlistItems.length > 0) {
+        document.querySelector(".empty-wishlist").classList.remove("active");
+        document.querySelector(".no-empty-wishlist").classList.add("active");
+    } else {
+        document.querySelector(".empty-wishlist").classList.add("active");
+        document.querySelector(".no-empty-wishlist").classList.remove("active");
+    }
+
+    wishlistItems.forEach(wi => {
+        let itemLi = document.createElement("li");
+        itemLi.setAttribute("id", wi.itemId);
+        let product = products_list.find(p => p.id == wi.itemId);
+    
+        if (product) {
+            itemLi.innerHTML = `
+                <img src="${product.image}" alt="">
+                <div class="text">
+                    <span class="name">${product.name}</span><br>
+
+                    <span class="qty">${ci.pcs}</span> x ${product.price} <br>
+                    <div class="price">$${ci.amount}</div>
+                    <i class="fa fa-trash remove-cart-item-btn" aria-hidden="true"></i>
+                </div>
+                <div class="qty qtycart">
+                    <span class="decrease decreasecart">-</span>
+                    <span class="pcs pcscart">${ci.pcs}</span>
+                    <span class="increase increasecart">+</span>
+
+                </div>
+            `;
+            wishlistUlList.appendChild(itemLi);
+            handleRemoveButtonInWishlist();  // Attach remove functionality
+    
+            let moveToCartBtn = itemLi.querySelector(".move-to-cart");
+            moveToCartBtn.addEventListener("click", () => moveToCart(wi.itemId));
+        }
+    });
+    
+}
+
+
+// Function to move item from wishlist to cart
+function moveToCart(wishlistItemId) {
+    // Find the item in wishlist
+    let wishlistItemIndex = wishlistItems.findIndex(item => item.itemId == wishlistItemId);
+    if (wishlistItemIndex > -1) {
+        let wishlistItem = wishlistItems[wishlistItemIndex];
+
+        // Check if the item already exists in the cart
+        let existingCartItem = cartItems.find(item => item.itemId == wishlistItemId);
+        if (existingCartItem) {
+            existingCartItem.pcs += wishlistItem.pcs; // Update quantity if it already exists
+            existingCartItem.amount = existingCartItem.pcs * products_list.find(p => p.id == wishlistItemId).price; // Update amount
+            showToast(`${wishlistItem.pcs} ${products_list.find(p => p.id == wishlistItemId).name} moved to cart!`);
+        } else {
+            cartItems.push({
+                itemId: wishlistItem.itemId,
+                pcs: wishlistItem.pcs,
+                amount: wishlistItem.amount
+            });
+            showToast(`${wishlistItem.pcs} ${products_list.find(p => p.id == wishlistItemId).name} added to cart!`);
+        }
+
+        // Remove the item from the wishlist
+        wishlistItems.splice(wishlistItemIndex, 1);
+        localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+
+        // Re-display the wishlist and cart items
+        displayWishlistItems();
+        displayCartItems();
+    }
+}
+
+
+// Scroll animation
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
       // Apply ScrollReveal to products
       const productBoxes = document.querySelectorAll(".products-box .box");
