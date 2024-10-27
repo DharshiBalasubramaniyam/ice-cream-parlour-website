@@ -25,7 +25,10 @@ function displayProducts(products) {
       if (productsSection) {
             productsSection.innerHTML = ""; 
       }
-
+      
+      if(products == ''){
+            productsSection.innerHTML = "<h1>No Product Found </h1>"
+      }
       products.forEach((product) => {
             let box = document.createElement("div");
             let flavorName = flavor_list.find((f) => f.id === product.flavor_id)?.name;
