@@ -94,6 +94,7 @@
 
     .home {
         height: max-content;
+        min-height: auto;
         padding: 50px 10px 0 10px;
         flex-direction: column-reverse;
     }
@@ -138,23 +139,6 @@
         flex-direction: column;
         margin-top: 10px;
         gap: 10px;
-    }
-    .contact-div{
-        display:flex;
-        flex-direction: column;
-        
-    }
-    .img-container {
-        width: 100vw !important;  /* Make sure this applies to the image container */
-        margin: 0;  /* Remove default margins */
-        padding: 0; /* Remove any padding if necessary */
-        
-    }
-    
-    .contact form {
-        width: 100vw !important;  /* Make sure this applies to the image container */
-        
-       
     }
 
 }
