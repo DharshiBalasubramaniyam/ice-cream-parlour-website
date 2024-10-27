@@ -586,7 +586,7 @@ h3 {
 }
 
 /* Whatsapp */
-.footer-col .links li a[href*="#1"]:hover {
+.footer-col .links li a[href*="whatsapp.com"]:hover {
     background: linear-gradient(to right, rgba(0, 255, 0, 0.8), rgba(0, 0, 0, 0.2));
     -webkit-background-clip: text;
     color: transparent;
