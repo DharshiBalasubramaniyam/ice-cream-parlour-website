@@ -10,6 +10,7 @@
     list-style-type: none;
     text-decoration: none;
     outline: none;
+    cursor: none;
     font-weight: 400;
     box-sizing: border-box;
     font-family: var(--main-font);
@@ -176,6 +177,7 @@ input[type="submit"] {
     background-image: var(--background-image);
     font-size: 16px;
     padding: 8px 30px;
+    margin-bottom: 15px;
     background-color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 20px;
@@ -807,6 +809,8 @@ h3 {
     z-index: 99999999;
     /* so that it stays on top of all other elements */
 }
+
+
 /*Added a close button(X)*/
 #close-btn2 {
     position:absolute;

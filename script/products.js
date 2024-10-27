@@ -25,7 +25,10 @@ function displayProducts(products) {
       if (productsSection) {
             productsSection.innerHTML = ""; 
       }
-
+      
+      if(products == ''){
+            productsSection.innerHTML = "<h1>No Product Found </h1>"
+      }
       products.forEach((product) => {
             let box = document.createElement("div");
             let flavorName = flavor_list.find((f) => f.id === product.flavor_id)?.name;
@@ -230,7 +233,7 @@ function displayCartItems() {
                                                                         <span class="name">${product.name}</span><br>
                                                                         <span class="qty">${ci.pcs}</span> x ${product.price} <br>
                                                                         <div class="price">$${ci.amount}</div>
-                                                                        <i class="fa fa-times remove-cart-item-btn" aria-hidden="true"></i>
+                                                                        <i class="fa fa-trash remove-cart-item-btn" aria-hidden="true"></i>
                                                             </div>
                                                             <div class="qty qtycart">
                                                                         <span class="decrease decreasecart">-</span>
