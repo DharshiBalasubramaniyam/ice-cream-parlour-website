@@ -67,12 +67,12 @@ body {
 /* Keyframe Animations */
 @keyframes spin {
     0% {
-        transform:scale(-30%);
+        transform:scale(-1%);
         transition: linear;
     }
 
     100% {
-        transform: scale(30%);
+        transform: scale(50%);
         transition: linear;
     }
 }
