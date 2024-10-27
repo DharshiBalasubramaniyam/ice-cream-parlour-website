@@ -230,7 +230,7 @@ function displayCartItems() {
                                                                         <span class="name">${product.name}</span><br>
                                                                         <span class="qty">${ci.pcs}</span> x ${product.price} <br>
                                                                         <div class="price">$${ci.amount}</div>
-                                                                        <i class="fa fa-times remove-cart-item-btn" aria-hidden="true"></i>
+                                                                        <i class="fa fa-trash remove-cart-item-btn" aria-hidden="true"></i>
                                                             </div>
                                                             <div class="qty qtycart">
                                                                         <span class="decrease decreasecart">-</span>
