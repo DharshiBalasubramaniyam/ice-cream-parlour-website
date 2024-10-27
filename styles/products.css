@@ -152,28 +152,121 @@
 }
 
 .qtycart {
-    width: fit-content !important;
-    border: 2px solid red !important;
-    border-radius: 25px !important;
-    padding: 0 5px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    width: fit-content;
+    border: 2px solid rgba(80, 79, 79, 0.158);
+    border-radius: 5px;
+    padding: 0;
+    display: flex;
 }
 
 .decreasecart {
-    border-right: 2px solid red !important;
-    padding: 5px !important;
+    padding: 0;
 }
 
 .increasecart {
     cursor: pointer !important;
-    padding: 5px !important;
+    padding: 0;
 }
 
 .pcscart {
-    border-right: 2px solid red !important;
-    padding: 5px;
+    padding: 0;
+}
+
+/* Cart container */
+.cart-list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.cart-list-items li {
+    position: relative; /* Allows the remove button to be positioned at the top-right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-list-items li img {
+    width: 80px; /* Increase image size */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+/* Remove button styling */
+.remove-cart-item-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+}
+
+.remove-cart-item-btn:hover {
+    color: red;
+}
+
+/* Product details */
+.text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text .name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.text .description {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Price styling */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    /* margin-top: 5px; */
+    color: #333;
+}
+
+/* Quantity selectors */
+.qtycart {
+    position: absolute;
+    bottom: 10px; /* Position at bottom right */
+    right: 10px;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(80, 79, 79, 0.158);
+    border-radius: 5px;
+    padding: 0;
+}
+
+.qtycart .pcs {
+    margin: 0 ;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.qtycart span {
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.qtycart span:hover {
+    background-color: #f1f1f1;
 }
 
 .products .products-box .box .qty span {

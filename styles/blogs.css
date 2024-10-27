@@ -5,7 +5,7 @@ h1 {
     padding: 10px;
 }
 h2 {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .top-btn {
@@ -34,13 +34,13 @@ h2 {
     gap: 20px;
     justify-content: center;
     padding: 20px;
-    gap: 40px;
+    gap: 20px;
 }
 
 .contributor-card {
-    width: 300px;
+    width: 500px;
     position: relative;
-    aspect-ratio: 1/;
+    aspect-ratio: inherit;
     overflow: hidden;
     max-width: calc(55% - 16px);
     display: flex;
@@ -50,9 +50,9 @@ h2 {
     border: 2px solid rgb(229, 93, 193);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
+    padding: 30px;
     transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
-    text-decoration: none;
+    text-decoration:none;
     color: inherit;
 }
 
@@ -70,11 +70,10 @@ h2 {
 }
 
 .contributor-card img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 230px;
     object-fit: cover;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     transition: box-shadow 0.3s ease-in-out, border 0.1s ease-in-out;
 }
