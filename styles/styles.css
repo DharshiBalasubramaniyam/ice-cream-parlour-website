@@ -809,3 +809,27 @@ h3 {
     z-index: 99999999;
     /* so that it stays on top of all other elements */
 }
+
+
+/*Added a close button(X)*/
+#close-btn2 {
+    position:absolute;
+    top:1;
+    right:0;
+    font-size: 30px;
+    width: 40px; 
+    height: 40px;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+/*Hovering effect on close button*/
+#close-btn2:hover {
+    transform: scale(1);
+    color: #ff69b4;
+    background-color: rgb(235, 192, 211); 
+}
