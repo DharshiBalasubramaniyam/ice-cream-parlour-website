@@ -345,6 +345,7 @@ h3 {
 
 .nav-bar .icons i:hover {
     color: var(--main-color);
+   
 }
 
 .nav-bar .icons i.menu {
@@ -358,6 +359,10 @@ h3 {
     right: -15px;
     width: 25px;
     font-size: 12px;
+}
+.nav-links  a:hover {
+    color: #640d5f;
+    font-size: 24px;
 }
 
 /* cart styles */
