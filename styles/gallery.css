@@ -13,18 +13,19 @@
     display: flex;
     flex-wrap:wrap;
     margin-top: 50px;
-    gap: 0;
+    gap: 10px;
 }
 .gallery-images{
     height: 100%;
     width: 100%;
+    border-radius: 5px;
 }
 
 .gallery-item {
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
     transform: scale(1); 
-    flex: 1 1 300px;
+    flex: 1 1 250px;
     box-sizing: border-box; 
 }
 .gallery-item:hover {
