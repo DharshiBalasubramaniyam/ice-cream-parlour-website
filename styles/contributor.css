@@ -27,10 +27,6 @@ body {
   /* background-color: rgba(209, 209, 255, 0.8); */
 }
 
-div .title{
-  margin-top: 100px; /* Add space between title and line */ 
-}
-
 .contributors-grid {
   display: flex;
   flex-wrap: wrap;
