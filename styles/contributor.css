@@ -1,11 +1,11 @@
 body {
   font-family: "Poppins";
-  color: #333;
-  
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  background-color: #f8f9fa;
+  color: #212529;
 }
 
 .container {
@@ -163,11 +163,6 @@ body {
 }
 .toggle:checked:before {
   transform: translateX(25px);
-}
-
-body {
-  background-color: #f8f9fa;
-  color: #212529;
 }
 
 .nav-container {
