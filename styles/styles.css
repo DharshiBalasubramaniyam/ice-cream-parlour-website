@@ -452,13 +452,43 @@ h3 {
 }
 
 .cart .empty-cart {
+    text-align: center;
     display: none;
 }
 
-.cart .empty-cart p {
+.cart .empty-cart .empty-cart-info {
     text-align: center;
-    padding-top: 25%;
+    font-size:larger;
+    color: #640D5F;
+}
 
+.empty-cart-text {
+    font-size: 2em;
+    color: #ff69b4;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);   
+}
+.empty-cart-img-div
+{
+    display: flex; 
+    justify-content: center; 
+}
+
+.ice-cream-image {
+    max-width: 50%;
+    margin-top: 20%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .empty-cart-text {
+        font-size: 1.5em;
+    }
+
+    .ice-cream-image {
+        max-width: 80%;
+    }
 }
 
 .cart .empty-cart.active {
