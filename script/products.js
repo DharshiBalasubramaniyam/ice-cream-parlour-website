@@ -26,15 +26,6 @@ function displayProducts(products) {
             productsSection.innerHTML = ""; 
       }
       
-      // if (products == '') {
-      //       productsSection.innerHTML = `
-      //           <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-      //               <h1 style="color: pink; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); margin: 0;">No Product Found</h1>
-      //               <img src="images/product-not-found.png" alt="No products available" style="width: 25%; height: auto; margin: 5% 0;"> <!-- Adjusted image size -->
-      //               <p style="font-size:large; margin-top: 0.2%;">We're sorry, but it seems we can't find the product you're looking for. Try searching for another flavor!</p>
-      //           </div>
-      //       `;
-      //   }
       if (products == '') {
             productsSection.innerHTML = `
                 <div class="no-product-container">
