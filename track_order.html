@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffe6f2; /* Light pink background */
+        }
+
+        h1 {
+            text-align: center;
+            color: #d5006d; /* Darker pink for the title */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #d5006d; /* Darker pink border */
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #d5006d; /* Darker pink button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c4005a; /* Darker shade on hover */
+        }
+
+        .map-container {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1><i class="fas fa-truck icon"></i>Track Your Order</h1>
+        <form id="trackingForm">
+            <input type="text" id="trackingNumber" placeholder="Enter your tracking number" required>
+            <button type="submit"><i class="fas fa-search"></i> Track Order</button>
+        </form>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.452697041917!2d78.39076592375736!3d17.43803374982052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9144cdba8c47%3A0x937fe346f411a645!2sTutorials%20Point%20(India)%20Ltd.!5e0!3m2!1sen!2sin!4v1673629212535!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('trackingForm');
+        const trackingNumberInput = document.getElementById('trackingNumber');
+
+        // Handle form submission
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const trackingNumber = trackingNumberInput.value;
+
+            // Simulate fetching tracking data (replace with actual API call)
+            fetchTrackingData(trackingNumber);
+        });
+
+        // Simulated function to fetch tracking data
+        function fetchTrackingData(trackingNumber) {
+            // Simulated coordinates for demonstration
+            const trackingData = {
+                lat: -34.397 + Math.random() * 0.1,
+                lng: 150.644 + Math.random() * 0.1,
+                status: "In Transit"
+            };
+
+            // Update map with tracking data (this part is not functional with iframe)
+            // You can display the status or any other information as needed
+            alert(`Tracking Number: ${trackingNumber}\nStatus: ${trackingData.status}`);
+        }
+    </script>
+</body>
+</html>
