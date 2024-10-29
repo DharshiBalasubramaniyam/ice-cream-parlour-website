@@ -26,9 +26,16 @@ function displayProducts(products) {
             productsSection.innerHTML = ""; 
       }
       
-      if(products == ''){
-            productsSection.innerHTML = "<h1>No Product Found </h1>"
-      }
+      if (products == '') {
+            productsSection.innerHTML = `
+                <div class="no-product-container">
+                    <h1 class="no-product-heading">No Product Found</h1>
+                    <img src="images/product-not-found.png" alt="No products available" class="no-product-image">
+                    <p class="no-product-text">We're sorry, but it seems we can't find the product you're looking for. Try searching for another flavor!</p>
+                </div>
+            `;
+        }
+
       products.forEach((product) => {
             let box = document.createElement("div");
             let flavorName = flavor_list.find((f) => f.id === product.flavor_id)?.name;
