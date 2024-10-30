@@ -313,3 +313,37 @@
 .products-box button {
     width: 100%;
 }
+
+
+/* Center alignment and column layout for the container */
+.no-product-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Styling for the "No Product Found" heading */
+.no-product-heading {
+    color: #ff69b4;
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1); 
+    margin: 0;
+    font-size: 2rem; 
+}
+
+/* Image styling */
+.no-product-image {
+    width: 50%;
+    max-width: 12rem; 
+    height: auto;
+    margin: 1rem 0; 
+}
+
+/* Styling for the paragraph */
+.no-product-text {
+    font-size: 1.125rem;
+    margin-top: 1.25rem;
+    color: #640D5F;
+    line-height: 1.5; 
+}

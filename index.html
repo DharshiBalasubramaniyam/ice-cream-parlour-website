@@ -21,10 +21,7 @@
     <link rel="icon" href="./images/logo.png" type="image/png">
 
     <!-- font awesome icons script -->
-    <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -112,7 +109,12 @@
         </div>
 
         <div class="empty-cart active">
-            <p>No items in the cart!</p>
+            <div class="empty-cart-img-div">
+                <img src="images/empty-cart.png" alt="Delicious Ice Cream" class="ice-cream-image" />
+            </div>
+            <p class="empty-cart-text">Your cart is empty!</p>
+            <p class="empty-cart-info">As a cone without ice cream!🍦 </p>
+            <p class="empty-cart-info">Fill it up with our delicious flavors!</p>
         </div>
     </div>
 
@@ -419,7 +421,8 @@
             <div class="row">
                 <div class="input-box">
                     <label for="message">Your Message</label><br>
-                    <textarea class="dark_bg_txt" name="" id="message" cols="30" rows="10" placeholder="Enter your messege here"
+                    <textarea class="dark_bg_txt" name="" id="message" cols="30" rows="10"
+                        placeholder="Enter your messege here"
                         oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
                     <small class="error" style="color: rgb(255, 0, 0);"></small>
                 </div>
@@ -438,25 +441,15 @@
                 <ul class="links">
 
                     <li><a href="#home">Home</a></li>
-                    <!-- <li><a href="#"><i class="fas fa-user"></i> My Account</a></li> -->
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="gallary.html">Gallery</a></li>
+                    <li><a href="./login.html">My Account</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./gallary.html">Gallery</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="./faq.html" class="link"> FAQ</a></li>
-                    <li><a href="contributor.html"> Our Contributors</a></li>
-                    <li><a href="blogs.html"> Our Blogs</a></li>
-                    <!-- <li><a href="#"><i class="fas fa-file-contract"></i> Customer Agreement</a></li> -->
-                    <li><a href="privacy.html"> Privacy Policy</a></li>
-
-                    <!-- <li><a href="#home">Home</a></li>
-                    <li><a href="./products.html">Products</a></li>
-                    <li><a href="gallary.html">Gallery</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="./faq.html" class="link">FAQ</a></li>
-                    <li><a href="contributor.html">Our Contributors</a></li>
-                    <li><a href="blogs.html">Our Blogs</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms&condition.html">Terms&Condition</a></li> -->
+                    <li><a href="./contributor.html"> Our Contributors</a></li>
+                    <li><a href="./blogs.html"> Our Blogs</a></li>
+                    <li><a href="./terms&condition.html">Customer Agreement</a></li>
+                    <li><a href="./privacy.html"> Privacy Policy</a></li>
 
                 </ul>
             </div>
@@ -503,9 +496,8 @@
                             Linkedin</a></li>
                     <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
                             Twitter</a></li>
-                    <li><a href="#1" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
-                    <!--                     It's href is #1 for css purpose to get it's hover green  -->
-
+                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i> 
+                            Whatsapp</a></li>
                 </ul>
             </div>
             <div class="footer-col">

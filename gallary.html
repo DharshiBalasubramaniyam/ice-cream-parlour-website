@@ -18,15 +18,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
 
     <!-- font awesome icons script -->
-    <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
-
 </head>
 
-<body>
 
+<body>
     <!-- cursor -->
     <div class="circle"></div>
     <div class="circle"></div>
@@ -98,7 +97,12 @@
                 </div>
 
                 <div class="empty-cart active">
-                    <p>No items in the cart!</p>
+                    <div class="empty-cart-img-div">
+                        <img src="images/empty-cart.png" alt="Delicious Ice Cream" class="ice-cream-image" />
+                    </div>
+                    <p class="empty-cart-text">Your cart is empty!</p>
+                    <p class="empty-cart-info">As a cone without ice cream!🍦 </p>
+                    <p class="empty-cart-info">Fill it up with our delicious flavors!</p>
                 </div>
 
             </div>
@@ -274,7 +278,8 @@
                             Linkedin</a></li>
                     <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
                             Twitter</a></li>
-                    <li><a href="#" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
+                    <!-- Added Whatsapp Redirect -->
+                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></li>
 
                 </ul>
             </div>
