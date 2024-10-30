@@ -1,0 +1,69 @@
+#contact {
+    width: 90%; /* Set width as a percentage for responsiveness */
+    max-width: 75rem; /* 1200px max width to prevent stretching */
+    font-weight: 600;
+    color: #000;
+    margin: auto;
+    align-items: center;
+    transform: scale(0.9);
+    border: 1px solid crimson;
+    border-top-left-radius: 1.5625rem; /* 25px */
+    border-bottom-right-radius: 1.5625rem; /* 25px */
+    padding: 1rem;
+}
+
+#contact:hover {
+    box-shadow: 0 0.9375rem 0.9375rem rgba(231, 88, 169, 0.5); /* 15px */
+}
+
+#contact input {
+    margin: 0.625rem; /* 10px */
+    font-size: larger;
+    height: 3.125rem; /* 50px */
+    width: 100%;
+    max-width: 15.625rem; /* 250px */
+    border-radius: 0.3125rem; /* 5px */
+}
+
+#contact .feedback {
+    width: 90%; /* Percentage for responsiveness */
+    max-width: 21.875rem; /* 350px max width */
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#contact .feedback textarea {
+    margin: auto;
+    width: 100%;
+}
+
+#contact .feedback p {
+    font-size: 1.25rem; /* 20px */
+    margin-bottom: 0.3125rem; /* 5px */
+    margin-top: 0.3125rem; /* 5px */
+}
+
+#contact-form {
+    background-color: none;
+    background: none;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+    #contact {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #contact .feedback,
+    #contact input,
+    #contact .feedback textarea {
+        max-width: 100%;
+    }
+
+    #contact .feedback p {
+        font-size: 1rem; /* Slightly smaller on smaller screens */
+    }
+}

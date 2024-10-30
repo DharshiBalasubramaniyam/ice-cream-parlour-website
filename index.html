@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/style3.css">
     <link rel="stylesheet" href="styles/cursor.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
+    <link rel="stylesheet" href="index.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
@@ -394,13 +395,13 @@
                     <label for="fname">Your First Name</label><br>
                     <input class="dark_bg_txt" type="text" id="fname" placeholder="Enter your first name"
                         oninput="this.parentElement.querySelector('small').textContent = ''">
-                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    <small class="error"></small>
                 </div>
                 <div class="input-box">
                     <label for="lname">Your Last Name</label><br>
                     <input class="dark_bg_txt" type="text" id="lname" placeholder="Enter your last name"
                         oninput="this.parentElement.querySelector('small').textContent = ''">
-                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    <small class="error"></small>
                 </div>
             </div>
 
@@ -409,22 +410,26 @@
                     <label for="email">Your Email</label><br>
                     <input class="dark_bg_txt" type="email" id="email" placeholder="example@gmail.com"
                         oninput="this.parentElement.querySelector('small').textContent = ''">
-                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    <small class="error"></small>
                 </div>
                 <div class="input-box">
                     <label for="phone">Your Contact Number</label><br>
                     <input class="dark_bg_txt" type="tel" id="phone" placeholder="Enter your contact number"
                         oninput="this.parentElement.querySelector('small').textContent = ''">
-                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    <small class="error"></small>
                 </div>
             </div>
             <div class="row">
                 <div class="input-box">
-                    <label for="message">Your Message</label><br>
-                    <textarea class="dark_bg_txt" name="" id="message" cols="30" rows="10"
+
+                    <div class="feedback">
+                        <p>Your Message</p>
+                        <textarea class="dark_bg_txt" name="" id="message" cols="30" rows="10"
                         placeholder="Enter your messege here"
                         oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
-                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                    </div>
+
+                    <small class="error"></small>
                 </div>
             </div>
             <div class="row">
@@ -496,7 +501,7 @@
                             Linkedin</a></li>
                     <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
                             Twitter</a></li>
-                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i> 
+                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i>
                             Whatsapp</a></li>
                 </ul>
             </div>
