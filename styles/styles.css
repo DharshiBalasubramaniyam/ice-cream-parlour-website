@@ -358,6 +358,27 @@ h3 {
     font-size: 12px;
 }
 
+.nav-links input{
+   
+   height: 60%;
+   display: block;
+   border-radius: 20px;
+   font-size: 20px;
+   padding: 1px 17px;
+   border: 1px solid #cacaca;
+
+   margin: 0 5px;
+   color: var(--main-color);
+   
+}
+
+
+::placeholder{
+    color: var(--main-color);
+    opacity: 0.9;
+}
+
+
 /* cart styles */
 
 .cart {
@@ -389,6 +410,7 @@ h3 {
 }
 
 .cart ul li {
+
     padding: 7px;
     margin: 10px 0;
     border: 2px solid var(--ternary-color);
