@@ -91,81 +91,87 @@
         </div>
     </div>
 
-    <section>
-        <h1 style="margin-top: 100px; padding: 0 40px;">Island-Wide Delivery</h1>
-        <h2 class="heading">Enter Your Details</h2>
+    <div class="delivery_container">
+        <section>
+            <h1 style="margin-top: 100px; padding: 0 40px;">Island-Wide Delivery</h1>
+            <h2 class="heading">Enter Your Details</h2>
+            <div class="box">
+                <form class="form-contents">
+                    <div class="indv-text">
+                        <label for="name" class="text">Name</label>
+                        <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name"
+                            required />
+                    </div>
 
-        <form class="form-contents">
-            <div class="indv-text">
-                <label for="name" class="text">Name</label>
-                <input type="text" class="form-text" id="name" name="name" placeholder="Enter your Name" required />
+                    <div class="indv-text">
+                        <label for="email" class="text">Email Id</label>
+                        <input type="email" class="form-text" placeholder="example@gmail.com" required>
+                    </div>
+
+                    <div class="indv-text">
+                        <label for="contact" class="text">Contact No.</label>
+                        <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789"
+                            required>
+
+                    </div>
+
+                    <div class="indv-text">
+                        <label for="add1" class="text">Address Line1</label>
+                        <input type="text" class="form-text" name="" id="" placeholder="Street Address" required>
+                    </div>
+
+                    <div class="indv-text">
+                        <label for="add2" class="text">Address Line2</label>
+                        <input type="text" class="form-text" name="" id="" placeholder="City" required>
+                    </div>
+
+                    <div class="indv-text">
+                        <label for="pincode" class="text">PIN Code </label>
+                        <input type="text" class="form-text" id="pincode" name="pincode" placeholder="Enter Pin Code"
+                            required pattern="\d{6}" title="Please enter a valid 6-digit PIN code" maxlength="6">
+                    </div>
+
+                    <div class="indv-text">
+                        <label for="state" class="text">State</label>
+                        <select class="form-text" id="state" required>
+                            <option value="">Select State</option>
+                            <option value="Andhra Pradesh">Colombo</option>
+                            <option value="Arunachal Pradesh">Gampaha</option>
+                            <option value="Assam">Kalutara</option>
+                            <option value="Bihar">Kandy</option>
+                            <option value="Chhattisgarh">Matale</option>
+                            <option value="Goa">Nuwara Eliya</option>
+                            <option value="Gujarat">Galle</option>
+                            <option value="Haryana">Matara</option>
+                            <option value="Himachal Pradesh">Hambantota</option>
+                            <option value="Jharkhand">Jaffna</option>
+                            <option value="Karnataka">Kilinochchi</option>
+                            <option value="Kerala">Mannar</option>
+                            <option value="Madhya Pradesh">Vavuniya</option>
+                            <option value="Maharashtra">Mullaitivu</option>
+                            <option value="Manipur">Batticaloa</option>
+                            <option value="Meghalaya">Ampara</option>
+                            <option value="Mizoram">Trincomalee</option>
+                            <option value="Nagaland">Kurunegala</option>
+                            <option value="Odisha">Puttalam</option>
+                            <option value="Punjab">Anuradhapura</option>
+                            <option value="Rajasthan">Polonnaruwa</option>
+                            <option value="Sikkim">Badulla</option>
+                            <option value="Tamil Nadu">Moneragala</option>
+                            <option value="Telangana">Ratnapura</option>
+                            <option value="Tripura">Kegalle</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; margin: 20px;" class="btn">
+                        <button type="submit" value="SUMBIT" class="btn-style">Submit</button>
+                        <button type="reset" class="btn-style reset-btn" value="RESET">Clear</button>
+                    </div>
             </div>
 
-            <div class="indv-text">
-                <label for="email" class="text">Email Id</label>
-                <input type="email" class="form-text" placeholder="example@gmail.com" required>
-            </div>
-
-            <div class="indv-text">
-                <label for="contact" class="text">Contact No.</label>
-                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required>
-            </div>
-
-            <div class="indv-text">
-                <label for="add1" class="text">Address Line1</label>
-                <input type="text" class="form-text" name="" id="" placeholder="Street Address" required>
-            </div>
-
-            <div class="indv-text">
-                <label for="add2" class="text">Address Line2</label>
-                <input type="text" class="form-text" name="" id="" placeholder="City" required>
-            </div>
-
-            <div class="indv-text">
-                <label for="pincode" class="text">PIN Code </label>
-                <input type="text" class="form-text" id="pincode" name="pincode" placeholder="Enter Pin Code" required
-                    pattern="\d{6}" title="Please enter a valid 6-digit PIN code" maxlength="6">
-            </div>
-
-            <div class="indv-text">
-                <label for="state" class="text">State</label>
-                <select class="form-text" id="state" required>
-                    <option value="">Select State</option>
-                    <option value="Andhra Pradesh">Colombo</option>
-                    <option value="Arunachal Pradesh">Gampaha</option>
-                    <option value="Assam">Kalutara</option>
-                    <option value="Bihar">Kandy</option>
-                    <option value="Chhattisgarh">Matale</option>
-                    <option value="Goa">Nuwara Eliya</option>
-                    <option value="Gujarat">Galle</option>
-                    <option value="Haryana">Matara</option>
-                    <option value="Himachal Pradesh">Hambantota</option>
-                    <option value="Jharkhand">Jaffna</option>
-                    <option value="Karnataka">Kilinochchi</option>
-                    <option value="Kerala">Mannar</option>
-                    <option value="Madhya Pradesh">Vavuniya</option>
-                    <option value="Maharashtra">Mullaitivu</option>
-                    <option value="Manipur">Batticaloa</option>
-                    <option value="Meghalaya">Ampara</option>
-                    <option value="Mizoram">Trincomalee</option>
-                    <option value="Nagaland">Kurunegala</option>
-                    <option value="Odisha">Puttalam</option>
-                    <option value="Punjab">Anuradhapura</option>
-                    <option value="Rajasthan">Polonnaruwa</option>
-                    <option value="Sikkim">Badulla</option>
-                    <option value="Tamil Nadu">Moneragala</option>
-                    <option value="Telangana">Ratnapura</option>
-                    <option value="Tripura">Kegalle</option>
-                </select>
-            </div>
-
-            <div style="display: flex; margin: 20px;" class="btn">
-                <button type="submit" value="SUMBIT" class="btn-style">Submit</button>
-                <button type="reset" class="btn-style reset-btn" value="RESET">Clear</button>
-            </div>
-
-        </form>
-    </section>
+            </form>
+        </section>
+    </div>
 
     <!-- Cart -->
     <div class="cart">
@@ -242,13 +248,17 @@
                 </ul>
                 <h4 style="margin-top: 15px;">Follow Us</h4>
                 <ul class="links">
-                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
-                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i>
+                            Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
+                            Linkedin</a></li>
+                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
+                            Twitter</a></li>
                     <!-- Added Whatsapp Logo -->
                     <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i>
-                        Whatsapp</a></li>
+                            Whatsapp</a></li>
                 </ul>
             </div>
             <div class="footer-col">
