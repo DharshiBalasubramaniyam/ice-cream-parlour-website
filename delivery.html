@@ -277,6 +277,27 @@
     </div>
 
     <!-- scripts -->
+    <script>
+        document.querySelector('.form-contents').addEventListener('submit', function(event) {
+            const emailField = document.querySelector('input[type="email"]');
+            const email = emailField.value;
+    
+            // Stricter email regex pattern
+            const emailPattern = /^(?!.*\.\.)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]{1,64}@[a-zA-Z0-9-]{1,255}\.[a-zA-Z]{2,}$/;
+    
+            // Length checks for local and domain parts
+            const [localPart, domainPart] = email.split("@");
+            if (!emailPattern.test(email) || 
+                localPart.length > 64 || 
+                (domainPart && domainPart.length > 255)) {
+                
+                alert("Please enter a valid email address.");
+                emailField.focus();
+                event.preventDefault();  // Prevents form submission if email is invalid
+            }
+        });
+    </script>
+    
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
     <script src="./script/topscrollindicator.js"></script>
