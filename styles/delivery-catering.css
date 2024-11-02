@@ -8,18 +8,26 @@ section h1 {
     margin-top: 15px;
     font-weight: 400;
 }
+.form-text {
+    width: 80%; /* Set a smaller width for input fields */
+    padding: 8px; /* Reduce padding inside input fields */
+    font-size: 14px; /* Decrease font size for a more compact look */
+    border: 1px solid #e91e63;
+    border-radius: 5px; 
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+}
 .delivery_container{
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
-    background: url(/images/icecreams.jpg);
-    background-size:cover;
+    /* background: url(/images/icecreams.jpg); */
+    /* background-size:cover; */
 }
 .box{
     /* background: red; */
     box-shadow: 0px 0px 10px rgba(0,0, 0, 0.1);
-    border: 6px solid rgba(255,255 ,255 , 0.1);
+    border: 12px solid rgba(255,255 ,255 , 0.1);
     border-radius: 10px;
     backdrop-filter: blur(1.5px);
 
