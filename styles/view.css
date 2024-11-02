@@ -88,3 +88,45 @@ body {
     color: white;
     background-color: var(--secondary-color); 
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+         width: 90%;
+    }
+
+    .modal-right h2 {
+        font-size: 18px; 
+    }
+
+    .modal-right p, .modal-right .price {
+        font-size: 16px; /* Adjust text size for readability */
+    }
+
+    .quick-view-btn, .close {
+        font-size: 20px; 
+    }
+
+    .modal {
+        padding: 10px; /* Add padding around the modal for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%; /* Further reduce modal width for very small screens */
+    }
+
+    .close {
+        font-size: 24px; /* Smaller close button */
+    }
+
+    .modal-right h2 {
+        font-size: 18px;
+    }
+
+    .modal-right p, .modal-right .price {
+        font-size: 14px;
+    }
+}
