@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +8,11 @@
     <link rel="stylesheet" href="styles/login-signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
-
-</head>
-
-<body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+</head>
+<body>
 
-
-    <!-- cursor -->
+    <!-- Cursor Animation -->
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
@@ -52,20 +48,18 @@
         </div>
     </div>
 
-    <!-- scroll progress -->
+    <!-- Scroll Progress -->
     <div class="scroll-progress"></div>
 
     <a href="./index.html">
-
         <div id="logo">
-            <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true"
-                width="15%">
+            <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true" width="15%" alt="IcyCo Logo">
         </div>
     </a>
 
     <h1 style="text-align: center; margin-bottom: 20px;">Sign up to IcyCo</h1>
 
-    <form>
+    <form id="signup-form">
         <div id="name-fields">
             <div id="first-name-field">
                 <input type="text" class="input-field" placeholder="First name" required>
@@ -81,11 +75,11 @@
 
         <div class="input-fields">
             <div class="password-container">
-                <input type="password" class="input-field" id="password-input-field" placeholder="Password" required>
-                <i style="margin-top: 5px;" class="fa-solid fa-eye-slash" id="toggle-password"></i>
+                <input type="password" class="input-field" id="password-input-field" placeholder="Password" required oninput="checkPasswordStrength()">
+                <i style="margin-top: 5px;" class="fa-solid fa-eye-slash" id="toggle-password" onclick="togglePasswordVisibility()"></i>
             </div>
             <!-- Password strength meter -->
-            <div id="password-strength-meter">
+            <div id="password-strength-meter" style="display: none;">
                 <div id="strength-bar"></div>
                 <p id="password-strength-text"></p>
             </div>
@@ -96,12 +90,12 @@
         </div>
     </form>
 
-
     <div class="terms">
         <br>
-        By clicking Continue or registering through a third party you accept the Icyco
+        By clicking Continue or registering through a third party you accept the IcyCo
         <a href="#">Terms of Use and acknowledge the Privacy Statement and Cookie Policy</a>
     </div>
+
     <div id="line-container">
         <span>Already have an account?</span><a href="./login.html" class="register-now-link">Login</a>
         <div class="sep-container" style="margin-top: 5px;">
@@ -114,23 +108,67 @@
     </div>
 
     <div class="social-link-2">
-        <a href=""><img src="images/social-icons/google.png" width="25px" height="25px"></a>
-        <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px"></a>
+        <a href=""><img src="images/social-icons/google.png" width="25px" height="25px" alt="Google Sign In"></a>
+        <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px" alt="Facebook Sign In"></a>
     </div>
-
-
-
-
-
-
 
     <script src="script/cursor.js"></script>
     <script src="./script/signup.js"></script>
     <script src="script/login.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/topscrollindicator.js"></script>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password-input-field');
+            const toggleIcon = document.getElementById('toggle-password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            }
+        }
 
+        function checkPasswordStrength() {
+            const password = document.getElementById('password-input-field').value;
+            const result = zxcvbn(password);
+            const strengthBar = document.getElementById('strength-bar');
+            const strengthText = document.getElementById('password-strength-text');
+            const strengthMeter = document.getElementById('password-strength-meter');
 
+            strengthMeter.style.display = 'block';
+
+            switch (result.score) {
+                case 0:
+                    strengthBar.style.width = '0%';
+                    strengthBar.style.backgroundColor = 'red';
+                    strengthText.textContent = 'Very Weak';
+                    break;
+                case 1:
+                    strengthBar.style.width = '25%';
+                    strengthBar.style.backgroundColor = 'orange';
+                    strengthText.textContent = 'Weak';
+                    break;
+                case 2:
+                    strengthBar.style.width = '50%';
+                    strengthBar.style.backgroundColor = 'yellow';
+                    strengthText.textContent = 'Fair';
+                    break;
+                case 3:
+                    strengthBar.style.width = '75%';
+                    strengthBar.style.backgroundColor = 'lightgreen';
+                    strengthText.textContent = 'Good';
+                    break;
+                case 4:
+                    strengthBar.style.width = '100%';
+                    strengthBar.style.backgroundColor = 'green';
+                    strengthText.textContent = 'Strong';
+                    break;
+            }
+        }
+    </script>
 </body>
-
 </html>

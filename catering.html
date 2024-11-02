@@ -1,4 +1,3 @@
-<!-- @ -1,241 +0,0 @@ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,47 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICYCO - CATERING</title>
 
-    <!-- custom style sheets -->
+    <!-- Custom stylesheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
-    <!-- Link to add favicon  -->
     <link rel="icon" href="./images/logo.png" type="image/png">
-
     <link rel="stylesheet" href="styles/cursor.css">
     <link rel="stylesheet" href="styles/delivery-catering.css">
-
-    <!-- link to add favicon -->
-    <link rel="icon" href="./images/logo.png" type="image/png">
-
-    <!-- font awesome icons script -->
+    
+    <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
 
 <body>
-    <!-- cursor -->
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <!-- Cursor Effect -->
+    <div class="cursor-container">
+        <div class="circle"></div>
+        <!-- Multiple circles can be generated dynamically through JavaScript -->
+    </div>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -63,101 +40,88 @@
         </div>
     </div>
 
-    <!-- Scroll progress bar -->
+    <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- nav bar -->
-    <div class="nav-bar">
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
         <div class="logo">
-            <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
+            <img src="./images/logo.png" alt="icyco-logo" height="40" width="40">
             <a href="./index.html">IcyCo</a>
         </div>
         <div class="nav-links">
-            <a href="./index.html" class="link">home</a>
-            <a href="./products.html" class="link">products</a>
+            <a href="./index.html" class="link">Home</a>
+            <a href="./products.html" class="link">Products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link active">Catering</a>
         </div>
         <div class="icons">
+            <a class="icon" href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
             <div class="icon">
-                <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
-            </div>
-            <div class="icon">
-                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
-                        class="no-of-cart-items">0</span></span>
+                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span class="no-of-cart-items">0</span></span>
             </div>
             <div class="icon">
                 <i class="fa fa-bars menu" aria-hidden="true"></i>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <!-- catering form -->
+    <!-- Catering Form -->
     <section>
         <h1 style="margin-top: 100px; padding: 0 40px;">Event Catering</h1>
         <h2 class="heading">Tell us about your event</h2>
-        <form class="form-contents">
-
+        <form class="form-contents" method="POST" action="your-action-url">
             <div class="indv-text">
-                <label for="name" class="text">NAME</label>
-                <input type="text" class="form-text" placeholder="Enter your Name" required required
-                    pattern="[a-zA-Z ]+"
-                    oninvalid="this.setCustomValidity('Please enter your name  without using numbers or special characters.')"
+                <label for="name" class="text">Name</label>
+                <input type="text" id="name" class="form-text" placeholder="Enter your Name" required pattern="[a-zA-Z ]+"
+                    oninvalid="this.setCustomValidity('Please enter your name without using numbers or special characters.')"
                     oninput="this.setCustomValidity('')" />
             </div>
 
             <div class="indv-text">
-                <label for="email" class="text">EMAIL ID</label>
-                <input type="email" class="form-text" placeholder="example@gmail.com" required>
+                <label for="email" class="text">Email ID</label>
+                <input type="email" id="email" class="form-text" placeholder="example@gmail.com" required>
             </div>
 
             <div class="indv-text">
-                <label for="contact" class="text">CONTACT No.</label>
-                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required
-                    pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                <label for="contact" class="text">Contact No.</label>
+                <input type="tel" id="contact" class="form-text" placeholder="0123456789" required pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             </div>
 
             <div class="indv-text">
                 <label for="eventdate" class="text">Event Date</label>
-                <input type="date" class="form-text" name="" id="dateInput" required>
+                <input type="date" id="eventdate" class="form-text" required>
             </div>
 
             <div class="indv-text">
                 <label for="eventtype" class="text">Event Type</label>
-
-                <label for="self-pickup">
-                    <input type="radio" id="self-pickup" name="indoor-outdoor" value="self-pickup">
-                    Self Service Pickup
-                </label><br><br>
-            
-                <label for="self-delivery">
-                    <input type="radio" id="self-delivery" name="indoor-outdoor" value="self-delivery">
-                    Self Service Delivery
-                </label><br><br>
-            
-                <label for="full-service">
-                    <input type="radio" id="full-service" name="indoor-outdoor" value="full-service">
-                    Full Service Catering
-                </label><br><br>
-            
-                <label for="not-sure">
-                    <input type="radio" id="not-sure" name="indoor-outdoor" value="not-sure">
-                    Not Sure, Want To Learn More
-                </label>
-            </div>
-            
-    
-
-            <div class="indv-text">
-                <label for="add1" class="text">Complete Address</label>
-                <input type="text" class="form-text" name="" id="" placeholder="Street Address" required>
+                <div>
+                    <label>
+                        <input type="radio" id="self-pickup" name="event-type" value="self-pickup"> Self Service Pickup
+                    </label><br>
+                    <label>
+                        <input type="radio" id="self-delivery" name="event-type" value="self-delivery"> Self Service Delivery
+                    </label><br>
+                    <label>
+                        <input type="radio" id="full-service" name="event-type" value="full-service"> Full Service Catering
+                    </label><br>
+                    <label>
+                        <input type="radio" id="not-sure" name="event-type" value="not-sure"> Not Sure, Want To Learn More
+                    </label>
+                </div>
             </div>
 
             <div class="indv-text">
-                <label for="state" class="text">STATE</label>
-                <select class="form-text" id="state" required>
+                <label for="address" class="text">Complete Address</label>
+                <input type="text" id="address" class="form-text" placeholder="Street Address" required>
+            </div>
+
+            <div class="indv-text">
+                <label for="state" class="text">State</label>
+                <select id="state" class="form-text" required>
                     <option value="">Select State</option>
+                    <!-- Options for states -->
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                     <option value="Assam">Assam</option>
@@ -189,11 +153,10 @@
                 </select>
             </div>
 
-            <div style="display: flex; margin: 20px;" class="btn">
-                <button type="submit" value="SUMBIT" class="btn-style">Submit</button>
-                <button type="reset" class="btn-style reset-btn" value="RESET">Clear</button>
+            <div class="btn">
+                <button type="submit" class="btn-style">Submit</button>
+                <button type="reset" class="btn-style reset-btn">Clear</button>
             </div>
-
         </form>
     </section>
 
@@ -203,13 +166,11 @@
         <h1>Your Cart</h1>
 
         <div class="no-empty-cart">
-            <ul class="cart-list-items">
-            </ul>
+            <ul class="cart-list-items"></ul>
             <div>
                 <div class="total">Sub Total: <span class="sub-total">$0</span></div>
                 <button>Check out</button>
             </div>
-
         </div>
 
         <div class="empty-cart active">
@@ -217,102 +178,55 @@
                 <img src="images/empty-cart.png" alt="Delicious Ice Cream" class="ice-cream-image" />
             </div>
             <p class="empty-cart-text">Your cart is empty!</p>
-            <p class="empty-cart-info">As a cone without ice cream!🍦 </p>
+            <p class="empty-cart-info">As a cone without ice cream!🍦</p>
             <p class="empty-cart-info">Fill it up with our delicious flavors!</p>
         </div>
-
     </div>
 
-    <!-- footer -->
-    <section class="footer">
-        <div class="footer-row">
-            <div class="footer-col">
-                <h4>Useful links</h4>
-                <ul class="links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="./products.html">Products</a></li>
-                    <li><a href="gallary.html">Gallery</a></li>
-                    <li><a href="index.html#about">About Us</a></li>
-                    <li><a href="./faq.html" class="link">FAQ</a></li>
-                    <li><a href="contributor.html">Our Contributors</a></li>
-                    <li><a href="blogs.html">Our Blogs</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms&condition.html">Terms&Condition</a></li>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
                 </ul>
             </div>
-
-            <div class="footer-col">
-                <h4>Opening Hours</h4>
-                <ul class="links">
-                    <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
-                    <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
-                </ul>
-                <h4 style="margin-top: 15px;">Locations</h4>
-                <ul class="links">
-                    <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
-                            ramankulam-
-                            Malappuram Dt</a></li>
-                    <li class="address2"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> MG Road,
-                            Bangalore - Karnataka</a></li>
-                    <li class="address3"><a href="" class="social"><i class="fa-solid fa-location-dot"></i>
-                            Connaught Place, New Delhi</a></li>
-                    <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
-                            Street, Kolkata - West Bengal</a></li>
-
-                    </li>
-
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Need Help?</h4>
-                <ul class="links">
-                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
-                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
-                    <li><a href="" class="social"><i class="fa-solid fa-envelope"></i> mail@1234567.com</a></li>
-                </ul>
-                <h4 style="margin-top: 15px;">Follow Us</h4>
-                <ul class="links">
-                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
-                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
-                    <!-- Added Whatsapp Logo -->
-                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i>
-                        Whatsapp</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Newsletter</h4>
-                <p>
-                    Subscribe to our newsletter for a weekly dose
-                    of news, updates, helpful tips, and
-                    exclusive offers.
-                </p>
-                <form action="#">
-                    <input type="text" placeholder="Your email" required>
+            <div class="footer-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
                 </form>
             </div>
         </div>
-    </section>
+        <div class="footer-bottom">
+            <p>&copy; 2024 IcyCo. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    <!-----scroll bottom to top------->
-    <button class="scroll-button">
-        <img src="images/icecream-cone.png" alt="icecream-cone" />
-    </button>
-
-    <!-- copyright -->
-    <div class="copyright">
-        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
-    </div>
-
-    <script src="./script/catering.js"></script>
-    <script src="./script/nav.js"></script>
-    <script src="./script/cart.js"></script>
-    <script src="./script/topscrollindicator.js"></script>
-    <script type="module" src="./script/products.js"></script>
-    <script src="script/cursor.js"></script>
-
+    <!-- External Scripts -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/swiper-bundle.min.js"></script>
+    <script src="scripts/topscrollindicator.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+

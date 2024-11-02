@@ -2,18 +2,25 @@ const cartIcon = document.querySelector(".cart-icon");
 const cart = document.querySelector(".cart");
 const close = document.querySelector(".close-cart");
 
+// Toggle cart visibility when the cart icon is clicked
 cartIcon.addEventListener("click", () => {
-    if (cart.classList.contains("active")) {
-        cart.classList.remove("active");
-    }
-    else {
-        cart.classList.add("active");
-    }
-})
+    cart.classList.toggle("active");
+});
 
-close?.addEventListener("click", () => {
-    cart.classList.remove("active");
-})
+// Close the cart when the close button is clicked
+if (close) {
+    close.addEventListener("click", () => {
+        cart.classList.remove("active");
+    });
+}
+
+
+
+
+
+
+
+
 
 
 

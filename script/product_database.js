@@ -5,7 +5,7 @@ const products_list = [
         flavor_id: "f001",
         off: 5,
         price: 35,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
+        description: "Delicious chocolate chip cookie with a classic taste.",
         image: "images/chocolate.jpg",
         rating: 4
     },
@@ -15,8 +15,8 @@ const products_list = [
         flavor_id: "f001",
         off: 5,
         price: 35,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/vannila.jpg",
+        description: "Rich and creamy Häagen-Dazs vanilla ice cream.",
+        image: "images/vanilla.jpg", // Corrected image filename
         rating: 5
     },
     {
@@ -25,8 +25,8 @@ const products_list = [
         flavor_id: "f001",
         off: 5,
         price: 35,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mango.jpg",
+        description: "Smooth and creamy homemade vanilla ice cream.",
+        image: "images/homemade-vanilla.jpg", // Suggested new image name
         rating: 4
     },
     {
@@ -35,8 +35,8 @@ const products_list = [
         flavor_id: "f001",
         off: 5,
         price: 35,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/vannila.jpg",
+        description: "Classic cookies and cream ice cream with real cookie chunks.",
+        image: "images/cookies-and-cream.jpg", // Suggested new image name
         rating: 5
     },
     {
@@ -45,8 +45,8 @@ const products_list = [
         flavor_id: "f002",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/strawberry.jpg",
+        description: "Rich sea salt caramel gelato with a creamy texture.",
+        image: "images/sea-salt-caramel.jpg", // Suggested new image name
         rating: 4
     },
     {
@@ -55,8 +55,8 @@ const products_list = [
         flavor_id: "f002",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/peanut-butter.jpg",
+        description: "Delicious stracciatella gelato with chocolate flakes.",
+        image: "images/stracciatella.jpg", // Suggested new image name
         rating: 5
     },
     {
@@ -65,8 +65,8 @@ const products_list = [
         flavor_id: "f002",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mango.jpg",
+        description: "Authentic pistachio gelato made with real pistachios.",
+        image: "images/pistachio.jpg", // Suggested new image name
         rating: 4
     },
     {
@@ -75,8 +75,8 @@ const products_list = [
         flavor_id: "f002",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mint.jpg",
+        description: "Refreshing Mediterranean mint gelato with a cool finish.",
+        image: "images/mediterranean-mint.jpg", // Suggested new image name
         rating: 3
     },
     {
@@ -85,8 +85,8 @@ const products_list = [
         flavor_id: "f003",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/rainbow.jpg",
+        description: "Fruity raspberry sorbetto made with real raspberries.",
+        image: "images/raspberry-sorbetto.jpg", // Suggested new image name
         rating: 4
     },
     {
@@ -95,8 +95,8 @@ const products_list = [
         flavor_id: "f003",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mango.jpg",
+        description: "Tropical mango sorbet made from fresh mangoes.",
+        image: "images/mango-sorbet.jpg", // Suggested new image name
         rating: 5
     },
     {
@@ -105,8 +105,8 @@ const products_list = [
         flavor_id: "f003",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/blue berry.jpg",
+        description: "Mixed berry sorbet with a delightful blend of flavors.",
+        image: "images/berry-sorbet.jpg", // Suggested new image name
         rating: 3
     },
     {
@@ -115,8 +115,8 @@ const products_list = [
         flavor_id: "f003",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg",
+        description: "Zesty lemon sorbet for a refreshing treat.",
+        image: "images/lemon-sorbet.jpg", // Suggested new image name
         rating: 4
     },
     {
@@ -125,8 +125,8 @@ const products_list = [
         flavor_id: "f003",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/strawberry.jpg",
+        description: "Sweet strawberry sorbet made with real strawberries.",
+        image: "images/strawberry-sorbet.jpg", // Suggested new image name
         rating: 5
     },
     {
@@ -135,8 +135,8 @@ const products_list = [
         flavor_id: "f003",
         off: 4,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg",
+        description: "Rich chocolate sorbet for chocolate lovers.",
+        image: "images/chocolate-sorbet.jpg", // Suggested new image name
         rating: 4
     },
     {
@@ -145,8 +145,8 @@ const products_list = [
         flavor_id: "f004",
         off: 25,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/peanut-butter.jpg",
+        description: "Classic frozen yogurt with a creamy texture.",
+        image: "images/frozen-yogurt.jpg", // Suggested new image name
         rating: 5
     },
     {
@@ -155,28 +155,28 @@ const products_list = [
         flavor_id: "f004",
         off: 10,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/vannila.jpg",
+        description: "Vanilla bean frozen yogurt made with real vanilla.",
+        image: "images/vanilla-bean-yogurt.jpg", // Suggested new image name
         rating: 4
     },
     {
         id: "p017",
-        name: "Strawberry",
+        name: "Strawberry Frozen Yogurt",
         flavor_id: "f004",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/strawberry.jpg",
+        description: "Strawberry frozen yogurt for a delightful treat.",
+        image: "images/strawberry-frozen-yogurt.jpg", // Suggested new image name
         rating: 4
     },
     {
         id: "p018",
-        name: "Cake Batter",
+        name: "Cake Batter Frozen Yogurt",
         flavor_id: "f004",
         off: 12,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/rainbow.jpg",
+        description: "Fun cake batter frozen yogurt that tastes like dessert.",
+        image: "images/cake-batter-yogurt.jpg", // Suggested new image name
         rating: 3
     },
     {
@@ -185,18 +185,18 @@ const products_list = [
         flavor_id: "f004",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/vannila.jpg",
+        description: "Creamy Greek yogurt for a healthy snack.",
+        image: "images/greek-yogurt.jpg", // Suggested new image name
         rating: 5
     },
     {
         id: "p020",
-        name: "Pistachio",
+        name: "Pistachio Frozen Yogurt",
         flavor_id: "f004",
         off: 1,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg",
+        description: "Pistachio frozen yogurt with a rich flavor.",
+        image: "images/pistachio-yogurt.jpg", // Suggested new image name
         rating: 4
     },
     {
@@ -205,18 +205,18 @@ const products_list = [
         flavor_id: "f005",
         off: 0,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/blue berry.jpg",
+        description: "Decadent fudge brownie ice cream with chunks of brownie.",
+        image: "images/fudge-brownie.jpg", // Suggested new image name
         rating: 5
     },
     {
         id: "p022",
-        name: "Peanut Butter",
+        name: "Peanut Butter Ice Cream",
         flavor_id: "f005",
         off: 3,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/rainbow.jpg",
+        description: "Creamy peanut butter ice cream with a rich taste.",
+        image: "images/peanut-butter-ice-cream.jpg", // Suggested new image name
         rating: 4
     },
     {
@@ -225,8 +225,8 @@ const products_list = [
         flavor_id: "f005",
         off: 15,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/mint.jpg",
+        description: "Refreshing mint chip ice cream that is dairy-free.",
+        image: "images/mint-chip.jpg", // Suggested new image name
         rating: 4
     },
     {
@@ -235,10 +235,10 @@ const products_list = [
         flavor_id: "f005",
         off: 8,
         price: 50,
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, ad.",
-        image: "images/chocolate.jpg",
+        description: "Delicious oat milk chocolate ice cream for a dairy-free treat.",
+        image: "images/oat-milk-chocolate.jpg", // Suggested new image name
         rating: 3
     }
-]
+];
 
 export default products_list;

@@ -10,36 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="mediaqueries.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
-
-        <!-- link to add favicon -->
-        <link rel="icon" href="./images/logo.png" type="image/png">
+    <link rel="icon" href="./images/logo.png" type="image/png">
 </head>
 
 <body>
-    <!-- cursor -->
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <!-- Custom Cursor -->
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
+    <div class="circle" aria-hidden="true"></div>
 
     <!-- Preloader -->
-    <div id="preloader">
+    <div id="preloader" aria-live="polite">
         <div class="loader-container">
             <div class="flavor-circle chocolate"></div>
             <div class="flavor-circle strawberry"></div>
@@ -52,50 +46,46 @@
         </div>
     </div>
 
-    <!-- scroll progress -->
+    <!-- Scroll Progress -->
     <div class="scroll-progress"></div>
 
-    <a href="./index.html">
-
-        <div id="logo">
-            <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true"
-                width="15%"></img>
-        </div>
+    <a href="./index.html" id="logo" aria-label="Go to home page">
+        <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true" alt="IcyCo Logo" width="15%">
     </a>
 
-    <h1 style="margin-bottom: 10px;">Login to IcyCo</h1>
+    <h1>Login to IcyCo</h1>
     <form>
         <div class="input-fields">
-            <!-- <div class="input-field-header">Email</div> -->
             <input type="email" class="input-field" placeholder="Email" required>
         </div>
 
         <div class="input-fields">
-            <!-- <div class="input-field-header">Password</div> -->
             <div class="password-container">
                 <input type="password" class="input-field" id="password-input-field" placeholder="Password" required>
-                <i style="margin-top: 5px;" class="fa-solid fa-eye-slash" id="toggle-password"></i>
+                <i class="fa-solid fa-eye-slash" id="toggle-password" aria-hidden="true"></i>
             </div>
-
         </div>
+
         <div class="check-container">
             <div class="check-button">
-                <input type="checkbox">
-                <span>Remember me</span>
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
             </div>
             <div class="forget-button">
                 <a href="#" style="color: var(--main-color);">Forgot your password?</a>
             </div>
         </div>
+
         <div class="signin-btn">
-            <button>Sign in</button>
+            <button type="submit">Sign in</button>
         </div>
     </form>
 
     <div id="line-container">
-        <br>
-        <span>Don't have an account?</span><a href="./signup.html" class="register-now-link">Create account</a>
+        <span>Don't have an account?</span>
+        <a href="./signup.html" class="register-now-link">Create account</a>
     </div>
+
     <div class="sep-container">
         <div class="sep-line"></div>
         <div>
@@ -103,16 +93,16 @@
         </div>
         <div class="sep-line"></div>
     </div>
+
     <div class="social-link-2">
-        <a href=""><img src="images/social-icons/google.png" width="25px" height="25px"></a>
-        <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px"></a>
+        <a href="#"><img src="images/social-icons/google.png" alt="Login with Google" width="25" height="25"></a>
+        <a href="#"><img src="images/social-icons/Facebook.svg" alt="Login with Facebook" width="25" height="25"></a>
     </div>
 
     <script src="script/login.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/topscrollindicator.js"></script>
     <script src="script/cursor.js"></script>
-
 </body>
 
 </html>

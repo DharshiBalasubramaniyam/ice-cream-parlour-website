@@ -6,65 +6,66 @@ window.addEventListener('load', function () {
     }, 3000); // 3 seconds delay
 });
 
-
-
 const menu = document.querySelector(".menu");
-// Selecting the links and sections
 const links = document.querySelectorAll(".link");
 const sections = document.querySelectorAll("section");
+const navlinks = document.querySelector(".nav-links");
+const scrollButton = document.querySelector(".scroll-button");
 
-menu.addEventListener("click", controlMenu)
+// Menu control
+menu.addEventListener("click", controlMenu);
 
 function controlMenu() {
-    const navlinks = document.querySelector(".nav-links");
-    console.log(navlinks.classList)
-    if (navlinks.classList.contains("active")) {
-        navlinks.classList.remove("active");
-    }
-    else {
-        navlinks.classList.add("active");
-    }
+    navlinks.classList.toggle("active");
+    menu.classList.toggle('fa-bars');
+    menu.classList.toggle('fa-times');
 }
 
 function controlLinks() {
-    const links = document.querySelectorAll(".link");
-    const navlinks = document.querySelector(".nav-links");
     links.forEach(link => {
         link.addEventListener("click", () => {
             if (navlinks.classList.contains("active")) {
-                navlinks.classList.remove("active")
+                navlinks.classList.remove("active");
             }
-        })
+        });
     });
 }
 
-document.querySelector('.menu').addEventListener('click', function () {
-    this.classList.toggle('fa-bars');
-    this.classList.toggle('fa-times');
-});
-
 controlLinks();
 
-
-// ================scroll  bottom to top==========================
-const scrollButton = document.querySelector(".scroll-button");
-
+// ================ Scroll to Top ===========================
 window.addEventListener("scroll", () => {
     window.pageYOffset > 100
         ? scrollButton.classList.add("show-btn")
         : scrollButton.classList.remove("show-btn");
 });
 
-// When the button is clicked, scroll to the top instantly
-scrollButton?.addEventListener("click", () => {
-    document.documentElement.scrollTop = 0; // For modern browsers
-    document.body.scrollTop = 0; // For older browsers
-});
+// Smooth scroll to top
+scrollButton?.addEventListener("click", smoothScrollToTop);
 
-scrollButton?.addEventListener("click", () => {
-    requestAnimationFrame(smoothScrollToTop);
-});
+function smoothScrollToTop() {
+    const scrollStep = -window.scrollY / (500 / 15); // Calculate step
+    const scrollInterval = setInterval(function () {
+        if (window.scrollY !== 0) {
+            window.scrollBy(0, scrollStep);
+        } else {
+            clearInterval(scrollInterval);
+        }
+    }, 15);
+}
 
-// copyright
+// Copyright Year
 const year = new Date().getFullYear();
 document.getElementById("year").innerText = year;
+
+
+
+
+
+
+
+
+
+
+
+

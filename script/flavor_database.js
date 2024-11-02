@@ -1,4 +1,4 @@
-const falvors_list = [
+const flavors_list = [
     {
         id: "f001",
         name: "Regular",
@@ -24,6 +24,6 @@ const falvors_list = [
         name: "Non-Dairy/Vegan",
         image: "images/vegan.jpg"
     }
-]
+];
 
-export default falvors_list;
+export default flavors_list;
