@@ -615,6 +615,10 @@ input[type="email"] {
         width: calc(45% - 15px);
         /* Adjust for 2 boxes per row */
     }
+    .popup-content {
+        width: 90%;
+        max-width: 600px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -622,4 +626,34 @@ input[type="email"] {
         width: calc(100% - 15px);
         /* 1 box per row on smaller screens */
     }
+}
+
+@media (max-width: 768px) {
+
+    .popup-left {
+        display: none;
+    }
+    
+    /* Make popup content full width on mobile */
+    .popup-content {
+        flex-direction: column;
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .popup-right {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .signup-btn {
+        font-size: 14px;
+    }
+    
 }
