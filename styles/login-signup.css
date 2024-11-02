@@ -5,7 +5,28 @@ body {
     justify-content: center;
     flex-direction: column;
     min-height: 100dvh;
+    background: linear-gradient(to top, var(--body-color), #ffabd2);
 }
+
+.homeBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    z-index: 10;
+  }
+
+  
+  .homeBtn:hover {
+    background: #ffabd2;
+    color: #ffffff;
+  }
 
 #logo {
     display: flex;
