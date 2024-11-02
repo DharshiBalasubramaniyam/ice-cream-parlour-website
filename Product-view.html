@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Quick View</title>
+    <link rel="stylesheet" href="styles/view.css">
+</head>
+<body>
+    <!-- Eye Icon to Trigger Modal -->
+    <div class="product-container">
+        <img src="product-image.jpg" alt="Product" class="product-img">
+        <button class="quick-view-btn" onclick="openModal()">
+            <i class="fa fa-eye"></i> <!-- Eye icon for quick view -->
+        </button>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-left">
+                <img src="product-image.jpg" alt="Product" class="modal-product-img">
+            </div>
+            <div class="modal-right">
+                <h2>Papaya Pineapple Ice Cream</h2>
+                <p>The delightful duo of papaya and pineapple makes this an irresistible flavour. Papaya is sourced from Solapur and Pineapple from Kerala. Just to give you a taste that’s truly memorable!</p>
+                <h3>Ingredients</h3>
+                <p>Milk, Pineapple Pulp, Papaya Pulp, Sugar</p>
+                <h3>Available In</h3>
+                <p>Scoop | Shake | Family Pack</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/products.js"></script>
+</body>
+</html>

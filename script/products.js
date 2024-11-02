@@ -23,61 +23,69 @@ document.addEventListener("DOMContentLoaded", () => {
 function displayProducts(products) {
       let productsSection = document.querySelector(".products-box");
       if (productsSection) {
-            productsSection.innerHTML = ""; 
+          productsSection.innerHTML = ""; 
       }
       
       if (products == '') {
-            productsSection.innerHTML = `
-                <div class="no-product-container">
-                    <h1 class="no-product-heading">No Product Found</h1>
-                    <img src="images/product-not-found.png" alt="No products available" class="no-product-image">
-                    <p class="no-product-text">We're sorry, but it seems we can't find the product you're looking for. Try searching for another flavor!</p>
-                </div>
-            `;
-        }
-
+          productsSection.innerHTML = `
+              <div class="no-product-container">
+                  <h1 class="no-product-heading">No Product Found</h1>
+                  <img src="images/product-not-found.png" alt="No products available" class="no-product-image">
+                  <p class="no-product-text">We're sorry, but it seems we can't find the product you're looking for. Try searching for another flavor!</p>
+              </div>
+          `;
+      }
+  
       products.forEach((product) => {
-            let box = document.createElement("div");
-            let flavorName = flavor_list.find((f) => f.id === product.flavor_id)?.name;
-
-            box.setAttribute("class", "box");
-            box.setAttribute("id", product.id);
-
-            box.innerHTML = `
-                                                      <div class="image-wrapper">
-                                                                  <div class="off">-${product.off}%</div>
-                                                                  <img src="${product.image}" alt="">
-                                                                  <div class="cat-label">${flavorName}</div>
-                                                      </div>
-                                                      <div class="name-price">
-                                                                  <div class="name">${product.name}</div>
-                                                                  <div class="price">$${product.price}</div>
-                                                      </div>
-                                                      <div class="description">${product.description}</div>
-                                                      <div class="qty">
-                                                                  <span class="decrease">-</span>
-                                                                  <span class="pcs">1</span>
-                                                                  <span class="increase">+</span>
-                                                      </div>`;
-
-            let addToCartButton = document.createElement("button");
-            let existingCartItem = cartItems.find((item) => item?.itemId == product.id);
-            addToCartButton.textContent = existingCartItem
-                  ? "Already in the cart - Add again?"
-                  : "Add to Cart";
-
-            addToCartButton.addEventListener("click", (e) => {
-                  addToCart(e);
-            });
-
-            box.appendChild(addToCartButton);
-
-            productsSection?.appendChild(box);
+          let box = document.createElement("div");
+          let flavorName = flavor_list.find((f) => f.id === product.flavor_id)?.name;
+  
+          box.setAttribute("class", "box");
+          box.setAttribute("id", product.id);
+  
+          box.innerHTML = `
+              <div class="image-wrapper">
+                  <div class="off">-${product.off}%</div>
+                  <img src="${product.image}" alt="">
+                  <div class="cat-label">${flavorName}</div>
+                  <div class="quick-view-icon">
+                      <i class="fas fa-eye"></i>
+                  </div>
+              </div>
+              <div class="name-price">
+                  <div class="name">${product.name}</div>
+                  <div class="price">$${product.price}</div>
+              </div>
+              <div class="description">${product.description}</div>
+              <div class="qty">
+                  <span class="decrease">-</span>
+                  <span class="pcs">1</span>
+                  <span class="increase">+</span>
+              </div>`;
+  
+          let addToCartButton = document.createElement("button");
+          let existingCartItem = cartItems.find((item) => item?.itemId == product.id);
+          addToCartButton.textContent = existingCartItem
+              ? "Already in the cart - Add again?"
+              : "Add to Cart";
+  
+          addToCartButton.addEventListener("click", (e) => {
+              addToCart(e);
+          });
+  
+          box.appendChild(addToCartButton);
+  
+          // Add click event for the quick view icon
+          
+box.querySelector(".quick-view-icon").addEventListener("click", () => {
+      showQuickView(product);
+  });
+  
+          productsSection?.appendChild(box);
       });
-
+  
       handleQuantityButtonsInProductCard();
-}
-
+  }
 function displayFlavorFilter() {
       let flavorFilterSection = document.querySelector(".categories-wrapper");
 
@@ -552,3 +560,56 @@ function handleSearchInput() {
       });
 }
 
+function showQuickView(product) {
+      const overlay = document.getElementById("overlay");
+  
+      // Set the inner HTML of overlay with the product details in two sections
+      overlay.innerHTML = `
+          <div class="quick-view-popup">
+              <span class="close-btn">&times;</span>
+              <div class="popup-content">
+                  <!-- Left section for the image -->
+                  <div class="left-section">
+                      <img src="${product.image}" alt="${product.name}" class="quick-view-image"/>
+                  </div>
+                  <!-- Right section for the text content -->
+                  <div class="right-section">
+                      <h2>${product.name}</h2>
+                      <p>${product.description}</p>
+                      <div class="price">Price: $${product.price}</div>
+                  </div>
+              </div>
+          </div>
+      `;
+  
+      // Show the overlay
+      overlay.style.display = "flex";
+  
+      // Close popup on clicking the close button
+      overlay.querySelector(".close-btn").addEventListener("click", () => {
+          overlay.style.display = "none";
+      });
+  
+      // Close popup when clicking outside of it
+      overlay.addEventListener("click", (e) => {
+          if (e.target === overlay) {
+              overlay.style.display = "none";
+          }
+      });
+  }
+
+  function openModal() {
+      document.getElementById("quickViewModal").style.display = "flex";
+  }
+  
+  function closeModal() {
+      document.getElementById("quickViewModal").style.display = "none";
+  }
+  
+  // Close modal when clicking outside content
+  window.onclick = function(event) {
+      const modal = document.getElementById("quickViewModal");
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  };
