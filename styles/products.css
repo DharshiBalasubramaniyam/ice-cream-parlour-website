@@ -42,7 +42,7 @@
 
 .categories-wrapper button:not(.active) {
     background-image: none;
-    color: var(--ternary-color);
+    color: var(--main-color);
     background-color: transparent;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .products .products-box .box .off,
-.products .products-box .box .wish {
+.products .products-box .quick-view-icon  {
     position: absolute;
     width: 60px;
     height: 40px;
@@ -96,23 +96,24 @@
     text-align: center;
     top: 15px;
     left: 0px;
-    background-color: var(--main-color);
+    background: rgba(0, 0, 0, 0.5);
     color: var(--body-color);
     padding: 7px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 0 25px 25px 0;
 
 }
 
-.products .products-box .box .wish {
+.products .products-box .quick-view-icon {
     left: auto;
-    right: -60px;
-    transition: right 0.2s ease;
-}
-
-.products .products-box .box:hover .wish {
     right: 0;
+    border-radius: 25px 0 0 25px;
+    transition: 0.3s;
+}
+.products .products-box .quick-view-icon:hover {
+    background: var(--secondary-color);
 }
 
 .products .products-box .box:hover {
@@ -131,13 +132,10 @@
     width: 100%;
     display: flex;
     align-items: center;
-    /* Vertically center the name and price */
     justify-content: space-between;
-    /* Keep name and price at opposite ends */
     font-size: 22px;
     padding: 10px 1px;
     text-align: center;
-    /* Centers the text within each item */
 }
 
 .products .products-box .box .description {
@@ -150,68 +148,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.qtycart {
-    width: fit-content;
-    border: 2px solid rgba(80, 79, 79, 0.158);
-    border-radius: 5px;
-    padding: 0;
-    display: flex;
-}
-
-.decreasecart {
-    padding: 0;
-}
-
-.increasecart {
-    cursor: pointer !important;
-    padding: 0;
-}
-
-.pcscart {
-    padding: 0;
-}
-
-/* Cart container */
-.cart-list-items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-.cart-list-items li {
-    position: relative; /* Allows the remove button to be positioned at the top-right */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    margin-bottom: 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.cart-list-items li img {
-    width: 80px; /* Increase image size */
-    height: auto;
-    border-radius: 8px;
-    margin-right: 15px;
-}
-
-/* Remove button styling */
-.remove-cart-item-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: #888;
-    cursor: pointer;
-}
-
-.remove-cart-item-btn:hover {
-    color: red;
 }
 
 /* Product details */
@@ -238,32 +174,6 @@
     font-weight: bold;
     /* margin-top: 5px; */
     color: #333;
-}
-
-/* Quantity selectors */
-.qtycart {
-    position: absolute;
-    bottom: 10px; /* Position at bottom right */
-    right: 10px;
-    display: flex;
-    align-items: center;
-    border: 2px solid rgba(80, 79, 79, 0.158);
-    border-radius: 5px;
-    padding: 0;
-}
-
-.qtycart .pcs {
-    margin: 0 ;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.qtycart span {
-    background-color: #fff;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
 }
 
 .qtycart span:hover {
@@ -353,18 +263,22 @@
 .image-wrapper {
     position: relative;
 }
-.quick-view-icon {
+/* .quick-view-icon {
     position: absolute;
-    right: 10px;
-    bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    top: 15px;
+    left: auto;
+    right: 0;
+    background-color: var(--main-color);
+    color: var(--body-color);
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 
 .image-wrapper:hover .quick-view-icon {
     opacity: 1;
@@ -408,6 +322,33 @@
     color: #333;
     cursor: pointer;
 }
+
+
+.close-btn {
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size: 30px;
+    width: 40px; 
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    transition: 0.3s;
+}
+.close-btn:hover {
+    transform: scale(1);
+    color: white;
+    background-color: var(--secondary-color); 
+}
+
 
 /* Content container inside the popup */
 .popup-content {
