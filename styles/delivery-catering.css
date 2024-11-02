@@ -8,28 +8,6 @@ section h1 {
     margin-top: 15px;
     font-weight: 400;
 }
-.form-container{
-    width: 100%;
-    padding: 2vw;
-    display:flex ;
-    justify-content: center;
-    align-items: center;
-    height: 70%;
-    /*background Styles*/
-    background-color: #f4eef5;
-    background-image: 
-        radial-gradient(at 47% 33%, hsl(300.73, 77%, 79%) 0, transparent 59%), 
-        radial-gradient(at 82% 65%, hsl(311, 87%, 63%) 0, transparent 55%);
-}
-.delivery-form{
-    backdrop-filter: blur(10px) saturate(154%);
-    -webkit-backdrop-filter: blur(10px) saturate(154%);
-    background-color: rgba(223, 219, 219, 0.54);
-    border-radius: 12px;
-    border: 2px solid rgba(209, 213, 219, 0.3);
-width: 60%;
-padding:3px ;
-}
 
 .form-text {
     margin-left: 0px;
