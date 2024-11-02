@@ -65,10 +65,26 @@ body {
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size: 30px;
+    width: 40px; 
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
     cursor: pointer;
-    color: #333;
+    padding: 2px;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    transition: 0.3s;
+}
+.close:hover {
+    transform: scale(1);
+    color: white;
+    background-color: var(--secondary-color); 
 }

@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
       displayFlavorFilter();
       displayCartItems();
       handleQuantityButtonsInCart();
-      createSearchBar(); 
+      createSearchBar();
 
       const falvor_id = getQueryParam("flavor");
 
       if (falvor_id) {
-            filterProducts(falvor_id); 
+            filterProducts(falvor_id);
       } else {
-            displayProducts(products_list); 
+            displayProducts(products_list);
       }
 
 });
@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
 function displayProducts(products) {
       let productsSection = document.querySelector(".products-box");
       if (productsSection) {
-          productsSection.innerHTML = ""; 
+            productsSection.innerHTML = "";
       }
-      
+
       if (products == '') {
-          productsSection.innerHTML = `
+            productsSection.innerHTML = `
               <div class="no-product-container">
                   <h1 class="no-product-heading">No Product Found</h1>
                   <img src="images/product-not-found.png" alt="No products available" class="no-product-image">
@@ -35,15 +35,15 @@ function displayProducts(products) {
               </div>
           `;
       }
-  
+
       products.forEach((product) => {
-          let box = document.createElement("div");
-          let flavorName = flavor_list.find((f) => f.id === product.flavor_id)?.name;
-  
-          box.setAttribute("class", "box");
-          box.setAttribute("id", product.id);
-  
-          box.innerHTML = `
+            let box = document.createElement("div");
+            let flavorName = flavor_list.find((f) => f.id === product.flavor_id)?.name;
+
+            box.setAttribute("class", "box");
+            box.setAttribute("id", product.id);
+
+            box.innerHTML = `
               <div class="image-wrapper">
                   <div class="off">-${product.off}%</div>
                   <img src="${product.image}" alt="">
@@ -62,30 +62,30 @@ function displayProducts(products) {
                   <span class="pcs">1</span>
                   <span class="increase">+</span>
               </div>`;
-  
-          let addToCartButton = document.createElement("button");
-          let existingCartItem = cartItems.find((item) => item?.itemId == product.id);
-          addToCartButton.textContent = existingCartItem
-              ? "Already in the cart - Add again?"
-              : "Add to Cart";
-  
-          addToCartButton.addEventListener("click", (e) => {
-              addToCart(e);
-          });
-  
-          box.appendChild(addToCartButton);
-  
-          // Add click event for the quick view icon
-          
-box.querySelector(".quick-view-icon").addEventListener("click", () => {
-      showQuickView(product);
-  });
-  
-          productsSection?.appendChild(box);
+
+            let addToCartButton = document.createElement("button");
+            let existingCartItem = cartItems.find((item) => item?.itemId == product.id);
+            addToCartButton.textContent = existingCartItem
+                  ? "Already in the cart - Add again?"
+                  : "Add to Cart";
+
+            addToCartButton.addEventListener("click", (e) => {
+                  addToCart(e);
+            });
+
+            box.appendChild(addToCartButton);
+
+            // Add click event for the quick view icon
+
+            box.querySelector(".quick-view-icon").addEventListener("click", () => {
+                  showQuickView(product);
+            });
+
+            productsSection?.appendChild(box);
       });
-  
+
       handleQuantityButtonsInProductCard();
-  }
+}
 function displayFlavorFilter() {
       let flavorFilterSection = document.querySelector(".categories-wrapper");
 
@@ -245,16 +245,16 @@ function displayCartItems() {
                   itemLi.innerHTML = `
                                                             <img src="${product.image}" alt="">
                                                             <div class="text">
-                                                                        <span class="name">${product.name}</span><br>
-                                                                        <span class="qty">${ci.pcs}</span> x ${product.price} <br>
+                                                                        <span class="name">${product.name}</span>
+                                                                        <div class="qty qtycart">
+                                                                              <span class="decrease decreasecart">-</span>
+                                                                              <span class="pcs pcscart">${ci.pcs}</span>
+                                                                              <span class="increase increasecart">+</span>
+                                                                        </div>
                                                                         <div class="price">$${ci.amount}</div>
                                                                         <i class="fa fa-trash remove-cart-item-btn" aria-hidden="true"></i>
                                                             </div>
-                                                            <div class="qty qtycart">
-                                                                        <span class="decrease decreasecart">-</span>
-                                                                        <span class="pcs pcscart">${ci.pcs}</span>
-                                                                        <span class="increase increasecart">+</span>
-                                                            </div>
+                                                            
                                                 `;
 
                   cartUlList.appendChild(itemLi);
@@ -352,79 +352,79 @@ function handleQuantityButtonsInCart() {
 // Add items to wishlist
 
 function addToWishlist(e) {
-    let wishlistItemId = e.target.closest(".box").getAttribute("id");
-    let pcs = parseInt(e.target.closest(".box").querySelector(".pcs").textContent, 10);
+      let wishlistItemId = e.target.closest(".box").getAttribute("id");
+      let pcs = parseInt(e.target.closest(".box").querySelector(".pcs").textContent, 10);
 
-    // Ensure pcs is a valid number
-    if (isNaN(pcs) || pcs <= 0) {
-        showToast("Please select the number of cups you want!");
-        return;
-    }
+      // Ensure pcs is a valid number
+      if (isNaN(pcs) || pcs <= 0) {
+            showToast("Please select the number of cups you want!");
+            return;
+      }
 
-    let existingWishlistItem = wishlistItems.find(item => item.itemId == wishlistItemId);
-    let item = products_list.find(item => item.id == wishlistItemId);
-    let amount = item.price * pcs;
+      let existingWishlistItem = wishlistItems.find(item => item.itemId == wishlistItemId);
+      let item = products_list.find(item => item.id == wishlistItemId);
+      let amount = item.price * pcs;
 
-    if (existingWishlistItem) {
-        existingWishlistItem.pcs += pcs; // Increment by the correct number of pcs
-        existingWishlistItem.amount = existingWishlistItem.pcs * item.price;
-        showToast(`${pcs} more ${item.name} ice cream/s successfully added to the wishlist!`);
-    } else {
-        wishlistItems.push({
-            itemId: wishlistItemId,
-            pcs: pcs,  // Ensure pcs is a number
-            amount: amount
-        });
-        showToast(`${pcs} ${item.name} ice cream/s successfully added to the wishlist!`);
-    }
+      if (existingWishlistItem) {
+            existingWishlistItem.pcs += pcs; // Increment by the correct number of pcs
+            existingWishlistItem.amount = existingWishlistItem.pcs * item.price;
+            showToast(`${pcs} more ${item.name} ice cream/s successfully added to the wishlist!`);
+      } else {
+            wishlistItems.push({
+                  itemId: wishlistItemId,
+                  pcs: pcs,  // Ensure pcs is a number
+                  amount: amount
+            });
+            showToast(`${pcs} ${item.name} ice cream/s successfully added to the wishlist!`);
+      }
 
-    localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
-    displayWishlistItems();
+      localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+      displayWishlistItems();
 }
 
 
 
 
 function handleRemoveButtonInWishlist() {
-    let removeBtns = document.querySelectorAll(".remove-wishlist-item-btn");
-    removeBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            let itemId = btn.closest('li').getAttribute("id");
-            wishlistItems = wishlistItems.filter(item => item.itemId !== itemId);
+      let removeBtns = document.querySelectorAll(".remove-wishlist-item-btn");
+      removeBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                  let itemId = btn.closest('li').getAttribute("id");
+                  wishlistItems = wishlistItems.filter(item => item.itemId !== itemId);
 
-            localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
-            displayWishlistItems(); // Update the wishlist display
+                  localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+                  displayWishlistItems(); // Update the wishlist display
 
-            // Reset button text to "Add to Wishlist" if necessary
-            const productBox = document.querySelector(`.box[id='${itemId}']`);
-            if (productBox) {
-                const addToWishlistButton = productBox.querySelector(".wishlist-btn");
-                addToWishlistButton.innerHTML = '<i class="fa fa-heart"></i>'; // Reset icon and text
-            }
-        });
-    });
+                  // Reset button text to "Add to Wishlist" if necessary
+                  const productBox = document.querySelector(`.box[id='${itemId}']`);
+                  if (productBox) {
+                        const addToWishlistButton = productBox.querySelector(".wishlist-btn");
+                        addToWishlistButton.innerHTML = '<i class="fa fa-heart"></i>'; // Reset icon and text
+                  }
+            });
+      });
 }
 
 
 function displayWishlistItems() {
-    const wishlistUlList = document.querySelector(".wishlist-list-items");
-    wishlistUlList.innerHTML = "";
+      const wishlistUlList = document.querySelector(".wishlist-list-items");
+      wishlistUlList.innerHTML = "";
 
-    if (wishlistItems.length > 0) {
-        document.querySelector(".empty-wishlist").classList.remove("active");
-        document.querySelector(".no-empty-wishlist").classList.add("active");
-    } else {
-        document.querySelector(".empty-wishlist").classList.add("active");
-        document.querySelector(".no-empty-wishlist").classList.remove("active");
-    }
+      if (wishlistItems.length > 0) {
+            document.querySelector(".empty-wishlist").classList.remove("active");
+            document.querySelector(".no-empty-wishlist").classList.add("active");
+      } else {
+            document.querySelector(".empty-wishlist").classList.add("active");
+            document.querySelector(".no-empty-wishlist").classList.remove("active");
+      }
 
-    wishlistItems.forEach(wi => {
-        let itemLi = document.createElement("li");
-        itemLi.setAttribute("id", wi.itemId);
-        let product = products_list.find(p => p.id == wi.itemId);
-    
-        if (product) {
-            itemLi.innerHTML = `
+      wishlistItems.forEach(wi => {
+            let itemLi = document.createElement("li");
+            itemLi.setAttribute("id", wi.itemId);
+            let product = products_list.find(p => p.id == wi.itemId);
+
+            if (product) {
+                  itemLi.innerHTML = `
                 <img src="${product.image}" alt="">
                 <div class="text">
                     <span class="name">${product.name}</span><br>
@@ -440,47 +440,47 @@ function displayWishlistItems() {
 
                 </div>
             `;
-            wishlistUlList.appendChild(itemLi);
-            handleRemoveButtonInWishlist();  // Attach remove functionality
-    
-            let moveToCartBtn = itemLi.querySelector(".move-to-cart");
-            moveToCartBtn.addEventListener("click", () => moveToCart(wi.itemId));
-        }
-    });
-    
+                  wishlistUlList.appendChild(itemLi);
+                  handleRemoveButtonInWishlist();  // Attach remove functionality
+
+                  let moveToCartBtn = itemLi.querySelector(".move-to-cart");
+                  moveToCartBtn.addEventListener("click", () => moveToCart(wi.itemId));
+            }
+      });
+
 }
 
 
 // Function to move item from wishlist to cart
 function moveToCart(wishlistItemId) {
-    // Find the item in wishlist
-    let wishlistItemIndex = wishlistItems.findIndex(item => item.itemId == wishlistItemId);
-    if (wishlistItemIndex > -1) {
-        let wishlistItem = wishlistItems[wishlistItemIndex];
+      // Find the item in wishlist
+      let wishlistItemIndex = wishlistItems.findIndex(item => item.itemId == wishlistItemId);
+      if (wishlistItemIndex > -1) {
+            let wishlistItem = wishlistItems[wishlistItemIndex];
 
-        // Check if the item already exists in the cart
-        let existingCartItem = cartItems.find(item => item.itemId == wishlistItemId);
-        if (existingCartItem) {
-            existingCartItem.pcs += wishlistItem.pcs; // Update quantity if it already exists
-            existingCartItem.amount = existingCartItem.pcs * products_list.find(p => p.id == wishlistItemId).price; // Update amount
-            showToast(`${wishlistItem.pcs} ${products_list.find(p => p.id == wishlistItemId).name} moved to cart!`);
-        } else {
-            cartItems.push({
-                itemId: wishlistItem.itemId,
-                pcs: wishlistItem.pcs,
-                amount: wishlistItem.amount
-            });
-            showToast(`${wishlistItem.pcs} ${products_list.find(p => p.id == wishlistItemId).name} added to cart!`);
-        }
+            // Check if the item already exists in the cart
+            let existingCartItem = cartItems.find(item => item.itemId == wishlistItemId);
+            if (existingCartItem) {
+                  existingCartItem.pcs += wishlistItem.pcs; // Update quantity if it already exists
+                  existingCartItem.amount = existingCartItem.pcs * products_list.find(p => p.id == wishlistItemId).price; // Update amount
+                  showToast(`${wishlistItem.pcs} ${products_list.find(p => p.id == wishlistItemId).name} moved to cart!`);
+            } else {
+                  cartItems.push({
+                        itemId: wishlistItem.itemId,
+                        pcs: wishlistItem.pcs,
+                        amount: wishlistItem.amount
+                  });
+                  showToast(`${wishlistItem.pcs} ${products_list.find(p => p.id == wishlistItemId).name} added to cart!`);
+            }
 
-        // Remove the item from the wishlist
-        wishlistItems.splice(wishlistItemIndex, 1);
-        localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+            // Remove the item from the wishlist
+            wishlistItems.splice(wishlistItemIndex, 1);
+            localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
 
-        // Re-display the wishlist and cart items
-        displayWishlistItems();
-        displayCartItems();
-    }
+            // Re-display the wishlist and cart items
+            displayWishlistItems();
+            displayCartItems();
+      }
 }
 
 
@@ -562,7 +562,7 @@ function handleSearchInput() {
 
 function showQuickView(product) {
       const overlay = document.getElementById("overlay");
-  
+
       // Set the inner HTML of overlay with the product details in two sections
       overlay.innerHTML = `
           <div class="quick-view-popup">
@@ -581,35 +581,35 @@ function showQuickView(product) {
               </div>
           </div>
       `;
-  
+
       // Show the overlay
       overlay.style.display = "flex";
-  
+
       // Close popup on clicking the close button
       overlay.querySelector(".close-btn").addEventListener("click", () => {
-          overlay.style.display = "none";
+            overlay.style.display = "none";
       });
-  
+
       // Close popup when clicking outside of it
       overlay.addEventListener("click", (e) => {
-          if (e.target === overlay) {
-              overlay.style.display = "none";
-          }
+            if (e.target === overlay) {
+                  overlay.style.display = "none";
+            }
       });
-  }
+}
 
-  function openModal() {
+function openModal() {
       document.getElementById("quickViewModal").style.display = "flex";
-  }
-  
-  function closeModal() {
+}
+
+function closeModal() {
       document.getElementById("quickViewModal").style.display = "none";
-  }
-  
-  // Close modal when clicking outside content
-  window.onclick = function(event) {
+}
+
+// Close modal when clicking outside content
+window.onclick = function (event) {
       const modal = document.getElementById("quickViewModal");
       if (event.target === modal) {
-          modal.style.display = "none";
+            modal.style.display = "none";
       }
-  };
+};

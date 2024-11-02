@@ -18,9 +18,9 @@
 
 :root {
     --ternary-color: #640D5F;
-    --main-color: #D91656;
+    --main-color: rgb(217, 22, 86);
     --body-color: #ffffff;
-    --secondary-color: #EE66A6;
+    --secondary-color: rgb(238, 102, 166);
     --background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
     --main-font: "Afacad Flux", sans-serif;
     --heading-font: "Afacad Flux", sans-serif;
@@ -420,8 +420,8 @@ h3 {
 
 .cart ul li img {
     float: left;
-    height: 50px;
-    width: 50px;
+    min-height: 80px;
+    width: 80px;
     margin-right: 10px;
 }
 
@@ -429,6 +429,33 @@ h3 {
     position: relative;
     font-size: 13px;
     line-height: 17px;
+}
+.qtycart {
+    margin: 0;
+}
+
+.qtycart {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(80, 79, 79, 0.158);
+    border-radius: 5px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.qtycart .pcs {
+    margin: 0 ;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.qtycart span {
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 .cart ul li .text .price {
@@ -783,7 +810,7 @@ h3 {
         transform: translateX(0px);
     }
 }
-
+/* 
 .leftani {
     animation: appearleft linear;
     animation-timeline: view();
@@ -794,7 +821,7 @@ h3 {
     animation: appearright linear;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
-}
+} */
 
 
 @keyframes appearright {
@@ -830,11 +857,11 @@ h3 {
     }
 }
 
-.bottomani {
+/* .bottomani {
     animation: appearbottom linear;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
-}
+} */
 
 /* gallery Section */
 
@@ -863,25 +890,3 @@ h3 {
 }
 
 
-/*Added a close button(X)*/
-#close-btn2 {
-    position:absolute;
-    top:1;
-    right:0;
-    font-size: 30px;
-    width: 40px; 
-    height: 40px;
-    cursor: pointer;
-    padding: 2px;
-    border-radius: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-}
-/*Hovering effect on close button*/
-#close-btn2:hover {
-    transform: scale(1);
-    color: #ff69b4;
-    background-color: rgb(235, 192, 211); 
-}

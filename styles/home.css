@@ -6,7 +6,7 @@
     flex-direction: row;
     position: relative;
     gap: 25px;
-    background: linear-gradient(to bottom, var(--body-color), #ffabd2);
+    background: linear-gradient(to top, var(--body-color), #ffabd2);
 }
 
 .home .text {
@@ -44,7 +44,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     transition: 0.4s;
-    filter: brightness(70%);
+    filter: brightness(90%);
 
 }
 
@@ -135,7 +135,7 @@
 }
 
 .service-card {
-    box-shadow: 0 0 15px rgb(223, 223, 223);
+    /* box-shadow: 0 0 15px rgb(223, 223, 223); */
     flex: 1 1 300px;
     background-size: calc(2*16px) calc(2*16px);
     border-radius: 10px;
@@ -144,7 +144,7 @@
 }
 
 .service-card1:hover {
-    box-shadow: 3px 3px 12px var(--secondary-color);
+    /* box-shadow: 3px 3px 12px var(--secondary-color); */
 }
 
 .service-card>div {
@@ -157,7 +157,7 @@
     padding: 17px 10px;
     gap: 25px;
     flex-direction: column;
-    border-top: 5px solid var(--secondary-color);
+    /* border-top: 5px solid var(--secondary-color); */
 }
 
 .service-card:hover {
@@ -184,6 +184,7 @@
     line-height: 25px;
     text-align: center;
     font-family: var(--main-font);
+    color: #5b5b5b;
 }
 
 .service-card img {
@@ -279,19 +280,14 @@
     margin: 1%;
     display: flex;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 20px;
     box-shadow: var(--box-shadow);
     background: transparent;
     cursor: pointer;
     gap: 22px;
     transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.feature-box:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: scale(1.05);
-    box-shadow: 3px 3px 12px var(--secondary-color);
+    border: 2px solid var(--secondary-color);
 }
 
 .icon-circle {
@@ -318,12 +314,6 @@
 
 .feature-box img {
     transition: 0.3s;
-    /* added transition on image inside feature box */
-}
-
-.feature-box:hover img {
-    transform: scale(1.12);
-    /* added hover effect on img */
 }
 
 .feature-text {
@@ -339,25 +329,16 @@
     text-align: left;
     font-size: 1.26em;
     margin: 17px 0;
-    /* Keeping the margin from patch-1 */
     font-weight: bold;
     transition: color 0.3s ease;
-}
-
-.feature-box:hover .feature-text h3 {
-    color: #a10e70;
 }
 
 .feature-text p {
     color: #757575;
     font-size: 1em;
     transition: color 0.3s ease;
+    text-align: left;
 }
-
-.feature-box:hover .feature-text p {
-    color: #b0b0b0;
-}
-
 
 /* -------------reviews section styles------------------- */
 
@@ -373,37 +354,10 @@
     position: relative;
     flex: 1 1 400px;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.review-box:hover {
-    transform: scale(1.05);
-    /* box-shadow: 0 8px 16px rgb(0, 0, 0); */
-}
-
-/* Remove border for the first review box */
-#box_1 {
-    border: none;
-    border-radius: 0px;
-    box-shadow: none;
-    cursor: default;
-    background-color: #f7f7f7;
-}
-
-#box_1:hover {
-    transform: none;
-}
-
-/* Style the h2 font inside the first review */
-#box_1 h1 {
-    font-size: 40px;
-    /* Reduced font size for the title */
-    color: #333;
-    font-weight: bold;
-    background-color: inherit;
+    background-color: var(--body-color);
 }
 
 .review-box .quote {
@@ -448,7 +402,8 @@
 .review-box .text {
     margin-top: 10px;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 25px;
+    margin: 15px 0;
 }
 
 /* Our flavors section  */
@@ -481,8 +436,6 @@
     object-fit: cover;
     border-radius: 50%;
     border: 10px solid rgba(211, 211, 211, 0.4);
-    ;
-    /* Border around the image */
 }
 
 .flavor-item h3 {
@@ -584,7 +537,7 @@ input[type="email"] {
     margin-top: 10px;
     text-align: center;
     text-decoration: none;
-    margin-top: 15px;
+    margin-top: 0px;
     color: black;
 }
 
@@ -647,13 +600,47 @@ input[type="email"] {
         width: 100%;
     }
 
-    h2 {
+    .popup h2 {
         font-size: 24px;
         margin-bottom: 10px;
     }
 
-    .signup-btn {
+    .popup .signup-btn {
         font-size: 14px;
     }
     
+}
+
+#close-btn2 {
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size: 30px;
+    width: 40px; 
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    transition: 0.3s;
+}
+#close-btn2:hover {
+    transform: scale(1);
+    color: white;
+    background-color: var(--secondary-color); 
+}
+
+#services, #reviewsSection {
+    background-color: var(--secondary-color);
+    padding-block: 50px;
+}
+#services h1, #reviewsSection h1 {
+    background-color: var(--body-color);
+    color: var(--secondary-color);
 }
