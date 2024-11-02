@@ -274,80 +274,72 @@ function displayCartItems() {
 function handleQuantityButtonsInProductCard() {
       const productsBox = document.querySelector(".products-box");
       if (!productsBox) return;
+
       productsBox.addEventListener("click", (e) => {
             if (e.target.classList.contains("increase")) {
                   const qtySpan = e.target.previousElementSibling;
                   let currentQty = parseInt(qtySpan.textContent);
-                  qtySpan.textContent = currentQty + 1;
-
-            }
-            if (e.target.classList.contains("decrease")) {
+                  setTimeout(() => {
+                        qtySpan.textContent = currentQty + 1;
+                  }, 600); // 0.6 second delay
+            } else if (e.target.classList.contains("decrease")) {
                   const qtySpan = e.target.nextElementSibling;
                   let currentQty = parseInt(qtySpan.textContent);
                   if (currentQty > 1) {
-                        qtySpan.textContent = currentQty - 1;
-
+                        setTimeout(() => {
+                              qtySpan.textContent = currentQty - 1;
+                        }, 1000); // 1 second delay
                   }
             }
       });
 }
 
-function handleQuantityButtonsInCart() {
-      const cartList = document.querySelector(".cart-list-items");
-      function updateSubtotal() {
-            const subtotalElement = document.querySelector(".sub-total");
-            const subtotal = cartItems.reduce((acc, item) => acc + item.amount, 0);
-            subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
-      }
 
-      cartList.addEventListener("click", (e) => {
-            const itemId = e.target.closest("li").getAttribute("id");
-            let cartItem = cartItems.find((item) => item.itemId == itemId);
+  function handleQuantityButtonsInCart() {
+    const cartList = document.querySelector(".cart-list-items");
+    function updateSubtotal() {
+        const subtotalElement = document.querySelector(".sub-total");
+        const subtotal = cartItems.reduce((acc, item) => acc + item.amount, 0);
+        subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+    }
 
-            if (e.target.classList.contains("increase")) {
-                  const qtySpan = e.target.previousElementSibling;
-                  let currentQty = parseInt(qtySpan.textContent);
-                  qtySpan.textContent = currentQty + 1;
-                  cartItem.pcs = currentQty + 1;
-                  cartItem.amount =
-                        cartItem.pcs * products_list.find((p) => p.id == itemId).price;
+    cartList.addEventListener("click", (e) => {
+        const itemId = e.target.closest("li").getAttribute("id");
+        let cartItem = cartItems.find((item) => item.itemId == itemId);
 
-                  const priceElement = e.target.closest("li").querySelector(".price");
-                  priceElement.textContent = `$${cartItem.amount.toFixed(2)}`;
+        if (e.target.classList.contains("increase")) {
+            const qtySpan = e.target.previousElementSibling;
+            let currentQty = parseInt(qtySpan.textContent);
+            console.log(`Increasing cart quantity for item ${itemId} from ${currentQty} to ${currentQty + 1}`);
+            qtySpan.textContent = currentQty + 1;
+            cartItem.pcs = currentQty + 1;
+            cartItem.amount = cartItem.pcs * products_list.find((p) => p.id == itemId).price;
 
-                  const textQtyElement = e.target.closest("li").querySelector(".text .qty");
-                  textQtyElement.textContent = cartItem.pcs;
+            const priceElement = e.target.closest("li").querySelector(".price");
+            priceElement.textContent = `$${cartItem.amount.toFixed(2)}`; 
 
-                  localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems));
+            localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems));
+            updateSubtotal();
+        }
 
-                  updateSubtotal();
+        if (e.target.classList.contains("decrease")) {
+            const qtySpan = e.target.nextElementSibling;
+            let currentQty = parseInt(qtySpan.textContent);
+            if (currentQty > 1) {
+                console.log(`Decreasing cart quantity for item ${itemId} from ${currentQty} to ${currentQty - 1}`);
+                qtySpan.textContent = currentQty - 1;
+                cartItem.pcs = currentQty - 1;
+                cartItem.amount = cartItem.pcs * products_list.find((p) => p.id == itemId).price;
+
+                const priceElement = e.target.closest("li").querySelector(".price");
+                priceElement.textContent = `$${cartItem.amount.toFixed(2)}`;
+
+                localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems));
+                updateSubtotal();
             }
-
-            if (e.target.classList.contains("decrease")) {
-                  const qtySpan = e.target.nextElementSibling;
-                  let currentQty = parseInt(qtySpan.textContent);
-                  if (currentQty > 1) {
-                        qtySpan.textContent = currentQty - 1;
-                        cartItem.pcs = currentQty - 1;
-                        cartItem.amount =
-                              cartItem.pcs * products_list.find((p) => p.id == itemId).price;
-
-                        const priceElement = e.target.closest("li").querySelector(".price");
-                        priceElement.textContent = `$${cartItem.amount.toFixed(2)}`;
-
-                        const textQtyElement = e.target
-                              .closest("li")
-                              .querySelector(".text .qty");
-                        textQtyElement.textContent = cartItem.pcs;
-
-                        localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems));
-
-                        updateSubtotal();
-                  }
-            }
-      });
+        }
+    });
 }
-
 
 // Add items to wishlist
 
@@ -613,3 +605,45 @@ window.onclick = function (event) {
             modal.style.display = "none";
       }
 };
+
+function incrementProduct() {
+    setTimeout(function() {
+        // Your product increment logic here
+        console.log("Product incremented");
+    }, 1000); // 1000 milliseconds = 1 second
+}
+
+function decrementProduct() {
+    setTimeout(function() {
+        // Your product decrement logic here
+        console.log("Product decremented");
+    }, 1000); // 1000 milliseconds = 1 second
+}
+
+function incrementCartProduct() {
+    setTimeout(function() {
+        // Your cart product increment logic here
+        console.log("Cart product incremented");
+    }, 1000); // 1000 milliseconds = 1 second
+}
+
+function decrementCartProduct() {
+    setTimeout(function() {
+        // Your cart product decrement logic here
+        console.log("Cart product decremented");
+    }, 1000); // 1000 milliseconds = 1 second
+}
+
+function incrementWishlistProduct() {
+    setTimeout(function() {
+        // Your wishlist product increment logic here
+        console.log("Wishlist product incremented");
+    }, 1000); // 1000 milliseconds = 1 second
+}
+
+function decrementWishlistProduct() {
+    setTimeout(function() {
+        // Your wishlist product decrement logic here
+        console.log("Wishlist product decremented");
+    }, 1000); // 1000 milliseconds = 1 second
+}
