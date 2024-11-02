@@ -94,6 +94,7 @@
 
     .home {
         height: max-content;
+        min-height: auto;
         padding: 50px 10px 0 10px;
         flex-direction: column-reverse;
     }
@@ -138,23 +139,6 @@
         flex-direction: column;
         margin-top: 10px;
         gap: 10px;
-    }
-    .contact-div{
-        display:flex;
-        flex-direction: column;
-        
-    }
-    .img-container {
-        width: 100vw !important;  /* Make sure this applies to the image container */
-        margin: 0;  /* Remove default margins */
-        padding: 0; /* Remove any padding if necessary */
-        
-    }
-    
-    .contact form {
-        width: 100vw !important;  /* Make sure this applies to the image container */
-        
-       
     }
 
 }
@@ -269,5 +253,47 @@
     .plan {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .loader-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .flavor-circle{
+        width: 15px;
+        height: 15px;
+    }
+
+    .flavor-circle:nth-child(1){
+        transform: translate(-50%, -50%) rotate(0deg) translate(35px) rotate(0deg);
+    }
+    
+    .flavor-circle:nth-child(2){
+        transform: translate(-50%, -50%) rotate(45deg) translate(35px) rotate(-45deg);
+    }
+
+    .flavor-circle:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(90deg) translate(35px) rotate(-90deg);
+    }
+
+    .flavor-circle:nth-child(4) {
+        transform: translate(-50%, -50%) rotate(135deg) translate(35px) rotate(-135deg);
+    }
+
+    .flavor-circle:nth-child(5) {
+        transform: translate(-50%, -50%) rotate(180deg) translate(35px) rotate(-180deg);
+    }
+
+    .flavor-circle:nth-child(6) {
+        transform: translate(-50%, -50%) rotate(225deg) translate(35px) rotate(-225deg);
+    }
+
+    .flavor-circle:nth-child(7) {
+        transform: translate(-50%, -50%) rotate(270deg) translate(35px) rotate(-270deg);
+    }
+    
+    .flavor-circle:nth-child(8) {
+        transform: translate(-50%, -50%) rotate(315deg) translate(35px) rotate(-315deg);
     }
 }
