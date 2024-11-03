@@ -11,6 +11,9 @@
     <!-- Link to add favicon  -->
     <link rel="icon" href="./images/logo.png" type="image/png">
 
+    <!-- link to add favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -142,15 +145,22 @@
       </div>
 
       <div class="empty-cart active">
-          <p>No items in the cart!</p>
-      </div>
+        <div class="empty-cart-img-div">
+            <img src="images/empty-cart.png" alt="Delicious Ice Cream" class="ice-cream-image" />
+        </div>
+        <p class="empty-cart-text">Your cart is empty!</p>
+        <p class="empty-cart-info">As a cone without ice cream!🍦 </p>
+        <p class="empty-cart-info">Fill it up with our delicious flavors!</p>
+    </div>
 
   </div>
     <div class="container">
       <div class="toggle-container aos-init aos-animate" data-aos="fade-down">
         <input id="themeToggle" class="toggle" type="checkbox" />
       </div>
-      <h1 class="title">Our Contributors</h1>
+      <section class="products" id="products" style="margin-top: 100px;">
+        <h1>Our <span>Contributors</span></h1>
+      </section>
       <div id="contributors" class="contributors-grid"></div>
     </div>
     <button class="top-btn" id="goToTopBtn" onclick="goToTop()">
@@ -162,7 +172,7 @@
           <div class="footer-col">
               <h4>Useful links</h4>
               <ul class="links">
-                  <li><a href="#home">Home</a></li>
+                  <li><a href="./index.html">Home</a></li>
                   <li><a href="./products.html">Products</a></li>
                   <li><a href="gallary.html">Gallery</a></li>
                   <li><a href="#about">About Us</a></li>
@@ -224,10 +234,10 @@
                           Instagram</a></li>
                   <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                           Linkedin</a></li>
-                  <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                  <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-twitter" aria-hidden="true"></i>
                           Twitter</a></li>
-                  <li><a href="#1" class="social"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Whatsapp</a></li>
-                  <!--                     It's href is #1 for css purpose to get it's hover green  -->
+                  <!-- Modified the class link for redirect and CSS -->
+                  <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Whatsapp</a></li>
 
               </ul>
           </div>
