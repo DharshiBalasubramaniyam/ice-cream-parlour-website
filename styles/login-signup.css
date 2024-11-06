@@ -7,24 +7,6 @@ body {
   min-height: 100dvh;
 }
 
-.homeBtn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: #c08ea5;
-  color: #000000;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-  text-decoration: none;
-  z-index: 10;
-}
-.homeBtn:hover {
-  background: #ffabd2;
-  color: #ffffff;
-}
-
 #logo {
   display: flex;
   justify-content: center;
