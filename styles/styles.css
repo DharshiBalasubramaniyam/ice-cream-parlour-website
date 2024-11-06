@@ -1004,7 +1004,7 @@ h3 {
 }
 
 .container {
-    background-color: #f7f7f7; /* Very light grey */
+    background-color: #ffffff; /* Very light grey */
     padding: 20px; /* Reduced padding for a smaller container */
     border-radius: 10px;
 }
@@ -1639,4 +1639,59 @@ section h1 {
 }
 .gallery-para p{
     font-size:1.4rem;
+}
+
+/* In your styles.css */
+
+h1 {
+    font-size: 25px;
+    text-align: center;
+    color: var(--body-color);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 25px;
+    font-family: var(--heading-font);
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+    background-color: var(--secondary-color);
+}
+.combo-display {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1 rem; /* Increased font size */
+    color: var(--body-color);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    font-size: 1.2rem; /* Increased font size */
+}
+
+.form-group img {
+    margin-left: 10px;
+    width: 80px; /* Increased image size */
+    height: 80px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+}
+
+.form-group.show-image img {
+    display: block;
+}
+
+button {
+    background-color: #D91656;
+    color: white;
+    padding: 8px; /* Increased padding for larger button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem; /* Increased font size */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button:hover {
+    background-color: #c1154a; /* Darker shade of button color for hover effect */
 }

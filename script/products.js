@@ -64,6 +64,11 @@ function displayProducts(products) {
 
 }
 
+// Flavor and Topping Images
+
+   
+
+
 // display flavors filter
 function displayFlavorFilter() {
 
