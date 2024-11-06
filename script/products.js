@@ -346,7 +346,6 @@ function handleQuantityButtonsInProductCard() {
 function addToWishlist(e) {
       let wishlistItemId = e.target.closest(".box").getAttribute("id");
       let pcs = parseInt(e.target.closest(".box").querySelector(".pcs").textContent, 10);
-
       // Ensure pcs is a valid number
       if (isNaN(pcs) || pcs <= 0) {
             showToast("Please select the number of cups you want!");
