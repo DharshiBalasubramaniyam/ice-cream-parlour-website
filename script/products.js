@@ -18,6 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {
             displayProducts(products_list);
       }
 
+      // Scroll animation
+      const productBoxes = document.querySelectorAll(".products-box .box");
+      productBoxes.forEach((box) => {
+            sr.reveal(box, {
+                  origin: "left",
+                  distance: "80px",
+                  duration: 600,
+                  easing: "ease-in",
+                  interval: 400,
+                  reset: true,
+            });
+      });
 });
 
 function displayProducts(products) {
@@ -464,193 +476,4 @@ function moveToCart(wishlistItemId) {
         displayWishlistItems();
         displayCartItems();
     }
-}
-
-// Scroll animation
-document.addEventListener("DOMContentLoaded", () => {
-    // Apply ScrollReveal to products
-    const productBoxes = document.querySelectorAll(".products-box .box");
-    productBoxes.forEach((box) => {
-        sr.reveal(box, {
-            origin: "left",
-            distance: "80px",
-            duration: 600,
-            easing: "ease-in",
-            interval: 400,
-            reset: true,
-        });
-    });
-});
-
-
-// Scroll animation
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-      // Apply ScrollReveal to products
-      const productBoxes = document.querySelectorAll(".products-box .box");
-      productBoxes.forEach((box) => {
-            sr.reveal(box, {
-                  origin: "left",
-                  distance: "80px",
-                  duration: 600,
-                  easing: "ease-in",
-                  interval: 400,
-                  reset: true,
-            });
-      });
-});
-
-function createSearchBar() {
-      const searchBarContainer = document.querySelector(".search-container");
-
-      // Check if the search bar already exists
-      if (document.getElementById("search-bar")) return;
-
-      // Create the search bar only if it doesn't already exist
-      const searchBar = document.createElement("input");
-      searchBar.setAttribute("type", "text");
-      searchBar.setAttribute("id", "search-bar");
-      searchBar.setAttribute("placeholder", "Search for flavors...");
-      searchBarContainer.appendChild(searchBar);
-
-      // Check if the search button already exists
-      if (document.getElementById("search-btn")) return;
-
-      // Create the search button only if it doesn't already exist
-      const searchButton = document.createElement("button");
-      searchButton.setAttribute("id", "search-btn");
-      searchButton.innerText = "Search";
-      searchBarContainer.appendChild(searchButton);
-
-      // Attach event listener for the search button
-      searchButton.addEventListener("click", () => {
-            const query = searchBar.value.toLowerCase();
-            const filteredProducts = products_list.filter((product) => {
-                  const flavorName = flavor_list
-                        .find((f) => f.id === product.flavor_id)
-                        ?.name.toLowerCase();
-                  return (
-                        product.name.toLowerCase().includes(query) || flavorName.includes(query)
-                  );
-            });
-            displayProducts(filteredProducts);
-      });
-
-      // Handle input event for live search
-      handleSearchInput();
-}
-
-function handleSearchInput() {
-      const searchInput = document.getElementById("search-bar");
-      searchInput.addEventListener("input", () => {
-            const query = searchInput.value.toLowerCase();
-            const filteredProducts = products_list.filter((product) => {
-                  const flavorName = flavor_list
-                        .find((f) => f.id === product.flavor_id)
-                        ?.name.toLowerCase();
-                  return (
-                        product.name.toLowerCase().includes(query) || flavorName.includes(query)
-                  );
-
-            });
-            displayProducts(filteredProducts);
-      });
-}
-
-function showQuickView(product) {
-      const overlay = document.getElementById("overlay");
-
-      // Set the inner HTML of overlay with the product details in two sections
-      overlay.innerHTML = `
-          <div class="quick-view-popup">
-              <span class="close-btn">&times;</span>
-              <div class="popup-content">
-                  <!-- Left section for the image -->
-                  <div class="left-section">
-                      <img src="${product.image}" alt="${product.name}" class="quick-view-image"/>
-                  </div>
-                  <!-- Right section for the text content -->
-                  <div class="right-section">
-                      <h2>${product.name}</h2>
-                      <p>${product.description}</p>
-                      <div class="price">Price: $${product.price}</div>
-                  </div>
-              </div>
-          </div>
-      `;
-
-      // Show the overlay
-      overlay.style.display = "flex";
-
-      // Close popup on clicking the close button
-      overlay.querySelector(".close-btn").addEventListener("click", () => {
-            overlay.style.display = "none";
-      });
-
-      // Close popup when clicking outside of it
-      overlay.addEventListener("click", (e) => {
-            if (e.target === overlay) {
-                  overlay.style.display = "none";
-            }
-      });
-}
-
-function openModal() {
-      document.getElementById("quickViewModal").style.display = "flex";
-}
-
-function closeModal() {
-      document.getElementById("quickViewModal").style.display = "none";
-}
-
-// Close modal when clicking outside content
-window.onclick = function (event) {
-      const modal = document.getElementById("quickViewModal");
-      if (event.target === modal) {
-            modal.style.display = "none";
-      }
-};
-
-function incrementProduct() {
-    setTimeout(function() {
-        // Your product increment logic here
-        console.log("Product incremented");
-    }, 1000); // 1000 milliseconds = 1 second
-}
-
-function decrementProduct() {
-    setTimeout(function() {
-        // Your product decrement logic here
-        console.log("Product decremented");
-    }, 1000); // 1000 milliseconds = 1 second
-}
-
-function incrementCartProduct() {
-    setTimeout(function() {
-        // Your cart product increment logic here
-        console.log("Cart product incremented");
-    }, 1000); // 1000 milliseconds = 1 second
-}
-
-function decrementCartProduct() {
-    setTimeout(function() {
-        // Your cart product decrement logic here
-        console.log("Cart product decremented");
-    }, 1000); // 1000 milliseconds = 1 second
-}
-
-function incrementWishlistProduct() {
-    setTimeout(function() {
-        // Your wishlist product increment logic here
-        console.log("Wishlist product incremented");
-    }, 1000); // 1000 milliseconds = 1 second
-}
-
-function decrementWishlistProduct() {
-    setTimeout(function() {
-        // Your wishlist product decrement logic here
-        console.log("Wishlist product decremented");
-    }, 1000); // 1000 milliseconds = 1 second
 }
