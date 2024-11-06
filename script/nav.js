@@ -1,7 +1,7 @@
 // nav.js
 
-window.addEventListener('load', function() {
-    setTimeout(function() {
+window.addEventListener('load', function () {
+    setTimeout(function () {
         document.body.classList.add('loaded');
     }, 3000); // 3 seconds delay
 });
@@ -30,13 +30,18 @@ function controlLinks() {
     const links = document.querySelectorAll(".link");
     const navlinks = document.querySelector(".nav-links");
     links.forEach(link => {
-        link.addEventListener("click", ()=> {
+        link.addEventListener("click", () => {
             if (navlinks.classList.contains("active")) {
                 navlinks.classList.remove("active")
             }
         })
     });
 }
+
+document.querySelector('.menu').addEventListener('click', function () {
+    this.classList.toggle('fa-bars');
+    this.classList.toggle('fa-times');
+});
 
 controlLinks();
 
@@ -49,16 +54,6 @@ window.addEventListener("scroll", () => {
         ? scrollButton.classList.add("show-btn")
         : scrollButton.classList.remove("show-btn");
 });
-/*
-function smoothScrollToTop() {
-    const scrollY = window.pageYOffset;
-    const scrollStep = Math.max(10, Math.floor(scrollY / 20)); 
-    if (scrollY > 0) {
-        window.scrollBy(0, -scrollStep);
-        requestAnimationFrame(smoothScrollToTop);
-    }
-}
-*/
 
 // When the button is clicked, scroll to the top instantly
 scrollButton?.addEventListener("click", () => {
@@ -66,49 +61,10 @@ scrollButton?.addEventListener("click", () => {
     document.body.scrollTop = 0; // For older browsers
 });
 
-// When the button is clicked, scroll to the top smoothly
 scrollButton?.addEventListener("click", () => {
     requestAnimationFrame(smoothScrollToTop);
 });
 
-// Intersection Observer options
-// const observerOptions = {
-//     root: null, // Using the viewport as the root
-//     rootMargin: "0px",
-//     threshold: 0.3 // Trigger when at least 30% of the section is visible
-// };
-
-// // Function to handle active link update
-// function observerCallback(entries) {
-//     entries.forEach(entry => {
-//         const id = entry.target.id;
-//         const activeLink = document.querySelector(`.link[href="#${id}"]`);
-
-//         if (entry.isIntersecting) {
-//             // Remove active class from all links
-//             links.forEach(link => link.classList.remove("active"));
-//             // Add active class to the current link
-//             if (activeLink) {
-//                 activeLink.classList.add("active");
-//             }
-//         }
-//     });
-// }
-
-// // Creating the observer
-// const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-// // Observing each section
-// sections.forEach(section => {
-//     observer.observe(section);
-// });
-
-// // Smooth scrolling and manual link activation
-// links.forEach(link => {
-//     link.addEventListener("click", function() {
-//         links.forEach(link => link.classList.remove("active"));
-//         this.classList.add("active");
-//     });
-// });
-
-
+// copyright
+const year = new Date().getFullYear();
+document.getElementById("year").innerText = year;

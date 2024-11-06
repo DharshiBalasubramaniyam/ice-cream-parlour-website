@@ -6,37 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICYCO - SIGN-UP</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/style2.css">
-    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/login-signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+
 </head>
 
 <body>
- <!-- cursor -->
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
- <div class="circle"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+
+
+    <!-- cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
     <!-- Preloader -->
     <div id="preloader">
-        <img src="images/logo.png" alt="Preloader" class="preloader-icon">
-        <p class="loading-text">Loading...</p>
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+        </div>
     </div>
 
     <!-- scroll progress -->
@@ -46,7 +59,7 @@
 
         <div id="logo">
             <img src="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/blob/master/images/logo.png?raw=true"
-                width="15%"></img>
+                width="15%">
         </div>
     </a>
 
@@ -55,20 +68,20 @@
     <form>
         <div id="name-fields">
             <div id="first-name-field">
-                <input type="text" class="input-field" placeholder="First name">
+                <input type="text" class="input-field" placeholder="First name" required>
             </div>
             <div id="last-name-field">
-                <input type="text" class="input-field" placeholder="Last name">
+                <input type="text" class="input-field" placeholder="Last name" required>
             </div>
         </div>
 
         <div class="input-fields">
-            <input type="email" class="input-field" placeholder="Email">
+            <input type="email" class="input-field" placeholder="Email" required>
         </div>
 
         <div class="input-fields">
             <div class="password-container">
-                <input type="password" class="input-field" id="password-input-field" placeholder="Password">
+                <input type="password" class="input-field" id="password-input-field" placeholder="Password" required>
                 <i style="margin-top: 5px;" class="fa-solid fa-eye-slash" id="toggle-password"></i>
             </div>
             <!-- Password strength meter -->
@@ -77,10 +90,13 @@
                 <p id="password-strength-text"></p>
             </div>
         </div>
+
         <div class="signin-btn">
-            <button>Continue</button>
+            <button type="submit">Continue</button>
         </div>
     </form>
+
+
     <div class="terms">
         <br>
         By clicking Continue or registering through a third party you accept the Icyco
@@ -90,61 +106,30 @@
         <span>Already have an account?</span><a href="./login.html" class="register-now-link">Login</a>
         <div class="sep-container" style="margin-top: 5px;">
             <div class="sep-line"></div>
-            <div><p>or</p></div>
-            <div class="sep-line"></div>    
+            <div>
+                <p>or</p>
+            </div>
+            <div class="sep-line"></div>
         </div>
     </div>
-    
+
     <div class="social-link-2">
         <a href=""><img src="images/social-icons/google.png" width="25px" height="25px"></a>
         <a href=""><img src="images/social-icons/Facebook.svg" width="25px" height="25px"></a>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+
+
+
+
+
+
+    <script src="script/cursor.js"></script>
+    <script src="./script/signup.js"></script>
     <script src="script/login.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/topscrollindicator.js"></script>
 
-    <script>
-        const passwordInput = document.getElementById("password-input-field");
-        const strengthText = document.getElementById("password-strength-text");
-        const strengthBar = document.getElementById("strength-bar");
-
-        passwordInput.addEventListener("input", function () {
-            const password = passwordInput.value;
-            const result = zxcvbn(password);
-            const strength = result.score;
-
-            // Update strength bar and text
-            strengthBar.style.width = `${(strength + 1) * 20}%`;
-            const strengthLevels = ["Very Weak", "Weak", "Okay", "Good", "Strong"];
-            strengthText.textContent = strengthLevels[strength];
-            
-            // Color the strength bar based on strength
-            const colors = ["#ff4d4d", "#ff944d", "#ffd24d", "#d2ff4d", "#4dff88"];
-            strengthBar.style.backgroundColor = colors[strength];
-        });
-    </script>
-
-    <style>
-        #password-strength-meter {
-            margin-top: 10px;
-        }
-
-        #strength-bar {
-            height: 8px;
-            width: 0;
-            background-color: #ff4d4d;
-            transition: width 0.3s ease;
-        }
-
-        #password-strength-text {
-            margin-top: 5px;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
-  <script src="script/cursor.js"></script>
 
 </body>
 

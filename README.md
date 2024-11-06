@@ -1,5 +1,5 @@
 
-# 🍦 Ice Cream Parlour Website 🍨
+# 🍦 [Ice Cream Parlour Website](https://ice-cream-parlour-website-one.vercel.app/) 🍨
 
  ![Ice Cream Website Screenshot](/images/readme.png)
 
@@ -15,6 +15,27 @@
 # 🌟 Overview 🌟
 Welcome to the Ice Cream Parlour Website! This responsive and user-friendly website is designed to provide a delightful experience for ice cream lovers. Built using HTML, CSS, and Vanilla JavaScript, it offers an interactive interface for browsing ice cream options, shopping, and leaving reviews. The website is optimized for both desktop and mobile users, ensuring a smooth experience across all devices.
 
+
+<table align="center">
+    <thead align="center">
+        <tr border: 2px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+      <tr>
+          <td><img alt="Stars" src="https://img.shields.io/github/stars/DharshiBalasubramaniyam/ice-cream-parlour-website?style=flat&logo=github"/></td>
+          <td><img alt="Forks" src="https://img.shields.io/github/forks/DharshiBalasubramaniyam/ice-cream-parlour-website?style=flat&logo=github"/></td>
+          <td><img alt="Issues" src="https://img.shields.io/github/issues/DharshiBalasubramaniyam/ice-cream-parlour-website?style=flat&logo=github"/></td>
+          <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/DharshiBalasubramaniyam/ice-cream-parlour-website?style=flat&logo=github"/></td>
+          <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/DharshiBalasubramaniyam/ice-cream-parlour-website?style=flat&color=critical&logo=github"/></td>
+      </tr>
+    </tbody>
+</table>
 ---
 
 # ⚙️ Technologies Used ⚙️
@@ -60,6 +81,15 @@ JavaScript adds interactivity and functionality to the website. This project use
   <img src="https://github.com/user-attachments/assets/341b9e5e-ab35-4ace-94b0-89285cd4ecfd" alt="Second Image" width="20%" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);" />
 </div>
 
+---
+<!-- Added Hacktoberfest 2024 and GSSoc Extended 2024 banners -->
+### This project is now OFFICIALLY accepted for
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/SwanandD121/FeatherPerfect_fe/refs/heads/main/Untitled%20design.png" alt="GSSoC 2024 Extd" width="80%">
+  <img src="https://cdn.discordapp.com/attachments/657543125190967316/1294560786114674748/Screenshot_2024-10-12_122347.png?ex=670b752f&is=670a23af&hm=26ddd7f41740b8b19ee4985e7568b3892091384b3b85e7165770a4b10f4d1050&" alt="Hacktoberfest 2024" width="80%">
+</div>
+<br>
 ---
 
 # 🚀 How to Contribute to This Project
@@ -133,6 +163,19 @@ A big thank you to all the contributors! 🎉
 <a href="https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/pulse"> <img align="center" src="https://contrib.rocks/image?max=100&repo=DharshiBalasubramaniyam/ice-cream-parlour-website" /> </a> 
 
 ---
+## Stargazers ❤️
+
+<div align='left'>
+
+[![Stargazers repo roster for DharshiBalasubramaniyam/ice-cream-parlour-website](https://reporoster.com/stars/DharshiBalasubramaniyam/ice-cream-parlour-website)](https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/stargazers)
+
+</div>
+
+## Forkers ❤️
+
+[![Forkers repo roster for DharshiBalasubramaniyam/ice-cream-parlour-website](https://reporoster.com/forks/DharshiBalasubramaniyam/ice-cream-parlour-website)](https://github.com/DharshiBalasubramaniyam/ice-cream-parlour-website/network/members)
+
+---
 
 # 📄 Ending Note
 Thank you for exploring the Ice Cream Parlour Website! We hope you find this project enjoyable and informative. Your feedback, contributions, and suggestions are always welcome!
@@ -140,5 +183,12 @@ Thank you for exploring the Ice Cream Parlour Website! We hope you find this pro
 If you have any questions or need assistance, please feel free to reach out through the Issues section of this repository.
 
 # 🌈 Join Us!
+## 📫 Contact
+
+For any inquiries or support, please contact:
+
+- **LinkedIn:** https://www.linkedin.com/in/dharshibalasubramaniyam/
+- **GitHub:** (https://github.com/DharshiBalasubramaniyam)
+---
 
 

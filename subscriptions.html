@@ -1,28 +1,27 @@
-<!-- @ -1,241 +0,0 @@ -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICYCO - CATERING</title>
+    <title>ICYCO - SUBSCRIPTIONS</title>
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
-    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
-    <link rel="stylesheet" href="styles/topscrollindicator.css">
-    <!-- Link to add favicon  -->
-    <link rel="icon" href="./images/logo.png" type="image/png">
-
+    <link rel="stylesheet" href="styles/subscriptions.css">
     <link rel="stylesheet" href="styles/cursor.css">
-    <link rel="stylesheet" href="styles/delivery-catering.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
 
     <!-- font awesome icons script -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Container for each cart item */
+    </style>
 
 </head>
 
@@ -48,7 +47,6 @@
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
-
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-container">
@@ -63,8 +61,8 @@
         </div>
     </div>
 
-    <!-- Scroll progress bar -->
-    <div class="scroll-progress" id="scrollProgress"></div>
+    <!-- scroll progress -->
+    <div class="scroll-progress"></div>
 
     <!-- nav bar -->
     <div class="nav-bar">
@@ -73,11 +71,12 @@
             <a href="./index.html">IcyCo</a>
         </div>
         <div class="nav-links">
-            <a href="./index.html" class="link">Home</a>
-            <a href="./products.html" class="link">Products</a>
+            <a href="./index.html" class="link">home</a>
+            <a href="./products.html" class="link">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
-            <a href="./catering.html" class="link active">Catering</a>
+            <a href="./catering.html" class="link">Catering</a>
+            <a href="./subscriptions.html" class="link active">Subscriptions</a>
         </div>
         <div class="icons">
             <div class="icon">
@@ -93,108 +92,44 @@
         </div>
     </div>
 
-    <!-- catering form -->
-    <section>
-        <h1 style="margin-top: 100px; padding: 0 40px;">Event Catering</h1>
-        <h2 class="heading">Tell us about your event</h2>
-        <form class="form-contents">
+    <!-- Subscription Section -->
+    <section id="subscription-plans">
+        <h1 style="margin-top: 100px; padding: 0 40px;">ICYCO Subscription Plans</h1>
+        <p style="font-size: 20px; margin: 33px;">Exclusive Treats for True Ice Cream Lovers! <br> "Become a part of our
+            ice cream community and gain access to limited-edition flavors, special discounts,<br> and first dibs on new
+            arrivals. Don’t miss out on exclusive, mouth-watering flavors delivered fresh every month! <br>Choose the
+            perfect plan for your cravings!"</p>
 
-            <div class="indv-text">
-                <label for="name" class="text">Name</label>
-                <input type="text" class="form-text" placeholder="Enter your Name" required required
-                    pattern="[a-zA-Z ]+"
-                    oninvalid="this.setCustomValidity('Please enter your name  without using numbers or special characters.')"
-                    oninput="this.setCustomValidity('')" />
+        <div class="plans-container">
+            <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Ice Cream" class="ice-cream-img" />
+            <!-- Basic Plan -->
+            <div class="plan">
+                <h3>Basic Plan</h3>
+                <p>$6 / Month</p>
+                <ul>
+                    <li>2 Monthly Ice Cream Deliveries</li>
+                    <li>Exclusive Deals on New Flavors</li>
+                    <li>Free Shipping</li>
+                </ul>
+                <button class="btn-style" onclick="subscribe('Basic')">Subscribe Now</button>
             </div>
 
-            <div class="indv-text">
-                <label for="email" class="text">Email Id</label>
-                <input type="email" class="form-text" placeholder="example@gmail.com" required>
+            <!-- Premium Plan -->
+            <div class="plan">
+                <h3>Premium Plan</h3>
+                <p>$10 / Month</p>
+                <ul>
+                    <li>4 Monthly Ice Cream Deliveries</li>
+                    <li>Exclusive Access to Limited Editions</li>
+                    <li>Free Shipping & Early Access to New Flavors</li>
+                </ul>
+                <button class="btn-style" onclick="subscribe('Premium')">Subscribe Now</button>
             </div>
-
-            <div class="indv-text">
-                <label for="contact" class="text">Contact No.</label>
-                <input type="tel" class="form-text" name="contact" id="contact" placeholder="0123456789" required
-                    pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-            </div>
-
-            <div class="indv-text">
-                <label for="eventdate" class="text">Event Date</label>
-                <input type="date" class="form-text" name="" id="dateInput" required>
-            </div>
-
-          <div class="indv-text">
-              <label for="eventtype" class="text">Event Type</label>
-
-              <label for="self-pickup">
-              <input type="radio" id="self-pickup" name="indoor-outdoor" value="self-pickup">
-              Self Service Pickup
-              </label><br><br>
-
-              <label for="self-delivery">
-              <input type="radio" id="self-delivery" name="indoor-outdoor" value="self-delivery">
-              Self Service Delivery
-              </label><br><br>
-
-              <label for="full-service">
-              <input type="radio" id="full-service" name="indoor-outdoor" value="full-service">
-              Full Service Catering
-              </label><br><br>
-
-              <label for="not-sure">
-              <input type="radio" id="not-sure" name="indoor-outdoor" value="not-sure">
-              Not Sure, Want To Learn More
-              </label>
+            <img src="https://images.unsplash.com/photo-1496533141630-d6731a403292?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Ice Cream" class="ice-cream-img" />
         </div>
-
-            
-    
-
-            <div class="indv-text">
-                <label for="add1" class="text">Complete Address</label>
-                <input type="text" class="form-text" name="" id="" placeholder="Street Address" required>
-            </div>
-
-            <div class="indv-text">
-                 <label for="state" class="text">State</label>
-                 <select class="form-text" id="state" required>
-                    <option value="">Select District</option>
-                    <option value="Ampara">Ampara</option>
-                    <option value="Anuradhapura">Anuradhapura</option>
-                    <option value="Badulla">Badulla</option>
-                    <option value="Batticaloa">Batticaloa</option>
-                    <option value="Colombo">Colombo</option>
-                    <option value="Galle">Galle</option>
-                    <option value="Gampaha">Gampaha</option>
-                    <option value="Hambantota">Hambantota</option>
-                    <option value="Jaffna">Jaffna</option>
-                    <option value="Kalutara">Kalutara</option>
-                    <option value="Kandy">Kandy</option>
-                    <option value="Kegalle">Kegalle</option>
-                    <option value="Kilinochchi">Kilinochchi</option>
-                    <option value="Kurunegala">Kurunegala</option>
-                    <option value="Mannar">Mannar</option>
-                    <option value="Matale">Matale</option>
-                    <option value="Matara">Matara</option>
-                    <option value="Moneragala">Moneragala</option>
-                    <option value="Mullaitivu">Mullaitivu</option>
-                    <option value="Nuwara Eliya">Nuwara Eliya</option>
-                    <option value="Polonnaruwa">Polonnaruwa</option>
-                    <option value="Puttalam">Puttalam</option>
-                    <option value="Ratnapura">Ratnapura</option>
-                    <option value="Trincomalee">Trincomalee</option>
-                    <option value="Vavuniya">Vavuniya</option>
-                </select>
-            </div>
-
-            <div style="display: flex; margin: 20px;" class="btn">
-                <button type="submit" value="SUMBIT" class="btn-style">Submit</button>
-                <button type="reset" class="btn-style reset-btn" value="RESET">Clear</button>
-            </div>
-
-        </form>
     </section>
-
     <!-- Cart -->
     <div class="cart">
         <i class="fa fa-times close-cart" aria-hidden="true"></i>
@@ -220,6 +155,7 @@
         </div>
 
     </div>
+
 
     <!-- footer -->
     <section class="footer">
@@ -270,13 +206,10 @@
                 </ul>
                 <h4 style="margin-top: 15px;">Follow Us</h4>
                 <ul class="links">
-                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
-                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
-                    <!-- Added Whatsapp Logo -->
-                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i>
-                        Whatsapp</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                    <li><a href="#" class="social"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -301,10 +234,9 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
+        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Deserved
     </div>
 
-    <script src="./script/catering.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
     <script src="./script/topscrollindicator.js"></script>

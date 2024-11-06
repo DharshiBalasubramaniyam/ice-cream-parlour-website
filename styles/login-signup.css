@@ -1,0 +1,259 @@
+body {
+  padding: 25px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+form {
+  width: 100%;
+  max-width: 450px;
+}
+
+#name-fields {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#first-name-field,
+#last-name-field {
+  flex: 1 1 200px;
+}
+
+#first-name-field input,
+#last-name-field input {
+  padding: 15px 12px;
+  width: 100%;
+}
+
+.input-fields {
+  margin-bottom: 12px;
+}
+
+.input-fields input {
+  width: 100%;
+  padding: 15px 12px;
+}
+
+.input-field-header {
+  margin-bottom: 7px;
+  font-weight: 550;
+}
+
+.input-field:focus {
+  border: 2px solid #d91656;
+  box-shadow: 0 0 8px rgba(237, 59, 246, 0.6);
+  transition: box-shadow 0.3s;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  width: 100%;
+}
+
+/* Style the eye icon */
+.password-container i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.check-container {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+.check-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 15px;
+}
+
+.check-button input {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.check-button span {
+  margin-left: 8px;
+  font-size: 14px;
+}
+.forget-button {
+  width: 50%;
+}
+
+.signin-btn button {
+  width: 100%;
+  border-radius: auto;
+  margin-top: 15px;
+}
+.sep-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  color: gray;
+  font-size: 14px;
+}
+.sep-line {
+  height: 1px;
+  width: 50px;
+  border: 1px solid rgb(168, 168, 168);
+  margin: 10px;
+}
+
+.terms {
+  margin-top: 10px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.terms a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+#line-container {
+  font-size: 14px;
+}
+
+.register-now-link {
+  margin-left: 3px;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.register-now-link:hover {
+  text-decoration: underline;
+}
+
+.sign-in {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  max-width: 450px;
+}
+
+.social-links button {
+  width: 100%;
+  background-color: transparent;
+  background-image: none;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.social-links img {
+  margin-right: 5px;
+}
+
+.social-links img {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.social-links button span {
+  line-height: 20px;
+  padding-top: 4px;
+}
+.input-field::placeholder {
+  color: gray;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+}
+.input-field {
+  margin-top: 10px;
+  border-radius: 7px;
+  border: 1px solid black;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.social-link-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 5px;
+}
+.social-link-2 a {
+  background-color: transparent;
+  color: none;
+  border: solid 1px black;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.38s ease-in-out;
+  margin-left: 5px;
+}
+.social-link-2 a:hover {
+  transform: scale(1.2);
+  box-shadow: 1px 1px 6px 1px #d91656;
+}
+
+/* signup page  */
+
+.error {
+  border: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+.show-message {
+  display: block;
+}
+#password-strength-meter {
+  margin-top: 10px;
+}
+
+#strength-bar {
+  height: 8px;
+  width: 0;
+  background-color: #ff4d4d;
+  transition: width 0.3s ease;
+}
+
+#password-strength-text {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}

@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.product-container {
+    position: relative;
+    display: inline-block;
+}
+
+.quick-view-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    display: flex;
+    background-color: #fff;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.modal-product-img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.modal-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.modal-right h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.modal-right p {
+    margin: 10px 0;
+}
+
+.close {
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size: 30px;
+    width: 40px; 
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    transition: 0.3s;
+}
+.close:hover {
+    transform: scale(1);
+    color: white;
+    background-color: var(--secondary-color); 
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .modal-right h2 {
+        font-size: 20px; /* Adjust heading size for mobile */
+    }
+
+    .modal-right p, .modal-right .price {
+        font-size: 16px; /* Adjust text size for readability */
+    }
+
+    .quick-view-btn, .close {
+        font-size: 20px; /* Adjust button size */
+    }
+
+    .modal {
+        padding: 10px; /* Add padding around the modal for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%; /* Further reduce modal width for very small screens */
+    }
+
+    .close {
+        font-size: 24px; /* Smaller close button */
+    }
+
+    .modal-right h2 {
+        font-size: 18px;
+    }
+
+    .modal-right p, .modal-right .price {
+        font-size: 14px;
+    }
+}

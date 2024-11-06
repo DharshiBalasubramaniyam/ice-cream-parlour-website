@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICYCO - PRODUCTS</title>
-
-    <!-- custom style sheets -->
-    <link rel="stylesheet" href="styles/products.css">
+    <title>Terms and Conditions - Ice Cream Delight</title>
+    <link rel="stylesheet" href="styles/terms.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
-
-
+    <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="styles/style3.css">
+    <link rel="stylesheet" href="styles/cursor.css">
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <!-- Our flavor Section fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet" />
 
     <!-- font awesome icons script -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -58,7 +63,7 @@
         </div>
     </div>
 
-    <!-- scroll progress -->
+    <!-- scroll progress -->`
     <div class="scroll-progress"></div>
 
     <!-- nav bar -->
@@ -68,8 +73,8 @@
             <a href="./index.html">IcyCo</a>
         </div>
         <div class="nav-links">
-            <a href="./index.html" class="link">home</a>
-            <a href="./products.html" class="link active">products</a>
+            <a href="./index.html" class="link active">home</a>
+            <a href="./products.html" class="link">products</a>
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
@@ -83,7 +88,7 @@
                         class="no-of-cart-items">0</span></span>
             </div>
             <div class="icon">
-                <i class="fa fa-bars menu" aria-hidden="true"></i>
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
             </div>
         </div>
     </div>
@@ -100,6 +105,7 @@
                 <div class="total">Sub Total: <span class="sub-total">$0</span></div>
                 <button>Check out</button>
             </div>
+
         </div>
 
         <div class="empty-cart active">
@@ -110,135 +116,77 @@
             <p class="empty-cart-info">As a cone without ice cream!🍦 </p>
             <p class="empty-cart-info">Fill it up with our delicious flavors!</p>
         </div>
+
     </div>
 
-    <!-- Products -->
-    <section class="products" id="products" style="margin-top: 100px;">
-        <h1>Our <span>Products</span></h1>
-        <div class="categories-wrapper" style="margin-bottom: 20px;"></div>
-        <div class="search-container" style=" width: 65%; margin: auto;"></div>
-        <div class="box-container products-box " style="margin-top: 40px;"></div>
-    </section>
+    <main>
+        <section class="terms">
+            <h1>Terms and Conditions</h1>
+            <p class="intro">Welcome to Ice Cream Parlour! By using our services, you agree to the following terms.
+                Please read them carefully.</p>
 
-  
-    
-        <div class="container">
-          
-          <h1>Build Your Ice Cream Combo</h1>
-        
-          <form id="ice-cream-form">
-            <div class="form-group">
-              <label for="scoop1">Scoop 1:</label>
-              <select id="scoop1" name="scoop1" onchange="updateImage('scoop1-image', this.value)">
-                <option value="">Select Scoop 1</option>
-                <option value="vanilla">Vanilla</option>
-                <option value="chocolate">Chocolate</option>
-                <option value="strawberry">Strawberry</option>
-                <option value="mint">Mint</option>
-                <option value="coffee">Coffee</option>
-                <option value="mango">Mango</option>
-                <option value="cookiesncream">Cookies & Cream</option>
-                <option value="pistachio">Pistachio</option>
-                <option value="chickoo">Chickoo</option>
-                <option value="rockyroad">Rocky Road</option>
-              </select>
-              <img id="scoop1-image" src="" alt="Scoop 1" />
+            <div class="term-item">
+                <h3>1. Acceptance of Terms</h3>
+                <p>By using our website and services, you accept our terms. If you have questions, feel free to reach
+                    out. We appreciate your understanding!</p>
             </div>
-            <div class="form-group">
-              <label for="scoop2">Scoop 2:</label>
-              <select id="scoop2" name="scoop2" onchange="updateImage('scoop2-image', this.value)">
-                <option value="">Select Scoop 2</option>
-                <option value="vanilla">Vanilla</option>
-                <option value="chocolate">Chocolate</option>
-                <option value="strawberry">Strawberry</option>
-                <option value="mint">Mint</option>
-                <option value="coffee">Coffee</option>
-                <option value="mango">Mango</option>
-                <option value="cookiesncream">Cookies & Cream</option>
-                <option value="pistachio">Pistachio</option>
-                <option value="chickoo">Chickoo</option>
-                <option value="rockyroad">Rocky Road</option>
-              </select>
-              <img id="scoop2-image" src="" alt="Scoop 2" />
+
+            <div class="term-item">
+                <h3>2. Modifications to Terms</h3>
+                <p>We may update these terms from time to time. Changes will be posted here. Continued use means you
+                    accept the updated terms.</p>
             </div>
-            <div class="form-group">
-              <label for="topping">Topping:</label>
-              <select id="topping" name="topping" onchange="updateImage('topping-image', this.value)">
-                <option value="">Select Topping</option>
-                <option value="sprinkles">Sprinkles</option>
-                <option value="chocolatesyrup">Chocolate Syrup</option>
-                <option value="caramelsauce">Caramel Sauce</option>
-                <option value="nuts">Nuts</option>
-                <option value="marshmallows">Marshmallows</option>
-                <option value="whippedcream">Whipped Cream</option>
-                <option value="strawberries">Strawberries</option>
-                <option value="oreos">Oreos</option>
-                <option value="cherries">Cherries</option>
-                <option value="jellies">Jellies</option>
-              </select>
-              <img id="topping-image" src="" alt="Topping" />
+
+            <div class="term-item">
+                <h3>3. Product Information</h3>
+                <p>We’re excited to offer a variety of flavors! We strive for accuracy, but availability may change.
+                    Reach out if you have questions.</p>
             </div>
-            <button type="button" onclick="displayCombo()">Create Combo</button>
-          </form>
-          <div class="combo-display" id="combo-display"></div>
-        </div>
-      
-      
-      <script>
-        const flavors = {
-          vanilla: 'images/vanilla.jpg',
-          chocolate: 'images/choco.jpg',
-          strawberry: 'images/straw.jpg',
-          mint: 'images/mint1.jpg',
-    coffee: 'images/coffee.jpg',
-    mango: 'images/mango1.jpg',
-    cookiesncream: 'images/cookiesncream.jpg',
-    pistachio: 'images/pistachio.jpg',
-    chickoo: 'images/chickoo.jpg',
-    rockyroad: 'images/rockyroad.jpg',
-        };
-      
-        const toppings = {
-          sprinkles: 'images/sprinklres.jpg',
-          chocolatesyrup: 'images/choco12.jpg',
-          caramelsauce: 'images/caramel sauce.jpg',
-          nuts: 'images/nuts.jpg',
-    marshmallows: 'images/marshmallows.jpg',
-    whippedcream: 'images/whippedcream.jpg',
-    strawberries: 'images/strawberries.jpg',
-    oreos: 'images/oreos.jpg',
-    cherries: 'images/cherries.jpg',
-    jellies: 'images/jellies.jpg',
-        };
-      
-        function updateImage(imageId, value) {
-          const imageElement = document.getElementById(imageId);
-          if (value in flavors) {
-            imageElement.src = flavors[value];
-          } else if (value in toppings) {
-            imageElement.src = toppings[value];
-          } else {
-            imageElement.src = '';
-          }
-          imageElement.closest('.form-group').classList.add('show-image');
-        }
-      
-        function displayCombo() {
-          const scoop1 = document.getElementById("scoop1").value;
-          const scoop2 = document.getElementById("scoop2").value;
-          const topping = document.getElementById("topping").value;
-      
-          let combo = "";
-          if (scoop1 && scoop2 && topping) {
-            combo = `Your combo is: ${scoop1} and ${scoop2} scoops with ${topping} topping.`;
-          } else {
-            combo = "Please select all the options.";
-          }
-      
-          document.getElementById("combo-display").textContent = combo;
-        }
-      </script>
- 
+
+            <div class="term-item">
+                <h3>4. Pricing</h3>
+                <p>Prices may change without notice and are displayed in your local currency. Promotions may apply at
+                    our discretion.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>5. Customer Responsibilities</h3>
+                <p>Please provide accurate information for your orders. We aren’t responsible for errors due to
+                    incomplete info.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>6. Refund Policy</h3>
+                <p>All sales are final. If there’s an issue, contact us within 24 hours, and we’ll assist you.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>7. Governing Law</h3>
+                <p>These terms are governed by the laws of india. Any disputes will be resolved accordingly.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>8. Limitation of Liability</h3>
+                <p>Ice Cream Parlour isn’t liable for any indirect or consequential damages from using our products or
+                    services.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>9. Privacy Policy</h3>
+                <p>Your privacy matters. Please review our <a href="privacy.html">Privacy Policy</a> to understand how
+                    we protect your information.</p>
+            </div>
+
+            <div class="term-item">
+                <h3>10. Contact Us</h3>
+                <p>If you have questions about these terms, contact us at <a
+                        href="mailto:support@icecreamparlour.com">support@icecreamparlour.com</a>. We’re here to help!
+                </p>
+            </div>
+        </section>
+    </main>
+
+
     <!-- footer -->
     <section class="footer">
         <div class="footer-row">
@@ -274,6 +222,7 @@
                             Connaught Place, New Delhi</a></li>
                     <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
                             Street, Kolkata - West Bengal</a></li>
+
                     </li>
 
                 </ul>
@@ -281,9 +230,12 @@
             <div class="footer-col">
                 <h4>Need Help?</h4>
                 <ul class="links">
-                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
-                    <li><a href="" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
-                    <li><a href="" class="social"><i class="fa-solid fa-envelope"></i> mail@1234567.com</a></li>
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
+                    </li>
+                    <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
+                    </li>
+                    <li><a href="mailto:mail@1234567.com" class="social"><i class="fa-solid fa-envelope"></i>
+                            mail@1234567.com</a></li>
                 </ul>
                 <h4 style="margin-top: 15px;">Follow Us</h4>
                 <ul class="links">
@@ -293,11 +245,12 @@
                             Instagram</a></li>
                     <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
                             Linkedin</a></li>
-                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-twitter"></i>
+                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-x-twitter"></i>
                             Twitter</a></li>
-                    <!-- Added Whatsapp Logo -->
-                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i>
+                    <!-- Modified the redirect of Whatsapp for applying CSS -->
+                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i> 
                             Whatsapp</a></li>
+
                 </ul>
             </div>
             <div class="footer-col">
@@ -315,6 +268,7 @@
         </div>
     </section>
 
+
     <!-----scroll bottom to top------->
     <button class="scroll-button">
         <img src="images/icecream-cone.png" alt="icecream-cone" />
@@ -322,24 +276,17 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
-    </div>
-
+        &copy; 2024 by <span>DharshiB</span> | All Rights Reserved
     </div>
 
     <!-- Toaster -->
     <div id="toast-container" class="toast-container"></div>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script type="module" src="script/products.js"></script>
     <script type="module" src="script/nav.js"></script>
     <script type="module" src="script/cart.js"></script>
     <script src="script/topscrollindicator.js"></script>
     <script src="script/cursor.js"></script>
-
-
-
-
-
 </body>
 
+</html>

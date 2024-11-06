@@ -1,0 +1,646 @@
+.home {
+    min-height: 95dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    gap: 25px;
+    background: linear-gradient(to top, var(--body-color), #ffabd2);
+}
+
+.home .text {
+    width: 50%;
+    color: rgb(65, 65, 65);
+}
+
+.home .text h1 {
+    font-size: 65px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--main-color);
+    font-family: var(--curly-font);
+}
+
+.home .text h4 {
+    font-size: 20px;
+    line-height: 35px;
+    color: var(--ternary-color);
+    font-family: var(--main-font);
+
+}
+
+.grid {
+    width: 50%;
+    aspect-ratio: 1.5;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    padding: 15px;
+}
+
+.grid-box {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+    filter: brightness(90%);
+
+}
+
+.grid-box:hover {
+    transform: scale(1.04);
+    filter: brightness(100%);
+
+}
+
+.grid-box:nth-of-type(1) {
+    border-radius: 25px 0px 0px 0px;
+    background-image: url("../images/hero-grid1.jpg");
+}
+
+.grid-box:nth-of-type(2) {
+    border-radius: 0px 25px 0px 0;
+    background-image: url("../images/hero-grid2.jpg");
+}
+
+.grid-box:nth-of-type(3) {
+    border-radius: 0px 0px 0px 25px;
+    background-image: url("../images/hero-grid3.jpg");
+}
+
+.grid-box:nth-of-type(4) {
+    border-radius: 0px 0px 25px 0px;
+    background-image: url("../images/hero-grid4.jpg");
+}
+
+.home .image {
+    width: 50%;
+    background-color: #D91656;
+}
+
+.home .image img {
+    width: 100%;
+    height: 70%;
+    animation-name: zoom;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+/* -------------about section styles------------------- */
+.about {
+    background-color: #640D5F;
+    background-image: url("../images/abot.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0;
+}
+
+.about-box {
+    padding: 60px 100px;
+    margin-top: 50px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.5);
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-box h2 {
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    color: var(--ternary-color);
+    font-weight: bold;
+}
+
+.about-box p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.services-card-wrapper {
+    display: flex;
+    gap: 20px;
+    padding-block: 15px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.service-card {
+    /* box-shadow: 0 0 15px rgb(223, 223, 223); */
+    flex: 1 1 300px;
+    background-size: calc(2*16px) calc(2*16px);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-card1:hover {
+    /* box-shadow: 3px 3px 12px var(--secondary-color); */
+}
+
+.service-card>div {
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-color);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding: 17px 10px;
+    gap: 25px;
+    flex-direction: column;
+    /* border-top: 5px solid var(--secondary-color); */
+}
+
+.service-card:hover {
+    box-shadow: 0 0 20px rgb(223, 223, 223);
+}
+
+.service-card>div h2 {
+    text-align: center;
+    font-family: var(--curly-font);
+}
+
+.service-card>div h3 {
+    font-style: oblique;
+    font-family: var(--heading-font);
+    font-size: 16px;
+    width: 100%;
+}
+
+.service-card>div a {
+    color: var(--body-color);
+}
+
+.service-card>div p {
+    line-height: 25px;
+    text-align: center;
+    font-family: var(--main-font);
+    color: #5b5b5b;
+}
+
+.service-card img {
+    transition: 0.3s;
+}
+
+.service-card:hover img {
+    transform: scale(1.12);
+}
+
+.service-card>div button {
+    border-bottom: 2px solid transparent;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* -------------contact section styles------------------- */
+.contact form {
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--body-color);
+    margin: 50px 0;
+    padding: 25px 0;
+    box-shadow: 0 0 15px rgb(208, 208, 208);
+}
+
+.contact form .row {
+    padding: 0;
+    width: 95%;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.contact form .input-box {
+    width: 100%;
+}
+
+.contact form .input-box label {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.contact form .input-box input,
+.contact form .input-box textarea {
+    border: 2px solid var(--main-color);
+    font-size: 15px;
+    width: 100%;
+    padding: 7px 10px;
+    margin-top: 4px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.contact form .input-box input:focus,
+.contact form .input-box textarea:focus {
+    outline: 2px solid var(--secondary-color);
+}
+
+.contact form .row:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+
+/*------ WHY icyCO? styles----------------*/
+.why-icyco {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 65px 0;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.feature-box {
+    flex: 0 0 48%;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    background: transparent;
+    cursor: pointer;
+    gap: 22px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border: 2px solid var(--secondary-color);
+}
+
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.icon-circle img {
+    width: 75px;
+    transition: transform 0.3s ease;
+}
+
+.loader-container {
+    width: 150px;
+    height: 150px;
+}
+
+.flavor-circle {
+    width: 25px;
+    height: 25px;
+}
+
+.feature-box img {
+    transition: 0.3s;
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    padding: auto 0;
+}
+
+.feature-text h3 {
+    text-align: left;
+    font-size: 1.26em;
+    margin: 17px 0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.feature-text p {
+    color: #757575;
+    font-size: 1em;
+    transition: color 0.3s ease;
+    text-align: left;
+}
+
+/* -------------reviews section styles------------------- */
+
+/* Review box styles */
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 65px 0;
+}
+
+.review-box {
+    position: relative;
+    flex: 1 1 400px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--body-color);
+}
+
+.review-box .quote {
+    position: absolute;
+    font-size: 60px;
+    color: var(--main-color, #007bff);
+    top: 0;
+    right: 10px;
+    opacity: 0.2;
+}
+
+.review-box .top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review-box .top img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.review-box .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review-box .name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.review-box .stars i {
+    color: var(--main-color, #007bff);
+    margin-right: 3px;
+}
+
+.review-box .text {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 15px 0;
+}
+
+/* Our flavors section  */
+.flavors-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 65px 0;
+}
+
+.flavor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.flavor-item:hover {
+    transform: scale(1.1);
+}
+
+.flavor-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid rgba(211, 211, 211, 0.4);
+}
+
+.flavor-item h3 {
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    margin-top: 12px;
+    color: black;
+}
+
+/* Styling for the pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(135, 135, 135, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    display: flex;
+    background-color: var(--body-color);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    height: 520px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 15px whitesmoke;
+}
+
+.popup-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-right {
+    padding: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.popup h1 {
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+    background-color: var(--secondary-color);
+    padding: 0 25px;
+    color: var(--body-color);
+    font-weight: 600px;
+
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 7px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #D91656;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 8px 30px;
+    background-color: #D91656;
+    color: #ffeb55;
+    border: 2px solid #D91656;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.signup-btn:hover {
+    background-color: var(--main-color);
+}
+
+.no-thanks {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 0px;
+    color: black;
+}
+
+.no-thanks:hover {
+    text-decoration: underline;
+}
+
+.terms {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.terms a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .review-box {
+        width: calc(45% - 15px);
+        /* Adjust for 2 boxes per row */
+    }
+    .popup-content {
+        width: 90%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .review-box {
+        width: calc(100% - 15px);
+        /* 1 box per row on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .popup-left {
+        display: none;
+    }
+    
+    /* Make popup content full width on mobile */
+    .popup-content {
+        flex-direction: column;
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .popup-right {
+        width: 100%;
+    }
+
+    .popup h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .popup .signup-btn {
+        font-size: 14px;
+    }
+    
+}
+
+#close-btn2 {
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size: 30px;
+    width: 40px; 
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    transition: 0.3s;
+}
+#close-btn2:hover {
+    transform: scale(1);
+    color: white;
+    background-color: var(--secondary-color); 
+}
+
+#services, #reviewsSection {
+    background-color: var(--secondary-color);
+    padding-block: 50px;
+}
+#services h1, #reviewsSection h1 {
+    background-color: var(--body-color);
+    color: var(--secondary-color);
+}

@@ -3,16 +3,9 @@ h1 {
     font-size: 3em;
     margin-bottom: 20px;
     padding: 10px;
-    color: #eeb8eb;
-    text-shadow: 1px 1px 2px rgb(184, 45, 235), 0 0 1em rgba(216, 130, 200, 0.617),
-      0 0 0.2em rgba(99, 1, 124, 0.623);
 }
 h2 {
-    font-weight: 500;
-}
-
-html {
-    scroll-behavior: smooth;
+    font-weight: 700;
 }
 
 .top-btn {
@@ -41,13 +34,13 @@ html {
     gap: 20px;
     justify-content: center;
     padding: 20px;
-    gap: 40px;
+    gap: 20px;
 }
 
 .contributor-card {
-    width: 300px;
+    width: 500px;
     position: relative;
-    aspect-ratio: 1/;
+    aspect-ratio: inherit;
     overflow: hidden;
     max-width: calc(55% - 16px);
     display: flex;
@@ -57,9 +50,9 @@ html {
     border: 2px solid rgb(229, 93, 193);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
+    padding: 30px;
     transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
-    text-decoration: none;
+    text-decoration:none;
     color: inherit;
 }
 
@@ -77,11 +70,10 @@ html {
 }
 
 .contributor-card img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 230px;
     object-fit: cover;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     transition: box-shadow 0.3s ease-in-out, border 0.1s ease-in-out;
 }
