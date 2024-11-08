@@ -23,5 +23,10 @@
     document.querySelector('.no-thanks').addEventListener('click', function(event) {
       event.preventDefault();
       document.getElementById('popup').style.display = 'none';
+      localStorage.setItem("noThanksClicked", "true");
     });
+
+    if (localStorage.getItem("noThanksClicked") === "true") {
+      document.getElementById('popup').style.visibility = 'hidden';
+    }
     
