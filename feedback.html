@@ -1,27 +1,29 @@
+<!-- @ -1,241 +0,0 @@ -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICYCO - SUBSCRIPTIONS</title>
+    <title>ICYCO - FEEDBACK</title>
 
     <!-- custom style sheets -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mediaQueries.css">
-    <link rel="stylesheet" href="styles/subscriptions.css">
-    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/topscrollindicator.css">
+    <!-- Link to add favicon  -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
 
+    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/delivery-catering.css">
+    <link rel="stylesheet" href="styles/feedback.css">
 
     <!-- link to add favicon -->
     <link rel="icon" href="./images/logo.png" type="image/png">
 
     <!-- font awesome icons script -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Container for each cart item */
-    </style>
 
 </head>
 
@@ -47,6 +49,7 @@
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
+
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-container">
@@ -61,8 +64,8 @@
         </div>
     </div>
 
-    <!-- scroll progress -->
-    <div class="scroll-progress"></div>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- nav bar -->
     <div class="nav-bar">
@@ -76,8 +79,7 @@
             <a href="./delivery.html" class="link">Delivery</a>
             <a href="./dine-in.html" class="link">Dine In</a>
             <a href="./catering.html" class="link">Catering</a>
-            <a href="./feedback.html" class="link">Feedback</a>
-            <a href="./subscriptions.html" class="link active">Subscriptions</a>
+            <a href="./feedback.html" class="link active">Feedback</a>
         </div>
         <div class="icons">
             <div class="icon">
@@ -93,44 +95,43 @@
         </div>
     </div>
 
-    <!-- Subscription Section -->
-    <section id="subscription-plans">
-        <h1 style="margin-top: 100px; padding: 0 40px;">ICYCO Subscription Plans</h1>
-        <p style="font-size: 20px; margin: 33px;">Exclusive Treats for True Ice Cream Lovers! <br> "Become a part of our
-            ice cream community and gain access to limited-edition flavors, special discounts,<br> and first dibs on new
-            arrivals. Don’t miss out on exclusive, mouth-watering flavors delivered fresh every month! <br>Choose the
-            perfect plan for your cravings!"</p>
+    <!-- catering form -->
+    <section>
+        <h1 style="margin-top: 100px; padding: 0 40px;">Share Experience</h1>
+        
 
-        <div class="plans-container">
-            <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Ice Cream" class="ice-cream-img" />
-            <!-- Basic Plan -->
-            <div class="plan">
-                <h3>Basic Plan</h3>
-                <p>$6 / Month</p>
-                <ul>
-                    <li>2 Monthly Ice Cream Deliveries</li>
-                    <li>Exclusive Deals on New Flavors</li>
-                    <li>Free Shipping</li>
-                </ul>
-                <button class="btn-style" onclick="subscribe('Basic')">Subscribe Now</button>
-            </div>
-
-            <!-- Premium Plan -->
-            <div class="plan">
-                <h3>Premium Plan</h3>
-                <p>$10 / Month</p>
-                <ul>
-                    <li>4 Monthly Ice Cream Deliveries</li>
-                    <li>Exclusive Access to Limited Editions</li>
-                    <li>Free Shipping & Early Access to New Flavors</li>
-                </ul>
-                <button class="btn-style" onclick="subscribe('Premium')">Subscribe Now</button>
-            </div>
-            <img src="https://images.unsplash.com/photo-1496533141630-d6731a403292?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Ice Cream" class="ice-cream-img" />
+        <div class="content">
+            <header class="feedback-header">
+              <h1>Feel free to drop us your feedback.</h1>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1457119/feedback-form-template.svg"
+                alt="A woman is sitting on the floor and working on a laptop (vector illustration)" />
+            </header>
+            <main>
+               <id="feedbackForm">
+                <h2>How would you rate your overall experience?</h2>
+                <div class="star-rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars"></label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars"></label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"></label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"></label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"></label>
+                </div>
+                <h2>How satisfied are you overall with the support of our website?</h2>
+                <div class="tickmarks">
+                  <span>0</span>
+                  <span>2</span>
+                  <span>4</span>
+                  <span>6</span>
+                  <span>8</span>
+                  <span>10</span>
+                </div>
+                <input type="range" id="score" min="0" max="10" value="5">
+                <textarea id="comment" placeholder="Please tell us your reasons for giving this score here..."></textarea>
+                <button type="submit" id="feedback-btn">Send Feedback</button>
+            </main>
         </div>
     </section>
+
     <!-- Cart -->
     <div class="cart">
         <i class="fa fa-times close-cart" aria-hidden="true"></i>
@@ -156,7 +157,6 @@
         </div>
 
     </div>
-
 
     <!-- footer -->
     <section class="footer">
@@ -207,10 +207,13 @@
                 </ul>
                 <h4 style="margin-top: 15px;">Follow Us</h4>
                 <ul class="links">
-                    <li><a href="#" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="#" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
-                    <li><a href="#" class="social"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                    <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                    <!-- Added Whatsapp Logo -->
+                    <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i>
+                        Whatsapp</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -235,14 +238,17 @@
 
     <!-- copyright -->
     <div class="copyright">
-        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Deserved
+        &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
     </div>
 
+    <script src="./script/catering.js"></script>
     <script src="./script/nav.js"></script>
     <script src="./script/cart.js"></script>
     <script src="./script/topscrollindicator.js"></script>
     <script type="module" src="./script/products.js"></script>
     <script src="script/cursor.js"></script>
+
+    
 
 </body>
 
