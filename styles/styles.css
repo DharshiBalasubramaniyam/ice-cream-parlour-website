@@ -50,6 +50,41 @@ body {
     z-index: 9999;
 }
 
+/* Icon styling */
+#icon {
+    width: 30px;
+    padding-left: 10px;
+    cursor: pointer; /* Makes the icon look clickable */
+}
+
+/* Default light mode styles */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body {
+    background: linear-gradient(to right, #ffcccc, #ffe6e6); /* Adjust as per your color needs */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+html, body {
+    overflow-x: hidden;
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
 
 .loader-container {
     position: relative;
