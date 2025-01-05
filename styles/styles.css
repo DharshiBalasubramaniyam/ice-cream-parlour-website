@@ -169,88 +169,130 @@ h3 {
 
 /* -------------header styles------------------- */
 .nav-bar {
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: fit-content;
-    width: 100%;
-    z-index: 1000;
-    background-color: var(--ternary-color);
-    height: 70px;
-    padding: 0 100px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--ternary-color);
+  height: 70px;
+  padding: 0 100px;
 }
 
 .nav-bar .logo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
+.nav-bar .logo img {
+  display: inline-block;
 }
 
 .nav-bar .logo a {
-    font-size: 30px;
-    font-weight: 400;
-    color: var(--body-color);
-    font-family: var(--curly-font);
-
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--body-color);
+  font-family: var(--curly-font);
 }
 
-.nav-bar .nav-links a {
-    width: 100px;
-    border-radius: 5px;
-    text-align: center;
-    padding: 7px 10px;
-    display: inline-block;
-    margin: 0 15px;
-    color: var(--body-color);
-    text-transform: capitalize;
-    transition: 0.3s;
-    font-size: 18px;
-    letter-spacing: 1.3px;
+.nav-bar .nav-links {
+  display: flex;
+  align-items: center;
 }
 
-.nav-bar .nav-links a:hover,
-.nav-bar .nav-links a.active {
-    color: var(--secondary-color);
+.nav-bar .nav-links .link {
+  width: auto;
+  padding: 7px 15px;
+  margin: 0 10px;
+  color: var(--body-color);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.nav-bar .nav-links .link.active {
+  color: var(--secondary-color);
+}
+
+.nav-bar .nav-links .link:hover {
+  color: var(--secondary-color);
+}
+
+/* Unique hover effects for each link */
+.nav-bar .nav-links .link[href="#home"]:hover {
+  text-shadow: 2px 2px 5px var(--secondary-color);
+}
+
+.nav-bar .nav-links .link[href="#services"]:hover {
+  background-color: var(--secondary-color);
+  color: var(--ternary-color);
+  transform: scale(1.1);
+}
+
+.nav-bar .nav-links .link[href="#about"]:hover {
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.nav-bar .nav-links .link[href="#products"]:hover {
+  letter-spacing: 2px;
+  font-style: italic;
+}
+
+.nav-bar .nav-links .link[href="#reviews"]:hover {
+  transform: rotate(3deg);
+  color: var(--secondary-color);
+}
+
+.nav-bar .nav-links .link[href="#contact"]:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .nav-bar .icons {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
 
 .nav-bar .icons .icon {
-    padding: 0 5px;
-    position: relative;
+  margin: 0 10px;
 }
 
 .nav-bar .icons i {
-    font-size: 20px;
-    margin: 0 8px;
-    color: var(--body-color);
-    padding: 10px 0;
-    cursor: pointer;
-    transition: 0.3s;
+  font-size: 20px;
+  color: var(--body-color);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .nav-bar .icons i:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
-.nav-bar .icons i.menu {
-    display: none;
+.nav-bar .icons .cart-icon {
+  position: relative;
 }
 
-.nav-bar .icons .no-of-cart-items,
-.no-of-wishlist-items {
-    position: absolute;
-    color: var(--body-color);
-    right: -15px;
-    width: 25px;
-    font-size: 12px;
+.nav-bar .icons .no-of-cart-items {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--secondary-color);
+  color: var(--ternary-color);
+  border-radius: 50%;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* cart styles */
 
