@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="styles/styles.css">
+   <link rel="stylesheet" href="styles/mediaQueries.css">
+
+   <!-- link to add favicon -->
+   <link rel="icon" href="./images/logo.png" type="image/png">
+
+   <!-- font awesome icons script -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+   <!--  -->
+   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+   <title>Icyco AI Assistant</title>
+   <style>
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         background: #f7f8fa;
+         display: flex;
+         flex-direction: column;
+      }
+
+      .chat-header {
+         color: var(--main-color);	
+         padding: 1rem 100px;
+         text-align: center;
+         font-size: 1.5rem;
+         font-weight: bold;
+         margin-top: 70px;
+      }
+
+      .chat-container {
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         padding: 1rem 100px;
+         overflow-y: auto;
+         min-height: 70vh;
+         max-height: 80vh;
+      }
+
+      @media screen and (max-width: 768px) {
+         .chat-container, .chat-header, .input-area {
+            padding: 1rem;
+         }
+      }
+
+      .message {
+         max-width: 70%;
+         padding: 0.75rem 1rem;
+         border-radius: 20px;
+         margin: 0.5rem 0;
+         font-size: 1.1rem;
+         line-height: 1.4;
+      }
+
+      .user {
+         background: #ffb6d9;
+         align-self: flex-end;
+         border-bottom-right-radius: 0;
+      }
+
+      .assistant {
+         background: #d2f4ea;
+         align-self: flex-start;
+         border-bottom-left-radius: 0;
+      }
+
+      .input-area {
+         display: flex;
+         align-items: center;
+         padding: 1rem 100px;
+         border-top: 1px solid #ddd;
+         height: max-content;
+         position: sticky;
+      }
+
+      .input-area input {
+         flex: 1;
+         padding: 0.75rem 1rem;
+         font-size: 1rem;
+         border-radius: 20px;
+         border: 1px solid #ccc;
+         outline: none;
+         margin-right: 0.5rem;
+      }
+
+      .input-area button {
+         padding: 0.75rem 1.2rem;
+         font-size: 1rem;
+         background: #ff7eb9;
+         color: white;
+         border: none;
+         border-radius: 20px;
+         cursor: pointer;
+         margin: 0;
+      }
+
+      .input-area button:hover {
+         background: #ff61a6;
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- cursor -->
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+
+   <!-- Preloader -->
+   <div id="preloader">
+      <div class="loader-container">
+         <div class="flavor-circle chocolate"></div>
+         <div class="flavor-circle strawberry"></div>
+         <div class="flavor-circle vanilla"></div>
+         <div class="flavor-circle mint"></div>
+         <div class="flavor-circle blueberry"></div>
+         <div class="flavor-circle mango"></div>
+         <div class="flavor-circle pistachio"></div>
+         <div class="flavor-circle raspberry"></div>
+      </div>
+   </div>
+
+   <!-- Scroll progress bar -->
+   <div class="scroll-progress" id="scrollProgress"></div>
+
+   <!-- nav bar -->
+   <div class="nav-bar">
+      <div class="logo">
+         <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
+         <a href="./index.html">IcyCo</a>
+      </div>
+      <div class="nav-links">
+         <a href="./index.html" class="link active">home</a>
+         <a href="./products.html" class="link">products</a>
+         <a href="./delivery.html" class="link">Delivery</a>
+         <a href="./dine-in.html" class="link">Dine In</a>
+         <a href="./catering.html" class="link">Catering</a>
+      </div>
+      <div class="icons">
+         <div class="icon">
+            <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+         </div>
+         <div class="icon">
+            <a href="./ai-assistant.html"><i class="fas fa-robot"></i></a>
+         </div>
+         <div class="icon">
+            <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                  class="no-of-cart-items">0</span></span>
+         </div>
+         <div class="icon">
+            <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
+         </div>
+      </div>
+   </div>
+
+   <!-- Cart -->
+   <div class="cart">
+      <i class="fa fa-times close-cart" aria-hidden="true"></i>
+      <h1>Your Cart</h1>
+
+      <div class="no-empty-cart">
+         <ul class="cart-list-items">
+         </ul>
+         <div>
+            <div class="total">Sub Total: <span class="sub-total">$0</span></div>
+            <button>Check out</button>
+         </div>
+
+      </div>
+
+      <div class="empty-cart active">
+         <div class="empty-cart-img-div">
+            <img src="images/empty-cart.png" alt="Delicious Ice Cream" class="ice-cream-image" />
+         </div>
+         <p class="empty-cart-text">Your cart is empty!</p>
+         <p class="empty-cart-info">As a cone without ice cream!🍦 </p>
+         <p class="empty-cart-info">Fill it up with our delicious flavors!</p>
+      </div>
+   </div>
+
+   <div class="chat-header">
+      Icyco AI Assistant 🍦
+   </div>
+
+   <div class="chat-container" id="chat">
+   </div>
+
+   <div class="input-area">
+      <input type="text" id="userInput" placeholder="Type your question..." />
+      <button id="sendBtn">Send</button>
+   </div>
+
+   <!-- footer -->
+   <section class="footer">
+      <div class="footer-row">
+          <div class="footer-col">
+              <h4>Useful links</h4>
+              <ul class="links">
+
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="./login.html">My Account</a></li>
+                  <li><a href="./products.html">Products</a></li>
+                  <li><a href="./gallary.html">Gallery</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="./faq.html" class="link"> FAQ</a></li>
+                  <li><a href="./contributor.html"> Our Contributors</a></li>
+                  <li><a href="./blogs.html"> Our Blogs</a></li>
+                  <li><a href="./terms&condition.html">Customer Agreement</a></li>
+                  <li><a href="./privacy.html"> Privacy Policy</a></li>
+
+              </ul>
+          </div>
+
+          <div class="footer-col">
+              <h4>Opening Hours</h4>
+              <ul class="links">
+                  <li><a href="#">Mon-Sat : 9.00 AM to 9.30 PM</a></li>
+                  <li><a href="#">Sunday : 9.00 AM to 3.00 PM</a></li>
+              </ul>
+              <h4 style="margin-top: 15px;">Locations</h4>
+              <ul class="links">
+                  <li class="address1"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Kolathur
+                          ramankulam-
+                          Malappuram Dt</a></li>
+                  <li class="address2"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> MG Road,
+                          Bangalore - Karnataka</a></li>
+                  <li class="address3"><a href="" class="social"><i class="fa-solid fa-location-dot"></i>
+                          Connaught Place, New Delhi</a></li>
+                  <li class="address4"><a href="" class="social"><i class="fa-solid fa-location-dot"></i> Park
+                          Street, Kolkata - West Bengal</a></li>
+
+                  </li>
+
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Need Help?</h4>
+              <ul class="links">
+                  <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
+                  </li>
+                  <li><a href="tel:90904500112" class="social"><i class="fa-solid fa-phone"></i> +91 90904500112</a>
+                  </li>
+                  <li><a href="mailto:mail@1234567.com" class="social"><i class="fa-solid fa-envelope"></i>
+                          mail@1234567.com</a></li>
+              </ul>
+              <h4 style="margin-top: 15px;">Follow Us</h4>
+              <ul class="links">
+                  <li><a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i>
+                          Facebook</a></li>
+                  <li><a href="https://www.instagram.com/" class="social"><i class="fa-brands fa-instagram"></i>
+                          Instagram</a></li>
+                  <li><a href="https://www.linkedin.com/" class="social"><i class="fa-brands fa-linkedin-in"></i>
+                          Linkedin</a></li>
+                  <li><a href="https://www.twitter.com/" class="social"><i class="fa-brands fa-twitter"></i>
+                          Twitter</a></li>
+                  <li><a href="https://www.whatsapp.com/" class="social"><i class="fa-brands fa-whatsapp"></i> 
+                          Whatsapp</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Newsletter</h4>
+              <p>
+                  Subscribe to our newsletter for a weekly dose
+                  of news, updates, helpful tips, and
+                  exclusive offers.
+              </p>
+              <form action="#">
+                  <input type="email" placeholder="Your email" required>
+                  <button type="submit">Subscribe</button>
+              </form>
+          </div>
+      </div>
+  </section>
+
+  <button class="scroll-button">
+      <img src="images/icecream-cone.png" alt="icecream-cone" />
+  </button>
+
+  <!-- copyright -->
+  <div class="copyright">
+      &copy; <span id="year"></span> by <span>DharshiB</span> | All Rights Reserved
+  </div>
+
+   <script>
+      const chatContainer = document.getElementById('chat');
+      const chats = []; // Array to store chat history
+      const maxChatHistory = 15; // Maximum number of chat messages to keep in history
+
+      window.addEventListener('load', () => {
+         console.log('User has entered the site.');
+         // Load chat history from local storage if available
+         const storedChats = JSON.parse(localStorage.getItem('icyco_chats'));
+         if (storedChats && storedChats.last_updated_at > Date.now() - 24 * 60 * 60 * 1000) { // Check if the data is less than 24 hours old
+            chats.push(...(storedChats.chats));
+         } else {
+            chats.push(
+               { type: 'assistant', text: 'Hi! I\'m your Icyco assistant. Ask me anything about our products or services!' },
+            );
+            localStorage.setItem('icyco_chats', JSON.stringify({chats: chats, last_updated_at: Date.now()})); // Initialize if not present
+         }
+         chats.forEach(chat => {
+            const messageElement = document.createElement('div');
+            messageElement.className = `message ${chat.type}`;
+            messageElement.textContent = chat.text;
+            chatContainer.appendChild(messageElement);
+         });
+      });
+
+      document.getElementById('sendBtn').addEventListener('click', async () => {
+         alert("This feature is currently not available. Server implementation is still in progress.")
+         const userInput = document.getElementById('userInput').value;
+         if (userInput.trim() === '') return;
+
+         const userMessage = document.createElement('div');
+         userMessage.className = 'message user';
+         userMessage.textContent = userInput;
+         chatContainer.appendChild(userMessage);
+         chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+         chats.push({ type: 'user', text: userInput }); // Store user message
+
+         const assistantMessage = document.createElement('div');
+         assistantMessage.className = 'message assistant';
+         assistantMessage.textContent = 'Please wait...'; // Placeholder for assistant response
+         chatContainer.appendChild(assistantMessage);
+         chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+
+         // Simulate assistant response
+         fetch('http://127.0.0.1:5000/chat', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+               query: userInput,
+               chat_history: chats.map(chat => `${chat.type}: ${chat.text}`).join('\n')
+            })
+         })
+            .then(response => response.json())
+            .then(data => {
+               console.log(data); // Log the response from the server
+               assistantMessage.innerHTML = marked.parse(data.result); // Update assistant message with parsed HTML
+               chats.push({ type: 'assistant', text: data.result }); // Store assistant response
+               chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+               localStorage.setItem('icyco_chats', JSON.stringify({chats: chats.slice(-1 * maxChatHistory), last_updated_at: Date.now()})); // Update local storage
+            })
+            .catch(error => {
+               console.error('Error:', error);
+               assistantMessage.textContent = 'Sorry, I couldn\'t process your request.';
+               chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+            });
+
+         document.getElementById('userInput').value = ''; // Clear input field
+      });
+
+   </script>
+   <script type="module" src="script/nav.js"></script>
+   <script src="script/cursor.js"></script>
+   <script src="script/script.js"></script>
+
+</body>
+
+</html>
