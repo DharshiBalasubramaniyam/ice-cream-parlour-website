@@ -867,4 +867,8 @@ h3 {
     /* so that it stays on top of all other elements */
 }
 
-
+@media (max-width: 768px) {
+    .circle {
+        display: none;
+    }
+}
